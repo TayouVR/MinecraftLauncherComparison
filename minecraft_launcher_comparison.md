@@ -7,6 +7,7 @@ This is here to structure a proper comparison table between the various launcher
         <th>Feature</th>
         <th>Vanilla</th>
         <th>PolyMC</th>
+        <th>MultiMC</th>
         <th>ATLauncher</th>
         <th>GDLauncher</th>
         <th>Curseforge</th>
@@ -17,9 +18,10 @@ This is here to structure a proper comparison table between the various launcher
     <tr>
         <td>Open Source?</td>
         <td>❌No</td>
-        <td>✅Yes</td>
-        <td>✅Yes</td>
-        <td>✅Yes</td>
+        <td>✅Yes, GPL3</td>
+        <td>✅Yes, GPL3</td>
+        <td>✅Yes, GPL3</td>
+        <td>✅Yes, GPL3</td>
         <td>❌No</td>
         <td>❌No</td>
         <td>❌No</td>
@@ -28,6 +30,7 @@ This is here to structure a proper comparison table between the various launcher
     <tr>
         <td>Programming Language / Frameworks</td>
         <td>C#, Probably</td>
+        <td>C++, C (Qt)</td>
         <td>C++, C (Qt)</td>
         <td>Java</td>
         <td>Web (HTML, JS, CSS)</td>
@@ -45,11 +48,13 @@ This is here to structure a proper comparison table between the various launcher
         <td>✅Yes</td>
         <td>✅Yes</td>
         <td>✅Yes</td>
+        <td>✅Yes</td>
         <td>❌No</td>
     </tr>
     <tr>
         <td>Custom Instance Support</td>
         <td>🟠Partially (Version / Mod specific data isn't managed)</td>
+        <td>✅Yes</td>
         <td>✅Yes</td>
         <td>✅Yes</td>
         <td>✅Yes</td>
@@ -59,11 +64,12 @@ This is here to structure a proper comparison table between the various launcher
         <td>🟠Partially (Version / Mod specific data isn't managed)</td>
     </tr>
     <tr>
-        <th colspan=9>Modpacks</th>
+        <th colspan=10>Modpacks</th>
     </tr>
     <tr>
         <td>Curseforge Modpacks</td>
         <td>❌No</td>
+        <td>✅Yes</td>
         <td>✅Yes</td>
         <td>✅Yes</td>
         <td>✅Yes</td>
@@ -76,6 +82,7 @@ This is here to structure a proper comparison table between the various launcher
         <td>Modrinth Modpacks</td>
         <td>❌No</td>
         <td>✅Yes</td>
+        <td>❌No</td>
         <td>✅Yes</td>
         <td>❌No</td>
         <td>?</td>
@@ -86,6 +93,7 @@ This is here to structure a proper comparison table between the various launcher
     <tr>
         <td>ATLauncher Modpacks</td>
         <td>❌No</td>
+        <td>✅Yes</td>
         <td>✅Yes</td>
         <td>✅Yes</td>
         <td>❌No</td>
@@ -100,6 +108,7 @@ This is here to structure a proper comparison table between the various launcher
         <td>✅Yes</td>
         <td>✅Yes</td>
         <td>✅Yes</td>
+        <td>✅Yes</td>
         <td>?</td>
         <td>✅Yes</td>
         <td>?</td>
@@ -108,6 +117,7 @@ This is here to structure a proper comparison table between the various launcher
     <tr>
         <td>Legacy FTB Modpacks</td>
         <td>❌No</td>
+        <td>✅Yes</td>
         <td>✅Yes</td>
         <td>❌No</td>
         <td>❌No</td>
@@ -121,6 +131,7 @@ This is here to structure a proper comparison table between the various launcher
         <td>❌No</td>
         <td>✅Yes</td>
         <td>✅Yes</td>
+        <td>✅Yes</td>
         <td>❌No</td>
         <td>?</td>
         <td>❌No</td>
@@ -128,12 +139,13 @@ This is here to structure a proper comparison table between the various launcher
         <td>❌No</td>
     </tr>
     <tr>
-        <th colspan=9>Mod Loaders</th>
+        <th colspan=10>Mod Loaders</th>
     </tr>
     <tr>
         <td>Fabric Loader Support</td>
         <td>❌No</td>
         <td>✅Yes</td>
+        <td>❌No</td>
         <td>✅Yes</td>
         <td>✅Yes</td>
         <td>?</td>
@@ -147,6 +159,7 @@ This is here to structure a proper comparison table between the various launcher
         <td>✅Yes</td>
         <td>✅Yes</td>
         <td>✅Yes</td>
+        <td>✅Yes</td>
         <td>?</td>
         <td>❌No</td>
         <td>?</td>
@@ -156,6 +169,7 @@ This is here to structure a proper comparison table between the various launcher
         <td>Quilt Loader Support</td>
         <td>❌No</td>
         <td>✅Yes</td>
+        <td>❌No</td>
         <td>✅Yes</td>
         <td>❌No</td>
         <td>?</td>
@@ -167,6 +181,7 @@ This is here to structure a proper comparison table between the various launcher
         <td>LiteLoader Support</td>
         <td>❌No</td>
         <td>✅Yes</td>
+        <td>✅Yes</td>
         <td>❌No</td>
         <td>❌No</td>
         <td>?</td>
@@ -175,12 +190,13 @@ This is here to structure a proper comparison table between the various launcher
         <td>❌No</td>
     </tr>
     <tr>
-        <th colspan=9>Mods</th>
+        <th colspan=10>Mods</th>
     </tr>
     <tr>
         <td>Curseforge Mod Download</td>
         <td>❌No</td>
         <td>✅Yes</td>
+        <td>❌No</td>
         <td>✅Yes</td>
         <td>✅Yes</td>
         <td>✅Yes</td>
@@ -192,6 +208,7 @@ This is here to structure a proper comparison table between the various launcher
         <td>Modrinth Mod Download</td>
         <td>❌No</td>
         <td>✅Yes</td>
+        <td>❌No</td>
         <td>✅Yes</td>
         <td>❌No</td>
         <td>❌No</td>
@@ -203,6 +220,7 @@ This is here to structure a proper comparison table between the various launcher
         <td>Curseforge Blocked Mod Download</td>
         <td>❌No</td>
         <td>🟠Partially (via web browser)</td>
+        <td>❌No</td>
         <td>🟠Partially (via web browser, automatically moves mod)</td>
         <td>✅Yes (by using standard browser user agent)</td>
         <td>✅Yes</td>
@@ -214,6 +232,7 @@ This is here to structure a proper comparison table between the various launcher
         <td>Mod Updating</td>
         <td>❌No</td>
         <td>🚧No (WIP)</td>
+        <td>❌No</td>
         <td>✅Yes</td>
         <td>✅Yes</td>
         <td>?</td>
@@ -222,10 +241,11 @@ This is here to structure a proper comparison table between the various launcher
         <td>❌No</td>
     </tr>
     <tr>
-        <th colspan=9>Misc</th>
+        <th colspan=10>Misc</th>
     </tr>
     <tr>
         <td>Server Instances</td>
+        <td>❌No</td>
         <td>❌No</td>
         <td>❌No</td>
         <td>✅Yes</td>
@@ -239,6 +259,7 @@ This is here to structure a proper comparison table between the various launcher
         <td>Automatic Java Setup</td>
         <td>✅Yes</td>
         <td>🚧No (WIP)</td>
+        <td>❌No</td>
         <td>✅Optional</td>
         <td>✅Optioinal</td>
         <td>?</td>
@@ -249,6 +270,7 @@ This is here to structure a proper comparison table between the various launcher
     <tr>
         <td>Instance Export</td>
         <td>❌No</td>
+        <td>MultiMC</td>
         <td>MultiMC</td>
         <td>Curseforge, Modrinth, MultiMC</td>
         <td>Curseforge</td>
@@ -261,6 +283,7 @@ This is here to structure a proper comparison table between the various launcher
         <td>Instance Import</td>
         <td>❌No</td>
         <td>Curseforge, Modrinth, MultiMC, Technic</td>
+        <td>Curseforge, MultiMC, Technic</td>
         <td>Curseforge, Modrinth, MultiMC</td>
         <td>Curseforge</td>
         <td>?</td>
@@ -271,6 +294,7 @@ This is here to structure a proper comparison table between the various launcher
     <tr>
         <td>Look and Feel</td>
         <td>Minecraft Official</td>
+        <td>System (configurable)</td>
         <td>System (configurable)</td>
         <td>Configurable</td>
         <td>Custom</td>
@@ -287,6 +311,7 @@ This is here to structure a proper comparison table between the various launcher
         <td>❌No</td>
         <td>❌No</td>
         <td>❌No</td>
+        <td>❌No</td>
         <td>✅Yes</td>
         <td>?</td>
         <td>?</td>
@@ -295,6 +320,7 @@ This is here to structure a proper comparison table between the various launcher
     </tr>
     <tr>
         <td>In Game Overlay</td>
+        <td>❌No</td>
         <td>❌No</td>
         <td>❌No</td>
         <td>❌No</td>
