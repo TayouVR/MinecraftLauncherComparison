@@ -28,6 +28,18 @@ This is here to structure a proper comparison table between the various launcher
         <td><a href="https://launcher.mojang.com/download/">mojang.com</a></td>
     </tr>
     <tr>
+        <td>Operating Systems</td>
+        <td>Windows 10 & 11</td>
+        <td>Windows, Linux, MacOS</td>
+        <td>Windows, Linux, MacOS</td>
+        <td>Windows, Linux, MacOS</td>
+        <td>Windows, Linux, MacOS</td>
+        <td>Windows, Linux, MacOS</td>
+        <td>Windows, Linux, MacOS</td>
+        <td>Windows, Linux, MacOS</td>
+        <td>Windows, Linux, MacOS</td>
+    </tr>
+    <tr>
         <td>Open Source?</td>
         <td>❌No</td>
         <td>✅Yes, GPL3</td>
