@@ -10,7 +10,7 @@ This is here to structure a proper comparison table between the various launcher
         <th>ATLauncher</th>
         <th>GDLauncher</th>
         <th>Curseforge</th>
-        <th>FTB</th>
+        <th>FTB App</th>
         <th>Technic</th>
         <th>Old Vanilla</th>
     </tr>
@@ -26,15 +26,15 @@ This is here to structure a proper comparison table between the various launcher
         <td>❌No</td>
     </tr>
     <tr>
-        <td>Programming Language</td>
+        <td>Programming Language / Frameworks</td>
         <td>C#, Probably</td>
-        <td>C++, C</td>
+        <td>C++, C (Qt)</td>
         <td>Java</td>
         <td>Web (HTML, JS, CSS)</td>
-        <td>?</td>
-        <td>?</td>
+        <td>Overwolf</td>
+        <td>Overwolf</td>
         <td>Java</td>
-        <td>Java</td>
+        <td>Java (AWT, Swing)</td>
     </tr>
     <tr>
         <th colspan=9>Modpacks</th>
@@ -42,9 +42,9 @@ This is here to structure a proper comparison table between the various launcher
     <tr>
         <td>Curseforge Modpacks</td>
         <td>❌No</td>
-        <td>✅Download &amp; Install</td>
-        <td>✅Download &amp; Install</td>
-        <td>✅Download &amp; Install</td>
+        <td>✅Yes</td>
+        <td>✅Yes</td>
+        <td>✅Yes</td>
         <td>?</td>
         <td>?</td>
         <td>?</td>
@@ -53,8 +53,8 @@ This is here to structure a proper comparison table between the various launcher
     <tr>
         <td>Modrinth Modpacks</td>
         <td>❌No</td>
-        <td>✅Download &amp; Install</td>
-        <td>✅Download &amp; Install</td>
+        <td>✅Yes</td>
+        <td>✅Yes</td>
         <td>❌No</td>
         <td>?</td>
         <td>?</td>
@@ -64,8 +64,8 @@ This is here to structure a proper comparison table between the various launcher
     <tr>
         <td>ATLauncher Modpacks</td>
         <td>❌No</td>
-        <td>✅Download &amp; Install</td>
-        <td>✅Download &amp; Install</td>
+        <td>✅Yes</td>
+        <td>✅Yes</td>
         <td>❌No</td>
         <td>?</td>
         <td>?</td>
@@ -75,34 +75,34 @@ This is here to structure a proper comparison table between the various launcher
     <tr>
         <td>FTB Modpacks</td>
         <td>❌No</td>
-        <td>✅Download &amp; Install</td>
-        <td>✅Download &amp; Install</td>
-        <td>✅Download &amp; Install</td>
+        <td>✅Yes</td>
+        <td>✅Yes</td>
+        <td>✅Yes</td>
         <td>?</td>
-        <td>✅Download &amp; Install</td>
+        <td>✅Yes</td>
         <td>?</td>
         <td>❌No</td>
     </tr>
     <tr>
         <td>Legacy FTB Modpacks</td>
         <td>❌No</td>
-        <td>✅Download &amp; Install</td>
+        <td>✅Yes</td>
         <td>❌No</td>
         <td>❌No</td>
         <td>?</td>
-        <td>✅Download &amp; Install</td>
+        <td>✅Yes</td>
         <td>?</td>
         <td>❌No</td>
     </tr>
     <tr>
         <td>Technic Modpacks</td>
         <td>❌No</td>
-        <td>✅Download &amp; Install</td>
-        <td>✅Download &amp; Install</td>
+        <td>✅Yes</td>
+        <td>✅Yes</td>
         <td>❌No</td>
         <td>?</td>
         <td>?</td>
-        <td>✅Download &amp; Install</td>
+        <td>✅Yes</td>
         <td>❌No</td>
     </tr>
     <tr>
