@@ -16,16 +16,16 @@ This is here to structure a proper comparison table between the various launcher
         <th>Old Vanilla</th>
     </tr>
     <tr>
-        <th>Download Link</th>
-        <th>WIP</th>
-        <th>WIP</th>
-        <th>WIP</th>
-        <th>WIP</th>
-        <th>WIP</th>
-        <th>WIP</th>
-        <th>WIP</th>
-        <th>WIP</th>
-        <th>WIP</th>
+        <td>Download Link</td>
+        <td>WIP</td>
+        <td>WIP</td>
+        <td>WIP</td>
+        <td>WIP</td>
+        <td>WIP</td>
+        <td>WIP</td>
+        <td>WIP</td>
+        <td>WIP</td>
+        <td>WIP</td>
     </tr>
     <tr>
         <td>Open Source?</td>
