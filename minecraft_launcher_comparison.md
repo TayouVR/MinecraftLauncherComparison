@@ -14,6 +14,7 @@ This is here to structure a proper comparison table between the various launcher
         <th>FTB App</th>
         <th>Technic</th>
         <th>Old Vanilla</th>
+        <th>PoJavLauncher</th>
     </tr>
     <tr>
         <td>Download Link</td>
@@ -26,6 +27,20 @@ This is here to structure a proper comparison table between the various launcher
         <td><a href="https://www.feed-the-beast.com/app">feed-the-beast.com</a></td>
         <td><a href="https://www.technicpack.net/download">technicpack.net</a></td>
         <td><a href="https://launcher.mojang.com/download/">mojang.com</a></td>
+        <td><a href="https://play.google.com/store/apps/details?id=net.kdt.pojavlaunch">Play Store</a></td>
+    </tr>
+    <tr>
+        <td>Source Code</td>
+        <td>---</td>
+        <td><a href="https://github.com/PolyMC/PolyMC">github.com</a></td>
+        <td><a href="https://github.com/MultiMC/Launcher/">github.com</a></td>
+        <td><a href="https://github.com/ATLauncher/ATLauncher">github.com</a></td>
+        <td><a href="https://github.com/gorilla-devs/GDLauncher">github.com</a></td>
+        <td>---</td>
+        <td>---</td>
+        <td>---</td>
+        <td>---</td>
+        <td><a href="https://github.com/PojavLauncherTeam/PojavLauncher">github.com</a></td>
     </tr>
     <tr>
         <td>Operating Systems</td>
@@ -38,6 +53,7 @@ This is here to structure a proper comparison table between the various launcher
         <td>Windows, Linux, MacOS</td>
         <td>Windows, Linux, MacOS</td>
         <td>Windows, Linux, MacOS</td>
+        <td>Android, iOS</td>
     </tr>
     <tr>
         <td>Open Source?</td>
@@ -50,6 +66,7 @@ This is here to structure a proper comparison table between the various launcher
         <td>❌No</td>
         <td>❌No</td>
         <td>❌No</td>
+        <td>✅Yes, GPL3</td>
     </tr>
     <tr>
         <td>Programming Language / Frameworks</td>
@@ -61,7 +78,7 @@ This is here to structure a proper comparison table between the various launcher
         <td>Overwolf</td>
         <td>Overwolf</td>
         <td>Java</td>
-        <td>Java (AWT, Swing)</td>
+        <td>Java, C</td>
     </tr>
     <tr>
         <td>Modpack Support</td>
@@ -73,6 +90,7 @@ This is here to structure a proper comparison table between the various launcher
         <td>✅Yes</td>
         <td>✅Yes</td>
         <td>✅Yes</td>
+        <td>❌No</td>
         <td>❌No</td>
     </tr>
     <tr>
@@ -86,9 +104,10 @@ This is here to structure a proper comparison table between the various launcher
         <td>❌No</td>
         <td>❌No</td>
         <td>🟠No data is managed, only version switches</td>
+        <td>✅Yes (?)</td>
     </tr>
     <tr>
-        <th colspan=10>Modpacks</th>
+        <th colspan=11>Modpacks</th>
     </tr>
     <tr>
         <td>Curseforge Modpacks</td>
@@ -100,6 +119,7 @@ This is here to structure a proper comparison table between the various launcher
         <td>✅Yes</td>
         <td>✅Yes</td>
         <td>❔</td>
+        <td>❌No</td>
         <td>❌No</td>
     </tr>
     <tr>
@@ -113,6 +133,7 @@ This is here to structure a proper comparison table between the various launcher
         <td>❌No</td>
         <td>❔</td>
         <td>❌No</td>
+        <td>❌No</td>
     </tr>
     <tr>
         <td>ATLauncher Modpacks</td>
@@ -124,6 +145,7 @@ This is here to structure a proper comparison table between the various launcher
         <td>❔</td>
         <td>❌No</td>
         <td>❔</td>
+        <td>❌No</td>
         <td>❌No</td>
     </tr>
     <tr>
@@ -137,6 +159,7 @@ This is here to structure a proper comparison table between the various launcher
         <td>✅Yes</td>
         <td>❔</td>
         <td>❌No</td>
+        <td>❌No</td>
     </tr>
     <tr>
         <td>Legacy FTB Modpacks</td>
@@ -148,6 +171,7 @@ This is here to structure a proper comparison table between the various launcher
         <td>❔</td>
         <td>✅Yes</td>
         <td>❔</td>
+        <td>❌No</td>
         <td>❌No</td>
     </tr>
     <tr>
@@ -161,9 +185,10 @@ This is here to structure a proper comparison table between the various launcher
         <td>❌No</td>
         <td>✅Yes</td>
         <td>❌No</td>
+        <td>❌No</td>
     </tr>
     <tr>
-        <th colspan=10>Mod Loaders</th>
+        <th colspan=11>Mod Loaders</th>
     </tr>
     <tr>
         <td>Fabric Loader Support</td>
@@ -175,6 +200,7 @@ This is here to structure a proper comparison table between the various launcher
         <td>❔</td>
         <td>❌No</td>
         <td>❔</td>
+        <td>❌No</td>
         <td>❌No</td>
     </tr>
     <tr>
@@ -188,6 +214,7 @@ This is here to structure a proper comparison table between the various launcher
         <td>❌No</td>
         <td>❔</td>
         <td>❌No</td>
+        <td>❌No</td>
     </tr>
     <tr>
         <td>Quilt Loader Support</td>
@@ -199,6 +226,7 @@ This is here to structure a proper comparison table between the various launcher
         <td>❔</td>
         <td>❌No</td>
         <td>❔</td>
+        <td>❌No</td>
         <td>❌No</td>
     </tr>
     <tr>
@@ -212,9 +240,10 @@ This is here to structure a proper comparison table between the various launcher
         <td>❌No</td>
         <td>❔</td>
         <td>❌No</td>
+        <td>❌No</td>
     </tr>
     <tr>
-        <th colspan=10>Mods</th>
+        <th colspan=11>Mods</th>
     </tr>
     <tr>
         <td>Curseforge Mod Download</td>
@@ -226,6 +255,7 @@ This is here to structure a proper comparison table between the various launcher
         <td>✅Yes</td>
         <td>🚧Yes, but not functional</td>
         <td>❔</td>
+        <td>❌No</td>
         <td>❌No</td>
     </tr>
     <tr>
@@ -239,6 +269,7 @@ This is here to structure a proper comparison table between the various launcher
         <td>❌No</td>
         <td>❔</td>
         <td>❌No</td>
+        <td>❌No</td>
     </tr>
     <tr>
         <td>Curseforge Blocked Mod Download</td>
@@ -250,6 +281,7 @@ This is here to structure a proper comparison table between the various launcher
         <td>✅Yes</td>
         <td>❔Unknown (as mod search is not functional)</td>
         <td>❔</td>
+        <td>❌No</td>
         <td>❌No</td>
     </tr>
     <tr>
@@ -263,9 +295,10 @@ This is here to structure a proper comparison table between the various launcher
         <td>❌No</td>
         <td>❔</td>
         <td>❌No</td>
+        <td>❌No</td>
     </tr>
     <tr>
-        <th colspan=10>Misc</th>
+        <th colspan=11>Misc</th>
     </tr>
     <tr>
         <td>Server Instances</td>
@@ -277,6 +310,7 @@ This is here to structure a proper comparison table between the various launcher
         <td>❔</td>
         <td>❔</td>
         <td>❔</td>
+        <td>❌No</td>
         <td>❌No</td>
     </tr>
     <tr>
@@ -290,6 +324,7 @@ This is here to structure a proper comparison table between the various launcher
         <td>❔</td>
         <td>❔</td>
         <td>✅Yes</td>
+        <td>✅Yes</td>
     </tr>
     <tr>
         <td>Instance Export</td>
@@ -301,6 +336,7 @@ This is here to structure a proper comparison table between the various launcher
         <td>❔</td>
         <td>❔</td>
         <td>❔</td>
+        <td>❌No</td>
         <td>❌No</td>
     </tr>
     <tr>
@@ -314,6 +350,7 @@ This is here to structure a proper comparison table between the various launcher
         <td>❔</td>
         <td>❔</td>
         <td>❌No</td>
+        <td>❌No</td>
     </tr>
     <tr>
         <td>Look and Feel</td>
@@ -326,9 +363,10 @@ This is here to structure a proper comparison table between the various launcher
         <td>Custom</td>
         <td>Custom</td>
         <td>System (mostly)</td>
+        <td>Minecraft Knockoff</td>
     </tr>
     <tr>
-        <th colspan=10>Other Bloat</th>
+        <th colspan=11>Other Bloat</th>
     </tr>
     <tr>
         <td>Server Hosting Ad</td>
@@ -340,6 +378,7 @@ This is here to structure a proper comparison table between the various launcher
         <td>❔</td>
         <td>❔</td>
         <td>❔</td>
+        <td>❌No</td>
         <td>❌No</td>
     </tr>
     <tr>
@@ -353,6 +392,7 @@ This is here to structure a proper comparison table between the various launcher
         <td>✅Yes</td>
         <td>❌No</td>
         <td>❌No</td>
+        <td>✅Yes, for controls -> touch screen</td>
     </tr>
 </table>
 
