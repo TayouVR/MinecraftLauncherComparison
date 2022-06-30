@@ -16,6 +16,18 @@ This is here to structure a proper comparison table between the various launcher
         <th>Old Vanilla</th>
     </tr>
     <tr>
+        <th>Download Link</th>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th></th>
+    </tr>
+    <tr>
         <td>Open Source?</td>
         <td>❌No</td>
         <td>✅Yes, GPL3</td>
