@@ -59,7 +59,7 @@ This is here to structure a proper comparison table between the various launcher
         <td>Open Source?</td>   
         <td>❌No</td>                                    <!--Official-->
         <td>✅Yes, GPL3</td>                             <!--PolyMC-->
-        <td>🟠Yesno, GPL3, but its complicated</td>      <!--MultiMC-->
+        <td>🟠 Partially. MultiMC is proprietary but a debranded MS-PL licensed version which lacks many keys MultiMC uses is available on GitHub</td>      <!--MultiMC-->
         <td>✅Yes, GPL3</td>                             <!--ATLauncher-->
         <td>✅Yes, GPL3 (has <a href="https://cla-assistant.io/gorilla-devs/GDLauncher">CLA</a>)</td>                             <!--GDLauncher-->
         <td>❌No</td>                                    <!--Curseforge-->
