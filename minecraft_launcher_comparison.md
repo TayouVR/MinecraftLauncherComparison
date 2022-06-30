@@ -61,7 +61,7 @@ This is here to structure a proper comparison table between the various launcher
         <td>✅Yes, GPL3</td>                             <!--PolyMC-->
         <td>✅Yes, GPL3</td>                             <!--MultiMC-->
         <td>✅Yes, GPL3</td>                             <!--ATLauncher-->
-        <td>✅Yes, GPL3</td>                             <!--GDLauncher-->
+        <td>✅Yes, GPL3 (has <a href="https://cla-assistant.io/gorilla-devs/GDLauncher">CLA</a>)</td>                             <!--GDLauncher-->
         <td>❌No</td>                                    <!--Curseforge-->
         <td>❌No (Old Version is, modern one not)</td>   <!--FTB App-->
         <td>❌No</td>                                    <!--Technic Launcher-->
