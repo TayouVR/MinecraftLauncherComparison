@@ -111,9 +111,9 @@ This is here to structure a proper comparison table between the various launcher
     <tr>
         <td>Fabric Loader Support</td>
         <td>❌No</td>
-        <td>✅Download &amp; Install</td>
-        <td>✅Download &amp; Install</td>
-        <td>✅Download &amp; Install</td>
+        <td>✅Yes</td>
+        <td>✅Yes</td>
+        <td>✅Yes</td>
         <td>?</td>
         <td>?</td>
         <td>?</td>
@@ -122,9 +122,9 @@ This is here to structure a proper comparison table between the various launcher
     <tr>
         <td>Forge Loader Support</td>
         <td>❌No</td>
-        <td>✅Download &amp; Install</td>
-        <td>✅Download &amp; Install</td>
-        <td>✅Download &amp; Install</td>
+        <td>✅Yes</td>
+        <td>✅Yes</td>
+        <td>✅Yes</td>
         <td>?</td>
         <td>?</td>
         <td>?</td>
@@ -133,8 +133,8 @@ This is here to structure a proper comparison table between the various launcher
     <tr>
         <td>Quilt Loader Support</td>
         <td>❌No</td>
-        <td>✅Download &amp; Install</td>
-        <td>✅Download &amp; Install</td>
+        <td>✅Yes</td>
+        <td>✅Yes</td>
         <td>❌No</td>
         <td>?</td>
         <td>?</td>
@@ -144,7 +144,7 @@ This is here to structure a proper comparison table between the various launcher
     <tr>
         <td>LiteLoader Support</td>
         <td>❌No</td>
-        <td>✅Download &amp; Install</td>
+        <td>✅Yes</td>
         <td>❌No</td>
         <td>❌No</td>
         <td>?</td>
