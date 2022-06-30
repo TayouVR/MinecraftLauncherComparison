@@ -247,3 +247,5 @@ This is here to structure a proper comparison table between the various launcher
         <td>❌No</td>
     </tr>
 </table>
+
+### Technic Launcher seems to specifically require oracle JDK / JRE 1.8.0 of any sub version. Other Java installs like Adoptium Temurin don't seem to work. (tested on Windows 10 with adoptium temurin 8.0.332-9, installed through scoop)
