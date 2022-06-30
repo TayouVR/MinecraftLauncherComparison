@@ -44,29 +44,29 @@ This is here to structure a proper comparison table between the various launcher
     </tr>
     <tr>
         <td>Operating Systems</td>
-        <td>Windows, Linux, MacOS</td>
-        <td>Windows, Linux, MacOS</td>
-        <td>Windows, Linux, MacOS</td>
-        <td>Windows, Linux, MacOS</td>
-        <td>Windows, Linux, MacOS</td>
-        <td>Windows, Linux, MacOS</td>
-        <td>Windows, Linux, MacOS</td>
-        <td>Windows, Linux, MacOS</td>
-        <td>Windows, Linux, MacOS</td>
-        <td>Android, iOS</td>
+        <td>Windows, Linux, MacOS</td>  <!--Official-->
+        <td>Windows, Linux, MacOS</td>  <!--PolyMC-->
+        <td>Windows, Linux, MacOS</td>  <!--MultiMC-->
+        <td>Windows, Linux, MacOS</td>  <!--ATLauncher-->
+        <td>Windows, Linux, MacOS</td>  <!--GDLauncher-->
+        <td>Windows, MacOS</td>         <!--Curseforge-->
+        <td>Windows, Linux, MacOS</td>  <!--FTB App-->
+        <td>Windows, Linux, MacOS</td>  <!--Technic Launcher-->
+        <td>Windows, Linux, MacOS</td>  <!--Old Official-->
+        <td>Android, iOS</td>           <!--PoJavLauncher-->
     </tr>
     <tr>
-        <td>Open Source?</td>
-        <td>❌No</td>
-        <td>✅Yes, GPL3</td>
-        <td>✅Yes, GPL3</td>
-        <td>✅Yes, GPL3</td>
-        <td>✅Yes, GPL3</td>
-        <td>❌No</td>
-        <td>❌No</td>
-        <td>❌No</td>
-        <td>❌No</td>
-        <td>✅Yes, GPL3</td>
+        <td>Open Source?</td>   
+        <td>❌No</td>           <!--Official-->
+        <td>✅Yes, GPL3</td>    <!--PolyMC-->
+        <td>✅Yes, GPL3</td>    <!--MultiMC-->
+        <td>✅Yes, GPL3</td>    <!--ATLauncher-->
+        <td>✅Yes, GPL3</td>    <!--GDLauncher-->
+        <td>❌No</td>           <!--Curseforge-->
+        <td>❌No</td>           <!--FTB App-->
+        <td>❌No</td>           <!--Technic Launcher-->
+        <td>❌No</td>           <!--Old Official-->
+        <td>✅Yes, GPL3</td>    <!--PoJavLauncher-->
     </tr>
     <tr>
         <td>Programming Language / Frameworks</td>
