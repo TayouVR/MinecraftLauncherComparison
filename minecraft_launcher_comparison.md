@@ -1,6 +1,6 @@
 # Minecraft Launcher Comparison (Vanilla, PolyMC, ATLauncher, GDLauncher, Curseforge, FTB, Technic)
 
-This is here to structure a proper comparison table between the various launchers for Minecraft.
+This is here to structure a proper comparison table between the various launchers for Minecraft (Java Edition).
 
 <table>
     <tr>
