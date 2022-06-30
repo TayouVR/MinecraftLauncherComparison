@@ -17,15 +17,15 @@ This is here to structure a proper comparison table between the various launcher
     </tr>
     <tr>
         <th>Download Link</th>
-        <th></th>
-        <th></th>
-        <th></th>
-        <th></th>
-        <th></th>
-        <th></th>
-        <th></th>
-        <th></th>
-        <th></th>
+        <th>WIP</th>
+        <th>WIP</th>
+        <th>WIP</th>
+        <th>WIP</th>
+        <th>WIP</th>
+        <th>WIP</th>
+        <th>WIP</th>
+        <th>WIP</th>
+        <th>WIP</th>
     </tr>
     <tr>
         <td>Open Source?</td>
