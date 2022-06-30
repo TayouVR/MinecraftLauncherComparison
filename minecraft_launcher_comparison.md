@@ -53,7 +53,7 @@ This is here to structure a proper comparison table between the various launcher
     </tr>
     <tr>
         <td>Custom Instance Support</td>
-        <td>🟠Partially (Version / Mod specific data isn't managed)</td>
+        <td>🟠No data is managed, only version switches</td>
         <td>✅Yes</td>
         <td>✅Yes</td>
         <td>✅Yes</td>
@@ -61,7 +61,7 @@ This is here to structure a proper comparison table between the various launcher
         <td>?</td>
         <td>❌No</td>
         <td>❌No</td>
-        <td>🟠Partially (Version / Mod specific data isn't managed)</td>
+        <td>🟠No data is managed, only version switches</td>
     </tr>
     <tr>
         <th colspan=10>Modpacks</th>
