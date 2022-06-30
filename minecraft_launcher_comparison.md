@@ -22,7 +22,7 @@ This is here to structure a proper comparison table between the various launcher
         <td>✅Yes</td>
         <td>❌No</td>
         <td>?</td>
-        <td>?</td>
+        <td>❌No</td>
         <td>❌No</td>
     </tr>
     <tr>
@@ -33,7 +33,7 @@ This is here to structure a proper comparison table between the various launcher
         <td>Web (HTML, JS, CSS)</td>
         <td>?</td>
         <td>?</td>
-        <td>?</td>
+        <td>Java</td>
         <td>Java</td>
     </tr>
     <tr>
