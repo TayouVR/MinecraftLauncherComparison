@@ -57,16 +57,16 @@ This is here to structure a proper comparison table between the various launcher
     </tr>
     <tr>
         <td>Open Source?</td>   
-        <td>❌No</td>           <!--Official-->
-        <td>✅Yes, GPL3</td>    <!--PolyMC-->
-        <td>✅Yes, GPL3</td>    <!--MultiMC-->
-        <td>✅Yes, GPL3</td>    <!--ATLauncher-->
-        <td>✅Yes, GPL3</td>    <!--GDLauncher-->
-        <td>❌No</td>           <!--Curseforge-->
-        <td>❌No</td>           <!--FTB App-->
-        <td>❌No</td>           <!--Technic Launcher-->
-        <td>❌No</td>           <!--Old Official-->
-        <td>✅Yes, GPL3</td>    <!--PoJavLauncher-->
+        <td>❌No</td>                                    <!--Official-->
+        <td>✅Yes, GPL3</td>                             <!--PolyMC-->
+        <td>✅Yes, GPL3</td>                             <!--MultiMC-->
+        <td>✅Yes, GPL3</td>                             <!--ATLauncher-->
+        <td>✅Yes, GPL3</td>                             <!--GDLauncher-->
+        <td>❌No</td>                                    <!--Curseforge-->
+        <td>❌No (Old Version is, modern one not)</td>   <!--FTB App-->
+        <td>❌No</td>                                    <!--Technic Launcher-->
+        <td>❌No</td>                                    <!--Old Official-->
+        <td>✅Yes, GPL3</td>                             <!--PoJavLauncher-->
     </tr>
     <tr>
         <td>Programming Language / Frameworks</td>
