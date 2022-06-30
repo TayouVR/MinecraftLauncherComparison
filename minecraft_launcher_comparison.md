@@ -316,7 +316,7 @@ This is here to structure a proper comparison table between the various launcher
         <td>System (mostly)</td>
     </tr>
     <tr>
-        <th colspan=9>other Bloat</th>
+        <th colspan=10>Other Bloat</th>
     </tr>
     <tr>
         <td>Server Hosting Ad</td>
