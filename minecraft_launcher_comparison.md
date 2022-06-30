@@ -157,7 +157,7 @@ This is here to structure a proper comparison table between the various launcher
         <td>Fabric Loader Support</td>
         <td>❌No</td>
         <td>✅Yes</td>
-        <td>❌No</td>
+        <td>✅Yes</td>
         <td>✅Yes</td>
         <td>✅Yes</td>
         <td>?</td>
