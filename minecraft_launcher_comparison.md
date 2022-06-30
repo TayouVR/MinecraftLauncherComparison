@@ -212,7 +212,7 @@ This is here to structure a proper comparison table between the various launcher
         <td>✅Yes</td>
         <td>✅Yes</td>
         <td>✅Yes</td>
-        <td>✅Yes</td>
+        <td>🚧Yes, but not functional</td>
         <td>?</td>
         <td>❌No</td>
     </tr>
@@ -236,7 +236,7 @@ This is here to structure a proper comparison table between the various launcher
         <td>🟠Partially (via web browser, automatically moves mod)</td>
         <td>✅Yes (by using standard browser user agent)</td>
         <td>✅Yes</td>
-        <td>🚧Yes, but not functional</td>
+        <td>? Unknown (as mod search is not functional)</td>
         <td>?</td>
         <td>❌No</td>
     </tr>
