@@ -37,6 +37,28 @@ This is here to structure a proper comparison table between the various launcher
         <td>Java (AWT, Swing)</td>
     </tr>
     <tr>
+        <td>Modpack Support</td>
+        <td>❌No</td>
+        <td>✅Yes</td>
+        <td>✅Yes</td>
+        <td>✅Yes</td>
+        <td>✅Yes</td>
+        <td>✅Yes</td>
+        <td>✅Yes</td>
+        <td>❌No</td>
+    </tr>
+    <tr>
+        <td>Custom Instance Support</td>
+        <td>✅Yes</td>
+        <td>✅Yes</td>
+        <td>✅Yes</td>
+        <td>✅Yes</td>
+        <td>?</td>
+        <td>❌No</td>
+        <td>❌No</td>
+        <td>✅Yes</td>
+    </tr>
+    <tr>
         <th colspan=9>Modpacks</th>
     </tr>
     <tr>
@@ -45,8 +67,8 @@ This is here to structure a proper comparison table between the various launcher
         <td>✅Yes</td>
         <td>✅Yes</td>
         <td>✅Yes</td>
-        <td>?</td>
-        <td>?</td>
+        <td>✅Yes</td>
+        <td>✅Yes</td>
         <td>?</td>
         <td>❌No</td>
     </tr>
@@ -57,7 +79,7 @@ This is here to structure a proper comparison table between the various launcher
         <td>✅Yes</td>
         <td>❌No</td>
         <td>?</td>
-        <td>?</td>
+        <td>❌No</td>
         <td>?</td>
         <td>❌No</td>
     </tr>
@@ -68,7 +90,7 @@ This is here to structure a proper comparison table between the various launcher
         <td>✅Yes</td>
         <td>❌No</td>
         <td>?</td>
-        <td>?</td>
+        <td>❌No</td>
         <td>?</td>
         <td>❌No</td>
     </tr>
@@ -101,7 +123,7 @@ This is here to structure a proper comparison table between the various launcher
         <td>✅Yes</td>
         <td>❌No</td>
         <td>?</td>
-        <td>?</td>
+        <td>❌No</td>
         <td>✅Yes</td>
         <td>❌No</td>
     </tr>
@@ -115,7 +137,7 @@ This is here to structure a proper comparison table between the various launcher
         <td>✅Yes</td>
         <td>✅Yes</td>
         <td>?</td>
-        <td>?</td>
+        <td>❌No</td>
         <td>?</td>
         <td>❌No</td>
     </tr>
@@ -126,7 +148,7 @@ This is here to structure a proper comparison table between the various launcher
         <td>✅Yes</td>
         <td>✅Yes</td>
         <td>?</td>
-        <td>?</td>
+        <td>❌No</td>
         <td>?</td>
         <td>❌No</td>
     </tr>
@@ -137,7 +159,7 @@ This is here to structure a proper comparison table between the various launcher
         <td>✅Yes</td>
         <td>❌No</td>
         <td>?</td>
-        <td>?</td>
+        <td>❌No</td>
         <td>?</td>
         <td>❌No</td>
     </tr>
@@ -148,7 +170,7 @@ This is here to structure a proper comparison table between the various launcher
         <td>❌No</td>
         <td>❌No</td>
         <td>?</td>
-        <td>?</td>
+        <td>❌No</td>
         <td>?</td>
         <td>❌No</td>
     </tr>
@@ -162,7 +184,7 @@ This is here to structure a proper comparison table between the various launcher
         <td>✅Yes</td>
         <td>✅Yes</td>
         <td>✅Yes</td>
-        <td>?</td>
+        <td>✅Yes</td>
         <td>?</td>
         <td>❌No</td>
     </tr>
@@ -172,8 +194,8 @@ This is here to structure a proper comparison table between the various launcher
         <td>✅Yes</td>
         <td>✅Yes</td>
         <td>❌No</td>
-        <td>?</td>
-        <td>?</td>
+        <td>❌No</td>
+        <td>❌No</td>
         <td>?</td>
         <td>❌No</td>
     </tr>
@@ -184,7 +206,7 @@ This is here to structure a proper comparison table between the various launcher
         <td>🟠Partially (via web browser, automatically moves mod)</td>
         <td>✅Yes (by using standard browser user agent)</td>
         <td>✅Yes</td>
-        <td>?</td>
+        <td>🚧Yes, but not functional</td>
         <td>?</td>
         <td>❌No</td>
     </tr>
@@ -195,7 +217,7 @@ This is here to structure a proper comparison table between the various launcher
         <td>✅Yes</td>
         <td>✅Yes</td>
         <td>?</td>
-        <td>?</td>
+        <td>❌No</td>
         <td>?</td>
         <td>❌No</td>
     </tr>
@@ -244,6 +266,31 @@ This is here to structure a proper comparison table between the various launcher
         <td>?</td>
         <td>?</td>
         <td>?</td>
+        <td>❌No</td>
+    </tr>
+    <tr>
+        <th colspan=9>other Bloat</th>
+    </tr>
+    <tr>
+        <td>Server Hosting Ad</td>
+        <td>❌No</td>
+        <td>❌No</td>
+        <td>❌No</td>
+        <td>✅Yes</td>
+        <td>?</td>
+        <td>?</td>
+        <td>?</td>
+        <td>❌No</td>
+    </tr>
+    <tr>
+        <td>In Game Overlay</td>
+        <td>❌No</td>
+        <td>❌No</td>
+        <td>❌No</td>
+        <td>❌No</td>
+        <td>✅Yes</td>
+        <td>✅Yes</td>
+        <td>❌No</td>
         <td>❌No</td>
     </tr>
 </table>
