@@ -269,6 +269,17 @@ This is here to structure a proper comparison table between the various launcher
         <td>❌No</td>
     </tr>
     <tr>
+        <td>Look and Feel</td>
+        <td>Minecraft Official</td>
+        <td>System (configurable)</td>
+        <td>Configurable</td>
+        <td>Custom</td>
+        <td>Custom</td>
+        <td>Custom</td>
+        <td>Custom</td>
+        <td>System (mostly)</td>
+    </tr>
+    <tr>
         <th colspan=9>other Bloat</th>
     </tr>
     <tr>
