@@ -108,7 +108,7 @@ This is here to structure a proper comparison table between the various launcher
         <td>✅Yes (?)</td>
     </tr>
     <tr>
-        <th colspan=11>Modpacks</th>
+        <th colspan=11>Installing Modpacks through Launcher</th>
     </tr>
     <tr>
         <td>Curseforge Modpacks</td>
@@ -189,7 +189,7 @@ This is here to structure a proper comparison table between the various launcher
         <td>❌No</td>
     </tr>
     <tr>
-        <th colspan=11>Mod Loaders</th>
+        <th colspan=11>Installing Mod Loaders through Launcher</th>
     </tr>
     <tr>
         <td>Fabric Loader Support</td>
@@ -244,7 +244,7 @@ This is here to structure a proper comparison table between the various launcher
         <td>❌No</td>
     </tr>
     <tr>
-        <th colspan=11>Mods</th>
+        <th colspan=11>Installing Mods through Launcher</th>
     </tr>
     <tr>
         <td>Curseforge Mod Download</td>
