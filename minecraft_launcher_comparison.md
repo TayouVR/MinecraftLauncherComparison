@@ -17,15 +17,15 @@ This is here to structure a proper comparison table between the various launcher
     </tr>
     <tr>
         <td>Download Link</td>
-        <td>WIP</td>
-        <td>WIP</td>
-        <td>WIP</td>
-        <td>WIP</td>
-        <td>WIP</td>
-        <td>WIP</td>
-        <td>WIP</td>
-        <td>WIP</td>
-        <td>WIP</td>
+        <td><a href="https://launcher.mojang.com/download/">mojang.com</a></td>
+        <td><a href="https://polymc.org/download/">polymc.org</a></td>
+        <td><a href="https://multimc.org/#Download">multimc.org</a></td>
+        <td><a href="https://atlauncher.com/downloads">atlauncher.com</a></td>
+        <td><a href="https://gdevs.io/#downloadContainer">gdevs.io</a></td>
+        <td><a href="https://download.curseforge.com/">curseforge.com</a></td>
+        <td><a href="https://www.feed-the-beast.com/app">feed-the-beast.com</a></td>
+        <td><a href="https://www.technicpack.net/download">technicpack.net</a></td>
+        <td><a href="https://launcher.mojang.com/download/">mojang.com</a></td>
     </tr>
     <tr>
         <td>Open Source?</td>
