@@ -44,7 +44,7 @@ This is here to structure a proper comparison table between the various launcher
     </tr>
     <tr>
         <td>Operating Systems</td>
-        <td>Windows 10 & 11</td>
+        <td>Windows, Linux, MacOS</td>
         <td>Windows, Linux, MacOS</td>
         <td>Windows, Linux, MacOS</td>
         <td>Windows, Linux, MacOS</td>
@@ -71,8 +71,8 @@ This is here to structure a proper comparison table between the various launcher
     <tr>
         <td>Programming Language / Frameworks</td>
         <td>C#, Probably</td>
-        <td>C++, C (Qt)</td>
-        <td>C++, C (Qt)</td>
+        <td>C++ (Qt)</td>
+        <td>C++ (Qt)</td>
         <td>Java</td>
         <td>Web (HTML, JS, CSS)</td>
         <td>Overwolf</td>
@@ -370,13 +370,13 @@ This is here to structure a proper comparison table between the various launcher
         <th colspan=11>Other Bloat</th>
     </tr>
     <tr>
-        <td>Server Hosting Ad</td>
+        <td>Advertisements</td>
         <td>❌No</td>
         <td>❌No</td>
         <td>❌No</td>
         <td>❌No</td>
         <td>✅Yes</td>
-        <td>❔</td>
+        <td>✅Yes</td>
         <td>❔</td>
         <td>❔</td>
         <td>❌No</td>
