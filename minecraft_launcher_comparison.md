@@ -70,7 +70,7 @@ This is here to structure a proper comparison table between the various launcher
         <td>✅Yes</td>
         <td>✅Yes</td>
         <td>✅Yes</td>
-        <td>?</td>
+        <td>❔</td>
         <td>❌No</td>
         <td>❌No</td>
         <td>🟠No data is managed, only version switches</td>
@@ -87,7 +87,7 @@ This is here to structure a proper comparison table between the various launcher
         <td>✅Yes</td>
         <td>✅Yes</td>
         <td>✅Yes</td>
-        <td>?</td>
+        <td>❔</td>
         <td>❌No</td>
     </tr>
     <tr>
@@ -97,9 +97,9 @@ This is here to structure a proper comparison table between the various launcher
         <td>❌No</td>
         <td>✅Yes</td>
         <td>❌No</td>
-        <td>?</td>
+        <td>❔</td>
         <td>❌No</td>
-        <td>?</td>
+        <td>❔</td>
         <td>❌No</td>
     </tr>
     <tr>
@@ -109,9 +109,9 @@ This is here to structure a proper comparison table between the various launcher
         <td>✅Yes</td>
         <td>✅Yes</td>
         <td>❌No</td>
-        <td>?</td>
+        <td>❔</td>
         <td>❌No</td>
-        <td>?</td>
+        <td>❔</td>
         <td>❌No</td>
     </tr>
     <tr>
@@ -121,9 +121,9 @@ This is here to structure a proper comparison table between the various launcher
         <td>✅Yes</td>
         <td>✅Yes</td>
         <td>✅Yes</td>
-        <td>?</td>
+        <td>❔</td>
         <td>✅Yes</td>
-        <td>?</td>
+        <td>❔</td>
         <td>❌No</td>
     </tr>
     <tr>
@@ -133,9 +133,9 @@ This is here to structure a proper comparison table between the various launcher
         <td>✅Yes</td>
         <td>❌No</td>
         <td>❌No</td>
-        <td>?</td>
+        <td>❔</td>
         <td>✅Yes</td>
-        <td>?</td>
+        <td>❔</td>
         <td>❌No</td>
     </tr>
     <tr>
@@ -145,7 +145,7 @@ This is here to structure a proper comparison table between the various launcher
         <td>✅Yes</td>
         <td>✅Yes</td>
         <td>❌No</td>
-        <td>?</td>
+        <td>❔</td>
         <td>❌No</td>
         <td>✅Yes</td>
         <td>❌No</td>
@@ -160,9 +160,9 @@ This is here to structure a proper comparison table between the various launcher
         <td>✅Yes</td>
         <td>✅Yes</td>
         <td>✅Yes</td>
-        <td>?</td>
+        <td>❔</td>
         <td>❌No</td>
-        <td>?</td>
+        <td>❔</td>
         <td>❌No</td>
     </tr>
     <tr>
@@ -172,9 +172,9 @@ This is here to structure a proper comparison table between the various launcher
         <td>✅Yes</td>
         <td>✅Yes</td>
         <td>✅Yes</td>
-        <td>?</td>
+        <td>❔</td>
         <td>❌No</td>
-        <td>?</td>
+        <td>❔</td>
         <td>❌No</td>
     </tr>
     <tr>
@@ -184,9 +184,9 @@ This is here to structure a proper comparison table between the various launcher
         <td>❌No</td>
         <td>✅Yes</td>
         <td>❌No</td>
-        <td>?</td>
+        <td>❔</td>
         <td>❌No</td>
-        <td>?</td>
+        <td>❔</td>
         <td>❌No</td>
     </tr>
     <tr>
@@ -196,9 +196,9 @@ This is here to structure a proper comparison table between the various launcher
         <td>✅Yes</td>
         <td>❌No</td>
         <td>❌No</td>
-        <td>?</td>
+        <td>❔</td>
         <td>❌No</td>
-        <td>?</td>
+        <td>❔</td>
         <td>❌No</td>
     </tr>
     <tr>
@@ -213,7 +213,7 @@ This is here to structure a proper comparison table between the various launcher
         <td>✅Yes</td>
         <td>✅Yes</td>
         <td>🚧Yes, but not functional</td>
-        <td>?</td>
+        <td>❔</td>
         <td>❌No</td>
     </tr>
     <tr>
@@ -225,7 +225,7 @@ This is here to structure a proper comparison table between the various launcher
         <td>❌No</td>
         <td>❌No</td>
         <td>❌No</td>
-        <td>?</td>
+        <td>❔</td>
         <td>❌No</td>
     </tr>
     <tr>
@@ -236,8 +236,8 @@ This is here to structure a proper comparison table between the various launcher
         <td>🟠Partially (via web browser, automatically moves mod)</td>
         <td>✅Yes (by using standard browser user agent)</td>
         <td>✅Yes</td>
-        <td>? Unknown (as mod search is not functional)</td>
-        <td>?</td>
+        <td>❔Unknown (as mod search is not functional)</td>
+        <td>❔</td>
         <td>❌No</td>
     </tr>
     <tr>
@@ -247,9 +247,9 @@ This is here to structure a proper comparison table between the various launcher
         <td>❌No</td>
         <td>✅Yes</td>
         <td>✅Yes</td>
-        <td>?</td>
+        <td>❔</td>
         <td>❌No</td>
-        <td>?</td>
+        <td>❔</td>
         <td>❌No</td>
     </tr>
     <tr>
@@ -262,9 +262,9 @@ This is here to structure a proper comparison table between the various launcher
         <td>❌No</td>
         <td>✅Yes</td>
         <td>❌No</td>
-        <td>?</td>
-        <td>?</td>
-        <td>?</td>
+        <td>❔</td>
+        <td>❔</td>
+        <td>❔</td>
         <td>❌No</td>
     </tr>
     <tr>
@@ -274,9 +274,9 @@ This is here to structure a proper comparison table between the various launcher
         <td>❌No</td>
         <td>✅Optional</td>
         <td>✅Optioinal</td>
-        <td>?</td>
-        <td>?</td>
-        <td>?</td>
+        <td>❔</td>
+        <td>❔</td>
+        <td>❔</td>
         <td>✅Yes</td>
     </tr>
     <tr>
@@ -286,9 +286,9 @@ This is here to structure a proper comparison table between the various launcher
         <td>MultiMC</td>
         <td>Curseforge, Modrinth, MultiMC</td>
         <td>Curseforge</td>
-        <td>?</td>
-        <td>?</td>
-        <td>?</td>
+        <td>❔</td>
+        <td>❔</td>
+        <td>❔</td>
         <td>❌No</td>
     </tr>
     <tr>
@@ -298,9 +298,9 @@ This is here to structure a proper comparison table between the various launcher
         <td>Curseforge, MultiMC, Technic</td>
         <td>Curseforge, Modrinth, MultiMC</td>
         <td>Curseforge</td>
-        <td>?</td>
-        <td>?</td>
-        <td>?</td>
+        <td>❔</td>
+        <td>❔</td>
+        <td>❔</td>
         <td>❌No</td>
     </tr>
     <tr>
@@ -325,9 +325,9 @@ This is here to structure a proper comparison table between the various launcher
         <td>❌No</td>
         <td>❌No</td>
         <td>✅Yes</td>
-        <td>?</td>
-        <td>?</td>
-        <td>?</td>
+        <td>❔</td>
+        <td>❔</td>
+        <td>❔</td>
         <td>❌No</td>
     </tr>
     <tr>
