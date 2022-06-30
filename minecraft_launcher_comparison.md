@@ -78,6 +78,7 @@ This is here to structure a proper comparison table between the various launcher
         <td>Overwolf</td>
         <td>Overwolf</td>
         <td>Java</td>
+        <td>Java (AWT, Swing)</td>
         <td>Java, C</td>
     </tr>
     <tr>
