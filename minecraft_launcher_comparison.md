@@ -59,7 +59,7 @@ This is here to structure a proper comparison table between the various launcher
         <td>Open Source?</td>   
         <td>❌No</td>                                    <!--Official-->
         <td>✅Yes, GPL3</td>                             <!--PolyMC-->
-        <td>✅Yes, GPL3</td>                             <!--MultiMC-->
+        <td>🟠Yesno, GPL3, but its complicated</td>      <!--MultiMC-->
         <td>✅Yes, GPL3</td>                             <!--ATLauncher-->
         <td>✅Yes, GPL3 (has <a href="https://cla-assistant.io/gorilla-devs/GDLauncher">CLA</a>)</td>                             <!--GDLauncher-->
         <td>❌No</td>                                    <!--Curseforge-->
@@ -153,7 +153,7 @@ This is here to structure a proper comparison table between the various launcher
         <td>FTB Modpacks</td>
         <td>❌No</td>
         <td>✅Yes</td>
-        <td>✅Yes</td>
+        <td>❌No</td>
         <td>✅Yes</td>
         <td>✅Yes</td>
         <td>❔</td>
@@ -166,7 +166,7 @@ This is here to structure a proper comparison table between the various launcher
         <td>Legacy FTB Modpacks</td>
         <td>❌No</td>
         <td>✅Yes</td>
-        <td>✅Yes</td>
+        <td>❌No</td>
         <td>❌No</td>
         <td>❌No</td>
         <td>❔</td>
@@ -221,7 +221,7 @@ This is here to structure a proper comparison table between the various launcher
         <td>Quilt Loader Support</td>
         <td>❌No</td>
         <td>✅Yes</td>
-        <td>❌No</td>
+        <td>✅Yes</td>
         <td>✅Yes</td>
         <td>❌No</td>
         <td>❔</td>
@@ -265,7 +265,7 @@ This is here to structure a proper comparison table between the various launcher
         <td>✅Yes</td>
         <td>❌No</td>
         <td>✅Yes</td>
-        <td>❌No</td>
+        <td>🚧WIP</td>
         <td>❌No</td>
         <td>❌No</td>
         <td>❔</td>
@@ -377,7 +377,7 @@ This is here to structure a proper comparison table between the various launcher
         <td>❌No</td>
         <td>✅Yes</td>
         <td>✅Yes</td>
-        <td>❔</td>
+        <td>✅Yes</td>
         <td>❔</td>
         <td>❌No</td>
         <td>❌No</td>
