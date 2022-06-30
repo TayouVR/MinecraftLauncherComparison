@@ -231,7 +231,7 @@ This is here to structure a proper comparison table between the various launcher
     <tr>
         <td>Mod Updating</td>
         <td>❌No</td>
-        <td>🚧No (WIP)</td>
+        <td>🚧WIP</td>
         <td>❌No</td>
         <td>✅Yes</td>
         <td>✅Yes</td>
@@ -258,7 +258,7 @@ This is here to structure a proper comparison table between the various launcher
     <tr>
         <td>Automatic Java Setup</td>
         <td>✅Yes</td>
-        <td>🚧No (WIP)</td>
+        <td>🚧WIP</td>
         <td>❌No</td>
         <td>✅Optional</td>
         <td>✅Optioinal</td>
