@@ -21,7 +21,7 @@ This is here to structure a proper comparison table between the various launcher
         <td>✅Yes</td>
         <td>✅Yes</td>
         <td>❌No</td>
-        <td>?</td>
+        <td>❌No</td>
         <td>❌No</td>
         <td>❌No</td>
     </tr>
@@ -49,14 +49,14 @@ This is here to structure a proper comparison table between the various launcher
     </tr>
     <tr>
         <td>Custom Instance Support</td>
-        <td>✅Yes</td>
+        <td>🟠Partially (Version / Mod specific data isn't managed)</td>
         <td>✅Yes</td>
         <td>✅Yes</td>
         <td>✅Yes</td>
         <td>?</td>
         <td>❌No</td>
         <td>❌No</td>
-        <td>✅Yes</td>
+        <td>🟠Partially (Version / Mod specific data isn't managed)</td>
     </tr>
     <tr>
         <th colspan=9>Modpacks</th>
