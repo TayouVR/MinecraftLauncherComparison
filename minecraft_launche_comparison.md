@@ -48,7 +48,7 @@ This is here to structure a proper comparison table between the various launcher
         <td>?</td>
         <td>?</td>
         <td>?</td>
-        <td>?</td>
+        <td>❌No</td>
     </tr>
     <tr>
         <td>Modrinth Modpacks</td>
@@ -59,7 +59,7 @@ This is here to structure a proper comparison table between the various launcher
         <td>?</td>
         <td>?</td>
         <td>?</td>
-        <td>?</td>
+        <td>❌No</td>
     </tr>
     <tr>
         <td>ATLauncher Modpacks</td>
@@ -70,7 +70,7 @@ This is here to structure a proper comparison table between the various launcher
         <td>?</td>
         <td>?</td>
         <td>?</td>
-        <td>?</td>
+        <td>❌No</td>
     </tr>
     <tr>
         <td>FTB Modpacks</td>
@@ -81,7 +81,7 @@ This is here to structure a proper comparison table between the various launcher
         <td>?</td>
         <td>✅Download &amp; Install</td>
         <td>?</td>
-        <td>?</td>
+        <td>❌No</td>
     </tr>
     <tr>
         <td>Legacy FTB Modpacks</td>
@@ -92,7 +92,7 @@ This is here to structure a proper comparison table between the various launcher
         <td>?</td>
         <td>✅Download &amp; Install</td>
         <td>?</td>
-        <td>?</td>
+        <td>❌No</td>
     </tr>
     <tr>
         <td>Technic Modpacks</td>
@@ -103,7 +103,7 @@ This is here to structure a proper comparison table between the various launcher
         <td>?</td>
         <td>?</td>
         <td>✅Download &amp; Install</td>
-        <td>?</td>
+        <td>❌No</td>
     </tr>
     <tr>
         <th colspan=9>Mod Loaders</th>
@@ -117,7 +117,7 @@ This is here to structure a proper comparison table between the various launcher
         <td>?</td>
         <td>?</td>
         <td>?</td>
-        <td>?</td>
+        <td>❌No</td>
     </tr>
     <tr>
         <td>Forge Loader Support</td>
@@ -128,7 +128,7 @@ This is here to structure a proper comparison table between the various launcher
         <td>?</td>
         <td>?</td>
         <td>?</td>
-        <td>?</td>
+        <td>❌No</td>
     </tr>
     <tr>
         <td>Quilt Loader Support</td>
@@ -139,7 +139,7 @@ This is here to structure a proper comparison table between the various launcher
         <td>?</td>
         <td>?</td>
         <td>?</td>
-        <td>?</td>
+        <td>❌No</td>
     </tr>
     <tr>
         <td>LiteLoader Support</td>
@@ -150,7 +150,7 @@ This is here to structure a proper comparison table between the various launcher
         <td>?</td>
         <td>?</td>
         <td>?</td>
-        <td>?</td>
+        <td>❌No</td>
     </tr>
     <tr>
         <th colspan=9>Mods</th>
@@ -164,7 +164,7 @@ This is here to structure a proper comparison table between the various launcher
         <td>✅Yes</td>
         <td>?</td>
         <td>?</td>
-        <td>?</td>
+        <td>❌No</td>
     </tr>
     <tr>
         <td>Modrinth Mod Download</td>
@@ -175,7 +175,7 @@ This is here to structure a proper comparison table between the various launcher
         <td>?</td>
         <td>?</td>
         <td>?</td>
-        <td>?</td>
+        <td>❌No</td>
     </tr>
     <tr>
         <td>Curseforge Blocked Mod Download</td>
@@ -186,7 +186,7 @@ This is here to structure a proper comparison table between the various launcher
         <td>✅Yes</td>
         <td>?</td>
         <td>?</td>
-        <td>?</td>
+        <td>❌No</td>
     </tr>
     <tr>
         <td>Mod Updating</td>
@@ -197,7 +197,7 @@ This is here to structure a proper comparison table between the various launcher
         <td>?</td>
         <td>?</td>
         <td>?</td>
-        <td>?</td>
+        <td>❌No</td>
     </tr>
     <tr>
         <th colspan=9>Misc</th>
@@ -211,7 +211,7 @@ This is here to structure a proper comparison table between the various launcher
         <td>?</td>
         <td>?</td>
         <td>?</td>
-        <td>?</td>
+        <td>❌No</td>
     </tr>
     <tr>
         <td>Automatic Java Setup</td>
@@ -222,7 +222,7 @@ This is here to structure a proper comparison table between the various launcher
         <td>?</td>
         <td>?</td>
         <td>?</td>
-        <td>?</td>
+        <td>✅Yes</td>
     </tr>
     <tr>
         <td>Instance Export</td>
@@ -233,7 +233,7 @@ This is here to structure a proper comparison table between the various launcher
         <td>?</td>
         <td>?</td>
         <td>?</td>
-        <td>?</td>
+        <td>❌No</td>
     </tr>
     <tr>
         <td>Instance Import</td>
@@ -244,6 +244,6 @@ This is here to structure a proper comparison table between the various launcher
         <td>?</td>
         <td>?</td>
         <td>?</td>
-        <td>?</td>
+        <td>❌No</td>
     </tr>
 </table>
