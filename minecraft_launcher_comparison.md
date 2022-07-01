@@ -102,7 +102,7 @@ This is here to structure a proper comparison table between the various launcher
         <td>✅Yes</td>
         <td>✅Yes</td>
         <td>❔</td>
-        <td>❌No</td>
+        <td>🚧WIP</td>
         <td>❌No</td>
         <td>🟠No data is managed, only version switches</td>
         <td>✅Yes (?)</td>
