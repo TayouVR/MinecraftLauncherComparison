@@ -37,7 +37,7 @@ This is here to structure a proper comparison table between the various launcher
         <td><a href="https://github.com/ATLauncher/ATLauncher">github.com</a></td>
         <td><a href="https://github.com/gorilla-devs/GDLauncher">github.com</a></td>
         <td>---</td>
-        <td>---</td>
+        <td><a href="https://github.com/CreeperHost/modpacklauncher">backend</a> <a href="https://github.com/FTBTeam/FTB-App">frontend</a></td>
         <td>---</td>
         <td>---</td>
         <td><a href="https://github.com/PojavLauncherTeam/PojavLauncher">github.com</a></td>
@@ -59,11 +59,11 @@ This is here to structure a proper comparison table between the various launcher
         <td>Open Source?</td>   
         <td>❌No</td>                                    <!--Official-->
         <td>✅Yes, GPL3</td>                             <!--PolyMC-->
-        <td>🟠 Partially. MultiMC is proprietary but a debranded MS-PL licensed version which lacks many keys MultiMC uses is available on GitHub</td>      <!--MultiMC-->
+        <td>🟠Partially. MultiMC is proprietary but a debranded MS-PL licensed version which lacks many keys MultiMC uses is available on GitHub</td>      <!--MultiMC-->
         <td>✅Yes, GPL3</td>                             <!--ATLauncher-->
         <td>✅Yes, GPL3 (has <a href="https://cla-assistant.io/gorilla-devs/GDLauncher">CLA</a>)</td>                             <!--GDLauncher-->
         <td>❌No</td>                                    <!--Curseforge-->
-        <td>❌No (Old Version is, modern one not)</td>   <!--FTB App-->
+        <td>🟠Partially (Legacy Version is LGPL-2.1, modern one not)</td>   <!--FTB App-->
         <td>❌No</td>                                    <!--Technic Launcher-->
         <td>❌No</td>                                    <!--Old Official-->
         <td>✅Yes, GPL3</td>                             <!--PoJavLauncher-->
@@ -76,7 +76,7 @@ This is here to structure a proper comparison table between the various launcher
         <td>Java</td>
         <td>Web (HTML, JS, CSS)</td>
         <td>Overwolf</td>
-        <td>Overwolf</td>
+        <td>Java, Vue.Js (Overwolf)</td>
         <td>Java</td>
         <td>Java (AWT, Swing)</td>
         <td>Java, C</td>
