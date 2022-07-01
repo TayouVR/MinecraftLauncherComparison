@@ -358,7 +358,7 @@ This is here to structure a proper comparison table between the various launcher
         <td>Minecraft Official</td>
         <td>System (configurable)</td>
         <td>System (configurable)</td>
-        <td>Configurable</td>
+        <td>Custom (configurable)</td>
         <td>Custom</td>
         <td>Custom</td>
         <td>Custom</td>
