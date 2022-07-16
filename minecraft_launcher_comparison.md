@@ -344,7 +344,7 @@ This is here to structure a proper comparison table between the various launcher
         <td>Instance Import</td>
         <td>❌No</td>
         <td>Curseforge, Modrinth, MultiMC, Technic</td>
-        <td>Curseforge, MultiMC, Technic</td>
+        <td>Curseforge, MultiMC, Technic, FTB App</td>
         <td>Curseforge, Modrinth, MultiMC</td>
         <td>Curseforge</td>
         <td>❔</td>
