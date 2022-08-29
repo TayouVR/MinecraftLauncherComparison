@@ -95,6 +95,19 @@ This is here to structure a proper comparison table between the various launcher
         <td>❌No</td>
     </tr>
     <tr>
+        <td>Modpack Updating</td>
+        <td>❌No</td>
+        <td>🚧WIP</td>
+        <td>❌No</td>
+        <td>✅Yes</td>
+        <td>✅Yes</td>
+        <td>✅Yes</td>
+        <td>❔</td>
+        <td>❔</td>
+        <td>❌No</td>
+        <td>❌No</td>
+    </tr>
+    <tr>
         <td>Custom Instance Support</td>
         <td>🟠No data is managed, only version switches</td>
         <td>✅Yes</td>
