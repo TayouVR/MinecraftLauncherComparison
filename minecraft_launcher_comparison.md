@@ -315,6 +315,32 @@ This is here to structure a proper comparison table between the various launcher
         <th colspan=11>Misc</th>
     </tr>
     <tr>
+        <td>Resourcepack download [modrinth|curseforge]</td>
+        <td>❌No</td>
+        <td>❌No</td>
+        <td>❌No</td>
+        <td>❌No</td>
+        <td>❌No</td>
+        <td>❌No</td>
+        <td>❌No</td>
+        <td>❌No</td>
+        <td>❌No</td>
+        <td>❌No</td>
+    </tr>
+    <tr>
+        <td>Plugins Download [modrinth|curseforge]</td>
+        <td>❌No</td>
+        <td>❌No</td>
+        <td>❌No</td>
+        <td>❌No</td>
+        <td>❌No</td>
+        <td>❌No</td>
+        <td>❌No</td>
+        <td>❌No</td>
+        <td>❌No</td>
+        <td>❌No</td>
+    </tr>
+    <tr>
         <td>Server Instances</td>
         <td>❌No</td>
         <td>❌No</td>
