@@ -288,7 +288,7 @@ This is here to structure a proper comparison table between the various launcher
     <tr>
         <td>Mod Updating</td>
         <td>❌No</td>
-        <td>🚧WIP</td>
+        <td>✅Yes</td>
         <td>❌No</td>
         <td>✅Yes</td>
         <td>✅Yes</td>
