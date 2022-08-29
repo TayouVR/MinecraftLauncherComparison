@@ -70,7 +70,7 @@ This is here to structure a proper comparison table between the various launcher
     </tr>
     <tr>
         <td>Programming Language / Frameworks</td>
-        <td>C#, Probably</td>
+        <td>C++ (CEF)</td>
         <td>C++ (Qt)</td>
         <td>C++ (Qt)</td>
         <td>Java</td>
@@ -127,7 +127,7 @@ This is here to structure a proper comparison table between the various launcher
         <td>Modrinth Modpacks</td>
         <td>❌No</td>
         <td>✅Yes</td>
-        <td>❌No</td>
+        <td>✅Yes</td>
         <td>✅Yes</td>
         <td>❌No</td>
         <td>❔</td>
@@ -166,7 +166,7 @@ This is here to structure a proper comparison table between the various launcher
         <td>Legacy FTB Modpacks</td>
         <td>❌No</td>
         <td>✅Yes</td>
-        <td>❌No</td>
+        <td>✅Yes</td>
         <td>❌No</td>
         <td>❌No</td>
         <td>❔</td>
