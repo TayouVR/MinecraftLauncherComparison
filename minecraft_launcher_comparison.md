@@ -114,7 +114,7 @@ This is here to structure a proper comparison table between the various launcher
         <td>Curseforge Modpacks</td>
         <td>❌No</td>
         <td>✅Yes</td>
-        <td>🟠Partially (does not support new API)</td>
+        <td>❌No</td>
         <td>✅Yes</td>
         <td>✅Yes</td>
         <td>✅Yes</td>
