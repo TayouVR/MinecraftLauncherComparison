@@ -74,7 +74,7 @@ This is here to structure a proper comparison table between the various launcher
         <td>C++ (Qt)</td>
         <td>C++ (Qt)</td>
         <td>Java</td>
-        <td>Web (HTML, JS, CSS)</td>
+        <td>Electron (HTML, JS, CSS)</td>
         <td>Overwolf</td>
         <td>Java, Vue.Js (Overwolf)</td>
         <td>Java</td>
