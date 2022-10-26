@@ -6,7 +6,7 @@ This is here to structure a proper comparison table between the various launcher
     <tr>
         <th>Feature</th>
         <th>Vanilla</th>
-        <th>PolyMC</th>
+        <th>Prism Launcher</th>
         <th>MultiMC</th>
         <th>ATLauncher</th>
         <th>GDLauncher</th>
@@ -19,7 +19,7 @@ This is here to structure a proper comparison table between the various launcher
     <tr>
         <td>Download Link</td>
         <td><a href="https://launcher.mojang.com/download/">mojang.com</a></td>
-        <td><a href="https://polymc.org/download/">polymc.org</a></td>
+        <td><a href="https://prismlauncher.org/download/">prismlauncher.org</a></td>
         <td><a href="https://multimc.org/#Download">multimc.org</a></td>
         <td><a href="https://atlauncher.com/downloads">atlauncher.com</a></td>
         <td><a href="https://gdevs.io/#downloadContainer">gdevs.io</a></td>
@@ -32,7 +32,7 @@ This is here to structure a proper comparison table between the various launcher
     <tr>
         <td>Source Code</td>
         <td>---</td>
-        <td><a href="https://github.com/PolyMC/PolyMC">github.com</a></td>
+        <td><a href="https://github.com/Prism Launcher/Prism Launcher">github.com</a></td>
         <td><a href="https://github.com/MultiMC/Launcher/">github.com</a></td>
         <td><a href="https://github.com/ATLauncher/ATLauncher">github.com</a></td>
         <td><a href="https://github.com/gorilla-devs/GDLauncher">github.com</a></td>
@@ -45,7 +45,7 @@ This is here to structure a proper comparison table between the various launcher
     <tr>
         <td>Operating Systems</td>
         <td>Windows, Linux, MacOS</td>  <!--Official-->
-        <td>Windows, Linux, MacOS</td>  <!--PolyMC-->
+        <td>Windows, Linux, MacOS</td>  <!--Prism Launcher-->
         <td>Windows, Linux, MacOS</td>  <!--MultiMC-->
         <td>Windows, Linux, MacOS</td>  <!--ATLauncher-->
         <td>Windows, Linux, MacOS</td>  <!--GDLauncher-->
@@ -58,7 +58,7 @@ This is here to structure a proper comparison table between the various launcher
     <tr>
         <td>Open Source?</td>   
         <td>❌No</td>                                    <!--Official-->
-        <td>✅Yes, GPL3</td>                             <!--PolyMC-->
+        <td>✅Yes, GPL3</td>                             <!--Prism Launcher-->
         <td>🟠Partially. MultiMC is proprietary but a debranded MS-PL licensed version which lacks many keys MultiMC uses is available on GitHub</td>      <!--MultiMC-->
         <td>✅Yes, GPL3</td>                             <!--ATLauncher-->
         <td>✅Yes, GPL3 (has <a href="https://cla-assistant.io/gorilla-devs/GDLauncher">CLA</a>)</td>                             <!--GDLauncher-->
@@ -97,7 +97,7 @@ This is here to structure a proper comparison table between the various launcher
     <tr>
         <td>Modpack Updating</td>
         <td>❌No</td>
-        <td>🚧WIP</td>
+        <td>🟠Partially (WIP)</td>
         <td>❌No</td>
         <td>✅Yes</td>
         <td>✅Yes</td>
