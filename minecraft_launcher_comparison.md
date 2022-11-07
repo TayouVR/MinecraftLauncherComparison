@@ -32,7 +32,7 @@ This is here to structure a proper comparison table between the various launcher
     <tr>
         <td>Source Code</td>
         <td>---</td>
-        <td><a href="https://github.com/Prism Launcher/Prism Launcher">github.com</a></td>
+        <td><a href="https://github.com/PrismLauncher/PrismLauncher">github.com</a></td>
         <td><a href="https://github.com/MultiMC/Launcher/">github.com</a></td>
         <td><a href="https://github.com/ATLauncher/ATLauncher">github.com</a></td>
         <td><a href="https://github.com/gorilla-devs/GDLauncher">github.com</a></td>
