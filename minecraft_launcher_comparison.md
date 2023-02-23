@@ -97,7 +97,7 @@ This is here to structure a proper comparison table between the various launcher
     <tr>
         <td>Modpack Updating</td>
         <td>❌No</td>
-        <td>🟠Partially (WIP)</td>
+        <td>✅Yes (CF, MR)</td>
         <td>❌No</td>
         <td>✅Yes</td>
         <td>✅Yes</td>
