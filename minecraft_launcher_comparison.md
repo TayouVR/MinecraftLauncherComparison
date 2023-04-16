@@ -370,7 +370,7 @@ This is here to structure a proper comparison table between the various launcher
         <td>Instance Export</td>
         <td>❌No</td>
         <td>MultiMC</td>
-        <td>MultiMC</td>
+        <td>MultiMC, Modrinth</td>
         <td>Curseforge, Modrinth, MultiMC</td>
         <td>Curseforge</td>
         <td>❔</td>
