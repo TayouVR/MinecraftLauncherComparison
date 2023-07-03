@@ -59,12 +59,12 @@ This is here to structure a proper comparison table between the various launcher
         <td>Open Source?</td>   
         <td>❌No</td>                                        <!--Official-->
         <td>✅Yes, GPL3</td>                                 <!--Prism Launcher-->
-        <td>🟠Partially[1]</td>                                <!--MultiMC-->
+        <td>🟠Partially<a href="#1-multimc-is-proprietary-but-a-debranded-ms-pl-licensed-version-which-lacks-many-keys-multimc-uses-is-available-on-github" >[1]</a></td>                                <!--MultiMC-->
         <td>✅Yes, GPL3</td>                                 <!--ATLauncher-->
-        <td>✅Yes, GPL3[2]</td>                             <!--GDLauncher-->
+        <td>✅Yes, GPL3<a href="#2-gdlauncher-has-a-cla" >[2]</a></td>                             <!--GDLauncher-->
         <td>❌No</td>                                        <!--Curseforge-->
-        <td>❔Unsure[3]</td>     <!--FTB App-->
-        <td>❔Unsure[4]</td> <!--Technic Launcher-->
+        <td>❔Unsure<a href="#3-new-ftb-app-source-code-seems-to-be-unavailable-old-was-lgpl-21" >[3]</a></td>     <!--FTB App-->
+        <td>❔Unsure<a href="#4-technic-launcher-is-gpl3-however-the-source-repo-has-not-been-updated-since-2014-meaning-the-current-build-is-either-completely-seperate-or-a-continuation-of-the-public-repo-which-violates-the-gpl" >[4]</a></td> <!--Technic Launcher-->
         <td>❌No</td>                                        <!--Old Official-->
         <td>✅Yes, GPL3</td>                                 <!--PoJavLauncher-->
     </tr>
@@ -468,5 +468,5 @@ This is here to structure a proper comparison table between the various launcher
 ### Source code and licenses
 #### 1. MultiMC is proprietary but a debranded MS-PL licensed version which lacks many keys MultiMC uses is available on GitHub
 #### 2. GDLauncher has a <a href="https://cla-assistant.io/gorilla-devs/GDLauncher">CLA</a>
-#### 3. Technic Launcher is GPL3, however the source repo has not been updated since 2014, meaning the current build is either completely seperate or a continuation of the public repo; which violates the GPL
-#### 4. new FTB App source code seems to be unavailable, old was LGPL-2.1
+#### 3. new FTB App source code seems to be unavailable, old was LGPL-2.1
+#### 4. Technic Launcher is GPL3, however the source repo has not been updated since 2014, meaning the current build is either completely seperate or a continuation of the public repo; which violates the GPL
