@@ -57,16 +57,16 @@ This is here to structure a proper comparison table between the various launcher
     </tr>
     <tr>
         <td>Open Source?</td>   
-        <td>❌No</td>                                    <!--Official-->
-        <td>✅Yes, GPL3</td>                             <!--Prism Launcher-->
-        <td>🟠Partially. MultiMC is proprietary but a debranded MS-PL licensed version which lacks many keys MultiMC uses is available on GitHub</td>      <!--MultiMC-->
-        <td>✅Yes, GPL3</td>                             <!--ATLauncher-->
-        <td>✅Yes, GPL3 (has <a href="https://cla-assistant.io/gorilla-devs/GDLauncher">CLA</a>)</td>                             <!--GDLauncher-->
-        <td>❌No</td>                                    <!--Curseforge-->
-        <td>✅Yes, LGPL-2.1</td>                       <!--FTB App-->
-        <td>🟠Partially, GPL3... not updated since 2014</td>                             <!--Technic Launcher-->
-        <td>❌No</td>                                    <!--Old Official-->
-        <td>✅Yes, GPL3</td>                             <!--PoJavLauncher-->
+        <td>❌No</td>                                        <!--Official-->
+        <td>✅Yes, GPL3</td>                                 <!--Prism Launcher-->
+        <td>🟠Partially[1]</td>                                <!--MultiMC-->
+        <td>✅Yes, GPL3</td>                                 <!--ATLauncher-->
+        <td>✅Yes, GPL3[2]</td>                             <!--GDLauncher-->
+        <td>❌No</td>                                        <!--Curseforge-->
+        <td>❔Unsure[3]</td>     <!--FTB App-->
+        <td>❔Unsure[4]</td> <!--Technic Launcher-->
+        <td>❌No</td>                                        <!--Old Official-->
+        <td>✅Yes, GPL3</td>                                 <!--PoJavLauncher-->
     </tr>
     <tr>
         <td>Programming Language / Frameworks</td>
@@ -462,4 +462,11 @@ This is here to structure a proper comparison table between the various launcher
     </tr>
 </table>
 
-⚠️⚠️⚠️ Technic Launcher seems to specifically require oracle JDK / JRE 1.8.0. Other Java installs like Adoptium Temurin don't seem to work. (tested on Windows 10 with adoptium temurin 8.0.332-9, installed through scoop) ⚠️⚠️⚠️
+~~⚠️⚠️⚠️ Technic Launcher seems to specifically require oracle JDK / JRE 1.8.0. Other Java installs like Adoptium Temurin don't seem to work. (tested on Windows 10 with adoptium temurin 8.0.332-9, installed through scoop) ⚠️⚠️⚠️~~ The linux download is just the jar, which works just fine.
+
+## Footnotes
+### Source code and licenses
+#### 1. MultiMC is proprietary but a debranded MS-PL licensed version which lacks many keys MultiMC uses is available on GitHub
+#### 2. GDLauncher has a <a href="https://cla-assistant.io/gorilla-devs/GDLauncher">CLA</a>
+#### 3. Technic Launcher is GPL3, however the source repo has not been updated since 2014, meaning the current build is either completely seperate or a continuation of the public repo; which violates the GPL
+#### 4. new FTB App source code seems to be unavailable, old was LGPL-2.1
