@@ -165,9 +165,9 @@ This is here to structure a proper comparison table between the various launcher
     <tr>
         <td>FTB Modpacks</td>
         <td>❌No</td>
-        <td>✅Yes</td>
         <td>❌No</td>
-        <td>✅Yes</td>
+        <td>❌No</td>
+        <td>❌No</td>
         <td>✅Yes</td>
         <td>❔</td>
         <td>✅Yes</td>
@@ -288,9 +288,9 @@ This is here to structure a proper comparison table between the various launcher
     <tr>
         <td>Curseforge Blocked Mod Download</td>
         <td>❌No</td>
-        <td>🟠Partially (via web browser)</td>
+        <td>✅Yes (via web browser, automatically moves mod)</td>
         <td>❌No</td>
-        <td>🟠Partially (via web browser, automatically moves mod)</td>
+        <td>✅Yes (via web browser, automatically moves mod)</td>
         <td>✅Yes (by using standard browser user agent)</td>
         <td>✅Yes</td>
         <td>❔Unknown (as mod search is not functional)</td>
@@ -317,7 +317,20 @@ This is here to structure a proper comparison table between the various launcher
     <tr>
         <td>Resourcepack download [modrinth|curseforge]</td>
         <td>❌No</td>
+        <td>✅Yes (MR, CF)</td>
         <td>❌No</td>
+        <td>❌No</td>
+        <td>❌No</td>
+        <td>❌No</td>
+        <td>❌No</td>
+        <td>❌No</td>
+        <td>❌No</td>
+        <td>❌No</td>
+    </tr>
+    <tr>
+        <td>Shaderpack download [modrinth|curseforge]</td>
+        <td>❌No</td>
+        <td>✅Yes (MR)</td>
         <td>❌No</td>
         <td>❌No</td>
         <td>❌No</td>
@@ -359,7 +372,7 @@ This is here to structure a proper comparison table between the various launcher
         <td>🚧WIP</td>
         <td>❌No</td>
         <td>✅Optional</td>
-        <td>✅Optioinal</td>
+        <td>✅Optional</td>
         <td>❔</td>
         <td>❔</td>
         <td>❔</td>
@@ -367,9 +380,22 @@ This is here to structure a proper comparison table between the various launcher
         <td>✅Yes</td>
     </tr>
     <tr>
+        <td>Full Launcher Sandboxing</td>
+        <td>❌No</td>
+        <td>🚧WIP</td>
+        <td>❔</td>
+        <td>❔</td>
+        <td>❔</td>
+        <td>❔</td>
+        <td>❔</td>
+        <td>❔</td>
+        <td>❌No</td>
+        <td>❔</td>
+    </tr>
+    <tr>
         <td>Instance Export</td>
         <td>❌No</td>
-        <td>MultiMC</td>
+        <td>MultiMC, Modrinth</td>
         <td>MultiMC, Modrinth</td>
         <td>Curseforge, Modrinth, MultiMC</td>
         <td>Curseforge</td>
