@@ -38,7 +38,7 @@ This is here to structure a proper comparison table between the various launcher
         <td><a href="https://github.com/gorilla-devs/GDLauncher">github.com</a></td>
         <td>---</td>
         <td><a href="https://github.com/CreeperHost/modpacklauncher">backend</a> <a href="https://github.com/FTBTeam/FTB-App">frontend</a></td>
-        <td><a href="https://github.com/TechnicPack/TechnicLauncher">github.com</a></td>
+        <td><a href="https://github.com/TechnicPack/TechnicLauncher">github.com</a> (not up to date)</td>
         <td>---</td>
         <td><a href="https://github.com/PojavLauncherTeam/PojavLauncher">github.com</a></td>
     </tr>
@@ -63,8 +63,8 @@ This is here to structure a proper comparison table between the various launcher
         <td>✅Yes, GPL3</td>                             <!--ATLauncher-->
         <td>✅Yes, GPL3 (has <a href="https://cla-assistant.io/gorilla-devs/GDLauncher">CLA</a>)</td>                             <!--GDLauncher-->
         <td>❌No</td>                                    <!--Curseforge-->
-        <td>✅Yes, (LGPL-2.1)</td>                       <!--FTB App-->
-        <td>✅Yes, GPL3</td>                             <!--Technic Launcher-->
+        <td>✅Yes, LGPL-2.1</td>                       <!--FTB App-->
+        <td>🟠Partially, GPL3... not updated since 2014</td>                             <!--Technic Launcher-->
         <td>❌No</td>                                    <!--Old Official-->
         <td>✅Yes, GPL3</td>                             <!--PoJavLauncher-->
     </tr>
