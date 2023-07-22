@@ -37,7 +37,7 @@ This is here to structure a proper comparison table between the various launcher
         <td><a href="https://github.com/ATLauncher/ATLauncher">github.com</a></td>
         <td><a href="https://github.com/gorilla-devs/GDLauncher">github.com</a></td>
         <td>---</td>
-        <td><a href="https://github.com/CreeperHost/modpacklauncher">backend</a> <a href="https://github.com/FTBTeam/FTB-App">frontend</a></td>
+        <td><a href="https://github.com/FTBTeam/FTB-App">github.com</a></td>
         <td><a href="https://github.com/TechnicPack/TechnicLauncher">github.com</a> (not up to date)</td>
         <td>---</td>
         <td><a href="https://github.com/PojavLauncherTeam/PojavLauncher">github.com</a></td>
