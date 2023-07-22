@@ -63,7 +63,7 @@ This is here to structure a proper comparison table between the various launcher
         <td>✅Yes, GPL3</td>                                 <!--ATLauncher-->
         <td>✅Yes, GPL3<a href="#2-gdlauncher-has-a-cla" >[2]</a></td>                             <!--GDLauncher-->
         <td>❌No</td>                                        <!--Curseforge-->
-        <td>❔Unsure<a href="#3-new-ftb-app-source-code-seems-to-be-unavailable-old-was-lgpl-21" >[3]</a></td>     <!--FTB App-->
+        <td>✅Yes, LGPL-2.1</td>     <!--FTB App-->
         <td>❔Unsure<a href="#4-technic-launcher-is-gpl3-however-the-source-repo-has-not-been-updated-since-2014-meaning-the-current-build-is-either-completely-seperate-or-a-continuation-of-the-public-repo-which-violates-the-gpl" >[4]</a></td> <!--Technic Launcher-->
         <td>❌No</td>                                        <!--Old Official-->
         <td>✅Yes, GPL3</td>                                 <!--PoJavLauncher-->
@@ -468,5 +468,5 @@ This is here to structure a proper comparison table between the various launcher
 ### Source code and licenses
 #### 1. MultiMC is proprietary but a debranded MS-PL licensed version which lacks many keys MultiMC uses is available on GitHub
 #### 2. GDLauncher has a <a href="https://cla-assistant.io/gorilla-devs/GDLauncher">CLA</a>
-#### 3. new FTB App source code seems to be unavailable, old was LGPL-2.1
+#### 3. the FTB App seems to be LGPL-2.1, alrthough the readme makes it seem like there is another part to it. Probably just outdated readme. The Legacy FTB Launcher seems to have been taken down fro mthe FTB github, so no idea how that was...
 #### 4. Technic Launcher is GPL3, however the source repo has not been updated since 2014, meaning the current build is either completely seperate or a continuation of the public repo; which violates the GPL
