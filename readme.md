@@ -15,6 +15,7 @@ This is here to structure a proper comparison table between the various launcher
         <th>Technic</th>
         <th>Old Vanilla</th>
         <th>PoJavLauncher</th>
+        <th>Modrinth App</th>
     </tr>
     <tr>
         <td>Download Link</td>
@@ -28,6 +29,7 @@ This is here to structure a proper comparison table between the various launcher
         <td><a href="https://www.technicpack.net/download">technicpack.net</a></td>
         <td><a href="https://launcher.mojang.com/download/">mojang.com</a></td>
         <td><a href="https://play.google.com/store/apps/details?id=net.kdt.pojavlaunch">Play Store</a></td>
+        <td><a href="https://modrinth.com/app">modrinth.com</a></td>
     </tr>
     <tr>
         <td>Source Code</td>
@@ -41,6 +43,7 @@ This is here to structure a proper comparison table between the various launcher
         <td><a href="https://github.com/TechnicPack/TechnicLauncher">github.com</a> (not up to date)</td>
         <td>---</td>
         <td><a href="https://github.com/PojavLauncherTeam/PojavLauncher">github.com</a></td>
+        <td><a href="https://github.com/modrinth/theseus">github.com</a></td>
     </tr>
     <tr>
         <td>Operating Systems</td>
@@ -54,6 +57,7 @@ This is here to structure a proper comparison table between the various launcher
         <td>Windows, Linux, MacOS</td>  <!--Technic Launcher-->
         <td>Windows, Linux, MacOS</td>  <!--Old Official-->
         <td>Android, iOS</td>           <!--PoJavLauncher-->
+        <td>Windows, Linux, MacOS</td>  <!-- Modrinth App (ferium) -->
     </tr>
     <tr>
         <td>Open Source?</td>   
@@ -67,6 +71,7 @@ This is here to structure a proper comparison table between the various launcher
         <td>❔Unsure<a href="#4-technic-launcher-is-gpl3-however-the-source-repo-has-not-been-updated-since-2014-meaning-the-current-build-is-either-completely-seperate-or-a-continuation-of-the-public-repo-which-violates-the-gpl" >[4]</a></td> <!--Technic Launcher-->
         <td>❌No</td>                                        <!--Old Official-->
         <td>✅Yes, GPL3</td>                                 <!--PoJavLauncher-->
+        <td>✅Yes, GPL3</td>                                 <!-- Modrinth App (ferium) -->
     </tr>
     <tr>
         <td>Programming Language / Frameworks</td>
@@ -76,10 +81,11 @@ This is here to structure a proper comparison table between the various launcher
         <td>Java</td>
         <td>Electron (HTML, JS, CSS), Rust</td>
         <td>Overwolf</td>
-        <td>Java, Vue.Js (Overwolf)</td>
+        <td>Java, Vue.js (Overwolf)</td>
         <td>Java</td>
         <td>Java (AWT, Swing)</td>
         <td>Java, C</td>
+        <td>Rust, tauri, Vue.js</td>
     </tr>
     <tr>
         <td>Modpack Support</td>
@@ -93,6 +99,7 @@ This is here to structure a proper comparison table between the various launcher
         <td>✅Yes</td>
         <td>❌No</td>
         <td>❌No</td>
+        <td>✅Yes</td>
     </tr>
     <tr>
         <td>Modpack Updating</td>
@@ -106,6 +113,7 @@ This is here to structure a proper comparison table between the various launcher
         <td>❔</td>
         <td>❌No</td>
         <td>❌No</td>
+        <td>✅Yes</td>
     </tr>
     <tr>
         <td>Custom Instance Support</td>
@@ -119,9 +127,10 @@ This is here to structure a proper comparison table between the various launcher
         <td>❌No</td>
         <td>🟠No data is managed, only version switches</td>
         <td>✅Yes (?)</td>
+        <td>✅Yes</td>
     </tr>
     <tr>
-        <th colspan=11>Installing Modpacks through Launcher</th>
+        <th colspan=12>Installing Modpacks through Launcher</th>
     </tr>
     <tr>
         <td>Curseforge Modpacks</td>
@@ -135,6 +144,7 @@ This is here to structure a proper comparison table between the various launcher
         <td>❔</td>
         <td>❌No</td>
         <td>❌No</td>
+        <td>❔Probably not</td>
     </tr>
     <tr>
         <td>Modrinth Modpacks</td>
@@ -148,6 +158,7 @@ This is here to structure a proper comparison table between the various launcher
         <td>❔</td>
         <td>❌No</td>
         <td>❌No</td>
+        <td>✅Yes</td>
     </tr>
     <tr>
         <td>ATLauncher Modpacks</td>
@@ -161,6 +172,7 @@ This is here to structure a proper comparison table between the various launcher
         <td>❔</td>
         <td>❌No</td>
         <td>❌No</td>
+        <td>❔Probably not</td>
     </tr>
     <tr>
         <td>FTB Modpacks</td>
@@ -174,6 +186,7 @@ This is here to structure a proper comparison table between the various launcher
         <td>❔</td>
         <td>❌No</td>
         <td>❌No</td>
+        <td>❔Probably not</td>
     </tr>
     <tr>
         <td>Legacy FTB Modpacks</td>
@@ -187,6 +200,7 @@ This is here to structure a proper comparison table between the various launcher
         <td>❔</td>
         <td>❌No</td>
         <td>❌No</td>
+        <td>❔Probably not</td>
     </tr>
     <tr>
         <td>Technic Modpacks</td>
@@ -200,9 +214,10 @@ This is here to structure a proper comparison table between the various launcher
         <td>✅Yes</td>
         <td>❌No</td>
         <td>❌No</td>
+        <td>❔Probably not</td>
     </tr>
     <tr>
-        <th colspan=11>Installing Mod Loaders through Launcher</th>
+        <th colspan=12>Installing Mod Loaders through Launcher</th>
     </tr>
     <tr>
         <td>Fabric Loader Support</td>
@@ -216,6 +231,21 @@ This is here to structure a proper comparison table between the various launcher
         <td>❔</td>
         <td>❌No</td>
         <td>❌No</td>
+        <td>✅Yes</td>
+    </tr>
+    <tr>
+        <td>NeoForge Loader Support</td>
+        <td>❌No</td>
+        <td>✅Yes</td>
+        <td>❔TODO</td>
+        <td>❔TODO</td>
+        <td>❔TODO</td>
+        <td>❔TODO</td>
+        <td>❔TODO</td>
+        <td>❔TODO</td>
+        <td>❌No</td>
+        <td>❌No</td>
+        <td>✅Yes</td>
     </tr>
     <tr>
         <td>Forge Loader Support</td>
@@ -229,6 +259,7 @@ This is here to structure a proper comparison table between the various launcher
         <td>❔</td>
         <td>❌No</td>
         <td>❌No</td>
+        <td>✅Yes</td>
     </tr>
     <tr>
         <td>Quilt Loader Support</td>
@@ -242,6 +273,7 @@ This is here to structure a proper comparison table between the various launcher
         <td>❔</td>
         <td>❌No</td>
         <td>❌No</td>
+        <td>✅Yes</td>
     </tr>
     <tr>
         <td>LiteLoader Support</td>
@@ -255,9 +287,10 @@ This is here to structure a proper comparison table between the various launcher
         <td>❔</td>
         <td>❌No</td>
         <td>❌No</td>
+        <td>✅Yes</td>
     </tr>
     <tr>
-        <th colspan=11>Installing Mods through Launcher</th>
+        <th colspan=12>Installing Mods through Launcher</th>
     </tr>
     <tr>
         <td>Curseforge Mod Download</td>
@@ -269,6 +302,7 @@ This is here to structure a proper comparison table between the various launcher
         <td>✅Yes</td>
         <td>🚧Yes, but not functional</td>
         <td>❔</td>
+        <td>❌No</td>
         <td>❌No</td>
         <td>❌No</td>
     </tr>
@@ -284,6 +318,7 @@ This is here to structure a proper comparison table between the various launcher
         <td>❔</td>
         <td>❌No</td>
         <td>❌No</td>
+        <td>✅Yes</td>
     </tr>
     <tr>
         <td>Curseforge Blocked Mod Download</td>
@@ -295,6 +330,7 @@ This is here to structure a proper comparison table between the various launcher
         <td>✅Yes</td>
         <td>❔Unknown (as mod search is not functional)</td>
         <td>❔</td>
+        <td>❌No</td>
         <td>❌No</td>
         <td>❌No</td>
     </tr>
@@ -310,9 +346,10 @@ This is here to structure a proper comparison table between the various launcher
         <td>❔</td>
         <td>❌No</td>
         <td>❌No</td>
+        <td>✅Yes</td>
     </tr>
     <tr>
-        <th colspan=11>Misc</th>
+        <th colspan=12>Misc</th>
     </tr>
     <tr>
         <td>Resourcepack download [modrinth|curseforge]</td>
@@ -326,6 +363,7 @@ This is here to structure a proper comparison table between the various launcher
         <td>❌No</td>
         <td>❌No</td>
         <td>❌No</td>
+        <td>❔TODO</td>
     </tr>
     <tr>
         <td>Shaderpack download [modrinth|curseforge]</td>
@@ -339,6 +377,7 @@ This is here to structure a proper comparison table between the various launcher
         <td>❌No</td>
         <td>❌No</td>
         <td>❌No</td>
+        <td>❔TODO</td>
     </tr>
     <tr>
         <td>Plugins Download [modrinth|curseforge]</td>
@@ -352,6 +391,7 @@ This is here to structure a proper comparison table between the various launcher
         <td>❌No</td>
         <td>❌No</td>
         <td>❌No</td>
+        <td>❔TODO</td>
     </tr>
     <tr>
         <td>Server Instances</td>
@@ -365,6 +405,7 @@ This is here to structure a proper comparison table between the various launcher
         <td>❔</td>
         <td>❌No</td>
         <td>❌No</td>
+        <td>❔TODO</td>
     </tr>
     <tr>
         <td>Automatic Java Setup</td>
@@ -378,6 +419,7 @@ This is here to structure a proper comparison table between the various launcher
         <td>❔</td>
         <td>✅Yes</td>
         <td>✅Yes</td>
+        <td>❔TODO</td>
     </tr>
     <tr>
         <td>Full Launcher Sandboxing</td>
@@ -391,6 +433,7 @@ This is here to structure a proper comparison table between the various launcher
         <td>❔</td>
         <td>❌No</td>
         <td>❔</td>
+        <td>❔TODO</td>
     </tr>
     <tr>
         <td>Instance Export</td>
@@ -404,6 +447,7 @@ This is here to structure a proper comparison table between the various launcher
         <td>❔</td>
         <td>❌No</td>
         <td>❌No</td>
+        <td>❔TODO</td>
     </tr>
     <tr>
         <td>Instance Import</td>
@@ -417,6 +461,7 @@ This is here to structure a proper comparison table between the various launcher
         <td>❔</td>
         <td>❌No</td>
         <td>❌No</td>
+        <td>Curseforge, MultiMC, GD Launcher, AT Launcher</td>
     </tr>
     <tr>
         <td>Look and Feel</td>
@@ -430,9 +475,10 @@ This is here to structure a proper comparison table between the various launcher
         <td>Custom</td>
         <td>System (mostly)</td>
         <td>Minecraft Knockoff</td>
+        <td>Custom</td>
     </tr>
     <tr>
-        <th colspan=11>Other Bloat</th>
+        <th colspan=12>Other Bloat</th>
     </tr>
     <tr>
         <td>Advertisements</td>
@@ -446,6 +492,7 @@ This is here to structure a proper comparison table between the various launcher
         <td>❔</td>
         <td>❌No</td>
         <td>❌No</td>
+        <td>❔TODO</td>
     </tr>
     <tr>
         <td>In Game Overlay</td>
@@ -459,6 +506,7 @@ This is here to structure a proper comparison table between the various launcher
         <td>❌No</td>
         <td>❌No</td>
         <td>✅Yes, for controls -> touch screen</td>
+        <td>❌No</td>
     </tr>
 </table>
 
@@ -468,5 +516,5 @@ This is here to structure a proper comparison table between the various launcher
 ### Source code and licenses
 #### 1. MultiMC is proprietary but a debranded MS-PL licensed version which lacks many keys MultiMC uses is available on GitHub
 #### 2. GDLauncher has a <a href="https://cla-assistant.io/gorilla-devs/GDLauncher">CLA</a>
-#### 3. the FTB App seems to be LGPL-2.1, alrthough the readme makes it seem like there is another part to it. Probably just outdated readme. The Legacy FTB Launcher seems to have been taken down fro mthe FTB github, so no idea how that was...
+#### 3. the FTB App seems to be LGPL-2.1, alrthough the readme makes it seem like there is another part to it. Probably just outdated readme. The Legacy FTB Launcher seems to have been taken down from the FTB github, so no idea how that was...
 #### 4. Technic Launcher is GPL3, however the source repo has not been updated since 2014, meaning the current build is either completely seperate or a continuation of the public repo; which violates the GPL
