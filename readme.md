@@ -24,7 +24,7 @@ This is here to structure a proper comparison table between the various launcher
         <td><a href="https://multimc.org/#Download">multimc.org</a></td>
         <td><a href="https://atlauncher.com/downloads">atlauncher.com</a></td>
         <td><a href="https://gdlauncher.com/en/download/">gdlauncher.com</a></td>
-        <td><a href="https://download.CurseForge.com/">CurseForge.com</a></td>
+        <td><a href="https://download.curseforge.com/">curseforge.com</a></td>
         <td><a href="https://www.feed-the-beast.com/app">feed-the-beast.com</a></td>
         <td><a href="https://www.technicpack.net/download">technicpack.net</a></td>
         <td><a href="https://launcher.mojang.com/download/">mojang.com</a></td>
