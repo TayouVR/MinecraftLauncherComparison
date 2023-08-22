@@ -10,21 +10,21 @@ This is here to structure a proper comparison table between the various launcher
         <th>MultiMC</th>
         <th>ATLauncher</th>
         <th>GDLauncher</th>
-        <th>Curseforge</th>
+        <th>CurseForge</th>
         <th>FTB App</th>
         <th>Technic</th>
         <th>Old Vanilla</th>
-        <th>PoJavLauncher</th>
+        <th>PojavLauncher</th>
         <th>Modrinth App</th>
     </tr>
     <tr>
         <td>Download Link</td>
-        <td><a href="https://launcher.mojang.com/download/">mojang.com</a></td>
+        <td><a href="https://www.minecraft.net/en-us/download">minecraft.net</a></td>
         <td><a href="https://prismlauncher.org/download/">prismlauncher.org</a></td>
         <td><a href="https://multimc.org/#Download">multimc.org</a></td>
         <td><a href="https://atlauncher.com/downloads">atlauncher.com</a></td>
-        <td><a href="https://gdevs.io/#downloadContainer">gdevs.io</a></td>
-        <td><a href="https://download.curseforge.com/">curseforge.com</a></td>
+        <td><a href="https://gdlauncher.com/en/download/">gdlauncher.com</a></td>
+        <td><a href="https://download.CurseForge.com/">CurseForge.com</a></td>
         <td><a href="https://www.feed-the-beast.com/app">feed-the-beast.com</a></td>
         <td><a href="https://www.technicpack.net/download">technicpack.net</a></td>
         <td><a href="https://launcher.mojang.com/download/">mojang.com</a></td>
@@ -52,11 +52,11 @@ This is here to structure a proper comparison table between the various launcher
         <td>Windows, Linux, MacOS</td>  <!--MultiMC-->
         <td>Windows, Linux, MacOS</td>  <!--ATLauncher-->
         <td>Windows, Linux, MacOS</td>  <!--GDLauncher-->
-        <td>Windows, MacOS</td>         <!--Curseforge-->
+        <td>Windows, MacOS</td>         <!--CurseForge-->
         <td>Windows, Linux, MacOS</td>  <!--FTB App-->
         <td>Windows, Linux, MacOS</td>  <!--Technic Launcher-->
         <td>Windows, Linux, MacOS</td>  <!--Old Official-->
-        <td>Android, iOS</td>           <!--PoJavLauncher-->
+        <td>Android, iOS</td>           <!--PojavLauncher-->
         <td>Windows, Linux, MacOS</td>  <!-- Modrinth App (ferium) -->
     </tr>
     <tr>
@@ -66,11 +66,11 @@ This is here to structure a proper comparison table between the various launcher
         <td>🟠Partially<a href="#1-multimc-is-proprietary-but-a-debranded-ms-pl-licensed-version-which-lacks-many-keys-multimc-uses-is-available-on-github" >[1]</a></td>                                <!--MultiMC-->
         <td>✅Yes, GPL3</td>                                 <!--ATLauncher-->
         <td>✅Yes, GPL3<a href="#2-gdlauncher-has-a-cla" >[2]</a></td>                             <!--GDLauncher-->
-        <td>❌No</td>                                        <!--Curseforge-->
+        <td>❌No</td>                                        <!--CurseForge-->
         <td>✅Yes, LGPL-2.1</td>     <!--FTB App-->
         <td>❔Unsure<a href="#4-technic-launcher-is-gpl3-however-the-source-repo-has-not-been-updated-since-2014-meaning-the-current-build-is-either-completely-seperate-or-a-continuation-of-the-public-repo-which-violates-the-gpl" >[4]</a></td> <!--Technic Launcher-->
         <td>❌No</td>                                        <!--Old Official-->
-        <td>✅Yes, GPL3</td>                                 <!--PoJavLauncher-->
+        <td>✅Yes, GPL3</td>                                 <!--PojavLauncher-->
         <td>✅Yes, GPL3</td>                                 <!-- Modrinth App (ferium) -->
     </tr>
     <tr>
@@ -85,7 +85,7 @@ This is here to structure a proper comparison table between the various launcher
         <td>Java</td>
         <td>Java (AWT, Swing)</td>
         <td>Java, C</td>
-        <td>Rust, tauri, Vue.js</td>
+        <td>Rust, Tauri, Vue.js</td>
     </tr>
     <tr>
         <td>Modpack Support</td>
@@ -133,7 +133,7 @@ This is here to structure a proper comparison table between the various launcher
         <th colspan=12>Installing Modpacks through Launcher</th>
     </tr>
     <tr>
-        <td>Curseforge Modpacks</td>
+        <td>CurseForge Modpacks</td>
         <td>❌No</td>
         <td>✅Yes</td>
         <td>❌No</td>
@@ -293,7 +293,7 @@ This is here to structure a proper comparison table between the various launcher
         <th colspan=12>Installing Mods through Launcher</th>
     </tr>
     <tr>
-        <td>Curseforge Mod Download</td>
+        <td>CurseForge Mod Download</td>
         <td>❌No</td>
         <td>✅Yes</td>
         <td>❌No</td>
@@ -321,7 +321,7 @@ This is here to structure a proper comparison table between the various launcher
         <td>✅Yes</td>
     </tr>
     <tr>
-        <td>Curseforge Blocked Mod Download</td>
+        <td>CurseForge Blocked Mod Download</td>
         <td>❌No</td>
         <td>✅Yes (via web browser, automatically moves mod)</td>
         <td>❌No</td>
@@ -352,7 +352,7 @@ This is here to structure a proper comparison table between the various launcher
         <th colspan=12>Misc</th>
     </tr>
     <tr>
-        <td>Resourcepack download [modrinth|curseforge]</td>
+        <td>Resourcepack download [modrinth|CurseForge]</td>
         <td>❌No</td>
         <td>✅Yes (MR, CF)</td>
         <td>❌No</td>
@@ -366,7 +366,7 @@ This is here to structure a proper comparison table between the various launcher
         <td>❔TODO</td>
     </tr>
     <tr>
-        <td>Shaderpack download [modrinth|curseforge]</td>
+        <td>Shaderpack download [modrinth|CurseForge]</td>
         <td>❌No</td>
         <td>✅Yes (MR)</td>
         <td>❌No</td>
@@ -380,7 +380,7 @@ This is here to structure a proper comparison table between the various launcher
         <td>❔TODO</td>
     </tr>
     <tr>
-        <td>Plugins Download [modrinth|curseforge]</td>
+        <td>Plugins Download [modrinth|CurseForge]</td>
         <td>❌No</td>
         <td>❌No</td>
         <td>❌No</td>
@@ -440,8 +440,8 @@ This is here to structure a proper comparison table between the various launcher
         <td>❌No</td>
         <td>MultiMC, Modrinth</td>
         <td>MultiMC, Modrinth</td>
-        <td>Curseforge, Modrinth, MultiMC</td>
-        <td>Curseforge</td>
+        <td>CurseForge, Modrinth, MultiMC</td>
+        <td>CurseForge</td>
         <td>❔</td>
         <td>❔</td>
         <td>❔</td>
@@ -452,16 +452,16 @@ This is here to structure a proper comparison table between the various launcher
     <tr>
         <td>Instance Import</td>
         <td>❌No</td>
-        <td>Curseforge, Modrinth, MultiMC, Technic</td>
-        <td>Curseforge, MultiMC, Technic, FTB App</td>
-        <td>Curseforge, Modrinth, MultiMC</td>
-        <td>Curseforge</td>
+        <td>CurseForge, Modrinth, MultiMC, Technic</td>
+        <td>CurseForge, MultiMC, Technic, FTB App</td>
+        <td>CurseForge, Modrinth, MultiMC</td>
+        <td>CurseForge</td>
         <td>❔</td>
         <td>❔</td>
         <td>❔</td>
         <td>❌No</td>
         <td>❌No</td>
-        <td>Curseforge, MultiMC, GD Launcher, AT Launcher</td>
+        <td>CurseForge, MultiMC, GDLauncher, ATLauncher</td>
     </tr>
     <tr>
         <td>Look and Feel</td>
@@ -516,5 +516,5 @@ This is here to structure a proper comparison table between the various launcher
 ### Source code and licenses
 #### 1. MultiMC is proprietary but a debranded MS-PL licensed version which lacks many keys MultiMC uses is available on GitHub
 #### 2. GDLauncher has a <a href="https://cla-assistant.io/gorilla-devs/GDLauncher">CLA</a>
-#### 3. the FTB App seems to be LGPL-2.1, alrthough the readme makes it seem like there is another part to it. Probably just outdated readme. The Legacy FTB Launcher seems to have been taken down from the FTB github, so no idea how that was...
+#### 3. The FTB App seems to be LGPL-2.1, although the readme makes it seem like there is another part to it. Probably just outdated readme. The Legacy FTB Launcher seems to have been taken down from the FTB github, so no idea how that was...
 #### 4. Technic Launcher is GPL3, however the source repo has not been updated since 2014, meaning the current build is either completely seperate or a continuation of the public repo; which violates the GPL
