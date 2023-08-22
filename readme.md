@@ -47,17 +47,17 @@ This is here to structure a proper comparison table between the various launcher
     </tr>
     <tr>
         <td>Operating Systems</td>
-        <td>Windows, Linux, MacOS</td>  <!--Official-->
-        <td>Windows, Linux, MacOS</td>  <!--Prism Launcher-->
-        <td>Windows, Linux, MacOS</td>  <!--MultiMC-->
-        <td>Windows, Linux, MacOS</td>  <!--ATLauncher-->
-        <td>Windows, Linux, MacOS</td>  <!--GDLauncher-->
-        <td>Windows, MacOS</td>         <!--CurseForge-->
-        <td>Windows, Linux, MacOS</td>  <!--FTB App-->
-        <td>Windows, Linux, MacOS</td>  <!--Technic Launcher-->
-        <td>Windows, Linux, MacOS</td>  <!--Old Official-->
+        <td>Windows, Linux, macOS</td>  <!--Official-->
+        <td>Windows, Linux, macOS</td>  <!--Prism Launcher-->
+        <td>Windows, Linux, macOS</td>  <!--MultiMC-->
+        <td>Windows, Linux, macOS</td>  <!--ATLauncher-->
+        <td>Windows, Linux, macOS</td>  <!--GDLauncher-->
+        <td>Windows, macOS</td>         <!--CurseForge-->
+        <td>Windows, Linux, macOS</td>  <!--FTB App-->
+        <td>Windows, Linux, macOS</td>  <!--Technic Launcher-->
+        <td>Windows, Linux, macOS</td>  <!--Old Official-->
         <td>Android, iOS</td>           <!--PojavLauncher-->
-        <td>Windows, Linux, MacOS</td>  <!-- Modrinth App (ferium) -->
+        <td>Windows, Linux, macOS</td>  <!-- Modrinth App (ferium) -->
     </tr>
     <tr>
         <td>Open Source?</td>   
