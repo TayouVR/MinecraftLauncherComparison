@@ -133,6 +133,9 @@ This is here to structure a proper comparison table between the various launcher
         <td>🟠No data is managed, only version switches</td>
     </tr>
     <tr>
+        <th colspan=12>Modpack Providers</th>
+    </tr>
+    <tr>
         <td>CurseForge Modpacks</td>
         <td>❌No</td>
         <td>✅Yes</td>
@@ -217,6 +220,9 @@ This is here to structure a proper comparison table between the various launcher
         <td>❌No</td>
     </tr>
     <tr>
+        <th colspan=12>Mod Loaders</th>
+    </tr>
+    <tr>
         <td>Fabric Loader Support</td>
         <td>❌No</td>
         <td>✅Yes</td>
@@ -299,6 +305,9 @@ This is here to structure a proper comparison table between the various launcher
         <td>❔</td>
         <td>❌No</td>
         <td>❌No</td>
+    </tr>
+    <tr>
+        <th colspan=12>Resource Download (Mods, Resourcepacks, Shaders, etc.)</th>
     </tr>
     <tr>
         <td>CurseForge Mod Download</td>
@@ -425,6 +434,9 @@ This is here to structure a proper comparison table between the various launcher
         <td>❌No</td>
         <td>❌No</td>
         <td>❌No</td>
+    </tr>
+    <tr>
+        <th colspan=12>Misc</th>
     </tr>
     <tr>
         <td>Server Instances</td>
