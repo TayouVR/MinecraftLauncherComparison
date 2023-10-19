@@ -115,13 +115,13 @@ Note: This list is maintained mostly by me and random contributions. Data will i
     <tr>
         <td>Modpack Updating</td>
         <td>❌No</td>
-        <td>✅Yes (CF, MR)</td>
+        <td>✅Yes (<img alt="CurseForge" src="/assets/curseforge.svg" style="height: 1em;" />, <img alt="Modrinth" src="/assets/modrinth.svg" style="height: 1em;" />)</td>
         <td>❌No</td>
-        <td>✅Yes (CF, MR)</td>
-        <td>✅Yes (CF, 🚧MR)</td>
-        <td>✅Yes (CF)</td>
-        <td>✅Yes (FTB, CF)</td>
-        <td>✅Yes (MR)</td>
+        <td>✅Yes (<img alt="CurseForge" src="/assets/curseforge.svg" style="height: 1em;" />, <img alt="Modrinth" src="/assets/modrinth.svg" style="height: 1em;" />)</td>
+        <td>✅Yes (<img alt="CurseForge" src="/assets/curseforge.svg" style="height: 1em;" />, 🚧<img alt="Modrinth" src="/assets/modrinth.svg" style="height: 1em;" />)</td>
+        <td>✅Yes (<img alt="CurseForge" src="/assets/curseforge.svg" style="height: 1em;" />)</td>
+        <td>✅Yes (FTB, <img alt="CurseForge" src="/assets/curseforge.svg" style="height: 1em;" />)</td>
+        <td>✅Yes (<img alt="Modrinth" src="/assets/modrinth.svg" style="height: 1em;" />)</td>
         <td></td>
         <td>❌No</td>
         <td>❌No</td>
@@ -318,53 +318,53 @@ Note: This list is maintained mostly by me and random contributions. Data will i
         <th colspan=12>Resource Download (Mods, Resourcepacks, Shaders, etc.)</th>
     </tr>
     <tr>
-        <td>Mod download [Modrinth|CurseForge]</td>
+        <td>Mod download [<img alt="Modrinth" src="/assets/modrinth.svg" style="height: 1em;" />|<img alt="CurseForge" src="/assets/curseforge.svg" style="height: 1em;" />]</td>
         <td>❌No</td>
-        <td>✅Yes (MR, CF)</td>
+        <td>✅Yes (<img alt="Modrinth" src="/assets/modrinth.svg" style="height: 1em;" />, <img alt="CurseForge" src="/assets/curseforge.svg" style="height: 1em;" />)</td>
         <td>❌No</td>
-        <td>✅Yes (MR, CF)</td>
-        <td>✅Yes (🚧MR, CF)</td>
-        <td>✅Yes (CF)</td>
-        <td>✅Yes (CF)</td>
-        <td>✅Yes (MR)</td>
+        <td>✅Yes (<img alt="Modrinth" src="/assets/modrinth.svg" style="height: 1em;" />, <img alt="CurseForge" src="/assets/curseforge.svg" style="height: 1em;" />)</td>
+        <td>✅Yes (🚧<img alt="Modrinth" src="/assets/modrinth.svg" style="height: 1em;" />, <img alt="CurseForge" src="/assets/curseforge.svg" style="height: 1em;" />)</td>
+        <td>✅Yes (<img alt="CurseForge" src="/assets/curseforge.svg" style="height: 1em;" />)</td>
+        <td>✅Yes (<img alt="CurseForge" src="/assets/curseforge.svg" style="height: 1em;" />)</td>
+        <td>✅Yes (<img alt="Modrinth" src="/assets/modrinth.svg" style="height: 1em;" />)</td>
         <td></td>
         <td>❌No</td>
         <td>❌No</td>
     </tr>
     <tr>
-        <td>Resourcepack download [Modrinth|CurseForge]</td>
+        <td>Resourcepack download [<img alt="Modrinth" src="/assets/modrinth.svg" style="height: 1em;" />|<img alt="CurseForge" src="/assets/curseforge.svg" style="height: 1em;" />]</td>
         <td>❌No</td>
-        <td>✅Yes (MR, CF)</td>
+        <td>✅Yes (<img alt="Modrinth" src="/assets/modrinth.svg" style="height: 1em;" />, <img alt="CurseForge" src="/assets/curseforge.svg" style="height: 1em;" />)</td>
         <td>❌No</td>
-        <td>✅Yes (MR, CF)</td>
+        <td>✅Yes (<img alt="Modrinth" src="/assets/modrinth.svg" style="height: 1em;" />, <img alt="CurseForge" src="/assets/curseforge.svg" style="height: 1em;" />)</td>
         <td>❌No</td>
-        <td>✅Yes (CF)</td>
+        <td>✅Yes (<img alt="CurseForge" src="/assets/curseforge.svg" style="height: 1em;" />)</td>
         <td>❌No</td>
-        <td>✅Yes (MR)</td>
-        <td>❌No</td>
-        <td>❌No</td>
-        <td>❌No</td>
-    </tr>
-    <tr>
-        <td>Shaderpack download [Modrinth|CurseForge]</td>
-        <td>❌No</td>
-        <td>✅Yes (MR)</td>
-        <td>❌No</td>
-        <td>✅Yes (MR, CF)</td>
-        <td>❌No</td>
-        <td>❌No</td>
-        <td>❌No</td>
-        <td>✅Yes (MR)</td>
+        <td>✅Yes (<img alt="Modrinth" src="/assets/modrinth.svg" style="height: 1em;" />)</td>
         <td>❌No</td>
         <td>❌No</td>
         <td>❌No</td>
     </tr>
     <tr>
-        <td>World download [CurseForge]</td>
+        <td>Shaderpack download [<img alt="Modrinth" src="/assets/modrinth.svg" style="height: 1em;" />|<img alt="CurseForge" src="/assets/curseforge.svg" style="height: 1em;" />]</td>
+        <td>❌No</td>
+        <td>✅Yes (<img alt="Modrinth" src="/assets/modrinth.svg" style="height: 1em;" />)</td>
+        <td>❌No</td>
+        <td>✅Yes (<img alt="Modrinth" src="/assets/modrinth.svg" style="height: 1em;" />, <img alt="CurseForge" src="/assets/curseforge.svg" style="height: 1em;" />)</td>
         <td>❌No</td>
         <td>❌No</td>
         <td>❌No</td>
-        <td>✅Yes (CF)</td>
+        <td>✅Yes (<img alt="Modrinth" src="/assets/modrinth.svg" style="height: 1em;" />)</td>
+        <td>❌No</td>
+        <td>❌No</td>
+        <td>❌No</td>
+    </tr>
+    <tr>
+        <td>World download [<img alt="CurseForge" src="/assets/curseforge.svg" style="height: 1em;" />]</td>
+        <td>❌No</td>
+        <td>❌No</td>
+        <td>❌No</td>
+        <td>✅Yes (<img alt="CurseForge" src="/assets/curseforge.svg" style="height: 1em;" />)</td>
         <td></td>
         <td></td>
         <td></td>
@@ -374,7 +374,7 @@ Note: This list is maintained mostly by me and random contributions. Data will i
         <td></td>
     </tr>
     <tr>
-        <td>Datapack download [Modrinth]</td>
+        <td>Datapack download [<img alt="Modrinth" src="/assets/modrinth.svg" style="height: 1em;" />]</td>
         <td>❌No</td>
         <td>❌No</td>
         <td>❌No</td>
@@ -388,7 +388,7 @@ Note: This list is maintained mostly by me and random contributions. Data will i
         <td></td>
     </tr>
     <tr>
-        <td>Plugins Download [Modrinth|CurseForge]</td>
+        <td>Plugins Download [<img alt="Modrinth" src="/assets/modrinth.svg" style="height: 1em;" />|<img alt="CurseForge" src="/assets/curseforge.svg" style="height: 1em;" />]</td>
         <td>❌No</td>
         <td>❌No</td>
         <td>❌No</td>
@@ -477,13 +477,13 @@ Note: This list is maintained mostly by me and random contributions. Data will i
     <tr>
         <td>Instance Export</td>
         <td>❌No</td>
-        <td>🚧<img alt="CurseForge" src="/assets/curseforge.svg" style="height: 1em;" />, Modrinth, MultiMC, 🚧TXT</td>
-        <td>Modrinth, MultiMC</td>
-        <td><img alt="CurseForge" src="/assets/curseforge.svg" style="height: 1em;" />, Modrinth, MultiMC</td>
+        <td>🚧<img alt="CurseForge" src="/assets/curseforge.svg" style="height: 1em;" />, <img alt="Modrinth" src="/assets/modrinth.svg" style="height: 1em;" />, MultiMC, 🚧TXT</td>
+        <td><img alt="Modrinth" src="/assets/modrinth.svg" style="height: 1em;" />, MultiMC</td>
+        <td><img alt="CurseForge" src="/assets/curseforge.svg" style="height: 1em;" />, <img alt="Modrinth" src="/assets/modrinth.svg" style="height: 1em;" />, MultiMC</td>
         <td><img alt="CurseForge" src="/assets/curseforge.svg" style="height: 1em;" /></td>
         <td><img alt="CurseForge" src="/assets/curseforge.svg" style="height: 1em;" /></td>
         <td>FTB App Share Code</td>
-        <td>Modrinth</td>
+        <td><img alt="Modrinth" src="/assets/modrinth.svg" style="height: 1em;" /></td>
         <td>❔</td>
         <td>❌No</td>
         <td>❌No</td>
@@ -491,9 +491,9 @@ Note: This list is maintained mostly by me and random contributions. Data will i
     <tr>
         <td>Instance Import</td>
         <td>❌No</td>
-        <td><img alt="CurseForge" src="/assets/curseforge.svg" style="height: 1em;" />, Modrinth, MultiMC, Technic, 🚧FTB App</td>
+        <td><img alt="CurseForge" src="/assets/curseforge.svg" style="height: 1em;" />, <img alt="Modrinth" src="/assets/modrinth.svg" style="height: 1em;" />, MultiMC, Technic, 🚧FTB App</td>
         <td><img alt="CurseForge" src="/assets/curseforge.svg" style="height: 1em;" />, MultiMC, Technic, FTB App</td>
-        <td><img alt="CurseForge" src="/assets/curseforge.svg" style="height: 1em;" />, Modrinth, MultiMC</td>
+        <td><img alt="CurseForge" src="/assets/curseforge.svg" style="height: 1em;" />, <img alt="Modrinth" src="/assets/modrinth.svg" style="height: 1em;" />, MultiMC</td>
         <td><img alt="CurseForge" src="/assets/curseforge.svg" style="height: 1em;" /></td>
         <td><img alt="CurseForge" src="/assets/curseforge.svg" style="height: 1em;" /></td>
         <td><img alt="CurseForge" src="/assets/curseforge.svg" style="height: 1em;" /> and FTB App Share Code</td>
