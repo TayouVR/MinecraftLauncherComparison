@@ -118,7 +118,7 @@ Note: This list is maintained mostly by me and random contributions. Data will i
         <td><img alt="CurseForge" src="/assets/curseforge.svg" style="height: 2em;" /> <img alt="Modrinth" src="/assets/modrinth.svg" style="height: 2em;" /></td>
         <td>❌No</td>
         <td><img alt="CurseForge" src="/assets/curseforge.svg" style="height: 2em;" /> <img alt="Modrinth" src="/assets/modrinth.svg" style="height: 2em;" /></td>
-        <td><img alt="CurseForge" src="/assets/curseforge.svg" style="height: 2em;" /> 🚧<img alt="Modrinth" src="/assets/modrinth.svg" style="height: 2em;" /></td>
+        <td><img alt="CurseForge" src="/assets/curseforge.svg" style="height: 2em;" /> <img alt="Modrinth [WIP]" src="/assets/modrinth.svg" style="height: 2em; filter: grayscale(1);" /></td>
         <td><img alt="CurseForge" src="/assets/curseforge.svg" style="height: 2em;" /></td>
         <td>FTB, <img alt="CurseForge" src="/assets/curseforge.svg" style="height: 2em;" /></td>
         <td><img alt="Modrinth" src="/assets/modrinth.svg" style="height: 2em;" /></td>
@@ -323,7 +323,7 @@ Note: This list is maintained mostly by me and random contributions. Data will i
         <td><img alt="Modrinth" src="/assets/modrinth.svg" style="height: 2em;" /> <img alt="CurseForge" src="/assets/curseforge.svg" style="height: 2em;" /></td>
         <td>❌No</td>
         <td><img alt="Modrinth" src="/assets/modrinth.svg" style="height: 2em;" /> <img alt="CurseForge" src="/assets/curseforge.svg" style="height: 2em;" /></td>
-        <td>🚧<img alt="Modrinth" src="/assets/modrinth.svg" style="height: 2em;" /> <img alt="CurseForge" src="/assets/curseforge.svg" style="height: 2em;" /></td>
+        <td><img alt="Modrinth [WIP]" src="/assets/modrinth.svg" style="height: 2em; filter: grayscale(1);" /> <img alt="CurseForge" src="/assets/curseforge.svg" style="height: 2em;" /></td>
         <td><img alt="CurseForge" src="/assets/curseforge.svg" style="height: 2em;" /></td>
         <td><img alt="CurseForge" src="/assets/curseforge.svg" style="height: 2em;" /></td>
         <td><img alt="Modrinth" src="/assets/modrinth.svg" style="height: 2em;" /></td>
@@ -477,7 +477,7 @@ Note: This list is maintained mostly by me and random contributions. Data will i
     <tr>
         <td>Instance Export</td>
         <td>❌No</td>
-        <td>🚧<img alt="CurseForge" src="/assets/curseforge.svg" style="height: 2em;" />, <img alt="Modrinth" src="/assets/modrinth.svg" style="height: 2em;" />, MultiMC, 🚧TXT</td>
+        <td><img alt="CurseForge [WIP]" src="/assets/curseforge.svg" style="height: 2em; filter: grayscale(1);" />, <img alt="Modrinth" src="/assets/modrinth.svg" style="height: 2em;" />, MultiMC, 🚧TXT</td>
         <td><img alt="Modrinth" src="/assets/modrinth.svg" style="height: 2em;" />, MultiMC</td>
         <td><img alt="CurseForge" src="/assets/curseforge.svg" style="height: 2em;" />, <img alt="Modrinth" src="/assets/modrinth.svg" style="height: 2em;" />, MultiMC</td>
         <td><img alt="CurseForge" src="/assets/curseforge.svg" style="height: 2em;" /></td>
