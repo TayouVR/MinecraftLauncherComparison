@@ -477,11 +477,11 @@ Note: This list is maintained mostly by me and random contributions. Data will i
     <tr>
         <td>Instance Export</td>
         <td>❌No</td>
-        <td>🚧CurseForge, Modrinth, MultiMC, 🚧TXT</td>
+        <td>🚧<img alt="CurseForge" src="/assets/curseforge.svg" height="1em" width="auto" />, Modrinth, MultiMC, 🚧TXT</td>
         <td>Modrinth, MultiMC</td>
-        <td>CurseForge, Modrinth, MultiMC</td>
-        <td>CurseForge</td>
-        <td>CurseForge</td>
+        <td><img alt="CurseForge" src="/assets/curseforge.svg" height="1em" width="auto" />, Modrinth, MultiMC</td>
+        <td><img alt="CurseForge" src="/assets/curseforge.svg" height="1em" width="auto" /></td>
+        <td><img alt="CurseForge" src="/assets/curseforge.svg" height="1em" width="auto" /></td>
         <td>FTB App Share Code</td>
         <td>Modrinth</td>
         <td>❔</td>
@@ -491,13 +491,13 @@ Note: This list is maintained mostly by me and random contributions. Data will i
     <tr>
         <td>Instance Import</td>
         <td>❌No</td>
-        <td><img alt="CurseForge" src="/assets/curseforge.svg" />, Modrinth, MultiMC, Technic, 🚧FTB App</td>
-        <td>CurseForge, MultiMC, Technic, FTB App</td>
-        <td>CurseForge, Modrinth, MultiMC</td>
-        <td>CurseForge</td>
-        <td>CurseForge</td>
-        <td>CurseForge and FTB App Share Code</td>
-        <td>CurseForge, MultiMC, GDLauncher, ATLauncher</td>
+        <td><img alt="CurseForge" src="/assets/curseforge.svg" height="1em" width="auto" />, Modrinth, MultiMC, Technic, 🚧FTB App</td>
+        <td><img alt="CurseForge" src="/assets/curseforge.svg" height="1em" width="auto" />, MultiMC, Technic, FTB App</td>
+        <td><img alt="CurseForge" src="/assets/curseforge.svg" height="1em" width="auto" />, Modrinth, MultiMC</td>
+        <td><img alt="CurseForge" src="/assets/curseforge.svg" height="1em" width="auto" /></td>
+        <td><img alt="CurseForge" src="/assets/curseforge.svg" height="1em" width="auto" /></td>
+        <td><img alt="CurseForge" src="/assets/curseforge.svg" height="1em" width="auto" /> and FTB App Share Code</td>
+        <td><img alt="CurseForge" src="/assets/curseforge.svg" height="1em" width="auto" />, MultiMC, GDLauncher, ATLauncher</td>
         <td>❔</td>
         <td>❌No</td>
         <td>❌No</td>
