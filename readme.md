@@ -52,7 +52,7 @@ Note: This list is maintained mostly by me and random contributions. Data will i
         <td><hr></td>
         <td><a href="https://github.com/FTBTeam/FTB-App">github.com</a></td>
         <td><a href="https://github.com/modrinth/theseus">github.com</a></td>
-        <td><a href="https://github.com/TechnicPack/TechnicLauncher">github.com</a> (not up to date)</td>
+        <td><a href="https://github.com/TechnicPack/LauncherV3">github.com</a></td>
         <td><a href="https://github.com/PojavLauncherTeam/PojavLauncher">github.com</a></td>
         <td><hr></td>
     </tr>
@@ -80,7 +80,7 @@ Note: This list is maintained mostly by me and random contributions. Data will i
         <td>❌No</td>
         <td>✅Yes, LGPL-2.1</td>
         <td>✅Yes, GPL3</td>
-        <td>❔Unsure<a href="#4-technic-launcher-is-gpl3-however-the-source-repo-has-not-been-updated-since-2014-meaning-the-current-build-is-either-completely-seperate-or-a-continuation-of-the-public-repo-which-violates-the-gpl">[4]</a></td>
+        <td>✅Yes, GPL3</td>
         <td>✅Yes, GPL3</td>
         <td>❌No</td>
     </tr>
@@ -579,5 +579,4 @@ Note: This list is maintained mostly by me and random contributions. Data will i
 ### Source code and licenses
 #### 1. MultiMC is proprietary but a debranded MS-PL licensed version which lacks many keys MultiMC uses is available on GitHub
 #### 2. GDLauncher has a <a href="https://cla-assistant.io/gorilla-devs/GDLauncher">CLA</a>
-#### 3. The FTB App seems to be LGPL-2.1, although the readme makes it seem like there is another part to it. Probably just outdated readme. The Legacy FTB Launcher seems to have been taken down from the FTB GitHub, so no idea how that was...
 #### 4. Technic Launcher is GPL3, however the source repo has not been updated since 2014, meaning the current build is either completely seperate or a continuation of the public repo; which violates the GPL
