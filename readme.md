@@ -109,7 +109,7 @@ Note: This list is maintained mostly by me and random contributions. Data will i
         <td>✅Yes</td>
         <td>✅Yes</td>
         <td>✅Yes</td>
-        <td>❌No</td>
+        <td>✅Yes</td>
         <td>❌No</td>
     </tr>
     <tr>
@@ -123,7 +123,7 @@ Note: This list is maintained mostly by me and random contributions. Data will i
         <td>✅Yes (FTB, CF)</td>
         <td>✅Yes (MR)</td>
         <td></td>
-        <td>❌No</td>
+        <td></td>
         <td>❌No</td>
     </tr>
     <tr>
@@ -137,7 +137,7 @@ Note: This list is maintained mostly by me and random contributions. Data will i
         <td>🚧WIP</td>
         <td>✅Yes</td>
         <td>❌No</td>
-        <td>✅Yes (?)</td>
+        <td>✅Yes</td>
         <td>🟠Unmanaged, only version switches</td>
     </tr>
     <tr>
@@ -154,7 +154,7 @@ Note: This list is maintained mostly by me and random contributions. Data will i
         <td>✅Yes</td>
         <td>❌No</td>
         <td></td>
-        <td>❌No</td>
+        <td>✅Yes</td>
         <td>❌No</td>
     </tr>
     <tr>
@@ -168,7 +168,7 @@ Note: This list is maintained mostly by me and random contributions. Data will i
         <td>❌No</td>
         <td>✅Yes</td>
         <td></td>
-        <td>❌No</td>
+        <td>✅Yes</td>
         <td>❌No</td>
     </tr>
     <tr>
@@ -241,7 +241,7 @@ Note: This list is maintained mostly by me and random contributions. Data will i
         <td>✅Yes</td>
         <td>✅Yes</td>
         <td></td>
-        <td>❌No</td>
+        <td>✅Yes</td>
         <td>❌No</td>
     </tr>
     <tr>
@@ -269,7 +269,7 @@ Note: This list is maintained mostly by me and random contributions. Data will i
         <td>✅Yes</td>
         <td>✅Yes</td>
         <td></td>
-        <td>❌No</td>
+        <td>✅Yes</td>
         <td>❌No</td>
     </tr>
     <tr>
@@ -283,7 +283,7 @@ Note: This list is maintained mostly by me and random contributions. Data will i
         <td>✅Yes</td>
         <td>✅Yes</td>
         <td></td>
-        <td>❌No</td>
+        <td>✅Yes</td>
         <td>❌No</td>
     </tr>
     <tr>
@@ -415,7 +415,7 @@ Note: This list is maintained mostly by me and random contributions. Data will i
         <td>✅Yes</td>
         <td>❌No</td>
         <td>❔</td>
-        <td>❌No</td>
+        <td>❔</td>
         <td>❌No</td>
     </tr>
     <tr>
@@ -513,7 +513,7 @@ Note: This list is maintained mostly by me and random contributions. Data will i
         <td>Custom</td>
         <td>Custom</td>
         <td>Custom</td>
-        <td>Minecraft Knockoff</td>
+        <td>Minecraft Inspired</td>
         <td>System (mostly)</td>
     </tr>
     <tr>
