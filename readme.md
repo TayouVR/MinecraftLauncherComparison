@@ -477,7 +477,7 @@ Note: This list is maintained mostly by me and random contributions. Data will i
     <tr>
         <td>Instance Export</td>
         <td>❌No</td>
-        <td>🚧CurseForge, Modrinth, MultiMC, 🚧TXT</td>
+        <td>CurseForge, Modrinth, MultiMC, TXT</td>
         <td>Modrinth, MultiMC</td>
         <td>CurseForge, Modrinth, MultiMC</td>
         <td>CurseForge</td>
@@ -491,7 +491,7 @@ Note: This list is maintained mostly by me and random contributions. Data will i
     <tr>
         <td>Instance Import</td>
         <td>❌No</td>
-        <td>CurseForge, Modrinth, MultiMC, Technic, 🚧FTB App</td>
+        <td>CurseForge, Modrinth, MultiMC, Technic, FTB App</td>
         <td>CurseForge, MultiMC, Technic, FTB App</td>
         <td>CurseForge, Modrinth, MultiMC</td>
         <td>CurseForge</td>
