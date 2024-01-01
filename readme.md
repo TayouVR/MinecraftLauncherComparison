@@ -128,7 +128,7 @@ Note: This list is maintained mostly by me and random contributions. Data will i
     </tr>
     <tr>
         <td>Custom Instance Support</td>
-        <td>🟠Unmanaged, only version switches</td>
+        <td>✅Yes</td>
         <td>✅Yes</td>
         <td>✅Yes</td>
         <td>✅Yes</td>
