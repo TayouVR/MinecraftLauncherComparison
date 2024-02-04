@@ -1,0 +1,21 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <OutputType>Exe</OutputType>
+        <TargetFramework>net8.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+        <AssemblyName>MCLauncherCompare</AssemblyName>
+        <RootNamespace>MCLauncherCompare</RootNamespace>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <PackageReference Include="Statiq.Web" Version="1.0.0-beta.60" />
+      <PackageReference Include="Statiq.Web.GitHub" Version="1.0.0-beta.60" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Compile Include="input\layouts\base.html.cs" />
+    </ItemGroup>
+
+</Project>

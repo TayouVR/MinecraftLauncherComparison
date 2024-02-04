@@ -1,7 +1,0 @@
-includes:
-  - readme.md
-defaults:
-  - google_analytics: false
-  - title: false
-  - description: false
-  - lang: false

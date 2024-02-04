@@ -15,7 +15,7 @@ Note: This list is maintained mostly by me and random contributions. Data will i
 
 <table>
 <thead>
-    <tr>
+    <tr class="header-row">
         <th>Feature</th>
         <th>Vanilla</th>
         <th>Prism Launcher</th>
