@@ -579,4 +579,4 @@ Note: This list is maintained mostly by me and random contributions. Data will i
 ### Source code and licenses
 #### 1. MultiMC is proprietary but a debranded MS-PL licensed version which lacks many keys MultiMC uses is available on GitHub
 #### 2. GDLauncher has a <a href="https://cla-assistant.io/gorilla-devs/GDLauncher">CLA</a>
-#### 4. Technic Launcher is GPL3, however the source repo has not been updated since 2014, meaning the current build is either completely seperate or a continuation of the public repo; which violates the GPL
+
