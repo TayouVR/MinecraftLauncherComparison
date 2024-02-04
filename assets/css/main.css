@@ -1,9 +1,9 @@
-/* Error: expected "{".
+/* Error: Expected identifier.
  *   ,
- * 5 | @import "custom";
- *   |                 ^
+ * 2 | # Only the main Sass file needs front matter (the dashes are enough)
+ *   |  ^
  *   '
- *   main.scss 5:17  root stylesheet */
+ *   main.scss 2:2  root stylesheet */
 
 body::before {
   font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
@@ -13,5 +13,5 @@ body::before {
   padding: 1em;
   margin-bottom: 1em;
   border-bottom: 2px solid black;
-  content: 'Error: expected "{".\a   \2577 \a 5 \2502  @import "custom";\a   \2502                  ^\a   \2575 \a   main.scss 5:17  root stylesheet';
+  content: "Error: Expected identifier.\a   \2577 \a 2 \2502  # Only the main Sass file needs front matter (the dashes are enough)\d\a   \2502   ^\a   \2575 \a   main.scss 2:2  root stylesheet";
 }
