@@ -10,9 +10,6 @@ Explanations:
 - Modloader support means a way to install the modloader through the launcher directly, without downloading it separately.
 - CurseForge blocked downloads: CurseForge offers creators on the platform the option to opt out of downloads from 3rd party platforms as a means to ensure ad revenue is generated when downloading content. Platforms need to work around that restriction to properly support CurseForge content.
 
-For a better view of the entire table at once you can go here: http://mc-launcher.tayou.org/    
-Note: the theme is quite ugly and I will hopefully get around to choosing/making a appropriate jekyll theme at some point.
-
 <hr>
 
 Note: This list is maintained mostly by me and random contributions. Data will inevitably get outdated over time and I always welcome any updates and corrections.
