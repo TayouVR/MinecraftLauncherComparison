@@ -1,3 +1,7 @@
+---
+title: "Minecraft Launcher Comparison"
+layout: default
+---
 # Minecraft Launcher Comparison
 
 This will give you an overview over the various Minecraft (Java Edition) launchers and their features.
