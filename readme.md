@@ -188,7 +188,7 @@ Note: This list is maintained mostly by me and random contributions. Data will i
     <tr>
         <td>FTB Modpacks</td>
         <td>❌No</td>
-        <td>❌No</td>
+        <td>🟠Importing from the FTB Launcher is supported</td>
         <td>❌No</td>
         <td>❌No</td>
         <td>❌No</td>
