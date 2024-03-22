@@ -138,7 +138,7 @@ Note: This list is maintained mostly by me and random contributions. Data will i
         <td>✅Yes</td>
         <td>✅Yes</td>
         <td>✅Yes</td>
-        <td>🚧WIP</td>
+        <td>✅Yes</td>
         <td>✅Yes</td>
         <td>❌No</td>
         <td>✅Yes</td>
