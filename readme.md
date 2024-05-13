@@ -27,6 +27,7 @@ Note: This list is maintained mostly by me and random contributions. Data will i
         <th>Technic</th>
         <th>PojavLauncher</th>
         <th>Old Vanilla</th>
+        <th>QWERTZ Launcher</th>
     </tr>
 </thead>
 <tbody>
@@ -43,6 +44,7 @@ Note: This list is maintained mostly by me and random contributions. Data will i
         <td><a href="https://www.technicpack.net/download">technicpack.net</a></td>
         <td><a href="https://play.google.com/store/apps/details?id=net.kdt.pojavlaunch">Play Store</a></td>
         <td><a href="https://launcher.mojang.com/download/">mojang.com</a></td>
+        <td><a href="https://qwertz.app/downloads/QWERTZLauncher/">qwertz.app</a></td>
     </tr>
     <tr>
         <td>Source Code</td>
@@ -57,6 +59,7 @@ Note: This list is maintained mostly by me and random contributions. Data will i
         <td><a href="https://github.com/TechnicPack/LauncherV3">github.com</a></td>
         <td><a href="https://github.com/PojavLauncherTeam/PojavLauncher">github.com</a></td>
         <td><hr></td>
+        <td><a href="https://github.com/QWERTZexe/QWERTZ-Launcher">github.com</a></td>
     </tr>
     <tr>
         <td>Operating Systems</td>
@@ -71,6 +74,7 @@ Note: This list is maintained mostly by me and random contributions. Data will i
         <td>Windows, Linux, macOS</td>
         <td>Android, iOS</td>
         <td>Windows, Linux, macOS</td>
+        <td>Windows, Linux</td> 
     </tr>
     <tr>
         <td>Open Source?</td>
@@ -85,6 +89,7 @@ Note: This list is maintained mostly by me and random contributions. Data will i
         <td>✅Yes, GPL3</td>
         <td>✅Yes, GPL3</td>
         <td>❌No</td>
+        <td>✅Yes, AGPL3</td>
     </tr>
     <tr>
         <td>Programming Language / Frameworks</td>
@@ -99,6 +104,7 @@ Note: This list is maintained mostly by me and random contributions. Data will i
         <td>Java</td>
         <td>Java, C</td>
         <td>Java (AWT, Swing)</td>
+        <td>Python (Qt)</td>
     </tr>
     <tr>
         <td>Modpack Support</td>
@@ -112,6 +118,7 @@ Note: This list is maintained mostly by me and random contributions. Data will i
         <td>✅Yes</td>
         <td>✅Yes</td>
         <td>✅Yes</td>
+        <td>❌No</td>
         <td>❌No</td>
     </tr>
     <tr>
@@ -127,6 +134,7 @@ Note: This list is maintained mostly by me and random contributions. Data will i
         <td></td>
         <td></td>
         <td>❌No</td>
+        <td>❌No</td>
     </tr>
     <tr>
         <td>Custom Instance Support</td>
@@ -141,6 +149,7 @@ Note: This list is maintained mostly by me and random contributions. Data will i
         <td>❌No</td>
         <td>✅Yes</td>
         <td>🟠Unmanaged, only version switches</td>
+        <td>✅Yes</td>
     </tr>
     <tr>
         <th colspan=12>Modpack Providers</th>
@@ -158,6 +167,7 @@ Note: This list is maintained mostly by me and random contributions. Data will i
         <td></td>
         <td>✅Yes</td>
         <td>❌No</td>
+        <td>❌No</td>
     </tr>
     <tr>
         <td>Modrinth Modpacks</td>
@@ -172,6 +182,7 @@ Note: This list is maintained mostly by me and random contributions. Data will i
         <td></td>
         <td>✅Yes</td>
         <td>❌No</td>
+        <td>❌No</td>
     </tr>
     <tr>
         <td>ATLauncher Modpacks</td>
@@ -184,6 +195,7 @@ Note: This list is maintained mostly by me and random contributions. Data will i
         <td>❌No</td>
         <td>❌No</td>
         <td></td>
+        <td>❌No</td>
         <td>❌No</td>
         <td>❌No</td>
     </tr>
@@ -200,6 +212,7 @@ Note: This list is maintained mostly by me and random contributions. Data will i
         <td></td>
         <td>❌No</td>
         <td>❌No</td>
+        <td>❌No</td>
     </tr>
     <tr>
         <td>Legacy FTB Modpacks</td>
@@ -214,6 +227,7 @@ Note: This list is maintained mostly by me and random contributions. Data will i
         <td></td>
         <td>❌No</td>
         <td>❌No</td>
+        <td>❌No</td>
     </tr>
     <tr>
         <td>Technic Modpacks</td>
@@ -226,6 +240,7 @@ Note: This list is maintained mostly by me and random contributions. Data will i
         <td>❌No</td>
         <td>❌No</td>
         <td>✅Yes</td>
+        <td>❌No</td>
         <td>❌No</td>
         <td>❌No</td>
     </tr>
@@ -245,6 +260,7 @@ Note: This list is maintained mostly by me and random contributions. Data will i
         <td></td>
         <td>✅Yes</td>
         <td>❌No</td>
+        <td>✅Yes</td>
     </tr>
     <tr>
         <td>NeoForge Loader</td>
@@ -257,6 +273,7 @@ Note: This list is maintained mostly by me and random contributions. Data will i
         <td>✅Yes</td>
         <td>✅Yes</td>
         <td>❔TODO</td>
+        <td>❌No</td>
         <td>❌No</td>
         <td>❌No</td>
     </tr>
@@ -273,6 +290,7 @@ Note: This list is maintained mostly by me and random contributions. Data will i
         <td></td>
         <td>✅Yes</td>
         <td>❌No</td>
+        <td>✅Yes</td>
     </tr>
     <tr>
         <td>Quilt Loader</td>
@@ -287,6 +305,7 @@ Note: This list is maintained mostly by me and random contributions. Data will i
         <td></td>
         <td>✅Yes</td>
         <td>❌No</td>
+        <td>❌No</td>
     </tr>
     <tr>
         <td>Legacy Fabric Loader</td>
@@ -294,6 +313,7 @@ Note: This list is maintained mostly by me and random contributions. Data will i
         <td>❌No</td>
         <td>❌No</td>
         <td>✅Yes</td>
+        <td>❌No</td>
         <td>❌No</td>
         <td>❌No</td>
         <td>❌No</td>
@@ -315,6 +335,7 @@ Note: This list is maintained mostly by me and random contributions. Data will i
         <td></td>
         <td>❌No</td>
         <td>❌No</td>
+        <td>❌No</td>
     </tr>
     <tr>
         <th colspan=12>Resource Download (Mods, Resourcepacks, Shaders, etc.)</th>
@@ -332,6 +353,7 @@ Note: This list is maintained mostly by me and random contributions. Data will i
         <td></td>
         <td>❌No</td>
         <td>❌No</td>
+        <td>❌No</td>
     </tr>
     <tr>
         <td>Resourcepack download [Modrinth|CurseForge]</td>
@@ -343,6 +365,7 @@ Note: This list is maintained mostly by me and random contributions. Data will i
         <td>✅Yes (CF)</td>
         <td>❌No</td>
         <td>✅Yes (MR)</td>
+        <td>❌No</td>
         <td>❌No</td>
         <td>❌No</td>
         <td>❌No</td>
@@ -360,6 +383,7 @@ Note: This list is maintained mostly by me and random contributions. Data will i
         <td>❌No</td>
         <td>❌No</td>
         <td>❌No</td>
+        <td>❌No</td>
     </tr>
     <tr>
         <td>World download [CurseForge]</td>
@@ -374,6 +398,7 @@ Note: This list is maintained mostly by me and random contributions. Data will i
         <td></td>
         <td></td>
         <td></td>
+        <td>❌No</td>
     </tr>
     <tr>
         <td>Datapack download [Modrinth]</td>
@@ -388,9 +413,11 @@ Note: This list is maintained mostly by me and random contributions. Data will i
         <td></td>
         <td></td>
         <td></td>
+        <td>❌No</td>
     </tr>
     <tr>
         <td>Plugins Download [Modrinth|CurseForge]</td>
+        <td>❌No</td>
         <td>❌No</td>
         <td>❌No</td>
         <td>❌No</td>
@@ -419,6 +446,7 @@ Note: This list is maintained mostly by me and random contributions. Data will i
         <td>❔</td>
         <td>❔</td>
         <td>❌No</td>
+        <td>❌No</td>
     </tr>
     <tr>
         <td>Mod Updating</td>
@@ -431,6 +459,7 @@ Note: This list is maintained mostly by me and random contributions. Data will i
         <td>❌No</td>
         <td>✅Yes</td>
         <td>❔</td>
+        <td>❌No</td>
         <td>❌No</td>
         <td>❌No</td>
     </tr>
@@ -447,6 +476,7 @@ Note: This list is maintained mostly by me and random contributions. Data will i
         <td>❔</td>
         <td>❌No</td>
         <td>❌No</td>
+        <td>❌No</td>
     </tr>
     <tr>
         <td>Automatic Java Setup</td>
@@ -459,6 +489,7 @@ Note: This list is maintained mostly by me and random contributions. Data will i
         <td>✅Yes</td>
         <td>✅Yes</td>
         <td>❔</td>
+        <td>✅Yes</td>
         <td>✅Yes</td>
         <td>✅Yes</td>
     </tr>
@@ -475,6 +506,7 @@ Note: This list is maintained mostly by me and random contributions. Data will i
         <td>❔</td>
         <td>❔</td>
         <td>❌No</td>
+        <td>❔</td>
     </tr>
     <tr>
         <td>Instance Export</td>
@@ -489,6 +521,7 @@ Note: This list is maintained mostly by me and random contributions. Data will i
         <td>❔</td>
         <td>❌No</td>
         <td>❌No</td>
+        <td>🚧WIP</td>
     </tr>
     <tr>
         <td>Instance Import</td>
@@ -503,6 +536,7 @@ Note: This list is maintained mostly by me and random contributions. Data will i
         <td>❔</td>
         <td>❌No</td>
         <td>❌No</td>
+        <td>🚧WIP</td>
     </tr>
     <tr>
         <td>Look and Feel</td>
@@ -517,6 +551,7 @@ Note: This list is maintained mostly by me and random contributions. Data will i
         <td>Custom</td>
         <td>Minecraft Inspired</td>
         <td>System (mostly)</td>
+        <td>Custom</td>
     </tr>
     <tr>
         <td>Advertisements</td>
@@ -529,6 +564,7 @@ Note: This list is maintained mostly by me and random contributions. Data will i
         <td>✅Yes</td>
         <td>✅Yes</td>
         <td>❔</td>
+        <td>❌No</td>
         <td>❌No</td>
         <td>❌No</td>
     </tr>
@@ -544,6 +580,7 @@ Note: This list is maintained mostly by me and random contributions. Data will i
         <td>❌No</td>
         <td>❌No</td>
         <td>✅Yes, for controls → touch screen</td>
+        <td>❌No</td>
         <td>❌No</td>
     </tr>
     <!--tr>
