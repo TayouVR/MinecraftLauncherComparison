@@ -22,7 +22,8 @@ Note: This list is maintained mostly by me and random contributions. Data will i
         <th>Prism Launcher</th>
         <th>MultiMC</th>
         <th>ATLauncher</th>
-        <th>GDLauncher</th>
+        <th>GDLauncher (Legacy)</th>
+        <th>GDLauncher Carbon</th>
         <th>CurseForge App</th>
         <th>FTB App</th>
         <th>Modrinth App</th>
@@ -39,6 +40,7 @@ Note: This list is maintained mostly by me and random contributions. Data will i
         <td><a href="https://prismlauncher.org/download/">prismlauncher.org</a></td>
         <td><a href="https://multimc.org/#Download">multimc.org</a></td>
         <td><a href="https://atlauncher.com/downloads">atlauncher.com</a></td>
+        <td><a href="https://github.com/gorilla-devs/GDLauncher/releases">github.com</a></td>
         <td><a href="https://gdlauncher.com/en/download/">gdlauncher.com</a></td>
         <td><a href="https://download.curseforge.com/">curseforge.com</a></td>
         <td><a href="https://www.feed-the-beast.com/app">feed-the-beast.com</a></td>
@@ -55,6 +57,7 @@ Note: This list is maintained mostly by me and random contributions. Data will i
         <td><a href="https://github.com/MultiMC/Launcher/">github.com</a></td>
         <td><a href="https://github.com/ATLauncher/ATLauncher">github.com</a></td>
         <td><a href="https://github.com/gorilla-devs/GDLauncher">github.com</a></td>
+        <td><a href="https://github.com/gorilla-devs/GDLauncher-Carbon">github.com</a></td>
         <td><hr></td>
         <td><a href="https://github.com/FTBTeam/FTB-App">github.com</a></td>
         <td><a href="https://github.com/modrinth/theseus">github.com</a></td>
@@ -65,6 +68,7 @@ Note: This list is maintained mostly by me and random contributions. Data will i
     </tr>
     <tr>
         <td>Operating Systems</td>
+        <td>Windows, Linux, macOS</td>
         <td>Windows, Linux, macOS</td>
         <td>Windows, Linux, macOS</td>
         <td>Windows, Linux, macOS</td>
@@ -85,6 +89,7 @@ Note: This list is maintained mostly by me and random contributions. Data will i
         <td>🟠Partially<a href="#1-multimc-is-proprietary-but-a-debranded-ms-pl-licensed-version-which-lacks-many-keys-multimc-uses-is-available-on-github">[1]</a></td>
         <td>✅Yes, GPL3</td>
         <td>✅Yes, GPL3<a href="#2-gdlauncher-has-a-cla">[2]</a></td>
+        <td>🟠Source-available</td>
         <td>❌No</td>
         <td>✅Yes, LGPL-2.1</td>
         <td>✅Yes, GPL3</td>
@@ -100,6 +105,7 @@ Note: This list is maintained mostly by me and random contributions. Data will i
         <td>C++ (Qt)</td>
         <td>Java</td>
         <td>HTML, JS, CSS, (Preact), (Electron) <br>🚧 Solid.js, Rust</td>
+        <td>HTML, JS, CSS, Astro, Rust, TypeScript</td>
         <td>HTML, JS, CSS, (React), (Next.js), Overwolf (Windows) or Electron (Windows, macOS, Linux)</td>
         <td>HTML, JS, CSS, (Vue.js), (Tailwind), Java, Overwolf (Windows) Electron (macOS and Linux)</td>
         <td>HTML, JS, CSS, (Vue.js), Rust, (Tauri)</td>
@@ -120,6 +126,7 @@ Note: This list is maintained mostly by me and random contributions. Data will i
         <td>✅Yes</td>
         <td>✅Yes</td>
         <td>✅Yes</td>
+        <td>✅Yes</td>
         <td>❌No</td>
         <td>❌No</td>
     </tr>
@@ -130,6 +137,7 @@ Note: This list is maintained mostly by me and random contributions. Data will i
         <td>❌No</td>
         <td>✅Yes (CF, MR)</td>
         <td>✅Yes (CF, 🚧MR)</td>
+        <td>✅Yes (CF, MR)</td> # Got up to here last edit
         <td>✅Yes (CF)</td>
         <td>✅Yes (FTB, CF)</td>
         <td>✅Yes (MR)</td>
