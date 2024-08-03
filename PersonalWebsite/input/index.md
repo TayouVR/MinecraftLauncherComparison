@@ -621,3 +621,8 @@ Note: This list is maintained mostly by me and random contributions. Data will i
 #### 1. MultiMC is proprietary but a debranded MS-PL licensed version which lacks many keys MultiMC uses is available on GitHub
 #### 2. GDLauncher has a <a href="https://cla-assistant.io/gorilla-devs/GDLauncher">CLA</a>
 
+View and edit the source of this page here:
+https://github.com/TayouVR/MinecraftLauncherComparison
+
+submit any issues, outdated or missing information here:
+https://github.com/TayouVR/MinecraftLauncherComparison/issues
