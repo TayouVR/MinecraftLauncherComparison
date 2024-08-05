@@ -38,12 +38,12 @@ jobs:
           dotnet-version: "8.x"
 
       - name: Restore dependencies
-        run: dotnet restore ./PersonalWebsite/PersonalWebsite.csproj
+        run: dotnet restore ./MCLauncherComparison/MCLauncherComparison.csproj
 
       - name: Build Statiq site
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # Set GitHub token as an environment variable
-        run: dotnet run --project ./PersonalWebsite/PersonalWebsite.csproj
+        run: dotnet run --project ./MCLauncherComparison/MCLauncherComparison.csproj
         # Statiqs own thing doesn't seem to deploy like that, so lets just ignore it
         
       - name: Setup Pages
@@ -53,7 +53,7 @@ jobs:
         uses: actions/upload-pages-artifact@v3
         with:
           # Upload path
-          path: './PersonalWebsite/output'
+          path: './MCLauncherComparison/output'
           
       - name: Deploy to GitHub Pages
         id: deployment
