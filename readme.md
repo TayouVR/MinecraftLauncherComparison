@@ -282,7 +282,7 @@ Note: This list is maintained mostly by me and random contributions. Data will i
         <td>NeoForge Loader</td>
         <td>❌No</td>
         <td>✅Yes</td>
-        <td>❔TODO</td>
+        <td>✅Yes</td>
         <td>✅Yes</td>
         <td>🚧WIP</td>
         <td>✅Yes</td>

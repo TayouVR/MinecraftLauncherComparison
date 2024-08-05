@@ -284,7 +284,7 @@ Note: This list is maintained mostly by me and random contributions. Data will i
         <td>NeoForge Loader</td>
         <td>❌No</td>
         <td>✅Yes</td>
-        <td>❔TODO</td>
+        <td>✅Yes</td>
         <td>✅Yes</td>
         <td>🚧WIP</td>
         <td>✅Yes</td>
@@ -659,3 +659,9 @@ Note: This list is maintained mostly by me and random contributions. Data will i
 #### 2. GDLauncher has a <a href="https://cla-assistant.io/gorilla-devs/GDLauncher">CLA</a>
 #### 3. GDLauncher Carbon mod updater appears to be slightly buggy at the time of writing
 #### 4. GDLauncher Legacy, CurseForge (ZIP, launcher), Modrinth (mrpack, 🚧launcher), 🚧ATLauncher, 🚧Technic, 🚧FTB, 🚧MultiMC, 🚧Prism
+
+View and edit the source of this page here:
+https://github.com/TayouVR/MinecraftLauncherComparison
+
+submit any issues, outdated or missing information here:
+https://github.com/TayouVR/MinecraftLauncherComparison/issues
