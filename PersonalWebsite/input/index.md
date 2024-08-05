@@ -237,7 +237,6 @@ Note: This list is maintained mostly by me and random contributions. Data will i
         <td>❌No</td>
         <td>❌No</td>
         <td>❌No</td>
-
         <td></td>
         <td>✅Yes</td>
         <td>❌No</td>
