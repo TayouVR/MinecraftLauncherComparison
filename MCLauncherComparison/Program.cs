@@ -1,4 +1,6 @@
-﻿namespace MCLauncherCompare;
+﻿using Statiq.Razor;
+
+namespace MCLauncherCompare;
 
 public class Program {
     public static KeyValuePair<string, object>[] Settings = {
@@ -16,16 +18,17 @@ public class Program {
         return await Bootstrapper
             .Factory
             .CreateWeb(args)
-            .AddPipeline("CombineDocs", new Pipeline {
+            .AddPipeline("ProcessLauncherDefinitions", new Pipeline {
                 InputModules = {
-                    new ReadFiles("../../readme.md"),
-                    new ReadFiles("index.md")
+                    new ReadFiles(pattern: "launcher-definitions/*.json"),
+                    new ReadFiles(pattern: "launcher-definitions/*.json5")
                 },
                 ProcessModules = {
-                    new ConcatDocuments(),
-                    new SetDestination("index.md")
+                    new ParseJson()
                 },
-                OutputModules = { new WriteFiles() }
+                OutputModules = {
+                    new RenderRazor().WithModel(Config.FromDocument((doc, ctx) => doc))
+                }
             })
             .AddSettings(Settings)
             .RunAsync();
