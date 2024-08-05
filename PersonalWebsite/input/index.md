@@ -236,7 +236,8 @@ Note: This list is maintained mostly by me and random contributions. Data will i
         <td>✅Yes</td>
         <td>❌No</td>
         <td>❌No</td>
-        <td>🟠Only versions uploaded to CurseForge</td>
+        <td>❌No</td>
+
         <td></td>
         <td>✅Yes</td>
         <td>❌No</td>
