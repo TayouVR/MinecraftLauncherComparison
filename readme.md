@@ -82,7 +82,7 @@ Note: This list is maintained mostly by me and random contributions. Data will i
         <td>✅Yes, GPL3</td>
         <td>🟠Partially<a href="#1-multimc-is-proprietary-but-a-debranded-ms-pl-licensed-version-which-lacks-many-keys-multimc-uses-is-available-on-github">[1]</a></td>
         <td>✅Yes, GPL3</td>
-        <td>✅Yes, GPL3<a href="#2-gdlauncher-has-a-cla">[2]</a></td>
+        <td>❌No, although source-available under BSL1.1</td>
         <td>❌No</td>
         <td>✅Yes, LGPL-2.1</td>
         <td>✅Yes, GPL3</td>
@@ -97,7 +97,7 @@ Note: This list is maintained mostly by me and random contributions. Data will i
         <td>C++ (Qt)</td>
         <td>C++ (Qt)</td>
         <td>Java</td>
-        <td>HTML, JS, CSS, (Preact), (Electron) <br>🚧 Solid.js, Rust</td>
+        <td>HTML, JS, CSS, (Solid.js), (Electron), Rust</td>
         <td>HTML, JS, CSS, (React), (Next.js), Overwolf (Windows) or Electron (Windows, macOS, Linux)</td>
         <td>HTML, JS, CSS, (Vue.js), (Tailwind), Java, Overwolf (Windows) Electron (macOS and Linux)</td>
         <td>HTML, JS, CSS, (Vue.js), Rust, (Tauri)</td>
@@ -617,5 +617,3 @@ Note: This list is maintained mostly by me and random contributions. Data will i
 ## Footnotes
 ### Source code and licenses
 #### 1. MultiMC is proprietary but a debranded MS-PL licensed version which lacks many keys MultiMC uses is available on GitHub
-#### 2. GDLauncher has a <a href="https://cla-assistant.io/gorilla-devs/GDLauncher">CLA</a>
-
