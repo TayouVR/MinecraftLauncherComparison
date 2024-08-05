@@ -22,7 +22,8 @@ Note: This list is maintained mostly by me and random contributions. Data will i
         <th>Prism Launcher</th>
         <th>MultiMC</th>
         <th>ATLauncher</th>
-        <th>GDLauncher</th>
+        <th>GDLauncher (Legacy)</th>
+        <th>GDLauncher Carbon</th>
         <th>CurseForge App</th>
         <th>FTB App</th>
         <th>Modrinth App</th>
@@ -39,6 +40,7 @@ Note: This list is maintained mostly by me and random contributions. Data will i
         <td><a href="https://prismlauncher.org/download/">prismlauncher.org</a></td>
         <td><a href="https://multimc.org/#Download">multimc.org</a></td>
         <td><a href="https://atlauncher.com/downloads">atlauncher.com</a></td>
+        <td><a href="https://github.com/gorilla-devs/GDLauncher/releases">github.com</a></td>
         <td><a href="https://gdlauncher.com/en/download/">gdlauncher.com</a></td>
         <td><a href="https://download.curseforge.com/">curseforge.com</a></td>
         <td><a href="https://www.feed-the-beast.com/app">feed-the-beast.com</a></td>
@@ -55,6 +57,7 @@ Note: This list is maintained mostly by me and random contributions. Data will i
         <td><a href="https://github.com/MultiMC/Launcher/">github.com</a></td>
         <td><a href="https://github.com/ATLauncher/ATLauncher">github.com</a></td>
         <td><a href="https://github.com/gorilla-devs/GDLauncher">github.com</a></td>
+        <td><a href="https://github.com/gorilla-devs/GDLauncher-Carbon">github.com</a></td>
         <td><hr></td>
         <td><a href="https://github.com/FTBTeam/FTB-App">github.com</a></td>
         <td><a href="https://github.com/modrinth/theseus">github.com</a></td>
@@ -65,6 +68,7 @@ Note: This list is maintained mostly by me and random contributions. Data will i
     </tr>
     <tr>
         <td>Operating Systems</td>
+        <td>Windows, Linux, macOS</td>
         <td>Windows, Linux, macOS</td>
         <td>Windows, Linux, macOS</td>
         <td>Windows, Linux, macOS</td>
@@ -85,6 +89,7 @@ Note: This list is maintained mostly by me and random contributions. Data will i
         <td>🟠Partially<a href="#1-multimc-is-proprietary-but-a-debranded-ms-pl-licensed-version-which-lacks-many-keys-multimc-uses-is-available-on-github">[1]</a></td>
         <td>✅Yes, GPL3</td>
         <td>✅Yes, GPL3<a href="#2-gdlauncher-has-a-cla">[2]</a></td>
+        <td>🟠Source-available</td>
         <td>❌No</td>
         <td>✅Yes, LGPL-2.1</td>
         <td>✅Yes, GPL3</td>
@@ -100,6 +105,7 @@ Note: This list is maintained mostly by me and random contributions. Data will i
         <td>C++ (Qt)</td>
         <td>Java</td>
         <td>HTML, JS, CSS, (Preact), (Electron) <br>🚧 Solid.js, Rust</td>
+        <td>HTML, JS, CSS, Astro, Rust, TypeScript</td>
         <td>HTML, JS, CSS, (React), (Next.js), Overwolf (Windows) or Electron (Windows, macOS, Linux)</td>
         <td>HTML, JS, CSS, (Vue.js), (Tailwind), Java, Overwolf (Windows) Electron (macOS and Linux)</td>
         <td>HTML, JS, CSS, (Vue.js), Rust, (Tauri)</td>
@@ -120,6 +126,7 @@ Note: This list is maintained mostly by me and random contributions. Data will i
         <td>✅Yes</td>
         <td>✅Yes</td>
         <td>✅Yes</td>
+        <td>✅Yes</td>
         <td>❌No</td>
         <td>❌No</td>
     </tr>
@@ -130,6 +137,7 @@ Note: This list is maintained mostly by me and random contributions. Data will i
         <td>❌No</td>
         <td>✅Yes (CF, MR)</td>
         <td>✅Yes (CF, 🚧MR)</td>
+        <td>✅Yes (CF, MR)</td> # Got up to here last edit
         <td>✅Yes (CF)</td>
         <td>✅Yes (FTB, CF)</td>
         <td>✅Yes (MR)</td>
@@ -140,6 +148,7 @@ Note: This list is maintained mostly by me and random contributions. Data will i
     </tr>
     <tr>
         <td>Custom Instance Support</td>
+        <td>✅Yes</td>
         <td>✅Yes</td>
         <td>✅Yes</td>
         <td>✅Yes</td>
@@ -165,6 +174,7 @@ Note: This list is maintained mostly by me and random contributions. Data will i
         <td>✅Yes</td>
         <td>✅Yes</td>
         <td>✅Yes</td>
+        <td>✅Yes</td>
         <td>❌No</td>
         <td></td>
         <td>✅Yes</td>
@@ -178,6 +188,7 @@ Note: This list is maintained mostly by me and random contributions. Data will i
         <td>✅Yes</td>
         <td>✅Yes</td>
         <td>🚧WIP</td>
+        <td>✅Yes</td>
         <td>❌No</td>
         <td>❌No</td>
         <td>✅Yes</td>
@@ -196,6 +207,7 @@ Note: This list is maintained mostly by me and random contributions. Data will i
         <td>❌No</td>
         <td>❌No</td>
         <td>❌No</td>
+        <td>❌No</td>
         <td></td>
         <td>❌No</td>
         <td>❌No</td>
@@ -205,6 +217,7 @@ Note: This list is maintained mostly by me and random contributions. Data will i
         <td>FTB Modpacks</td>
         <td>❌No</td>
         <td>🟠Import from FTB Launcher</td>
+        <td>❌No</td>
         <td>❌No</td>
         <td>❌No</td>
         <td>❌No</td>
@@ -223,6 +236,8 @@ Note: This list is maintained mostly by me and random contributions. Data will i
         <td>✅Yes</td>
         <td>❌No</td>
         <td>❌No</td>
+        <td>❌No</td>
+
         <td></td>
         <td>✅Yes</td>
         <td>❌No</td>
@@ -237,6 +252,7 @@ Note: This list is maintained mostly by me and random contributions. Data will i
         <td>✅Yes</td>
         <td>✅Yes</td>
         <td>✅Yes</td>
+        <td>❌No</td>
         <td>❌No</td>
         <td>❌No</td>
         <td>❌No</td>
@@ -259,6 +275,7 @@ Note: This list is maintained mostly by me and random contributions. Data will i
         <td>✅Yes</td>
         <td>✅Yes</td>
         <td>✅Yes</td>
+        <td>✅Yes</td>
         <td></td>
         <td>✅Yes</td>
         <td>❌No</td>
@@ -271,6 +288,7 @@ Note: This list is maintained mostly by me and random contributions. Data will i
         <td>✅Yes</td>
         <td>✅Yes</td>
         <td>🚧WIP</td>
+        <td>✅Yes</td>
         <td>❔TODO</td>
         <td>✅Yes</td>
         <td>✅Yes</td>
@@ -282,6 +300,7 @@ Note: This list is maintained mostly by me and random contributions. Data will i
     <tr>
         <td>Forge Loader</td>
         <td>❌No</td>
+        <td>✅Yes</td>
         <td>✅Yes</td>
         <td>✅Yes</td>
         <td>✅Yes</td>
@@ -304,6 +323,7 @@ Note: This list is maintained mostly by me and random contributions. Data will i
         <td>✅Yes</td>
         <td>✅Yes</td>
         <td>✅Yes</td>
+        <td>✅Yes</td>
         <td></td>
         <td>✅Yes</td>
         <td>❌No</td>
@@ -323,6 +343,7 @@ Note: This list is maintained mostly by me and random contributions. Data will i
         <td>❌No</td>
         <td>❌No</td>
         <td>❌No</td>
+        <td>❌No</td>
     </tr>
     <tr>
         <td>LiteLoader</td>
@@ -331,6 +352,7 @@ Note: This list is maintained mostly by me and random contributions. Data will i
         <td>✅Yes</td>
         <td>❌No</td>
         <td>❌No</td>
+        <td>✅Yes</td>
         <td>❌No</td>
         <td>❌No</td>
         <td>❌No</td>
@@ -349,6 +371,7 @@ Note: This list is maintained mostly by me and random contributions. Data will i
         <td>❌No</td>
         <td>✅Yes (MR, CF)</td>
         <td>✅Yes (🚧MR, CF)</td>
+        <td>✅Yes (MR, CF)</td>
         <td>✅Yes (CF)</td>
         <td>✅Yes (CF)</td>
         <td>✅Yes (MR)</td>
@@ -363,6 +386,7 @@ Note: This list is maintained mostly by me and random contributions. Data will i
         <td>✅Yes (MR, CF)</td>
         <td>❌No</td>
         <td>✅Yes (MR, CF)</td>
+        <td>❌No</td>
         <td>❌No</td>
         <td>✅Yes (CF)</td>
         <td>❌No</td>
@@ -381,6 +405,7 @@ Note: This list is maintained mostly by me and random contributions. Data will i
         <td>❌No</td>
         <td>❌No</td>
         <td>❌No</td>
+        <td>❌No</td>
         <td>✅Yes (MR)</td>
         <td>❌No</td>
         <td>❌No</td>
@@ -394,6 +419,7 @@ Note: This list is maintained mostly by me and random contributions. Data will i
         <td>❌No</td>
         <td>✅Yes (CF)</td>
         <td></td>
+        <td>❌No</td>
         <td></td>
         <td></td>
         <td>❌No</td>
@@ -409,6 +435,7 @@ Note: This list is maintained mostly by me and random contributions. Data will i
         <td>❌No</td>
         <td>❌No</td>
         <td></td>
+        <td>❌No</td>
         <td></td>
         <td></td>
         <td>✅Yes</td>
@@ -419,6 +446,7 @@ Note: This list is maintained mostly by me and random contributions. Data will i
     </tr>
     <tr>
         <td>Plugins Download [Modrinth|CurseForge]</td>
+        <td>❌No</td>
         <td>❌No</td>
         <td>❌No</td>
         <td>❌No</td>
@@ -442,6 +470,7 @@ Note: This list is maintained mostly by me and random contributions. Data will i
         <td>❌No</td>
         <td>✅Yes (via web browser, automatically moves mod)</td>
         <td>✅Yes (by using standard browser user agent)</td>
+        <td>✅Yes (granted bypass by CurseForge)</td>
         <td>✅Yes</td>
         <td>✅Yes</td>
         <td>❌No</td>
@@ -457,6 +486,7 @@ Note: This list is maintained mostly by me and random contributions. Data will i
         <td>❌No</td>
         <td>✅Yes</td>
         <td>✅Yes</td>
+        <td>⚠️Yes<a href="#3-gdlauncher-carbon-mod-updater-appears-to-be-slightly-buggy-at-the-time-of-writing">[3]</a></td>
         <td>✅Yes</td>
         <td>❌No</td>
         <td>✅Yes</td>
@@ -475,6 +505,7 @@ Note: This list is maintained mostly by me and random contributions. Data will i
         <td>❌No</td>
         <td>❌No</td>
         <td>❌No</td>
+        <td>❌No</td>
         <td>❔</td>
         <td>❌No</td>
         <td>❌No</td>
@@ -485,6 +516,7 @@ Note: This list is maintained mostly by me and random contributions. Data will i
         <td>✅Yes</td>
         <td>🚧WIP</td>
         <td>❌No</td>
+        <td>✅Optional</td>
         <td>✅Optional</td>
         <td>✅Optional</td>
         <td>✅Yes</td>
@@ -499,6 +531,7 @@ Note: This list is maintained mostly by me and random contributions. Data will i
         <td>Full Launcher Sandboxing</td>
         <td>❌No</td>
         <td>🚧WIP</td>
+        <td>❔</td>
         <td>❔</td>
         <td>❔</td>
         <td>❔</td>
@@ -517,6 +550,7 @@ Note: This list is maintained mostly by me and random contributions. Data will i
         <td>Modrinth, MultiMC</td>
         <td>CurseForge, Modrinth, MultiMC</td>
         <td>CurseForge</td>
+        <td>CurseForge, Modrinth</td>
         <td>CurseForge</td>
         <td>FTB App Share Code</td>
         <td>Modrinth</td>
@@ -532,6 +566,7 @@ Note: This list is maintained mostly by me and random contributions. Data will i
         <td>CurseForge, MultiMC, Technic, FTB App</td>
         <td>CurseForge, Modrinth, MultiMC</td>
         <td>CurseForge</td>
+        <td>See footnote <a href="#4-gdlauncher-legacy-curseforge-zip-launcher-modrinth-mrpack-launcher-atlauncher-technic-ftb-multimc-prism">[4]</a></td>
         <td>CurseForge</td>
         <td>CurseForge and FTB App Share Code</td>
         <td>CurseForge, MultiMC, GDLauncher, ATLauncher</td>
@@ -551,6 +586,7 @@ Note: This list is maintained mostly by me and random contributions. Data will i
         <td>Custom</td>
         <td>Custom</td>
         <td>Custom</td>
+        <td>Custom</td>
         <td>Minecraft Inspired</td>
         <td>System (mostly)</td>
         <td>Custom</td>
@@ -561,6 +597,7 @@ Note: This list is maintained mostly by me and random contributions. Data will i
         <td>❌No</td>
         <td>❌No</td>
         <td>❌No</td>
+        <td>✅Yes</td>
         <td>✅Yes</td>
         <td>✅Yes</td>
         <td>✅Yes</td>
@@ -577,6 +614,7 @@ Note: This list is maintained mostly by me and random contributions. Data will i
         <td>❌No</td>
         <td>❌No</td>
         <td>❌No</td>
+        <td>❔</td>
         <td>✅Optional (via Overwolf app)</td>
         <td>✅Optional (via Overwolf app)</td>
         <td>❌No</td>
@@ -620,6 +658,8 @@ Note: This list is maintained mostly by me and random contributions. Data will i
 ### Source code and licenses
 #### 1. MultiMC is proprietary but a debranded MS-PL licensed version which lacks many keys MultiMC uses is available on GitHub
 #### 2. GDLauncher has a <a href="https://cla-assistant.io/gorilla-devs/GDLauncher">CLA</a>
+#### 3. GDLauncher Carbon mod updater appears to be slightly buggy at the time of writing
+#### 4. GDLauncher Legacy, CurseForge (ZIP, launcher), Modrinth (mrpack, 🚧launcher), 🚧ATLauncher, 🚧Technic, 🚧FTB, 🚧MultiMC, 🚧Prism
 
 View and edit the source of this page here:
 https://github.com/TayouVR/MinecraftLauncherComparison
