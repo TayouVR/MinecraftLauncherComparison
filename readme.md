@@ -174,7 +174,7 @@ Note: This list is maintained mostly by me and random contributions. Data will i
         <td>✅Yes</td>
         <td>✅Yes</td>
         <td>❌No</td>
-        <td></td>
+        <td>❌No</td>
         <td>✅Yes</td>
         <td>❌No</td>
         <td>❌No</td>
@@ -190,7 +190,7 @@ Note: This list is maintained mostly by me and random contributions. Data will i
         <td>❌No</td>
         <td>❌No</td>
         <td>✅Yes</td>
-        <td></td>
+        <td>❌No</td>
         <td>✅Yes</td>
         <td>❌No</td>
         <td>❌No</td>
@@ -206,7 +206,7 @@ Note: This list is maintained mostly by me and random contributions. Data will i
         <td>❌No</td>
         <td>❌No</td>
         <td>❌No</td>
-        <td></td>
+        <td>❌No</td>
         <td>❌No</td>
         <td>❌No</td>
         <td>❌No</td>
@@ -222,7 +222,7 @@ Note: This list is maintained mostly by me and random contributions. Data will i
         <td></td>
         <td>✅Yes</td>
         <td>❌No</td>
-        <td></td>
+        <td>❌No</td>
         <td>❌No</td>
         <td>❌No</td>
         <td>❌No</td>
@@ -238,7 +238,7 @@ Note: This list is maintained mostly by me and random contributions. Data will i
         <td></td>
         <td>✅Yes</td>
         <td>❌No</td>
-        <td></td>
+        <td>❌No</td>
         <td>❌No</td>
         <td>❌No</td>
         <td>❌No</td>
@@ -372,7 +372,7 @@ Note: This list is maintained mostly by me and random contributions. Data will i
         <td>✅Yes (CF)</td>
         <td>✅Yes (CF)</td>
         <td>✅Yes (MR)</td>
-        <td></td>
+        <td>❌No</td>
         <td>❌No</td>
         <td>❌No</td>
         <td>❌No</td>
@@ -420,7 +420,7 @@ Note: This list is maintained mostly by me and random contributions. Data will i
         <td></td>
         <td></td>
         <td>❌No</td>
-        <td></td>
+        <td>❌No</td>
         <td></td>
         <td></td>
         <td>❌No</td>
@@ -436,7 +436,7 @@ Note: This list is maintained mostly by me and random contributions. Data will i
         <td></td>
         <td></td>
         <td>✅Yes</td>
-        <td></td>
+        <td>❌No</td>
         <td></td>
         <td></td>
         <td>❌No</td>
@@ -471,7 +471,7 @@ Note: This list is maintained mostly by me and random contributions. Data will i
         <td>✅Yes</td>
         <td>✅Yes</td>
         <td>❌No</td>
-        <td>❔</td>
+        <td>❌No</td>
         <td>❔</td>
         <td>❌No</td>
         <td>❌No</td>
@@ -551,7 +551,7 @@ Note: This list is maintained mostly by me and random contributions. Data will i
         <td>CurseForge</td>
         <td>FTB App Share Code</td>
         <td>Modrinth</td>
-        <td>❔</td>
+        <td>❌No</td>
         <td>❌No</td>
         <td>❌No</td>
         <td>🚧WIP</td>
@@ -567,7 +567,7 @@ Note: This list is maintained mostly by me and random contributions. Data will i
         <td>CurseForge</td>
         <td>CurseForge and FTB App Share Code</td>
         <td>CurseForge, MultiMC, GDLauncher, ATLauncher</td>
-        <td>❔</td>
+        <td>❌No</td>
         <td>❌No</td>
         <td>❌No</td>
         <td>🚧WIP</td>
