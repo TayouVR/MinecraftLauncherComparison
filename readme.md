@@ -511,7 +511,7 @@ Note: This list is maintained mostly by me and random contributions. Data will i
     <tr>
         <td>Automatic Java Setup</td>
         <td>✅Yes</td>
-        <td>🚧WIP</td>
+        <td>✅Optional</td>
         <td>❌No</td>
         <td>✅Optional</td>
         <td>✅Optional</td>
