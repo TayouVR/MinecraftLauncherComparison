@@ -398,7 +398,7 @@ Note: This list is maintained mostly by me and random contributions. Data will i
     <tr>
         <td>Shaderpack download [Modrinth|CurseForge]</td>
         <td>❌No</td>
-        <td>✅Yes (MR)</td>
+        <td>✅Yes (MR, CF)</td>
         <td>❌No</td>
         <td>✅Yes (MR, CF)</td>
         <td>❌No</td>
