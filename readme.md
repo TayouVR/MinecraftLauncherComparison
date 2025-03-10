@@ -1,5 +1,6 @@
 # Minecraft Launcher Comparison
 
+<!-- TODO: update this image when the site is more final!!!!! -->
 ![preview.png](.github/data/preview.png)
 
 > [!NOTE]  
