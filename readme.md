@@ -1,5 +1,7 @@
 # Minecraft Launcher Comparison
 
+![preview.png](.github/data/preview.png)
+
 > [!NOTE]  
 > The comparison table is not available in the readme anymore, go to https://mc-launcher.tayou.org/ instead.
 
