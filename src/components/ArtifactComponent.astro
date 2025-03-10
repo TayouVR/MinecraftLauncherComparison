@@ -1,0 +1,5 @@
+---
+import Artifact from "./Artifact.astro";
+const { artifacts } = Astro.props as { artifacts: { arch: string[], os: string, link?: string }[] };
+---
+{artifacts.map(artifact => <Artifact artifact={artifact} />)}

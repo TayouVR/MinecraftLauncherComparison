@@ -1,0 +1,161 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+import json5 from 'json5';
+import { readFileSync, readdirSync } from 'fs';
+import path from 'path';
+import ListComponent from "../components/ListComponent.astro";
+import {json} from "node:stream/consumers";
+
+function getLauncherDetails(path: string) {
+	return json5.parse<LauncherDetails>(
+		readFileSync(path, 'utf-8')
+	);
+}
+
+
+const dataDir = './src/launcher-definitions'; // Define the directory that holds JSON5 files
+const launchers: LauncherDetails[] = [];
+
+// Dynamically loop through all files in the directory
+readdirSync(dataDir).forEach((file) => {
+	if (file.endsWith('.json5')) {
+		const filePath = path.join(dataDir, file); // Construct full file path
+		launchers.push(getLauncherDetails(filePath)); // Parse and push to `launchers`
+	}
+});
+
+function launcherProperties<TLauncher extends Record<string, any>>(
+	launchers: LauncherDetails[],
+	sections: (keyof TLauncher)[]
+): Array<{ name: string; values: Array<{ identifier: string; value: unknown }>; }> {
+	// Create a map to group properties by name
+	const grouped: Record<string, { name: string; values: Array<{ identifier: string; value: unknown }>; }> = {};
+
+	// Iterate over each launcher
+	(launchers as any as TLauncher[]).forEach((launcher) => {
+		sections.forEach((section) => {
+			console.log(`\nSection: ${String(section)}`);
+			const fields = launcher[section];
+
+			Object.entries(fields).forEach(([fieldName, fieldValue]) => {
+				console.log(`Field Name: ${fieldName}`);
+				console.log("Field Value:", fieldValue);
+				if (!grouped[fieldName]) {
+					// If the `name` doesn't exist in the grouped map, initialize it
+					grouped[fieldName] = { name: fieldName, values: [] };
+				}
+				// Add the launcher identifier and its property value
+				grouped[fieldName].values.push({
+					identifier: launcher.identifier,
+					value: fieldValue,
+				});
+			});
+		});
+	});
+
+	// Convert the grouped entries back into an array
+	return Object.values(grouped);
+}
+
+
+const columnsClientState: any = {};
+launchers.forEach((launcher) => {
+	columnsClientState[launcher.identifier] = { enabled: true };
+});
+---
+
+<Layout>
+	<clientData id="clientData" value={JSON.stringify(columnsClientState)}></clientData>
+	<h1>Minecraft Launcher Comparison</h1>
+
+	This will give you an overview over the various Minecraft (Java Edition) launchers and their features.<br>
+	<br>
+	Explanations:
+	<ul>
+		<li>Modloader support means a way to install the modloader through the launcher directly, without downloading it separately.</li>
+		<li>CurseForge blocked downloads: CurseForge offers creators on the platform the option to opt out of downloads from 3rd party platforms as a means to ensure ad revenue is generated when downloading content. Platforms need to work around that restriction to properly support CurseForge content.</li>
+	</ul>
+
+	Note: This list is maintained mostly by me and random contributions. Data will inevitably get outdated over time and I always welcome any updates and corrections.<br>
+
+	<div class="launcher-toggle-container">
+		{ launchers.map(launcher => (
+			<button class:list={["launcher-toggle", launcher.identifier]} onclick={`toggleVisibility('${launcher.identifier}')`}>
+				{ launcher.icon ? (
+					<img class="launcher-icon" src={launcher.icon}  alt=`${launcher.name} Icon` /><br/>
+				) : launcher.name}
+			</button>
+		))}
+	</div>
+
+	<table>
+		<thead>
+			<tr class="header-row">
+				<th>Feature</th>
+				{ launchers.map(launcher => (
+					<th class={launcher.identifier}>
+						{ launcher.icon ? (
+							<img class="launcher-icon" src={launcher.icon}  alt=`${launcher.name} Icon` /><br/>
+						) : ''}
+						{launcher.name}
+					</th>
+				))}
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<th>License</th>
+				{ launchers.map(launcher => (
+					<th class={launcher.identifier}>{launcher.configuration.license}</th>
+				))}
+			</tr>
+			<tr>
+				<th>Look & Feel</th>
+				{ launchers.map(launcher => (
+					<th class={launcher.identifier}>{launcher.configuration.lookAndFeel}</th>
+				))}
+			</tr>
+			<tr><th colspan={launchers.length + 1}>Properties</th></tr>
+			{ launcherProperties(launchers, ["properties"]).map((property) => (
+				<ListComponent propertyName={property.name} launchers={launchers} propCategory="properties" />
+			))}
+			<tr><th colspan={launchers.length + 1}>Features</th></tr>
+			{ launcherProperties(launchers, ["features"]).map((property) => (
+				<ListComponent propertyName={property.name} launchers={launchers} propCategory="features" />
+			))}
+		</tbody>
+	</table>
+
+	View and edit the source of this page here:<br>
+	<a href="https://github.com/TayouVR/MinecraftLauncherComparison">https://github.com/TayouVR/MinecraftLauncherComparison</a><br>
+	<br>
+	submit any issues, outdated or missing information here:<br>
+	<a href="https://github.com/TayouVR/MinecraftLauncherComparison/issues">https://github.com/TayouVR/MinecraftLauncherComparison/issues</a><br>
+</Layout>
+
+<script is:inline>
+
+	let columns = {};
+
+	function getColumns() {
+		if (Object.keys(columns).length === 0) {
+			const jsonString = document.getElementById("clientData").attributes.value.value;
+			columns = JSON.parse(jsonString);
+		}
+		return columns;
+	}
+
+	// JavaScript function to toggle visibility
+	function toggleVisibility(className) {
+		getColumns();
+		const elements = document.getElementsByClassName(className);
+		columns[className].enabled = !columns[className].enabled;
+		for (const element of elements) {
+			// Toggle between visible and hidden
+			if (columns[className].enabled === element.classList.contains("column-disabled")) {
+				element.classList.toggle("column-disabled");
+			}
+		}
+	}
+</script>

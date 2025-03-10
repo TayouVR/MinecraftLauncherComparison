@@ -32,19 +32,16 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Setup .NET Core
-        uses: actions/setup-dotnet@v2
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
         with:
-          dotnet-version: "8.x"
+          node-version: 23
 
-      - name: Restore dependencies
-        run: dotnet restore ./MCLauncherComparison/MCLauncherComparison.csproj
+      - name: Install dependencies
+        run: npm install
 
-      - name: Build Statiq site
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # Set GitHub token as an environment variable
-        run: dotnet run --project ./MCLauncherComparison/MCLauncherComparison.csproj
-        # Statiqs own thing doesn't seem to deploy like that, so lets just ignore it
+      - name: Build Astro site
+        run: npm run build
         
       - name: Setup Pages
         uses: actions/configure-pages@v4
@@ -53,7 +50,7 @@ jobs:
         uses: actions/upload-pages-artifact@v3
         with:
           # Upload path
-          path: './MCLauncherComparison/output'
+          path: './dist'
           
       - name: Deploy to GitHub Pages
         id: deployment
