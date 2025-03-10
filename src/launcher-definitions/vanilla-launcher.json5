@@ -1,0 +1,98 @@
+﻿{
+  "identifier": "com.mojang.minecraft.launcher-new",
+  "name": "Vanilla Launcher",
+  "icon": "https://clipartcraft.com/images/minecraft-logo-png-2.png",
+  "downloadLink": "",
+  "sourceRepo": "",
+  "homepage": "",
+  "configuration": {
+    "license": "GPLv3 or newer",
+    "serverInstances": false,
+    "lookAndFeel": "Minecraft Official"
+  },
+  "features": {
+    "modpacks": [],
+    "modloaders": [],
+    "minecraftResources": {
+      "mods": {
+        "downloading": false,
+        "updating": false,
+        "providers": []
+      },
+      "resourcepacks": {
+        "downloading": false,
+        "updating": false,
+        "providers": []
+      },
+      "shaderpacks": {
+        "downloading": false,
+        "providers": []
+      },
+      "worlds": {
+        "downloading": false,
+        "updating": false,
+        "providers": []
+      },
+      "datapacks": {
+        "downloading": false,
+        "updating": false,
+        "providers": []
+      },
+      "plugins": {
+        "downloading": false,
+        "updating": false,
+        "providers": []
+      }
+    },
+    "import": [],
+    "export": [],
+    "java": {
+      "download": true,
+      "versionManagement": true,
+      "usingSystemInstall": true,
+    },
+    "sandboxing": { "status": "WIP" },
+    "overlay": { "status": "NotSupported" },
+    "advertisements": {
+      "status": "NotSupported",
+      "note": "Displaying optional ads for download providers via networks like Adrinth have been in consideration"
+    }
+  },
+  "properties": {
+    "artifacts": [
+      { "arch": ["x86_64"], "os": "Windows", "link": "" },
+      { "arch": ["x86_64"], "os": "Linux", "link": "" },
+      { "arch": ["x86_64", "arm64"], "os": "MacOS", "link": "" },
+      { "arch": ["arm64"], "os": "Windows", "link": "" },
+      { "arch": ["arm64"], "os": "Linux", "link": "" }
+    ],
+    "packages": [
+      // This is a lot of work, I don't know which launcher is in which package manager
+      { "name": "AUR", "official": true },
+      { "name": "Arch", "official": true },
+      { "name": "Debian", "official": true },
+      { "name": "Fedora", "official": true },
+      { "name": "Gentoo", "official": true },
+      { "name": "Homebrew", "official": true },
+      { "name": "MacPorts", "official": false },
+      { "name": "OpenSUSE", "official": true },
+      { "name": "PPA", "official": false },
+      { "name": "Portage", "official": false },
+      { "name": "MPR", "official": true },
+      { "name": "Winget", "official": true },
+      { "name": "Microsoft Store", "official": true },
+      { "name": "Scoop", "official": false },
+      { "name": "Nixpkgs", "official": true }
+    ],
+    "technology": {
+      "languages": ["HTML", "JS", "CSS", "C++"],
+      "frameworks": ["React", "CEF"]
+    }
+  },
+  "specialFeatures": {
+    "CurseForgeBlockedDownloads": {
+      "supported": true,
+      "method": "via web browser, automatically copies mod"
+    }
+  },
+}

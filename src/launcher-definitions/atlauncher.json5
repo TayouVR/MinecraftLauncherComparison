@@ -1,0 +1,104 @@
+﻿{
+  "identifier": "org.atlauncher.atlauncher",
+  "name": "ATLauncher",
+  "icon": "https://atlauncher.com/assets/images/logo.svg",
+  "downloadLink": "",
+  "sourceRepo": "",
+  "sourceRepo": "",
+  "homepage": "",
+  "configuration": {
+    "license": "GPLv3 or newer",
+    "serverInstances": false,
+    "lookAndFeel": "Custom (configurable)"
+  },
+  "features": {
+    "modpacks": [
+      { "name": "CurseForge", "method": "Download", "updating": true },
+      { "name": "Modrinth", "method": "Download", "updating": true },
+      { "name": "ftb", "method": "Download", "updating": false },
+      { "name": "atlauncher", "method": "Download", "updating": false },
+      { "name": "technic", "method": "Download", "updating": false }
+    ],
+    "modloaders": ["forge", "neoforge", "fabric", "quilt", "legacy-fabric"],
+    "minecraftResources": {
+      "mods": {
+        "downloading": true,
+        "updating": true,
+        "providers": ["Modrinth", "CurseForge"]
+      },
+      "resourcepacks": {
+        "downloading": true,
+        "updating": true,
+        "providers": ["Modrinth", "CurseForge"]
+      },
+      "shaderpacks": {
+        "downloading": true,
+        "providers": ["Modrinth"]
+      },
+      "worlds": {
+        "downloading": true,
+        "updating": true,
+        "providers": ["Modrinth", "CurseForge"]
+      },
+      "datapacks": {
+        "downloading": true,
+        "updating": true,
+        "providers": ["Modrinth", "CurseForge"]
+      },
+      "plugins": {
+        "downloading": true,
+        "updating": true,
+        "providers": ["Modrinth", "CurseForge"]
+      }
+    },
+    "import": ["OneSix", "Modrinth", "CurseForge", "Technic", "FtbApp"],
+    "export": ["OneSix", "Modrinth", "CurseForge", "Text", "Markdown", "JSON", "HTML"],
+    "java": {
+      "download": true,
+      "versionManagement": true,
+      "usingSystemInstall": true,
+    },
+    "sandboxing": { "status": "WIP" },
+    "overlay": { "status": "NotSupported" },
+    "advertisements": {
+      "status": "NotSupported",
+      "note": "Displaying optional ads for download providers via networks like Adrinth have been in consideration"
+    }
+  },
+  "properties": {
+    "artifacts": [
+      { "arch": ["x86_64"], "os": "Windows", "link": "" },
+      { "arch": ["x86_64"], "os": "Linux", "link": "" },
+      { "arch": ["x86_64", "arm64"], "os": "MacOS", "link": "" },
+      { "arch": ["arm64"], "os": "Windows", "link": "" },
+      { "arch": ["arm64"], "os": "Linux", "link": "" }
+    ],
+    "packages": [
+      // This is a lot of work, I don't know which launcher is in which package manager
+      { "name": "AUR", "official": true },
+      { "name": "Arch", "official": true },
+      { "name": "Debian", "official": true },
+      { "name": "Fedora", "official": true },
+      { "name": "Gentoo", "official": true },
+      { "name": "Homebrew", "official": true },
+      { "name": "MacPorts", "official": false },
+      { "name": "OpenSUSE", "official": true },
+      { "name": "PPA", "official": false },
+      { "name": "Portage", "official": false },
+      { "name": "MPR", "official": true },
+      { "name": "Winget", "official": true },
+      { "name": "Scoop", "official": true },
+      { "name": "Nixpkgs", "official": true }
+    ],
+    "technology": {
+      "languages": ["Java"],
+      "frameworks": ["Swing"]
+    }
+  },
+  "specialFeatures": {
+    "CurseForgeBlockedDownloads": {
+      "supported": true,
+      "method": "via web browser, automatically copies mod"
+    }
+  },
+}

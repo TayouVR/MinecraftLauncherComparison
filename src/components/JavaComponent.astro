@@ -1,0 +1,20 @@
+---
+
+const { java } = Astro.props as { "java": {
+        download: boolean;
+        versionManagement: boolean;
+        usingSystemInstall: boolean;
+    }, };
+
+const out: string[] = [];
+if (java.download) {
+    out.push("Download");
+}
+if (java.versionManagement) {
+    out.push("Manage Versions");
+}
+if (java.usingSystemInstall) {
+    out.push("use System Java");
+}
+---
+{out.join(', ')}

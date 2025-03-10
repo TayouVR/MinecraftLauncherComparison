@@ -1,0 +1,46 @@
+---
+const { modloaders } = Astro.props as { modloaders: string[] };
+---
+{modloaders.map(modloader => (
+<div class="modloader">
+    {modloader === 'forge' ? (
+        <img alt="Forge" src="/src/assets/forge.svg" />
+    ) : modloader === 'fabric' ? (
+        <img alt="FabricMC" src="/src/assets/fabric.png" />
+    ) : modloader === 'quilt' ? (
+        <img alt="QuiltMC" src="/src/assets/quilt.svg" />
+    ) : modloader === 'neoforge' ? (
+        <img alt="Neoforge" src="/src/assets/neoforged.png" />
+    ) : modloader === 'legacy-fabric' ? (
+        <img alt="Legacy Fabric" src="/src/assets/legacy-fabric.png" />
+    ) : ''}
+    <span>{modloader}</span>
+</div>
+))}
+
+<style>
+    .modloader {
+        display: flex;
+        flex-direction: row;
+        justify-content: left;
+        align-items: center;
+        margin: 10px;
+        border: 1px solid black;
+        border-radius: 5px;
+        background-color: #eee;
+        height: 2em;
+        overflow: hidden;
+
+        @media (prefers-color-scheme: dark) {
+            background-color: #222;
+        }
+
+        img {
+            height: 2em;
+        }
+        span {
+            margin: 10px;
+            text-wrap: nowrap;
+        }
+    }
+</style>

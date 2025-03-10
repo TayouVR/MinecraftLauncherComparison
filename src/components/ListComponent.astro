@@ -1,0 +1,53 @@
+---
+import ArtifactComponent from "./ArtifactComponent.astro";
+import PackagesComponent from "./PackagesComponent.astro";
+import ModloadersComponent from "./ModloadersComponent.astro";
+import MinecraftResources from "./MinecraftResources.astro";
+import JavaComponent from "./JavaComponent.astro";
+import {log} from "node:util";
+
+
+const { propertyName, launchers, propCategory } = Astro.props as { propertyName: string, launchers: LauncherDetails[], propCategory: "properties" | "features" };
+
+function valueFromLauncher<TLauncher extends Record<"properties" | "features", Record<string, any>>>(launcher: LauncherDetails) {
+    return (launcher as any as TLauncher)[propCategory][propertyName];
+}
+
+---
+
+<tr>
+    <td>{propertyName}</td>
+    { launchers.map(launcher => (
+        <td class={launcher.identifier}>
+            { (propertyName === "artifacts") ? (
+                <ArtifactComponent artifacts={valueFromLauncher(launcher)} />
+            ) : (propertyName === "packages") ? (
+                <PackagesComponent packages={valueFromLauncher(launcher)} />
+            ) : (propertyName === "technology") ? (
+                "Languages:" + valueFromLauncher(launcher).languages.join(', ') + " | Frameworks:" + valueFromLauncher(launcher).frameworks.join(', ')
+            ) : (propertyName === "modloaders") ? (
+                <ModloadersComponent modloaders={valueFromLauncher(launcher)} />
+            ) : (propertyName === "minecraftResources") ? (
+                <MinecraftResources resources={valueFromLauncher(launcher)} />
+            ) : (propertyName === "java") ? (
+                <JavaComponent java={valueFromLauncher(launcher)} />
+            ) : (propertyName === "sandboxing") ? (
+                valueFromLauncher(launcher).status
+            ) : (propertyName === "modpacks") ? (
+                valueFromLauncher(launcher).map(modpack => modpack.name).join(', ')
+            ) : (propertyName === "overlay") ? (
+                valueFromLauncher(launcher).status
+            ) : (propertyName === "advertisements") ? (
+                valueFromLauncher(launcher).status
+            ) : (typeof valueFromLauncher(launcher) === "string") ? (
+                valueFromLauncher(launcher).toUpperCase()
+            ) : (typeof valueFromLauncher(launcher) === "number") ? (
+                valueFromLauncher(launcher).toFixed(2)
+            ) : (Array.isArray(valueFromLauncher(launcher))) ? (
+                valueFromLauncher(launcher).join(', ')
+            ) : (
+                "Unsupported Type"
+            )}
+        </td>
+    ))}
+</tr>
