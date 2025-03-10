@@ -1,0 +1,155 @@
+﻿{
+  "identifier": "org.prismlauncher.prismlauncher",
+  "name": "Prism Launcher",
+  "icon": "https://icon/url/",
+  "downloadLink": "",
+  "properties": [
+    {
+      "id": "feature.modpacks",
+      "status": "Supported",
+      "value": [
+        {
+          "name": "curseforge",
+          "method": "Download"
+        },
+        {
+          "name": "modrinth",
+          "method": "Download"
+        },
+        {
+          "name": "ftb",
+          "method": "Import",
+          "note": "No easy updating"
+        },
+        {
+          "name": "atlauncher",
+          "method": "Download",
+          "note": "No easy updating"
+        },
+        {
+          "name": "legacy-ftb",
+          "method": "Download",
+          "note": "No easy updating"
+        },
+        {
+          "name": "technic",
+          "method": "Download",
+          "note": "No easy updating"
+        },
+      ],
+    },
+    {
+      "id": "feature.license",
+      "status": "Supported",
+      "value": "MIT"
+    },
+    {
+      "id": "feature.modloaders",
+      "status": "Supported",
+      "value": [
+        {
+          "name": "forge",
+        },
+        {
+          "name": "neoforge",
+        },
+        {
+          "name": "fabric",
+        },
+        {
+          "name": "quilt",
+        },
+        {
+          "name": "legacy-fabric",
+        },
+        {
+          "name": "liteloader",
+        },
+        {
+          "name": "Rift",
+        },
+        {
+          "name": "Risugami",
+        },
+      ],
+    },
+    {
+      "id": "feature.license",
+      "status": "Supported",
+      "value": "MIT"
+    },
+    {
+      "id": "feature.overlay",
+      "status": "Supported",
+      "note": "In-game overlay available"
+    }
+  ],
+  "sourceCode": "",
+  "supportedOS": [
+    "Windows",
+    "Linux",
+    "MacOS"
+  ],
+  "supportedArch": [
+    "x86",
+    "x86_64",
+    "arm64"
+  ],
+  "officialPackages": [
+    "AUR",
+    "MPR",
+    "MacOS"
+  ],
+  "unofficialPackages": [
+    "Scoop",
+    "Linux",
+    "MacOS"
+  ],
+  "programmingLanguage": "C++",
+  "UIToolkit": "Qt",
+  "modLoader": {
+  },
+  "resourceDownloding": {
+    "mods": [
+      "modrinth",
+      "curseforge",
+    ],
+    "resourcepacks": [
+      "modrinth",
+      "curseforge",
+    ],
+    "shaderpacks": [
+      "modrinth",
+    ],
+    "worlds": [],
+    "datapack": [],
+    "plugins": []
+  },
+  "curseforgeBlockedDownloads": {
+    "supported": true,
+    "method": "via web browser, automatically copies mod",
+  },
+  "modUpdating": true,
+  "serverInstances": false,
+  "automaticJavaSetup": "WIP",
+  "sandboxing": {
+    wip: true,
+    "supported": false,
+  },
+  "instanceExport": [
+    "CurseForge",
+    "Modrinth",
+    "MultiMC",
+    "TXT",
+  ],
+  "instanceImport": [
+    "CurseForge",
+    "Modrinth",
+    "MultiMC",
+    "Technic",
+    "FTB App"
+  ],
+  "lookAndFeel": "System (configurable)",
+  "advertisements": false,
+  "inGameOverlay": false,
+}

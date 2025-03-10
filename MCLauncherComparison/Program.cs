@@ -1,4 +1,7 @@
-﻿using Statiq.Razor;
+﻿using Statiq.App;
+using Statiq.Common;
+using Statiq.Razor;
+using Statiq.Web;
 
 namespace MCLauncherCompare;
 
@@ -18,17 +21,27 @@ public class Program {
         return await Bootstrapper
             .Factory
             .CreateWeb(args)
-            .AddPipeline("ProcessLauncherDefinitions", new Pipeline {
-                InputModules = {
-                    new ReadFiles(pattern: "launcher-definitions/*.json"),
-                    new ReadFiles(pattern: "launcher-definitions/*.json5")
-                },
-                ProcessModules = {
-                    new ParseJson()
-                },
-                OutputModules = {
-                    new RenderRazor().WithModel(Config.FromDocument((doc, ctx) => doc))
-                }
+            .AddPipeline("MyPipeline", pipeline => pipeline
+                .InputModules(
+                    new ReadFiles("*.json"),
+                    new ReadJsonAsDocuments("*.json")
+                )
+                .ProcessModules(
+                    new SetDestination(".html"),
+                    new RenderRazor().WithModel(new { }),
+                    new WriteFiles()
+                )
+            )
+            .BuildPipeline("ProcessLauncherDefinitions", builder => {
+                builder.WithInputReadFiles([
+                    "launcher-definitions/*.json",
+                    "launcher-definitions/*.json5",
+                ]);
+                // builder.WithProcessModules(new ModuleList{
+                //     new JsonLoaderModule()
+                // });
+                builder.WithProcessModules(new ParseJson());
+                builder.WithOutputWriteFiles(".json");
             })
             .AddSettings(Settings)
             .RunAsync();

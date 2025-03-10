@@ -1,0 +1,283 @@
+﻿{
+  "identifier": "org.tayou.template-launcher",
+  "name": "Example Template Launcher",
+  "icon": "https://icon/url/",
+  "downloadLink": "",
+  "properties": [
+    {
+      "id": "feature.modpacks",
+      "status": "Supported",
+      "value": [
+        {
+          "name": "curseforge",
+          "method": "Download"
+        },
+        {
+          "name": "modrinth",
+          "method": "Download"
+        },
+        {
+          "name": "ftb",
+          "method": "Import",
+          "note": "No easy updating"
+        },
+        {
+          "name": "atlauncher",
+          "method": "Download",
+          "note": "No easy updating"
+        },
+        {
+          "name": "legacy-ftb",
+          "method": "Download",
+          "note": "No easy updating"
+        },
+        {
+          "name": "technic",
+          "method": "Download",
+          "note": "No easy updating"
+        },
+      ],
+    },
+    {
+      "id": "property.license",
+      "status": "Supported",
+      "value": "MIT"
+    },
+    {
+      "id": "feature.modloaders",
+      "status": "Supported",
+      "value": [
+        {
+          "name": "forge",
+        },
+        {
+          "name": "neoforge",
+        },
+        {
+          "name": "fabric",
+        },
+        {
+          "name": "quilt",
+        },
+        {
+          "name": "legacy-fabric",
+        },
+        {
+          "name": "liteloader",
+        },
+        {
+          "name": "Rift",
+        },
+        {
+          "name": "Risugami",
+        },
+      ],
+    },
+    {
+      "id": "property.artifacts",
+      "status": "Supported",
+      "value": [
+        {
+          "arch": [
+            "x86_64"
+          ],
+          "os": "Windows",
+        },
+        {
+          "arch": [
+            "x86_64"
+          ],
+          "os": "Linux",
+        },
+        {
+          "arch": [
+            "x86_64",
+            "arm64"
+          ],
+          "os": "MacOS",
+        },
+        {
+          "arch": [
+            "arm64"
+          ],
+          "os": "Windows",
+        },
+        {
+          "arch": [
+            "arm64"
+          ],
+          "os": "Linux",
+        }
+      ]
+    },
+    {
+      "id": "property.packages",
+      "value": [
+        {
+          "name": "AUR",
+          "official": true
+        },
+        {
+          "name": "Arch",
+          "official": true
+        },
+        {
+          "name": "Debian",
+          "official": true
+        },
+        {
+          "name": "Fedora",
+          "official": true
+        },
+        {
+          "name": "Gentoo",
+          "official": true
+        },
+        {
+          "name": "Homebrew",
+          "official": true
+        },
+        {
+          "name": "MacPorts",
+          "official": false
+        },
+        {
+          "name": "OpenSUSE",
+          "official": true
+        },
+        {
+          "name": "PPA",
+          "official": false
+        },
+        {
+          "name": "Portage",
+          "official": false
+        },
+        {
+          "name": "MPR",
+          "official": true
+        },
+        {
+          "name": "Winget",
+          "official": true
+        },
+        {
+          "name": "Scoop",
+          "official": true
+        },
+        {
+          "name": "Nixpkgs",
+          "official": true
+        },
+      ]
+    },
+    {
+      "id": "property.technology",
+      "value": {
+        languages: [
+          "C++",
+          "Rust"
+        ],
+        frameworks: [
+          "Qt"
+        ]
+      }
+    },
+    {
+      "id": "feature.minecraftResources",
+      "value": {
+        "mods": {
+          downloading: true,
+          updating: true,
+          providers: [
+            "modrinth",
+            "curseforge",
+          ]
+        },
+        "resourcepacks": {
+          downloading: true,
+          updating: true,
+          providers: [
+            "modrinth",
+            "curseforge",
+          ]
+        },
+        "shaderpacks": {
+          downloading: true,
+          providers: [
+            "modrinth",
+          ]
+        },
+        "worlds": {
+          downloading: true,
+          updating: true,
+          providers: [
+            "modrinth",
+            "curseforge",
+          ]
+        },
+        "datapack": {
+          downloading: true,
+          updating: true,
+          providers: [
+            "modrinth",
+            "curseforge",
+          ]
+        },
+        "plugins": {
+          downloading: true,
+          updating: true,
+          providers: [
+            "modrinth",
+            "curseforge",
+          ]
+        }
+      },
+    },
+    {
+      "id": "feature.import",
+      "value": [
+        "OneSix",
+        "Modrinth",
+        "Curseforge",
+        "Technic",
+        "FtbApp",
+      ],
+    },
+    {
+      "id": "feature.export",
+      "value": [
+        "OneSix",
+        "Modrinth",
+        "Curseforge",
+        "Text",
+        "Markdown",
+        "Json",
+        "Html",
+      ],
+    },
+    {
+      "id": "feature.overlay",
+      "status": "NotSupported",
+    },
+    {
+      "id": "feature.advertisements",
+      "status": "NotSupported",
+      "note": "Displaying optional ads for download providers via networks like Adrinth have been in consideration"
+    },
+    {
+      "id": "feature.javaSetup",
+      "status": "Supported",
+    },
+    {
+      "id": "feature.sandboxing",
+      "status": "WIP",
+    }
+  ],
+  "curseforgeBlockedDownloads": {
+    "supported": true,
+    "method": "via web browser, automatically copies mod",
+  },
+  "serverInstances": false,
+  "lookAndFeel": "System (configurable)",
+}
