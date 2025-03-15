@@ -2,11 +2,11 @@
   "identifier": "com.CurseForge.CurseForge",
   "name": "CurseForge App",
   "icon": "https://warcraft.wiki.gg/images/7/71/CurseForge_logo.svg?3f1c83",
-  "downloadLink": "",
+  "downloadLink": "https://download.curseforge.com/",
   "sourceRepo": "",
-  "homepage": "",
+  "homepage": "https://www.curseforge.com/minecraft",
   "configuration": {
-    "license": "GPLv3 or newer",
+    "license": "proprietary",
     "serverInstances": false,
     "lookAndFeel": "Custom"
   },
@@ -19,31 +19,31 @@
       "mods": {
         "downloading": true,
         "updating": true,
-        "providers": ["Modrinth", "CurseForge"]
+        "providers": ["CurseForge"]
       },
       "resourcepacks": {
         "downloading": true,
         "updating": true,
-        "providers": ["Modrinth", "CurseForge"]
+        "providers": ["CurseForge"]
       },
       "shaderpacks": {
         "downloading": true,
-        "providers": ["Modrinth"]
+        "providers": ["CurseForge"]
       },
       "worlds": {
         "downloading": true,
         "updating": true,
-        "providers": ["Modrinth", "CurseForge"]
+        "providers": ["CurseForge"]
       },
       "datapacks": {
         "downloading": true,
         "updating": true,
-        "providers": ["Modrinth", "CurseForge"]
+        "providers": ["CurseForge"]
       },
       "plugins": {
         "downloading": true,
         "updating": true,
-        "providers": ["Modrinth", "CurseForge"]
+        "providers": ["CurseForge"]
       }
     },
     "import": ["CurseForge"],

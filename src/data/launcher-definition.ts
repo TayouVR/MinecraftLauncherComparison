@@ -87,13 +87,19 @@ type SpecialFeatures = {
     CurseForgeBlockedDownloads: SpecialFeature;
 };
 
+type Screenshot = {
+    name: string;
+    url: string;
+}
+
 type LauncherDetails = {
     identifier: string;
     name: string;
     icon: string;
     downloadLink: string;
-    repoLink: string;
+    sourceRepo?: string;
     homepage: string;
+    screenshots: Screenshot[];
     configuration: LauncherConfiguration;
     features: Features;
     properties: Properties;

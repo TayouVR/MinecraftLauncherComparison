@@ -103,3 +103,57 @@ h1 {
 td.column-disabled, th.column-disabled {
   display: none;
 }
+
+.card {
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  align-items: center;
+  margin: 10px;
+  border: 1px solid black;
+  border-radius: 5px;
+  background-color: #eee;
+  height: 2em;
+  overflow: hidden;
+
+  @media (prefers-color-scheme: dark) {
+    background-color: #222;
+  }
+
+  img {
+    height: 2em;
+  }
+
+  span {
+    margin: 10px;
+    text-wrap: nowrap;
+  }
+}
+
+
+.yes {
+  background-color: #63ff63;
+
+  @media (prefers-color-scheme: dark) {
+    background-color: #009900;
+  }
+}
+
+.no {
+  background-color: #ff4f4f;
+
+  @media (prefers-color-scheme: dark) {
+    background-color: #990000;
+
+  }
+}
+
+.wip {
+  background: repeating-linear-gradient(-45deg, #ffaf00 0, #ffae00 10px,
+          #ffffff 10px, #ffffff 20px);
+
+  @media (prefers-color-scheme: dark) {
+    background: repeating-linear-gradient(-45deg, #9f6d00 0, #9f6d00 10px,
+            #000000 10px, #000000 20px);
+  }
+}

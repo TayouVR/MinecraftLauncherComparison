@@ -1,1 +1,156 @@
-@import "tailwindcss";
+:root {
+  --text-color: black;
+  --bg-color: white;
+  --alt-table-row-color: #cccccc;
+  --header-table-row-color: #74ebff;
+  font-family: sans-serif;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --text-color: white;
+    --bg-color: #181818;
+    --alt-table-row-color: #0e0e0e;
+    --header-table-row-color: #203f44;
+  }
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+table, td, tr, th {
+  border-spacing: 0;
+  border-collapse: collapse;
+  box-sizing: border-box;
+}
+
+tr:nth-child(2n) {
+  background-color: var(--alt-table-row-color);
+}
+
+th {
+  font-weight: bold;
+}
+
+td, th {
+  padding: 5px;
+  height: 40px;
+}
+
+tr.header-row > th {
+  position: sticky;
+  top: 0;
+  background-color: var(--header-table-row-color);
+}
+
+h1 {
+  text-align: center;
+}
+
+:link {
+  color: #3787ff;
+}
+:link :visited {
+  color: #9b67ff;
+}
+
+.launcher-icon {
+  max-height: 6em;
+}
+
+.launcher-toggle-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 4px;
+  padding: 4px;
+}
+
+.launcher-toggle {
+  border: none;
+  width: 96px;
+  height: 96px;
+  color: var(--text-color);
+  background-color: #0095ff;
+  border-radius: 10px;
+}
+@media (prefers-color-scheme: dark) {
+  .launcher-toggle {
+    background-color: #1069a8;
+  }
+}
+.launcher-toggle > img {
+  max-width: 100%;
+  max-height: 100%;
+}
+.launcher-toggle.column-disabled {
+  background-color: #a3a3a3;
+}
+@media (prefers-color-scheme: dark) {
+  .launcher-toggle.column-disabled {
+    background-color: #515151;
+  }
+}
+.launcher-toggle.column-disabled > img {
+  filter: saturate(0);
+}
+
+td.column-disabled, th.column-disabled {
+  display: none;
+}
+
+.card {
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  align-items: center;
+  margin: 10px;
+  border: 1px solid black;
+  border-radius: 5px;
+  background-color: #eee;
+  height: 2em;
+  overflow: hidden;
+}
+@media (prefers-color-scheme: dark) {
+  .card {
+    background-color: #222;
+  }
+}
+.card img {
+  height: 2em;
+}
+.card span {
+  margin: 10px;
+  text-wrap: nowrap;
+}
+
+.yes {
+  background-color: #63ff63;
+}
+@media (prefers-color-scheme: dark) {
+  .yes {
+    background-color: #009900;
+  }
+}
+
+.no {
+  background-color: #ff4f4f;
+}
+@media (prefers-color-scheme: dark) {
+  .no {
+    background-color: #990000;
+  }
+}
+
+.wip {
+  background: repeating-linear-gradient(-45deg, #ffaf00 0, #ffae00 10px, #ffffff 10px, #ffffff 20px);
+}
+@media (prefers-color-scheme: dark) {
+  .wip {
+    background: repeating-linear-gradient(-45deg, #9f6d00 0, #9f6d00 10px, #000000 10px, #000000 20px);
+  }
+}
+
+/*# sourceMappingURL=global.css.map */

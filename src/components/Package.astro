@@ -4,24 +4,12 @@ const { packageData } = Astro.props;
 
 const typedPackage = packageData as { name: string, official: boolean };
 ---
-<div class:list={["package", packageData.official ? 'official' : '']}>
-    {typedPackage.name}
+<div class:list={["card", packageData.official ? 'official' : '']}>
+    <span>{typedPackage.name}</span>
 </div>
 
 <style>
-    .package {
-        margin: 10px;
-        padding: 10px;
-        border: 1px solid black;
-        border-radius: 5px;
-        background-color: #eee;
-
-        @media (prefers-color-scheme: dark) {
-            background-color: #222;
-        }
-    }
-
-    :not(.official) {
+    .card:not(.official) {
         background-color: #957c00;
 
         @media (prefers-color-scheme: dark) {
