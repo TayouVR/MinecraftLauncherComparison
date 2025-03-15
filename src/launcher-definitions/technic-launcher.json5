@@ -47,8 +47,8 @@
         "providers": ["Modrinth", "CurseForge"]
       }
     },
-    "import": ["OneSix", "Modrinth", "CurseForge", "Technic", "FtbApp"],
-    "export": ["OneSix", "Modrinth", "CurseForge", "Text", "Markdown", "JSON", "HTML"],
+    "import": ["Technic"],
+    "export": [],
     "java": {
       "download": true,
       "versionManagement": true,

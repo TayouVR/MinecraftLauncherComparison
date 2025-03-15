@@ -2,12 +2,11 @@
   "identifier": "org.atlauncher.atlauncher",
   "name": "ATLauncher",
   "icon": "https://atlauncher.com/assets/images/logo.svg",
-  "downloadLink": "",
-  "sourceRepo": "",
-  "sourceRepo": "",
-  "homepage": "",
+  "downloadLink": "https://atlauncher.com/downloads",
+  "sourceRepo": "https://github.com/ATLauncher/ATLauncher",
+  "homepage": "https://atlauncher.com/",
   "configuration": {
-    "license": "GPLv3 or newer",
+    "license": "GPLv3",
     "serverInstances": false,
     "lookAndFeel": "Custom (configurable)"
   },
@@ -51,8 +50,8 @@
         "providers": ["Modrinth", "CurseForge"]
       }
     },
-    "import": ["OneSix", "Modrinth", "CurseForge", "Technic", "FtbApp"],
-    "export": ["OneSix", "Modrinth", "CurseForge", "Text", "Markdown", "JSON", "HTML"],
+    "import": ["OneSix", "Modrinth", "CurseForge"],
+    "export": ["OneSix", "Modrinth", "CurseForge"],
     "java": {
       "download": true,
       "versionManagement": true,

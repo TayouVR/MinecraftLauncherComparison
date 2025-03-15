@@ -1,36 +1,59 @@
 ---
 
-const { minecraftResources } = Astro.props as { "minecraftResources": {
-        "mods": {
-            "downloading": true,
-            "updating": true,
-            "providers": ["Modrinth", "CurseForge"]
+const { launchers, values } = Astro.props as { launchers: LauncherDetails[], values: {
+        identifier: string,
+        value: {
+            "mods": {
+                "downloading": boolean,
+                "updating": boolean,
+                "providers": string[]
+            },
+            "resourcepacks": {
+                "downloading": boolean,
+                "updating": boolean,
+                "providers": string[]
+            },
+            "shaderpacks": {
+                "downloading": boolean,
+                "updating": boolean,
+                "providers": string[]
+            },
+            "worlds": {
+                "downloading": boolean,
+                "updating": boolean,
+                "providers": string[]
+            },
+            "datapacks": {
+                "downloading": boolean,
+                "updating": boolean,
+                "providers": string[]
+            },
+            "plugins": {
+                "downloading": boolean,
+                "updating": boolean,
+                "providers": string[]
+            }
         },
-        "resourcepacks": {
-            "downloading": true,
-            "updating": true,
-            "providers": ["Modrinth", "CurseForge"]
-        },
-        "shaderpacks": {
-            "downloading": true,
-            "providers": ["Modrinth"]
-        },
-        "worlds": {
-            "downloading": true,
-            "updating": true,
-            "providers": ["Modrinth", "CurseForge"]
-        },
-        "datapacks": {
-            "downloading": true,
-            "updating": true,
-            "providers": ["Modrinth", "CurseForge"]
-        },
-        "plugins": {
-            "downloading": true,
-            "updating": true,
-            "providers": ["Modrinth", "CurseForge"]
-        }
-    }, };
----
+    }[]
+};
 
+const availableResources = [...new Set(values.flat().map(v => Object.keys(v.value)).flat())];
+console.log(availableResources)
+
+function valueFromLauncher(launcher: LauncherDetails, key: string) {
+    return Object.entries(values.find(v => v.identifier === launcher.identifier).value)[key];
+}
+---
+<tr><th colspan={launchers.length + 1}>Resource Download (Mods, Resourcepacks, Shaders, etc.)</th></tr>
+{availableResources.map((key) => (
+<tr>
+    <td>{key}</td>
+    { launchers.map(launcher => (
+        <td class:list={[launcher.identifier ]}>
+            { valueFromLauncher(launcher, key)?.providers?.join(", ") }
+        </td>
+    ))}
+</tr>
+
+))}
 

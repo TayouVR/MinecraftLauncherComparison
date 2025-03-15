@@ -13,41 +13,136 @@ function valueFromLauncher<TLauncher extends Record<"properties" | "features", R
     return (launcher as any as TLauncher)[propCategory][propertyName];
 }
 
+const values = launchers.map(launcher => {
+    return {
+        identifier: launcher.identifier,
+        value: valueFromLauncher(launcher)
+    }
+});
+
 ---
 
-<tr>
-    <td>{propertyName}</td>
-    { launchers.map(launcher => (
-        <td class={launcher.identifier}>
-            { (propertyName === "artifacts") ? (
+{ (propertyName === "artifacts") ? (
+    <tr>
+        <td>{propertyName}</td>
+        { launchers.map(launcher => (
+            <td class={launcher.identifier}>
                 <ArtifactComponent artifacts={valueFromLauncher(launcher)} />
-            ) : (propertyName === "packages") ? (
+            </td>
+        ))}
+    </tr>
+) : (propertyName === "packages") ? (
+    <tr>
+        <td>{propertyName}</td>
+        { launchers.map(launcher => (
+            <td class={launcher.identifier}>
                 <PackagesComponent packages={valueFromLauncher(launcher)} />
-            ) : (propertyName === "technology") ? (
-                "Languages:" + valueFromLauncher(launcher).languages.join(', ') + " | Frameworks:" + valueFromLauncher(launcher).frameworks.join(', ')
-            ) : (propertyName === "modloaders") ? (
-                <ModloadersComponent modloaders={valueFromLauncher(launcher)} />
-            ) : (propertyName === "minecraftResources") ? (
-                <MinecraftResources resources={valueFromLauncher(launcher)} />
-            ) : (propertyName === "java") ? (
+            </td>
+        ))}
+    </tr>
+) : (propertyName === "technology") ? (
+    <tr>
+        <td>Languages</td>
+        { launchers.map(launcher => (
+            <td class={launcher.identifier}>
+                {valueFromLauncher(launcher).languages.join(', ')}
+            </td>
+        ))}
+    </tr>
+    <tr>
+        <td>Core Toolkits and Libraries</td>
+        { launchers.map(launcher => (
+            <td class={launcher.identifier}>
+                {valueFromLauncher(launcher).frameworks.join(', ')}
+            </td>
+        ))}
+    </tr>
+) : (propertyName === "modloaders") ? (
+    <ModloadersComponent launchers={launchers} values={values} />
+) : (propertyName === "minecraftResources") ? (
+    <MinecraftResources launchers={launchers} values={values} />
+) : (propertyName === "java") ? (
+    <tr>
+        <td>{propertyName}</td>
+        { launchers.map(launcher => (
+            <td class={launcher.identifier}>
                 <JavaComponent java={valueFromLauncher(launcher)} />
-            ) : (propertyName === "sandboxing") ? (
-                valueFromLauncher(launcher).status
-            ) : (propertyName === "modpacks") ? (
-                valueFromLauncher(launcher).map(modpack => modpack.name).join(', ')
-            ) : (propertyName === "overlay") ? (
-                valueFromLauncher(launcher).status
-            ) : (propertyName === "advertisements") ? (
-                valueFromLauncher(launcher).status
-            ) : (typeof valueFromLauncher(launcher) === "string") ? (
-                valueFromLauncher(launcher).toUpperCase()
-            ) : (typeof valueFromLauncher(launcher) === "number") ? (
-                valueFromLauncher(launcher).toFixed(2)
-            ) : (Array.isArray(valueFromLauncher(launcher))) ? (
-                valueFromLauncher(launcher).join(', ')
-            ) : (
-                "Unsupported Type"
-            )}
-        </td>
-    ))}
-</tr>
+            </td>
+        ))}
+    </tr>
+) : (propertyName === "sandboxing") ? (
+    <tr>
+        <td>{propertyName}</td>
+        { launchers.map(launcher => (
+            <td class={launcher.identifier}>
+                {valueFromLauncher(launcher).status}
+            </td>
+        ))}
+    </tr>
+) : (propertyName === "modpacks") ? (
+    <tr>
+        <td>{propertyName}</td>
+        { launchers.map(launcher => (
+            <td class={launcher.identifier}>
+                {valueFromLauncher(launcher).map(modpack => modpack.name).join(', ')}
+            </td>
+        ))}
+    </tr>
+) : (propertyName === "overlay") ? (
+    <tr>
+        <td>{propertyName}</td>
+        { launchers.map(launcher => (
+            <td class={launcher.identifier}>
+                {valueFromLauncher(launcher).status}
+            </td>
+        ))}
+    </tr>
+) : (propertyName === "advertisements") ? (
+    <tr>
+        <td>{propertyName}</td>
+        { launchers.map(launcher => (
+            <td class={launcher.identifier}>
+                {valueFromLauncher(launcher).status}
+            </td>
+        ))}
+    </tr>
+) : (propertyName === "import") ? (
+    <tr>
+        <td>{propertyName}</td>
+        { launchers.map(launcher => (
+                <td class={launcher.identifier}>
+                    {valueFromLauncher(launcher).map((format: string) => (
+                        <div class:list={["card", format.includes("🚧") ? "wip" : ""]}><span>{format}</span></div>
+                    ))}
+                </td>
+        ))}
+    </tr>
+) : (propertyName === "export") ? (
+    <tr>
+        <td>{propertyName}</td>
+        { launchers.map(launcher => (
+                <td class={launcher.identifier}>
+                    {valueFromLauncher(launcher).map((format: string) => (
+                            <div class:list={["card", format.includes("🚧") ? "wip" : ""]}><span>{format}</span></div>
+                    ))}
+                </td>
+        ))}
+    </tr>
+) : (
+    <tr>
+        <td>{propertyName}</td>
+        { launchers.map(launcher => (
+            <td class={launcher.identifier}>
+                {(typeof valueFromLauncher(launcher) === "string") ? (
+                    valueFromLauncher(launcher).toUpperCase()
+                ) : (typeof valueFromLauncher(launcher) === "number") ? (
+                    valueFromLauncher(launcher).toFixed(2)
+                ) : (Array.isArray(valueFromLauncher(launcher))) ? (
+                    valueFromLauncher(launcher).join(', ')
+                ) : (
+                    "Unsupported Type"
+                )}
+            </td>
+        ))}
+    </tr>
+)}

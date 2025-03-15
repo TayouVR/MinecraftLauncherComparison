@@ -5,7 +5,6 @@ import json5 from 'json5';
 import { readFileSync, readdirSync } from 'fs';
 import path from 'path';
 import ListComponent from "../components/ListComponent.astro";
-import {json} from "node:stream/consumers";
 
 function getLauncherDetails(path: string) {
 	return json5.parse<LauncherDetails>(
@@ -114,6 +113,30 @@ launchers.forEach((launcher) => {
 				<th>Look & Feel</th>
 				{ launchers.map(launcher => (
 					<th class={launcher.identifier}>{launcher.configuration.lookAndFeel}</th>
+				))}
+			</tr>
+			<tr>
+				<th>Homepage</th>
+				{ launchers.map(launcher => (
+					<th class={launcher.identifier}>
+						<a href={launcher.homepage}>{launcher.homepage}</a>
+					</th>
+				))}
+			</tr>
+			<tr>
+				<th>Download Link</th>
+				{ launchers.map(launcher => (
+					<th class={launcher.identifier}>
+						<a href={launcher.downloadLink}>{launcher.downloadLink}</a>
+					</th>
+				))}
+			</tr>
+			<tr>
+				<th>Source Repo</th>
+				{ launchers.map(launcher => (
+					<th class={launcher.identifier}>
+						<a href={launcher.sourceRepo}>{launcher.sourceRepo ?? "N/A"}</a>
+					</th>
 				))}
 			</tr>
 			<tr><th colspan={launchers.length + 1}>Properties</th></tr>
