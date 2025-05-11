@@ -6,14 +6,14 @@
 > [!NOTE]  
 > The comparison table is not available in the readme anymore, go to https://mc-launcher.tayou.org/ instead.
 
-Alternatively use the instructions below to generate the site locally.
+Alternatively, use the instructions below to generate the site locally.
 
 <hr>
 
 ## Building
 
 This project has been updated to use a static site generator, providing more features than a basic markdown file can.
-in order to build the page locally for development do:
+To build the page locally for development, do:
 1. clone this repo from the button in the top right, IDE, or using your terminal of choice:<br>
    `git clone https://github.com/TayouVR/MinecraftLauncherComparison.git MinecraftLauncherComparison`
 2. `cd MinecraftLauncherComparison`
