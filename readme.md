@@ -72,7 +72,7 @@ Note: This list is maintained mostly by me and random contributions. Data will i
         <td>Windows, Linux, macOS</td>
         <td>Windows, Linux, macOS</td>
         <td>Windows, Linux, macOS</td>
-        <td>Windows, macOS</td>
+        <td>Windows, Linux, macOS</td>
         <td>Windows, Linux, macOS</td>
         <td>Windows, Linux, macOS</td>
         <td>Windows, Linux, macOS</td>
