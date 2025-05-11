@@ -1,0 +1,25 @@
+---
+
+const { artifact } = Astro.props;
+
+const typedArtifact = artifact as { arch: string[], os: string, link?: string };
+---
+<a href={typedArtifact.link}>
+    <div class="artifact">
+        {typedArtifact.arch.join(', ')} | {typedArtifact.os}
+    </div>
+</a>
+
+<style>
+    .artifact {
+        margin: 10px;
+        padding: 10px;
+        border: 1px solid black;
+        border-radius: 5px;
+        background-color: #eee;
+
+        @media (prefers-color-scheme: dark) {
+            background-color: #222;
+        }
+    }
+</style>

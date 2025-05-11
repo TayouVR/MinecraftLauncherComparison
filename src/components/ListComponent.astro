@@ -1,0 +1,148 @@
+---
+import ArtifactComponent from "./ArtifactComponent.astro";
+import PackagesComponent from "./PackagesComponent.astro";
+import ModloadersComponent from "./ModloadersComponent.astro";
+import MinecraftResources from "./MinecraftResources.astro";
+import JavaComponent from "./JavaComponent.astro";
+import {log} from "node:util";
+
+
+const { propertyName, launchers, propCategory } = Astro.props as { propertyName: string, launchers: LauncherDetails[], propCategory: "properties" | "features" };
+
+function valueFromLauncher<TLauncher extends Record<"properties" | "features", Record<string, any>>>(launcher: LauncherDetails) {
+    return (launcher as any as TLauncher)[propCategory][propertyName];
+}
+
+const values = launchers.map(launcher => {
+    return {
+        identifier: launcher.identifier,
+        value: valueFromLauncher(launcher)
+    }
+});
+
+---
+
+{ (propertyName === "artifacts") ? (
+    <tr>
+        <td>{propertyName}</td>
+        { launchers.map(launcher => (
+            <td class={launcher.identifier}>
+                <ArtifactComponent artifacts={valueFromLauncher(launcher)} />
+            </td>
+        ))}
+    </tr>
+) : (propertyName === "packages") ? (
+    <tr>
+        <td>{propertyName}</td>
+        { launchers.map(launcher => (
+            <td class={launcher.identifier}>
+                <PackagesComponent packages={valueFromLauncher(launcher)} />
+            </td>
+        ))}
+    </tr>
+) : (propertyName === "technology") ? (
+    <tr>
+        <td>Languages</td>
+        { launchers.map(launcher => (
+            <td class={launcher.identifier}>
+                {valueFromLauncher(launcher).languages.join(', ')}
+            </td>
+        ))}
+    </tr>
+    <tr>
+        <td>Core Toolkits and Libraries</td>
+        { launchers.map(launcher => (
+            <td class={launcher.identifier}>
+                {valueFromLauncher(launcher).frameworks.join(', ')}
+            </td>
+        ))}
+    </tr>
+) : (propertyName === "modloaders") ? (
+    <ModloadersComponent launchers={launchers} values={values} />
+) : (propertyName === "minecraftResources") ? (
+    <MinecraftResources launchers={launchers} values={values} />
+) : (propertyName === "java") ? (
+    <tr>
+        <td>{propertyName}</td>
+        { launchers.map(launcher => (
+            <td class={launcher.identifier}>
+                <JavaComponent java={valueFromLauncher(launcher)} />
+            </td>
+        ))}
+    </tr>
+) : (propertyName === "sandboxing") ? (
+    <tr>
+        <td>{propertyName}</td>
+        { launchers.map(launcher => (
+            <td class={launcher.identifier}>
+                {valueFromLauncher(launcher).status}
+            </td>
+        ))}
+    </tr>
+) : (propertyName === "modpacks") ? (
+    <tr>
+        <td>{propertyName}</td>
+        { launchers.map(launcher => (
+            <td class={launcher.identifier}>
+                {valueFromLauncher(launcher).map(modpack => modpack.name).join(', ')}
+            </td>
+        ))}
+    </tr>
+) : (propertyName === "overlay") ? (
+    <tr>
+        <td>{propertyName}</td>
+        { launchers.map(launcher => (
+            <td class={launcher.identifier}>
+                {valueFromLauncher(launcher).status}
+            </td>
+        ))}
+    </tr>
+) : (propertyName === "advertisements") ? (
+    <tr>
+        <td>{propertyName}</td>
+        { launchers.map(launcher => (
+            <td class={launcher.identifier}>
+                {valueFromLauncher(launcher).status}
+            </td>
+        ))}
+    </tr>
+) : (propertyName === "import") ? (
+    <tr>
+        <td>{propertyName}</td>
+        { launchers.map(launcher => (
+                <td class={launcher.identifier}>
+                    {valueFromLauncher(launcher).map((format: string) => (
+                        <div class:list={["card", format.includes("🚧") ? "wip" : ""]}><span>{format}</span></div>
+                    ))}
+                </td>
+        ))}
+    </tr>
+) : (propertyName === "export") ? (
+    <tr>
+        <td>{propertyName}</td>
+        { launchers.map(launcher => (
+                <td class={launcher.identifier}>
+                    {valueFromLauncher(launcher).map((format: string) => (
+                            <div class:list={["card", format.includes("🚧") ? "wip" : ""]}><span>{format}</span></div>
+                    ))}
+                </td>
+        ))}
+    </tr>
+) : (
+    <tr>
+        <td>{propertyName}</td>
+        { launchers.map(launcher => (
+            <td class={launcher.identifier}>
+                {(typeof valueFromLauncher(launcher) === "string") ? (
+                    valueFromLauncher(launcher).toUpperCase()
+                ) : (typeof valueFromLauncher(launcher) === "number") ? (
+                    valueFromLauncher(launcher).toFixed(2)
+                ) : (Array.isArray(valueFromLauncher(launcher))) ? (
+                    valueFromLauncher(launcher).join(', ')
+                ) : (
+                    "Unsupported Type"
+                )}
+            </td>
+        ))}
+    </tr>
+)}

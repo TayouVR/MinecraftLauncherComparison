@@ -1,0 +1,19 @@
+---
+
+const { packageData } = Astro.props;
+
+const typedPackage = packageData as { name: string, official: boolean };
+---
+<div class:list={["card", packageData.official ? 'official' : '']}>
+    <span>{typedPackage.name}</span>
+</div>
+
+<style>
+    .card:not(.official) {
+        background-color: #957c00;
+
+        @media (prefers-color-scheme: dark) {
+            background-color: #706a00;
+        }
+    }
+</style>
