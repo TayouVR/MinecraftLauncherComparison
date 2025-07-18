@@ -216,7 +216,7 @@ Note: This list is maintained mostly by me and random contributions. Data will i
         <td>❌No</td>
         <td>🟠Import from FTB Launcher</td>
         <td>❌No</td>
-        <td>❌No</td>
+        <td>✅Yes</td>
         <td>❌No</td>
         <td>❌No</td>
         <td></td>
@@ -560,7 +560,7 @@ Note: This list is maintained mostly by me and random contributions. Data will i
         <td>Instance Import</td>
         <td>❌No</td>
         <td>CurseForge, Modrinth, MultiMC, Technic, FTB App</td>
-        <td>CurseForge, MultiMC, Technic, FTB App</td>
+        <td>MultiMC, Technic, FTB App</td>
         <td>CurseForge, Modrinth, MultiMC</td>
         <td>CurseForge</td>
         <td>See footnote <a href="#4-gdlauncher-legacy-curseforge-zip-launcher-modrinth-mrpack-launcher-atlauncher-technic-ftb-multimc-prism">[4]</a></td>
