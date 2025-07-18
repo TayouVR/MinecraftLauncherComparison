@@ -1,0 +1,5 @@
+---
+import Platform from "./Platform.astro";
+const { platforms } = Astro.props as { platforms: SupportedPlatform };
+---
+{Object.entries(platforms).map(([os, architectures]) => <Platform platform={{os, architectures}} />)}

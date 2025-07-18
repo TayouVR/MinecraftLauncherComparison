@@ -1,12 +1,12 @@
 ---
 
-const { artifact } = Astro.props;
+const { platform } = Astro.props;
 
-const typedArtifact = artifact as { arch: string[], os: string, link?: string };
+const typedPlatform = platform as {os: OS, architectures: Architecture[]};
 ---
-<a href={typedArtifact.link}>
+<a>
     <div class="artifact">
-        {typedArtifact.arch.join(', ')} | {typedArtifact.os}
+        {typedPlatform.architectures.join(', ')} | {typedPlatform.os}
     </div>
 </a>
 

@@ -61,30 +61,14 @@
     }
   },
   "properties": {
-    "artifacts": [
-      { "arch": ["x86_64"], "os": "Windows", "link": "" },
-      { "arch": ["x86_64"], "os": "Linux", "link": "" },
-      { "arch": ["x86_64", "arm64"], "os": "MacOS", "link": "" },
-      { "arch": ["arm64"], "os": "Windows", "link": "" },
-      { "arch": ["arm64"], "os": "Linux", "link": "" }
-    ],
-    "packages": [
-      // This is a lot of work, I don't know which launcher is in which package manager
-      { "name": "AUR", "official": true },
-      { "name": "Arch", "official": true },
-      { "name": "Debian", "official": true },
-      { "name": "Fedora", "official": true },
-      { "name": "Gentoo", "official": true },
-      { "name": "Homebrew", "official": true },
-      { "name": "MacPorts", "official": false },
-      { "name": "OpenSUSE", "official": true },
-      { "name": "PPA", "official": false },
-      { "name": "Portage", "official": false },
-      { "name": "MPR", "official": true },
-      { "name": "Winget", "official": true },
-      { "name": "Scoop", "official": true },
-      { "name": "Nixpkgs", "official": true }
-    ],
+    "platforms": {
+      "linux": ["x86_64", "x64", "arm64"],
+      "windows": ["x86_64", "x64", "arm64"],
+      "macos": ["x86_64", "x64", "arm64"],
+      "android": ["x86_64", "x64", "arm64"],
+      "ios": ["x86_64", "x64", "arm64"],
+    },
+    "packages": "modrinth-app",
     "technology": {
       "languages": ["HTML", "JS", "CSS", "Rust"],
       "frameworks": ["Vue.js", "Tauri"]

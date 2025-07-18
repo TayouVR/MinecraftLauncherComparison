@@ -62,15 +62,11 @@
     }
   },
   "properties": {
-    "artifacts": [
-      { "arch": ["arm64"], "os": "Android", "link": "" },
-      { "arch": ["arm64"], "os": "iOS", "link": "" }
-    ],
-    "packages": [
-      // This is a lot of work, I don't know which launcher is in which package manager
-      { "name": "Google Play Store", "official": true },
-      { "name": "Apple App Store", "official": true },
-    ],
+    "platforms": {
+      "android": ["arm64"],
+      "ios": ["arm64"],
+    },
+    "packages": "link.to.repology/for/this/launcher",
     "technology": {
       "languages": ["Java", "C"],
       "frameworks": []

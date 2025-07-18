@@ -1,5 +1,5 @@
 ---
-import ArtifactComponent from "./ArtifactComponent.astro";
+import PlatformComponent from "./PlatformComponent.astro";
 import PackagesComponent from "./PackagesComponent.astro";
 import ModloadersComponent from "./ModloadersComponent.astro";
 import MinecraftResources from "./MinecraftResources.astro";
@@ -22,12 +22,12 @@ const values = launchers.map(launcher => {
 
 ---
 
-{ (propertyName === "artifacts") ? (
+{ (propertyName === "platforms") ? (
     <tr>
         <td>{propertyName}</td>
         { launchers.map(launcher => (
             <td class={launcher.identifier}>
-                <ArtifactComponent artifacts={valueFromLauncher(launcher)} />
+                <PlatformComponent platforms={valueFromLauncher(launcher)} />
             </td>
         ))}
     </tr>
@@ -36,7 +36,9 @@ const values = launchers.map(launcher => {
         <td>{propertyName}</td>
         { launchers.map(launcher => (
             <td class={launcher.identifier}>
-                <PackagesComponent packages={valueFromLauncher(launcher)} />
+                <a href={`https://repology.org/project/${valueFromLauncher(launcher)}/versions`}>
+                    <img src={`https://repology.org/badge/vertical-allrepos/${valueFromLauncher(launcher)}.svg`} alt="Packaging status">
+                </a>
             </td>
         ))}
     </tr>

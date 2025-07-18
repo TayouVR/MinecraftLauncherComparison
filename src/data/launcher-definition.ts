@@ -56,16 +56,21 @@ type Features = {
     advertisements: Advertisement;
 };
 
-type Artifact = {
-    arch: string[];
-    os: string;
-    link: string;
-};
+enum OS {
+    Linux = "linux",
+    MacOS = "macos",
+    Windows = "windows",
+    Android = "android",
+    iOS = "ios"
+}
 
-type Package = {
-    name: string;
-    official: boolean;
-};
+enum Architecture {
+    ARM64 = "arm64",
+    X86_64 = "x86_64",
+    X64 = "x64",
+}
+
+type SupportedPlatform = Record<OS, Architecture[]>
 
 type Technology = {
     languages: string[];
@@ -73,8 +78,8 @@ type Technology = {
 };
 
 type Properties = {
-    artifacts: Artifact[];
-    packages: Package[];
+    platforms: SupportedPlatform[];
+    packages: string; // repology link
     technology: Technology;
 };
 
