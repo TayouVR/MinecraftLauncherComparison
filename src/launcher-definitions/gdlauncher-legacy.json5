@@ -68,7 +68,7 @@
       "android": ["x86_64", "x64", "arm64"],
       "ios": ["x86_64", "x64", "arm64"],
     },
-    "packages": "link.to.repology/for/this/launcher",
+    "packages": "gdlauncher",
     "technology": {
       "languages": ["HTML", "JS", "CSS", "Rust"],
       "frameworks": ["Preact", "Electron", "Solid.js"]
