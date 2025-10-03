@@ -1,0 +1,70 @@
+---
+const { launchers, values } = Astro.props as { launchers: LauncherDetails[], values: { identifier: string, value: FeatureModpack[] }[] };
+
+const availableModPackPlatforms = [...new Set(values.flatMap(v => v.value).flatMap(v => v.name))];
+
+const nicePlatformNames = {
+    "CurseForge": ["CurseForge", "/src/assets/curseforge.svg"],
+    "Modrinth": ["Modrinth", "/src/assets/modrinth.svg"],
+    "ftb": ["FTB", "/src/assets/ftb.svg"],
+    "atlauncher": ["AT Launcher", "/src/assets/at-launcher.png"],
+    "technic": ["Technic Launcher", "/src/assets/technic-launcher.svg"],
+    "legacy-ftb": ["Legacy FTB", "/src/assets/ftb.svg"],
+}
+
+function getModpackIcon(platform: string) {
+    const loaderData = nicePlatformNames[platform as keyof typeof nicePlatformNames];
+    return loaderData && loaderData[1] ? loaderData[1] : "";
+}
+
+function getModpackName(platform: string) {
+    const loaderData = nicePlatformNames[platform as keyof typeof nicePlatformNames];
+    return loaderData ? loaderData[0] : platform;
+}
+
+function modpackForLauncher(launcherID: string) {
+    return values.find((values) => values.identifier == launcherID)!.value;
+}
+function modpackFromList(launcherID: string, modpackName: string) {
+    return modpackForLauncher(launcherID)!.find((modpack) => modpack.name == modpackName);
+}
+
+---
+<tr><th colspan={launchers.length + 1}>Modpacks</th></tr>
+{availableModPackPlatforms.map(modpack => (
+<tr>
+    <td class="modpack">
+        { getModpackIcon(modpack) != "" ?
+                <img loading="lazy" alt={getModpackName(modpack)} src={getModpackIcon(modpack)} />
+            : ""}
+        <span>{getModpackName(modpack)}</span>
+    </td>
+    { launchers.map(launcher => (
+            <td class:list={[launcher.identifier, modpackFromList(launcher.identifier, modpack) ? 'yes' : 'no' ]}>
+                { modpackFromList(launcher.identifier, modpack) ? 'Yes' : 'No' }
+            </td>
+    ))}
+</tr>
+))}
+
+<style>
+    .modpack {
+        display: flex;
+        flex-direction: row;
+        justify-content: left;
+        align-items: center;
+        margin: 5px;
+        height: 2em;
+        overflow: hidden;
+        gap: 10px;
+
+        img {
+            height: 2em;
+            width: 2em;
+            border-radius: 2px;
+        }
+        span {
+            text-wrap: nowrap;
+        }
+    }
+</style>

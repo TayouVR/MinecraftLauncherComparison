@@ -1,10 +1,9 @@
 ---
 import PlatformComponent from "./PlatformComponent.astro";
-import PackagesComponent from "./PackagesComponent.astro";
 import ModloadersComponent from "./ModloadersComponent.astro";
 import MinecraftResources from "./MinecraftResources.astro";
 import JavaComponent from "./JavaComponent.astro";
-import {log} from "node:util";
+import ModpacksComponent from "./ModpacksComponent.astro";
 
 
 const { propertyName, launchers, propCategory } = Astro.props as { propertyName: string, launchers: LauncherDetails[], propCategory: "properties" | "features" };
@@ -59,6 +58,8 @@ const values = launchers.map(launcher => {
             </td>
         ))}
     </tr>
+) : (propertyName === "modpacks") ? (
+    <ModpacksComponent launchers={launchers} values={values} />
 ) : (propertyName === "modloaders") ? (
     <ModloadersComponent launchers={launchers} values={values} />
 ) : (propertyName === "minecraftResources") ? (
@@ -78,15 +79,6 @@ const values = launchers.map(launcher => {
         { launchers.map(launcher => (
             <td class={launcher.identifier}>
                 {valueFromLauncher(launcher).status}
-            </td>
-        ))}
-    </tr>
-) : (propertyName === "modpacks") ? (
-    <tr>
-        <td>{propertyName}</td>
-        { launchers.map(launcher => (
-            <td class={launcher.identifier}>
-                {valueFromLauncher(launcher).map(modpack => modpack.name).join(', ')}
             </td>
         ))}
     </tr>
