@@ -4,25 +4,26 @@ const { launchers, values } = Astro.props as { launchers: LauncherDetails[], val
 const availableModloaders = [...new Set(values.flatMap(v => v.value))];
 
 const niceLoaderNames = {
-    "forge": ["Forge", "/src/assets/forge.svg"],
-    "fabric": ["FabricMC", "/src/assets/fabric.png"],
-    "quilt": ["QuiltMC", "/src/assets/quilt.svg"],
-    "neoforge": ["Neoforge", "/src/assets/neoforged.png"],
-    "legacy-fabric": ["Legacy Fabric", "/src/assets/legacy-fabric.png"],
-    "liteloader": ["Lite Loader"],
-    "rift": ["Rift Loader"],
-    "risugami": ["Risugamis Modloader"],
+    "forge":            { displayName: "Forge",                 iconUrl: "/src/assets/forge.svg" },
+    "fabric":           { displayName: "FabricMC",              iconUrl: "/src/assets/fabric.png" },
+    "quilt":            { displayName: "QuiltMC",               iconUrl: "/src/assets/quilt.svg" },
+    "neoforge":         { displayName: "Neoforge",              iconUrl: "/src/assets/neoforged.png" },
+    "legacy-fabric":    { displayName: "Legacy Fabric",         iconUrl: "/src/assets/legacy-fabric.png" },
+    "liteloader":       { displayName: "Lite Loader",           iconUrl: "" },
+    "rift":             { displayName: "Rift Loader",           iconUrl: "" },
+    "risugami":         { displayName: "Risugamis Modloader",   iconUrl: "" },
 }
 
 function getLoaderIcon(platform: string) {
     const loaderData = niceLoaderNames[platform as keyof typeof niceLoaderNames];
-    return loaderData && loaderData[1] ? loaderData[1] : "";
+    return loaderData?.iconUrl ?? "";
 }
 
 function getLoaderName(platform: string) {
     const loaderData = niceLoaderNames[platform as keyof typeof niceLoaderNames];
-    return loaderData ? loaderData[0] : platform;
+    return loaderData?.displayName ?? platform;
 }
+
 ---
 <tr><th colspan={launchers.length + 1}>Modloaders</th></tr>
 {availableModloaders.map(modloader => (

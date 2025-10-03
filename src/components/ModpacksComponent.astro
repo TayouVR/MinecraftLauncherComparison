@@ -4,22 +4,22 @@ const { launchers, values } = Astro.props as { launchers: LauncherDetails[], val
 const availableModPackPlatforms = [...new Set(values.flatMap(v => v.value).flatMap(v => v.name))];
 
 const nicePlatformNames = {
-    "CurseForge": ["CurseForge", "/src/assets/curseforge.svg"],
-    "Modrinth": ["Modrinth", "/src/assets/modrinth.svg"],
-    "ftb": ["FTB", "/src/assets/ftb.svg"],
-    "atlauncher": ["AT Launcher", "/src/assets/at-launcher.png"],
-    "technic": ["Technic Launcher", "/src/assets/technic-launcher.svg"],
-    "legacy-ftb": ["Legacy FTB", "/src/assets/ftb.svg"],
+    "CurseForge":   { displayName: "CurseForge",        iconUrl: "/src/assets/curseforge.svg"},
+    "Modrinth":     { displayName: "Modrinth",          iconUrl: "/src/assets/modrinth.svg"},
+    "ftb":          { displayName: "FTB",               iconUrl: "/src/assets/ftb.svg"},
+    "atlauncher":   { displayName: "AT Launcher",       iconUrl: "/src/assets/at-launcher.png"},
+    "technic":      { displayName: "Technic Launcher",  iconUrl: "/src/assets/technic-launcher.svg"},
+    "legacy-ftb":   { displayName: "Legacy FTB",        iconUrl: "/src/assets/ftb.svg"},
 }
 
 function getModpackIcon(platform: string) {
     const loaderData = nicePlatformNames[platform as keyof typeof nicePlatformNames];
-    return loaderData && loaderData[1] ? loaderData[1] : "";
+    return loaderData?.iconUrl ?? "";
 }
 
 function getModpackName(platform: string) {
     const loaderData = nicePlatformNames[platform as keyof typeof nicePlatformNames];
-    return loaderData ? loaderData[0] : platform;
+    return loaderData?.displayName ?? platform;
 }
 
 function modpackForLauncher(launcherID: string) {
