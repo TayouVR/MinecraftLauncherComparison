@@ -1,38 +1,16 @@
 ---
+import {getIcon, getName} from "../data/utils.ts";
 const { launchers, values } = Astro.props as { launchers: LauncherDetails[], values: { identifier: string, value: string[] }[] };
 
 const availableModloaders = [...new Set(values.flatMap(v => v.value))];
-
-const niceLoaderNames = {
-    "forge":            { displayName: "Forge",                 iconUrl: "/src/assets/forge.svg" },
-    "fabric":           { displayName: "FabricMC",              iconUrl: "/src/assets/fabric.png" },
-    "quilt":            { displayName: "QuiltMC",               iconUrl: "/src/assets/quilt.svg" },
-    "neoforge":         { displayName: "Neoforge",              iconUrl: "/src/assets/neoforged.png" },
-    "legacy-fabric":    { displayName: "Legacy Fabric",         iconUrl: "/src/assets/legacy-fabric.png" },
-    "liteloader":       { displayName: "Lite Loader",           iconUrl: "" },
-    "rift":             { displayName: "Rift Loader",           iconUrl: "" },
-    "risugami":         { displayName: "Risugamis Modloader",   iconUrl: "" },
-}
-
-function getLoaderIcon(platform: string) {
-    const loaderData = niceLoaderNames[platform as keyof typeof niceLoaderNames];
-    return loaderData?.iconUrl ?? "";
-}
-
-function getLoaderName(platform: string) {
-    const loaderData = niceLoaderNames[platform as keyof typeof niceLoaderNames];
-    return loaderData?.displayName ?? platform;
-}
 
 ---
 <tr><th colspan={launchers.length + 1}>Modloaders</th></tr>
 {availableModloaders.map(modloader => (
 <tr>
     <td class="modloader">
-        { getLoaderIcon(modloader) != "" ?
-                <img loading="lazy" alt={getLoaderName(modloader)} src={getLoaderIcon(modloader)} />
-        : ""}
-        <span>{getLoaderName(modloader)}</span>
+        { getIcon(modloader) != "" ? <img loading="lazy" alt={getName(modloader)} src={getIcon(modloader)} /> : ""}
+        <span>{getName(modloader)}</span>
     </td>
     { launchers.map(launcher => (
             <td class:list={[launcher.identifier, values.find(v => v.identifier === launcher.identifier)?.value.includes(modloader) ? 'yes' : 'no' ]}>

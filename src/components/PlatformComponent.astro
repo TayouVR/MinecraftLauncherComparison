@@ -1,16 +1,9 @@
 ---
 import {platform} from "node:os";
+import {getIcon, getName} from "../data/utils.ts";
 const { launchers, values } = Astro.props as { launchers: LauncherDetails[], values: { identifier: string, value: SupportedPlatform }[] };
 
 const availablePlatforms = [...new Set(values.flatMap(v => Object.keys(v.value)) as OS[] )];
-
-const platformIconsByOS: Record<OS, string> = {
-    "windows": "/src/assets/windows.svg",
-    "macos": "/src/assets/macos.svg",
-    "linux": "/src/assets/tux.svg",
-    "android": "/src/assets/android.svg",
-    "ios": "/src/assets/apple_logo_rainbow.svg",
-}
 
 function getPlatformSupportForLauncher(launcherID: string) {
     return values.find((values) => values.identifier == launcherID)!.value;
@@ -21,8 +14,8 @@ function getPlatformSupportForLauncher(launcherID: string) {
 { availablePlatforms.map(os => (
     <tr>
         <td class:list={["platform", os]}>
-            { platformIconsByOS[os] != null ? <img loading="lazy" src={platformIconsByOS[os]} alt={os} /> : ""}
-            { os }
+            { getIcon(os) != null ? <img loading="lazy" src={getIcon(os)} alt={getName(os)} /> : ""}
+            { getName(os) }
         </td>
         { launchers.map(launcher => (
             <td class:list={[launcher.identifier, getPlatformSupportForLauncher(launcher.identifier)[os] == null ? "no" : "yes"]}>
