@@ -8,6 +8,8 @@ pkgs.mkShell {
     # Package manager
     nodePackages.npm
 
+    sass
+
     # Development tools
     nodePackages.typescript
     nodePackages.typescript-language-server

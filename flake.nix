@@ -20,6 +20,7 @@
         devShells.default = pkgs.mkShell rec {
           nativeBuildInputs = with pkgs; [
             nodejs
+            sass
 #            nodePackages.json5
 #            nodePackages.astro
           ];
