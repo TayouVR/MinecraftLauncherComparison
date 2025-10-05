@@ -2,50 +2,56 @@
   "identifier": "org.ftb.ftb",
   "name": "FTB App",
   "icon": "https://www.feed-the-beast.com/_next/static/media/logo.cc1c759c.svg",
-  "downloadLink": "",
-  "sourceRepo": "",
-  "homepage": "",
+  "downloadLink": "https://www.feed-the-beast.com/app",
+  "sourceRepo": "https://github.com/FTBTeam/FTB-App",
+  "homepage": "https://www.feed-the-beast.com/",
   "configuration": {
-    "license": "GPLv3 or newer",
+    "license": {
+      "name": "LGPL-2.1",
+      "url": "",
+      "foss": true,
+      "extraInfo": ""
+    },
     "serverInstances": false,
     "lookAndFeel": "Custom"
   },
   "features": {
     "modpacks": [
       { "name": "CurseForge", "method": "Download", "updating": true },
-      { "name": "ftb", "method": "Import", "updating": false },
-      { "name": "legacy-ftb", "method": "Download", "updating": false },
+      { "name": "ftb", "method": "Download", "updating": true },
+      { "name": "legacy-ftb", "method": "Download", "updating": true },
     ],
     "modloaders": ["forge", "neoforge", "fabric", "quilt"],
     "minecraftResources": {
       "mods": {
         "downloading": true,
         "updating": true,
-        "providers": ["Modrinth", "CurseForge"]
+        "providers": ["CurseForge"]
       },
       "resourcepacks": {
-        "downloading": true,
-        "updating": true,
-        "providers": ["Modrinth", "CurseForge"]
+        "downloading": false,
+        "updating": false,
+        "providers": []
       },
       "shaderpacks": {
-        "downloading": true,
-        "providers": ["Modrinth"]
+        "downloading": false,
+        "updating": false,
+        "providers": []
       },
       "worlds": {
-        "downloading": true,
-        "updating": true,
-        "providers": ["Modrinth", "CurseForge"]
+        "downloading": false,
+        "updating": false,
+        "providers": []
       },
       "datapacks": {
-        "downloading": true,
-        "updating": true,
-        "providers": ["Modrinth", "CurseForge"]
+        "downloading": false,
+        "updating": false,
+        "providers": []
       },
       "plugins": {
-        "downloading": true,
-        "updating": true,
-        "providers": ["Modrinth", "CurseForge"]
+        "downloading": false,
+        "updating": false,
+        "providers": []
       }
     },
     "import": ["FTB App Share Code", "CurseForge"],
@@ -55,20 +61,15 @@
       "versionManagement": true,
       "usingSystemInstall": true,
     },
-    "sandboxing": { "status": "WIP" },
-    "overlay": { "status": "NotSupported" },
-    "advertisements": {
-      "status": "NotSupported",
-      "note": "Displaying optional ads for download providers via networks like Adrinth have been in consideration"
-    }
+    "sandboxing": { "status": "No" },
+    "overlay": { "status": "Optional (via Overwolf app)" },
+    "advertisements": { "status": "Yes" }
   },
   "properties": {
     "platforms": {
       "linux": ["x86_64", "x64", "arm64"],
       "windows": ["x86_64", "x64", "arm64"],
       "macos": ["x86_64", "x64", "arm64"],
-      "android": ["x86_64", "x64", "arm64"],
-      "ios": ["x86_64", "x64", "arm64"],
     },
     "packages": "ftb-app",
     "technology": {
@@ -79,7 +80,7 @@
   "specialFeatures": {
     "CurseForgeBlockedDownloads": {
       "supported": true,
-      "method": "via web browser, automatically copies mod"
+      "method": "Yes"
     }
   },
 }

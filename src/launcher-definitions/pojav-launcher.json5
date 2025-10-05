@@ -2,11 +2,16 @@
   "identifier": "org.pojavteam.pojavlauncher",
   "name": "PoJavLauncher",
   "icon": "https://pojavlauncher.app/logo.png",
-  "downloadLink": "",
-  "sourceRepo": "",
-  "homepage": "",
+  "downloadLink": "https://play.google.com/store/apps/details?id=net.kdt.pojavlaunch",
+  "sourceRepo": "https://github.com/PojavLauncherTeam/PojavLauncher",
+  "homepage": "https://github.com/PojavLauncherTeam/PojavLauncher",
   "configuration": {
-    "license": "GPLv3 or newer",
+    "license": {
+      "name": "GPLv3 or newer",
+      "url": "",
+      "foss": true,
+      "extraInfo": ""
+    },
     "serverInstances": false,
     "lookAndFeel": "Minecraft Inspired"
   },
@@ -18,33 +23,33 @@
     "modloaders": ["forge", "fabric", "quilt"],
     "minecraftResources": {
       "mods": {
-        "downloading": true,
-        "updating": true,
-        "providers": ["Modrinth", "CurseForge"]
+        "downloading": false,
+        "updating": false,
+        "providers": []
       },
       "resourcepacks": {
-        "downloading": true,
-        "updating": true,
-        "providers": ["Modrinth", "CurseForge"]
+        "downloading": false,
+        "updating": false,
+        "providers": []
       },
       "shaderpacks": {
-        "downloading": true,
-        "providers": ["Modrinth"]
+        "downloading": false,
+        "providers": []
       },
       "worlds": {
-        "downloading": true,
-        "updating": true,
-        "providers": ["Modrinth", "CurseForge"]
+        "downloading": false,
+        "updating": false,
+        "providers": []
       },
       "datapacks": {
-        "downloading": true,
-        "updating": true,
-        "providers": ["Modrinth", "CurseForge"]
+        "downloading": false,
+        "updating": false,
+        "providers": []
       },
       "plugins": {
-        "downloading": true,
-        "updating": true,
-        "providers": ["Modrinth", "CurseForge"]
+        "downloading": false,
+        "updating": false,
+        "providers": []
       }
     },
     "import": [],
@@ -54,12 +59,9 @@
       "versionManagement": true,
       "usingSystemInstall": true,
     },
-    "sandboxing": { "status": "WIP" },
-    "overlay": { "status": "NotSupported" },
-    "advertisements": {
-      "status": "NotSupported",
-      "note": "Displaying optional ads for download providers via networks like Adrinth have been in consideration"
-    }
+    "sandboxing": { "status": "No" },
+    "overlay": { "status": "Yes, for controls → touch screen" },
+    "advertisements": { "status": "No" }
   },
   "properties": {
     "platforms": {
@@ -74,8 +76,8 @@
   },
   "specialFeatures": {
     "CurseForgeBlockedDownloads": {
-      "supported": true,
-      "method": "via web browser, automatically copies mod"
+      "supported": false,
+      "method": ""
     }
   },
 }

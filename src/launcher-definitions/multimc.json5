@@ -2,11 +2,16 @@
   "identifier": "org.multimc.multimc",
   "name": "MultiMC",
   "icon": "https://multimc.org/images/infinity32.png",
-  "downloadLink": "",
-  "sourceRepo": "",
-  "homepage": "",
+  "downloadLink": "https://multimc.org/#Download",
+  "sourceRepo": "https://github.com/MultiMC/Launcher/",
+  "homepage": "https://multimc.org/",
   "configuration": {
-    "license": "its complicated",
+    "license": {
+      "name": "its complicated",
+      "url": "",
+      "foss": false,
+      "extraInfo": "[state 2023] MultiMC is proprietary but a debranded MS-PL licensed version which lacks many keys MultiMC uses is available on GitHub"
+    },
     "serverInstances": false,
     "lookAndFeel": "System (configurable)"
   },
@@ -21,33 +26,34 @@
     "modloaders": ["forge", "neoforge", "fabric", "quilt", "liteloader"],
     "minecraftResources": {
       "mods": {
-        "downloading": true,
-        "updating": true,
-        "providers": ["Modrinth", "CurseForge"]
+        "downloading": false,
+        "updating": false,
+        "providers": []
       },
       "resourcepacks": {
-        "downloading": true,
-        "updating": true,
-        "providers": ["Modrinth", "CurseForge"]
+        "downloading": false,
+        "updating": false,
+        "providers": []
       },
       "shaderpacks": {
-        "downloading": true,
-        "providers": ["Modrinth"]
+        "downloading": false,
+        "updating": false,
+        "providers": []
       },
       "worlds": {
-        "downloading": true,
-        "updating": true,
-        "providers": ["Modrinth", "CurseForge"]
+        "downloading": false,
+        "updating": false,
+        "providers": []
       },
       "datapacks": {
-        "downloading": true,
-        "updating": true,
-        "providers": ["Modrinth", "CurseForge"]
+        "downloading": false,
+        "updating": false,
+        "providers": []
       },
       "plugins": {
-        "downloading": true,
-        "updating": true,
-        "providers": ["Modrinth", "CurseForge"]
+        "downloading": false,
+        "updating": false,
+        "providers": []
       }
     },
     "import": ["OneSix", "Modrinth", "Technic", "FtbApp"],
@@ -57,20 +63,15 @@
       "versionManagement": false,
       "usingSystemInstall": true,
     },
-    "sandboxing": { "status": "WIP" },
-    "overlay": { "status": "NotSupported" },
-    "advertisements": {
-      "status": "NotSupported",
-      "note": "Displaying optional ads for download providers via networks like Adrinth have been in consideration"
-    }
+    "sandboxing": { "status": "No" },
+    "overlay": { "status": "No" },
+    "advertisements": { "status": "No" }
   },
   "properties": {
     "platforms": {
       "linux": ["x86_64", "x64", "arm64"],
       "windows": ["x86_64", "x64", "arm64"],
       "macos": ["x86_64", "x64", "arm64"],
-      "android": ["x86_64", "x64", "arm64"],
-      "ios": ["x86_64", "x64", "arm64"],
     },
     "packages": "multimc",
     "technology": {
@@ -80,8 +81,8 @@
   },
   "specialFeatures": {
     "CurseForgeBlockedDownloads": {
-      "supported": true,
-      "method": "via web browser, automatically copies mod"
+      "supported": false,
+      "method": ""
     }
   },
 }

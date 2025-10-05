@@ -16,7 +16,12 @@
     }
   ],
   "configuration": {
-    "license": "GPLv3 or newer",
+    "license": {
+      "name": "GPLv3 or newer",
+      "url": "",
+      "foss": true,
+      "extraInfo": ""
+    },
     "serverInstances": false,
     "lookAndFeel": "System (configurable)"
   },
@@ -84,28 +89,19 @@
         ]
       },
       "worlds": {
-        "downloading": true,
-        "updating": true,
-        "providers": [
-          "Modrinth",
-          "CurseForge"
-        ]
+        "downloading": false,
+        "updating": false,
+        "providers": []
       },
       "datapacks": {
-        "downloading": true,
-        "updating": true,
-        "providers": [
-          "Modrinth",
-          "CurseForge"
-        ]
+        "downloading": false,
+        "updating": false,
+        "providers": []
       },
       "plugins": {
-        "downloading": true,
-        "updating": true,
-        "providers": [
-          "Modrinth",
-          "CurseForge"
-        ]
+        "downloading": false,
+        "updating": false,
+        "providers": []
       }
     },
     "import": [
@@ -129,14 +125,10 @@
       "versionManagement": true,
       "usingSystemInstall": true,
     },
-    "sandboxing": {
-      "status": "WIP"
-    },
-    "overlay": {
-      "status": "NotSupported"
-    },
+    "sandboxing": { "status": "WIP" },
+    "overlay": { "status": "No" },
     "advertisements": {
-      "status": "NotSupported",
+      "status": "No",
       "note": "Displaying optional ads for download providers via networks like Adrinth have been in consideration"
     }
   },
@@ -145,8 +137,6 @@
       "linux": ["x86_64", "x64", "arm64"],
       "windows": ["x86_64", "x64", "arm64"],
       "macos": ["x86_64", "x64", "arm64"],
-      "android": ["x86_64", "x64", "arm64"],
-      "ios": ["x86_64", "x64", "arm64"],
     },
     "packages": "prismlauncher",
     "technology": {

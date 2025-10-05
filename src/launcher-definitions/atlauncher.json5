@@ -6,7 +6,12 @@
   "sourceRepo": "https://github.com/ATLauncher/ATLauncher",
   "homepage": "https://atlauncher.com/",
   "configuration": {
-    "license": "GPLv3",
+    "license": {
+      "name": "GPLv3",
+      "url": "",
+      "foss": true,
+      "extraInfo": ""
+    },
     "serverInstances": false,
     "lookAndFeel": "Custom (configurable)"
   },
@@ -32,22 +37,22 @@
       },
       "shaderpacks": {
         "downloading": true,
-        "providers": ["Modrinth"]
+        "providers": ["Modrinth", "CurseForge"]
       },
       "worlds": {
         "downloading": true,
         "updating": true,
-        "providers": ["Modrinth", "CurseForge"]
+        "providers": ["CurseForge"]
       },
       "datapacks": {
-        "downloading": true,
-        "updating": true,
-        "providers": ["Modrinth", "CurseForge"]
+        "downloading": false,
+        "updating": false,
+        "providers": []
       },
       "plugins": {
-        "downloading": true,
-        "updating": true,
-        "providers": ["Modrinth", "CurseForge"]
+        "downloading": false,
+        "updating": false,
+        "providers": []
       }
     },
     "import": ["OneSix", "Modrinth", "CurseForge"],
@@ -57,20 +62,15 @@
       "versionManagement": true,
       "usingSystemInstall": true,
     },
-    "sandboxing": { "status": "WIP" },
-    "overlay": { "status": "NotSupported" },
-    "advertisements": {
-      "status": "NotSupported",
-      "note": "Displaying optional ads for download providers via networks like Adrinth have been in consideration"
-    }
+    "sandboxing": { "status": "No" },
+    "overlay": { "status": "No" },
+    "advertisements": { "status": "No" }
   },
   "properties": {
     "platforms": {
       "linux": ["x86_64", "x64", "arm64"],
       "windows": ["x86_64", "x64", "arm64"],
       "macos": ["x86_64", "x64", "arm64"],
-      "android": ["x86_64", "x64", "arm64"],
-      "ios": ["x86_64", "x64", "arm64"],
     },
     "packages": "atlauncher",
     "technology": {
