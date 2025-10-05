@@ -22,14 +22,7 @@ const values = launchers.map(launcher => {
 ---
 
 { (propertyName === "platforms") ? (
-    <tr>
-        <td>{propertyName}</td>
-        { launchers.map(launcher => (
-            <td class={launcher.identifier}>
-                <PlatformComponent platforms={valueFromLauncher(launcher)} />
-            </td>
-        ))}
-    </tr>
+    <PlatformComponent launchers={launchers} values={values} />
 ) : (propertyName === "packages") ? (
     <tr>
         <td>{propertyName}</td>
