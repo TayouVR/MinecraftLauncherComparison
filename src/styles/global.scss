@@ -67,24 +67,23 @@ h1 {
   justify-content: center;
   flex-direction: row;
   flex-wrap: wrap;
-  gap: 4px;
-  padding: 4px;
+  gap: 10px;
+  padding: 10px;
 }
 .launcher-toggle {
   border: none;
   width: 96px;
   height: 96px;
   color: var(--text-color);
-  background-color: #0095ff;
   border-radius: 10px;
-
-  @media (prefers-color-scheme: dark) {
-    background-color: #1069a8;
-  }
+  background: linear-gradient(70deg, #3245ff 0%, #6752ee 100%);
+  box-shadow:
+          inset 0 0 0 1px rgba(255, 255, 255, 0.12),
+          inset 0 -2px 0 rgba(0, 0, 0, 0.24);
 
   > img {
-    max-width: 100%;
-    max-height: 100%;
+    width: 80%;
+    height: 80%;
   }
 
   &.column-disabled {
@@ -131,20 +130,27 @@ td.column-disabled, th.column-disabled {
 }
 
 
-.yes {
-  background-color: #63ff63;
+.yes, .download {
+  background-image: linear-gradient(to bottom, #4FC921 0%, #40BA12 100%);
 
   @media (prefers-color-scheme: dark) {
-    background-color: #009900;
+    background-image: linear-gradient(to bottom, #358c15 0%, #2a8306 100%);
   }
 }
 
 .no {
-  background-color: #ff4f4f;
+  background-image: linear-gradient(to bottom, #DC6650 0%, #CB553F 100%);
 
   @media (prefers-color-scheme: dark) {
-    background-color: #990000;
+    background-image: linear-gradient(to bottom, #b53921 0%, #a82c19 100%);
+  }
+}
 
+.import, .unknown {
+  background-image: linear-gradient(to bottom, #ffd363 0%, #cda53d 100%);
+
+  @media (prefers-color-scheme: dark) {
+    background-image: linear-gradient(to bottom, #c38a0d 0%, #a5750c 100%);
   }
 }
 

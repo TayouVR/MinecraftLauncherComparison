@@ -106,7 +106,7 @@ launchers.forEach((launcher) => {
 			<tr>
 				<th>License</th>
 				{ launchers.map(launcher => (
-					<th class={launcher.identifier}>{launcher.configuration.license}</th>
+					<th class:list={[launcher.identifier, launcher.configuration.license.foss ? "yes" : "no"]}>{launcher.configuration.license.name}</th>
 				))}
 			</tr>
 			<tr>
@@ -139,14 +139,20 @@ launchers.forEach((launcher) => {
 					</th>
 				))}
 			</tr>
-			<tr><th colspan={launchers.length + 1}>Properties</th></tr>
 			{ launcherProperties(launchers, ["properties"]).map((property) => (
 				<ListComponent propertyName={property.name} launchers={launchers} propCategory="properties" />
 			))}
-			<tr><th colspan={launchers.length + 1}>Features</th></tr>
 			{ launcherProperties(launchers, ["features"]).map((property) => (
 				<ListComponent propertyName={property.name} launchers={launchers} propCategory="features" />
 			))}
+            <tr>
+                <th>CurseForge Blocked Mods handling</th>
+                { launchers.map(launcher => (
+                        <th class:list={[launcher.identifier, launcher.specialFeatures.CurseForgeBlockedDownloads.supported ? "yes" : "no"]}>
+                            {launcher.specialFeatures.CurseForgeBlockedDownloads.method != "" ? launcher.specialFeatures.CurseForgeBlockedDownloads.method : "No"}
+                        </th>
+                ))}
+            </tr>
 		</tbody>
 	</table>
 

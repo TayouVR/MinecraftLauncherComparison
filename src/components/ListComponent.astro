@@ -12,6 +12,21 @@ function valueFromLauncher<TLauncher extends Record<"properties" | "features", R
     return (launcher as any as TLauncher)[propCategory][propertyName];
 }
 
+function statusClass(launcher: LauncherDetails) {
+    let status = valueFromLauncher(launcher).status;
+    if (status.includes("Yes") || status.includes("Optional")) {
+        return "yes";
+    } else if (status.includes("No")) {
+        return "no";
+    } else if (status.includes("WIP")) {
+        return "wip";
+    } else if (status === "") {
+        return "";
+    } else {
+        return "unknown";
+    }
+}
+
 const values = launchers.map(launcher => {
     return {
         identifier: launcher.identifier,
@@ -70,7 +85,7 @@ const values = launchers.map(launcher => {
     <tr>
         <td>{propertyName}</td>
         { launchers.map(launcher => (
-            <td class={launcher.identifier}>
+            <td class:list={[launcher.identifier, statusClass(launcher)]}>
                 {valueFromLauncher(launcher).status}
             </td>
         ))}
@@ -79,7 +94,7 @@ const values = launchers.map(launcher => {
     <tr>
         <td>{propertyName}</td>
         { launchers.map(launcher => (
-            <td class={launcher.identifier}>
+            <td class:list={[launcher.identifier, statusClass(launcher)]}>
                 {valueFromLauncher(launcher).status}
             </td>
         ))}
@@ -88,7 +103,7 @@ const values = launchers.map(launcher => {
     <tr>
         <td>{propertyName}</td>
         { launchers.map(launcher => (
-            <td class={launcher.identifier}>
+            <td class:list={[launcher.identifier, statusClass(launcher)]}>
                 {valueFromLauncher(launcher).status}
             </td>
         ))}

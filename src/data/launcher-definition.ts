@@ -1,50 +1,57 @@
-type LauncherConfiguration = {
-    license: string;
+interface LicenseInfo {
+    name: string;
+    url: string;
+    foss: boolean;
+    extraInfo: string;
+}
+
+interface LauncherConfiguration {
+    license: LicenseInfo;
     serverInstances: boolean;
     lookAndFeel: string;
-};
+}
 
-type FeatureModpack = {
+interface FeatureModpack {
     name: string;
     method: string;
     updating: boolean;
-};
+}
 
-type MinecraftResource = {
+interface MinecraftResource {
     downloading: boolean;
     updating?: boolean;
     providers: string[];
-};
+}
 
-type MinecraftResources = {
+interface MinecraftResources {
     mods: MinecraftResource;
     resourcepacks: MinecraftResource;
     shaderpacks: MinecraftResource;
     worlds: MinecraftResource;
     datapacks: MinecraftResource;
     plugins: MinecraftResource;
-};
+}
 
-type JavaFeature = {
+interface JavaFeature {
     download: boolean;
     versionManagement: boolean;
     usingSystemInstall: boolean;
-};
+}
 
-type Sandboxing = {
-    status: string;
-};
-
-type Overlay = {
+interface Sandboxing {
     status: string;
 }
 
-type Advertisement = {
+interface Overlay {
+    status: string;
+}
+
+interface Advertisement {
     status: string;
     note: string;
 }
 
-type Features = {
+interface Features {
     modpacks: FeatureModpack[];
     modloaders: string[];
     minecraftResources: MinecraftResources;
@@ -54,7 +61,7 @@ type Features = {
     sandboxing: Sandboxing;
     overlay: Overlay;
     advertisements: Advertisement;
-};
+}
 
 enum OS {
     Linux = "linux",
@@ -72,32 +79,32 @@ enum Architecture {
 
 type SupportedPlatform = Record<OS, Architecture[]>
 
-type Technology = {
+interface Technology {
     languages: string[];
     frameworks: string[];
-};
+}
 
-type Properties = {
+interface Properties {
     platforms: SupportedPlatform[];
     packages: string; // repology link
     technology: Technology;
-};
+}
 
-type SpecialFeature = {
+interface SpecialFeature {
     supported: boolean;
     method: string;
-};
+}
 
-type SpecialFeatures = {
+interface SpecialFeatures {
     CurseForgeBlockedDownloads: SpecialFeature;
-};
+}
 
-type Screenshot = {
+interface Screenshot {
     name: string;
     url: string;
 }
 
-type LauncherDetails = {
+interface LauncherDetails {
     identifier: string;
     name: string;
     icon: string;
@@ -109,4 +116,4 @@ type LauncherDetails = {
     features: Features;
     properties: Properties;
     specialFeatures: SpecialFeatures;
-};
+}
