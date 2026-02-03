@@ -1,7 +1,7 @@
 ﻿{
   "identifier": "com.CurseForge.CurseForge",
   "name": "CurseForge App",
-  "icon": "https://warcraft.wiki.gg/images/7/71/CurseForge_logo.svg?3f1c83",
+  "icon": "/src/assets/modplatforms/curseforge.svg",
   "downloadLink": "https://download.curseforge.com/",
   "sourceRepo": "",
   "homepage": "https://www.curseforge.com/minecraft",

@@ -1,7 +1,7 @@
 ﻿{
   "identifier": "org.Modrinth.theseus",
   "name": "Modrinth App",
-  "icon": "https://github.com/gabrielvicenteYT/Modrinth-icons/raw/main/Branding/Wordmark/wordmark-dark.svg",
+  "icon": "/src/assets/modplatforms/modrinth.svg",
   "downloadLink": "https://modrinth.com/app",
   "sourceRepo": "https://github.com/modrinth/theseus",
   "homepage": "https://modrinth.com/",

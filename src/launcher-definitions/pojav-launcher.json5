@@ -1,7 +1,7 @@
 ﻿{
   "identifier": "org.pojavteam.pojavlauncher",
   "name": "PoJavLauncher",
-  "icon": "https://pojavlauncher.app/logo.png",
+  "icon": "/src/assets/launchers/pojav.png",
   "downloadLink": "https://play.google.com/store/apps/details?id=net.kdt.pojavlaunch",
   "sourceRepo": "https://github.com/PojavLauncherTeam/PojavLauncher",
   "homepage": "https://github.com/PojavLauncherTeam/PojavLauncher",
