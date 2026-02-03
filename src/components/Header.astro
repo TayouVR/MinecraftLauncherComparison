@@ -122,12 +122,23 @@ const themes = [ 'tayou', 'tayou-light',
                     <ul tabindex="-1" class="dropdown-content bg-base-300 rounded-box z-1 w-52 p-2 shadow-2xl max-h-96 overflow-y-auto">
                         {themes.map(theme => (
                             <li>
-                                <input
-                                        type="radio"
-                                        name="theme-dropdown"
-                                        class="theme-controller w-full btn btn-sm btn-block btn-ghost justify-start capitalize"
-                                        aria-label={theme}
-                                        value={theme} />
+                                <label class="w-full btn btn-sm btn-block btn-ghost justify-start capitalize gap-3 px-2 flex-row flex">
+                                    <input
+                                            type="radio"
+                                            name="theme-dropdown"
+                                            class="theme-controller hidden peer"
+                                            aria-label={theme}
+                                            value={theme} />
+                                    <div data-theme={theme} class="h-5 bg-base-100 grid shrink-0 grid-cols-2 gap-0.5 rounded-md p-1 shadow-sm">
+                                        <div class="bg-base-content size-1 rounded-full"></div>
+                                        <div class="bg-primary size-1 rounded-full"></div>
+                                        <div class="bg-secondary size-1 rounded-full"></div>
+                                        <div class="bg-accent size-1 rounded-full"></div></div>
+                                    <div class="w-32 truncate text-left">{theme}</div>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" class="invisible peer-checked:visible h-3 w-3 shrink-0">
+                                        <path d="M20.285 2l-11.285 11.567-5.286-5.011-3.714 3.716 9 8.728 15-15.285z"></path>
+                                    </svg>
+                                </label>
                             </li>
                         ))}
                     </ul>
@@ -195,12 +206,23 @@ const themes = [ 'tayou', 'tayou-light',
             <div class="grid grid-cols-1 gap-2">
                 {themes.map(theme => (
                     <li>
-                        <input
-                                type="radio"
-                                name="theme-drawer"
-                                class="theme-controller w-full btn btn-sm btn-block btn-ghost justify-start capitalize"
-                                aria-label={theme}
-                                value={theme} />
+                        <label class="btn btn-sm btn-ghost justify-start capitalize gap-3 px-2 flex-row flex w-full">
+                            <input
+                                    type="radio"
+                                    name="theme-drawer"
+                                    class="theme-controller hidden peer"
+                                    aria-label={theme}
+                                    value={theme} />
+                            <div data-theme={theme} class="bg-base-100 grid shrink-0 grid-cols-2 gap-0.5 rounded-md p-1 shadow-sm">
+                                <div class="bg-base-content size-1 rounded-full"></div>
+                                <div class="bg-primary size-1 rounded-full"></div>
+                                <div class="bg-secondary size-1 rounded-full"></div>
+                                <div class="bg-accent size-1 rounded-full"></div></div>
+                            <div class="w-32 truncate text-left">{theme}</div>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" class="invisible peer-checked:visible h-3 w-3 shrink-0">
+                                <path d="M20.285 2l-11.285 11.567-5.286-5.011-3.714 3.716 9 8.728 15-15.285z"></path>
+                            </svg>
+                        </label>
                     </li>
                 ))}
             </div>
@@ -292,5 +314,41 @@ const themes = [ 'tayou', 'tayou-light',
 	}
 
 	// Initialize on page load (in case browser remembers checkbox state)
-	window.addEventListener('DOMContentLoaded', updateFilters);
+	window.addEventListener('DOMContentLoaded', () => {
+        updateFilters();
+
+        // Theme handling
+        const currentTheme = document.documentElement.getAttribute('data-theme');
+        const themeControllers = document.querySelectorAll('.theme-controller');
+        
+        // Initialize radio buttons
+        themeControllers.forEach(el => {
+            if (el.value === currentTheme) {
+                el.checked = true;
+                const label = el.closest('label');
+                if (label) label.classList.add('bg-primary');
+            }
+        });
+
+        // Listen for changes
+        themeControllers.forEach(el => {
+            el.addEventListener('change', (e) => {
+                const newTheme = e.target.value;
+                document.documentElement.setAttribute('data-theme', newTheme);
+                document.cookie = `theme=${newTheme}; path=/; max-age=31536000; SameSite=Lax`;
+                
+                // Sync other radio buttons with the same value and update visual state
+                themeControllers.forEach(radio => {
+                    const label = radio.closest('label');
+                    if (radio.value === newTheme) {
+                        radio.checked = true;
+                        if (label) label.classList.add('bg-primary');
+                    } else {
+                        radio.checked = false;
+                        if (label) label.classList.remove('bg-primary');
+                    }
+                });
+            });
+        });
+    });
 </script>

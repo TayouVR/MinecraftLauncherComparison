@@ -39,7 +39,7 @@
       },
       {
         "name": "ftb",
-        "method": "Import",
+        "method": "Download",
         "updating": false
       },
       {
@@ -85,7 +85,8 @@
       "shaderpacks": {
         "downloading": true,
         "providers": [
-          "Modrinth"
+          "Modrinth",
+          "CurseForge"
         ]
       },
       "worlds": {

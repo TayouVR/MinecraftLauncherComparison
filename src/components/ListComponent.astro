@@ -34,34 +34,53 @@ const values = launchers.map(launcher => {
     }
 });
 
+if(![
+    "platforms", "technology", "modpacks", "modloaders", "minecraftResources",
+    "java", "sandboxing", "overlay", "advertisements", "import", "export"
+].includes(propertyName)) {
+    console.warn("property doesn't have dedicated row rendering", propertyName);
+}
+
 ---
 
-{ (propertyName === "platforms") ? (
+{propertyName === "platforms" && (
     <PlatformComponent launchers={launchers} values={values} />
-) : (propertyName === "technology") ? (
-    <tr>
-        <td>Languages</td>
-        { launchers.map(launcher => (
-            <td class={launcher.identifier}>
-                {valueFromLauncher(launcher).languages.join(', ')}
-            </td>
-        ))}
-    </tr>
-    <tr>
-        <td>Core Toolkits and Libraries</td>
-        { launchers.map(launcher => (
-            <td class={launcher.identifier}>
-                {valueFromLauncher(launcher).frameworks.join(', ')}
-            </td>
-        ))}
-    </tr>
-) : (propertyName === "modpacks") ? (
+)}
+
+{propertyName === "technology" && (
+    <>
+        <tr>
+            <td>Languages</td>
+            { launchers.map(launcher => (
+                <td class={launcher.identifier}>
+                    {valueFromLauncher(launcher).languages.join(', ')}
+                </td>
+            ))}
+        </tr>
+        <tr>
+            <td>Core Toolkits and Libraries</td>
+            { launchers.map(launcher => (
+                <td class={launcher.identifier}>
+                    {valueFromLauncher(launcher).frameworks.join(', ')}
+                </td>
+            ))}
+        </tr>
+    </>
+)}
+
+{propertyName === "modpacks" && (
     <ModpacksComponent launchers={launchers} values={values} />
-) : (propertyName === "modloaders") ? (
+)}
+
+{propertyName === "modloaders" && (
     <ModloadersComponent launchers={launchers} values={values} />
-) : (propertyName === "minecraftResources") ? (
+)}
+
+{propertyName === "minecraftResources" && (
     <MinecraftResources launchers={launchers} values={values} />
-) : (propertyName === "java") ? (
+)}
+
+{propertyName === "java" && (
     <tr>
         <td>{propertyName}</td>
         { launchers.map(launcher => (
@@ -70,7 +89,9 @@ const values = launchers.map(launcher => {
             </td>
         ))}
     </tr>
-) : (propertyName === "sandboxing") ? (
+)}
+
+{(propertyName === "sandboxing" || propertyName === "overlay" || propertyName === "advertisements") && (
     <tr>
         <td>{propertyName}</td>
         { launchers.map(launcher => (
@@ -81,29 +102,9 @@ const values = launchers.map(launcher => {
             </td>
         ))}
     </tr>
-) : (propertyName === "overlay") ? (
-    <tr>
-        <td>{propertyName}</td>
-        { launchers.map(launcher => (
-            <td class={launcher.identifier}>
-                <div class:list={["badge", launcher.identifier, statusClass(launcher)]}>
-                    {valueFromLauncher(launcher).status}
-                </div>
-            </td>
-        ))}
-    </tr>
-) : (propertyName === "advertisements") ? (
-    <tr>
-        <td>{propertyName}</td>
-        { launchers.map(launcher => (
-            <td class={launcher.identifier}>
-                <div class:list={["badge", launcher.identifier, statusClass(launcher)]}>
-                    {valueFromLauncher(launcher).status}
-                </div>
-            </td>
-        ))}
-    </tr>
-) : (propertyName === "import") ? (
+)}
+
+{propertyName === "import" && (
     <tr>
         <td>{propertyName}</td>
         { launchers.map(launcher => (
@@ -116,7 +117,9 @@ const values = launchers.map(launcher => {
             </td>
         ))}
     </tr>
-) : (propertyName === "export") ? (
+)}
+
+{propertyName === "export" && (
     <tr>
         <td>{propertyName}</td>
         { launchers.map(launcher => (
@@ -129,7 +132,12 @@ const values = launchers.map(launcher => {
             </td>
         ))}
     </tr>
-) : (
+)}
+
+{![
+    "platforms", "technology", "modpacks", "modloaders", "minecraftResources",
+    "java", "sandboxing", "overlay", "advertisements", "import", "export"
+].includes(propertyName) && (
     <tr>
         <td>{propertyName}</td>
         { launchers.map(launcher => (
