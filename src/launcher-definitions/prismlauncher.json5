@@ -94,9 +94,12 @@
         "providers": []
       },
       "datapacks": {
-        "downloading": false,
+        "downloading": true,
         "updating": false,
-        "providers": []
+        "providers": [
+          "Modrinth",
+          "CurseForge"
+        ]
       },
       "plugins": {
         "downloading": false,
