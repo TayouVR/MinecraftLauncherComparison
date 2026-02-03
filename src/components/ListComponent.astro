@@ -120,11 +120,13 @@ const values = launchers.map(launcher => {
     <tr>
         <td>{propertyName}</td>
         { launchers.map(launcher => (
-                <td class={launcher.identifier}>
+            <td class={launcher.identifier}>
+                <div class="flex flex-wrap gap-2">
                     {valueFromLauncher(launcher).map((format: string) => (
-                            <div class:list={["card", format.includes("🚧") ? "wip" : ""]}><span>{format}</span></div>
+                            <div class:list={["badge", format.includes("🚧") ? "wip" : "bg-base-600"]}><span>{format}</span></div>
                     ))}
-                </td>
+                </div>
+            </td>
         ))}
     </tr>
 ) : (
