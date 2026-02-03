@@ -66,7 +66,6 @@ launchers.forEach((launcher) => {
 
 <Layout>
 	<clientData id="clientData" value={JSON.stringify(columnsClientState)}></clientData>
-	<h1>Minecraft Launcher Comparison</h1>
 
 	This will give you an overview over the various Minecraft (Java Edition) launchers and their features.<br>
 	<br>
@@ -85,9 +84,9 @@ launchers.forEach((launcher) => {
 	<ul class="dropdown menu w-52 rounded-box bg-base-100 shadow-sm"
 		popover id="popover-1" style="position-anchor:--anchor-1">
 		{ launchers.map(launcher => (
-			<li><a onclick={`toggleVisibility('${launcher.identifier}')`}>
+			<li class:list={["launcher-toggle", launcher.identifier]}><a onclick={`toggleVisibility('${launcher.identifier}')`} class="flex items-center gap-2">
 				{ launcher.icon ? (
-					<img class="launcher-icon" src={launcher.icon}  alt=`${launcher.name} Icon` /><br/>
+					<img class="w-8 h-8" src={launcher.icon}  alt=`${launcher.name} Icon` />
 				) : ""}
 				<span>{launcher.name}</span>
 			</a></li>
@@ -95,24 +94,27 @@ launchers.forEach((launcher) => {
 	</ul>
 	<div class="launcher-toggle-container">
 		{ launchers.map(launcher => (
-			<button class:list={["launcher-toggle", "btn", launcher.identifier]} onclick={`toggleVisibility('${launcher.identifier}')`}>
+			<button class:list={["launcher-toggle", "btn", launcher.identifier, "size-30"]} onclick={`toggleVisibility('${launcher.identifier}')`}>
 				{ launcher.icon ? (
-					<img class="launcher-icon" src={launcher.icon}  alt=`${launcher.name} Icon` /><br/>
+					<img class="w-full h-full object-contain" src={launcher.icon}  alt=`${launcher.name} Icon` />
 				) : launcher.name}
 			</button>
 		))}
 	</div>
 
-	<table class="table">
-		<thead>
+	<div class="table-container w-full overflow-auto">
+	<table class="table table-zebra table-hover table-bordered w-full">
+		<thead class="sticky top-0 z-10 bg-base-100 shadow-sm">
 			<tr class="header-row">
-				<th>Feature</th>
+				<th class="bg-base-100">Feature</th>
 				{ launchers.map(launcher => (
-					<th class={launcher.identifier}>
-						{ launcher.icon ? (
-							<img class="launcher-icon" src={launcher.icon}  alt=`${launcher.name} Icon` /><br/>
-						) : ''}
-						{launcher.name}
+					<th class:list={[launcher.identifier, "bg-base-100"]}>
+						<a href={`/launcher/${launcher.identifier}`} class="flex flex-col items-center gap-2 hover:bg-base-200 p-2 rounded-lg transition-colors h-full w-full justify-center">
+							{ launcher.icon ? (
+								<img class="launcher-icon w-16 h-16 object-contain" src={launcher.icon}  alt=`${launcher.name} Icon` />
+							) : <div class="w-16 h-16 flex items-center justify-center font-bold">?</div>}
+							<span class="text-center">{launcher.name}</span>
+						</a>
 					</th>
 				))}
 			</tr>
@@ -121,7 +123,11 @@ launchers.forEach((launcher) => {
 			<tr>
 				<th>License</th>
 				{ launchers.map(launcher => (
-					<th class:list={[launcher.identifier, launcher.configuration.license.foss ? "yes" : "no"]}>{launcher.configuration.license.name}</th>
+					<td>
+						<div class:list={[launcher.identifier, launcher.configuration.license.foss ? "yes" : "no", "badge"]}>
+							{launcher.configuration.license.name}
+						</div>
+					</td>
 				))}
 			</tr>
 			<tr>
@@ -130,31 +136,9 @@ launchers.forEach((launcher) => {
 					<th class={launcher.identifier}>{launcher.configuration.lookAndFeel}</th>
 				))}
 			</tr>
-			<tr>
-				<th>Homepage</th>
-				{ launchers.map(launcher => (
-					<th class={launcher.identifier}>
-						<a href={launcher.homepage}>{launcher.homepage}</a>
-					</th>
-				))}
-			</tr>
-			<tr>
-				<th>Download Link</th>
-				{ launchers.map(launcher => (
-					<th class={launcher.identifier}>
-						<a href={launcher.downloadLink}>{launcher.downloadLink}</a>
-					</th>
-				))}
-			</tr>
-			<tr>
-				<th>Source Repo</th>
-				{ launchers.map(launcher => (
-					<th class={launcher.identifier}>
-						<a href={launcher.sourceRepo}>{launcher.sourceRepo ?? "N/A"}</a>
-					</th>
-				))}
-			</tr>
-			{ launcherProperties(launchers, ["properties"]).map((property) => (
+			{ launcherProperties(launchers, ["properties"])
+				.filter((prop) => prop.name != "packages")
+				.map((property) => (
 				<ListComponent propertyName={property.name} launchers={launchers} propCategory="properties" />
 			))}
 			{ launcherProperties(launchers, ["features"]).map((property) => (
@@ -170,12 +154,7 @@ launchers.forEach((launcher) => {
             </tr>
 		</tbody>
 	</table>
-
-	View and edit the source of this page here:<br>
-	<a href="https://github.com/TayouVR/MinecraftLauncherComparison">https://github.com/TayouVR/MinecraftLauncherComparison</a><br>
-	<br>
-	submit any issues, outdated or missing information here:<br>
-	<a href="https://github.com/TayouVR/MinecraftLauncherComparison/issues">https://github.com/TayouVR/MinecraftLauncherComparison/issues</a><br>
+	</div>
 </Layout>
 
 <script is:inline>

@@ -8,13 +8,17 @@ const availableModloaders = [...new Set(values.flatMap(v => v.value))];
 <tr><th colspan={launchers.length + 1}>Modloaders</th></tr>
 {availableModloaders.map(modloader => (
 <tr>
-    <td class="modloader">
-        { getIcon(modloader) != "" ? <img loading="lazy" alt={getName(modloader)} src={getIcon(modloader)} /> : ""}
-        <span>{getName(modloader)}</span>
+    <td>
+        <div class="modloader flex flex-row gap-2 text-nowrap h-2em items-center">
+            { getIcon(modloader) != "" ? <img loading="lazy" alt={getName(modloader)} src={getIcon(modloader)} /> : ""}
+            <span>{getName(modloader)}</span>
+        </div>
     </td>
     { launchers.map(launcher => (
-            <td class:list={[launcher.identifier, values.find(v => v.identifier === launcher.identifier)?.value.includes(modloader) ? 'yes' : 'no' ]}>
-                { values.find(v => v.identifier === launcher.identifier)?.value.includes(modloader) ? 'Yes' : 'No' }
+            <td>
+                <div class:list={["badge", launcher.identifier, values.find(v => v.identifier === launcher.identifier)?.value.includes(modloader) ? 'yes' : 'no' ]} >
+                    { values.find(v => v.identifier === launcher.identifier)?.value.includes(modloader) ? 'Yes' : 'No' }
+                </div>
             </td>
     ))}
 </tr>
@@ -22,21 +26,9 @@ const availableModloaders = [...new Set(values.flatMap(v => v.value))];
 
 <style>
     .modloader {
-        display: flex;
-        flex-direction: row;
-        justify-content: left;
-        align-items: center;
-        margin: 5px;
-        height: 2em;
-        overflow: hidden;
-        gap: 10px;
-
         img {
             height: 2em;
             border-radius: 2px;
-        }
-        span {
-            text-wrap: nowrap;
         }
     }
 </style>

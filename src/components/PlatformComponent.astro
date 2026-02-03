@@ -1,46 +1,24 @@
 ---
-import {platform} from "node:os";
 import {getIcon, getName} from "../data/utils.ts";
 const { launchers, values } = Astro.props as { launchers: LauncherDetails[], values: { identifier: string, value: SupportedPlatform }[] };
 
-const availablePlatforms = [...new Set(values.flatMap(v => Object.keys(v.value)) as OS[] )];
-
 function getPlatformSupportForLauncher(launcherID: string) {
-    return values.find((values) => values.identifier == launcherID)!.value;
+    return Object.keys(values.find((values) => values.identifier == launcherID)!.value ?? {});
 }
 
 ---
-<tr><th colspan={launchers.length + 1}>Platforms</th></tr>
-{ availablePlatforms.map(os => (
-    <tr>
-        <td class:list={["platform", os]}>
-            { getIcon(os) != null ? <img loading="lazy" src={getIcon(os)} alt={getName(os)} /> : ""}
-            { getName(os) }
+<tr>
+    <td>Platforms</td>
+    { launchers.map(launcher => (
+        <td class="platform">
+            <div class="flex flex-wrap gap-2">
+            { getPlatformSupportForLauncher(launcher.identifier).map(platform => (
+                <div class="card bg-base-200 p-3 items-center shadow-m">
+                    {getIcon(platform) != null ? <img loading="lazy" src={getIcon(platform)} alt={getName(platform)}/> : ""}
+                    {getName(platform)}
+                </div>
+            ))}
+            </div>
         </td>
-        { launchers.map(launcher => (
-            <td class:list={[launcher.identifier, getPlatformSupportForLauncher(launcher.identifier)[os] == null ? "no" : "yes"]}>
-                { getPlatformSupportForLauncher(launcher.identifier)[os] == null ? "" : getPlatformSupportForLauncher(launcher.identifier)[os].join(', ') }
-
-            </td>
-        ))}
-    </tr>
-))}
-
-<style>
-    .platform {
-        display: flex;
-        flex-direction: row;
-        justify-content: left;
-        align-items: center;
-        margin: 5px;
-        height: 2em;
-        overflow: hidden;
-        gap: 10px;
-
-        img {
-            height: 2em;
-            width: 2em;
-            border-radius: 2px;
-        }
-    }
-</style>
+    ))}
+</tr>

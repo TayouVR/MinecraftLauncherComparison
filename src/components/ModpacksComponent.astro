@@ -15,36 +15,28 @@ function modpackFromList(launcherID: string, modpackName: string) {
 <tr><th colspan={launchers.length + 1}>Modpacks</th></tr>
 {availableModPackPlatforms.map(modpack => (
 <tr>
-    <td class="modpack">
-        { getIcon(modpack) != "" ? <img loading="lazy" alt={getName(modpack)} src={getIcon(modpack)} /> : ""}
-        <span>{getName(modpack)}</span>
+    <td>
+        <div class="modpack flex flex-row gap-2 text-nowrap h-2em items-center">
+            { getIcon(modpack) != "" ? <img loading="lazy" alt={getName(modpack)} src={getIcon(modpack)} /> : ""}
+            <span>{getName(modpack)}</span>
+        </div>
     </td>
     { launchers.map(launcher => (
-            <td class:list={[launcher.identifier, modpackFromList(launcher.identifier, modpack)?.method.toLowerCase() ?? "no" ]}>
-                { modpackFromList(launcher.identifier, modpack)?.method }
-            </td>
+        <td>
+            <div class:list={["badge", launcher.identifier, modpackFromList(launcher.identifier, modpack)?.method.toLowerCase() ?? "no" ]} >
+                { modpackFromList(launcher.identifier, modpack)?.method ?? "No" }
+            </div>
+        </td>
     ))}
 </tr>
 ))}
 
 <style>
     .modpack {
-        display: flex;
-        flex-direction: row;
-        justify-content: left;
-        align-items: center;
-        margin: 5px;
-        height: 2em;
-        overflow: hidden;
-        gap: 10px;
-
         img {
             height: 2em;
             width: 2em;
             border-radius: 2px;
-        }
-        span {
-            text-wrap: nowrap;
         }
     }
 </style>

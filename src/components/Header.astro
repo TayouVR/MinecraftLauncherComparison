@@ -1,0 +1,91 @@
+---
+import json5 from 'json5';
+import { readFileSync, readdirSync } from 'fs';
+import path from 'path';
+
+const dataDir = './src/launcher-definitions';
+const launchers: LauncherDetails[] = [];
+
+readdirSync(dataDir).forEach((file) => {
+	if (file.endsWith('.json5')) {
+		const filePath = path.join(dataDir, file);
+		launchers.push(json5.parse(readFileSync(filePath, 'utf-8')));
+	}
+});
+
+// Sort launchers by name
+launchers.sort((a, b) => a.name.localeCompare(b.name));
+
+const themes = [ 'tayou', 'tayou-light',
+    'light', 'dark', 'cupcake', 'bumblebee', 'emerald', 'corporate', 'synthwave', 'retro',
+    'cyberpunk', 'valentine', 'halloween', 'garden', 'forest', 'aqua', 'lofi', 'pastel',
+    'fantasy', 'wireframe', 'black', 'luxury', 'dracula', 'cmyk', 'autumn', 'business',
+    'acid', 'lemonade', 'night', 'coffee', 'winter', 'dim', 'nord', 'sunset', 'caramellatte',
+    'abyss', 'silk'
+];
+---
+<div class="navbar bg-base-100 shadow-md mb-4">
+    <div class="flex-none">
+        <a href="/" class="btn btn-ghost text-xl">MCL Compare</a>
+    </div>
+    <div class="flex-1">
+        <div class="dropdown">
+            <div tabindex="0" role="button" class="btn m-1">
+                Launchers
+                <svg
+                        width="12px"
+                        height="12px"
+                        class="inline-block h-2 w-2 fill-current opacity-60"
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 2048 2048">
+                    <path d="M1799 349l242 241-1017 1017L7 590l242-241 775 775 775-775z"></path>
+                </svg>
+            </div>
+            <ul
+                tabindex="0"
+                class="dropdown-content menu bg-base-100 rounded-box z-[1] w-52 p-2 shadow">
+                {launchers.map(launcher => (
+                    <li>
+                        <a href={`/launcher/${launcher.identifier}`}>
+                            {launcher.icon && <img src={launcher.icon} class="w-4 h-4" alt="" />}
+                            {launcher.name}
+                        </a>
+                    </li>
+                ))}
+            </ul>
+        </div>
+    </div>
+    <div class="flex-none flex items-center gap-2">
+        <a href="https://github.com/TayouVR/MinecraftLauncherComparison" class="btn btn-ghost btn-sm" title="GitHub Repository">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+        </a>
+        <a href="https://github.com/TayouVR/MinecraftLauncherComparison/issues" class="btn btn-ghost btn-sm" title="Issue Tracker">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
+        </a>
+        <div class="dropdown dropdown-end">
+            <div tabindex="0" role="button" class="btn m-1">
+                Theme
+                <svg
+                        width="12px"
+                        height="12px"
+                        class="inline-block h-2 w-2 fill-current opacity-60"
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 2048 2048">
+                    <path d="M1799 349l242 241-1017 1017L7 590l242-241 775 775 775-775z"></path>
+                </svg>
+            </div>
+            <ul tabindex="-1" class="dropdown-content bg-base-300 rounded-box z-1 w-52 p-2 shadow-2xl max-h-96 overflow-y-auto">
+                {themes.map(theme => (
+                    <li>
+                        <input
+                                type="radio"
+                                name="theme-dropdown"
+                                class="theme-controller w-full btn btn-sm btn-block btn-ghost justify-start capitalize"
+                                aria-label={theme}
+                                value={theme} />
+                    </li>
+                ))}
+            </ul>
+        </div>
+    </div>
+</div>

@@ -38,17 +38,6 @@ const values = launchers.map(launcher => {
 
 { (propertyName === "platforms") ? (
     <PlatformComponent launchers={launchers} values={values} />
-) : (propertyName === "packages") ? (
-    <tr>
-        <td>{propertyName}</td>
-        { launchers.map(launcher => (
-            <td class={launcher.identifier}>
-                <a href={`https://repology.org/project/${valueFromLauncher(launcher)}/versions`}>
-                    <img src={`https://repology.org/badge/vertical-allrepos/${valueFromLauncher(launcher)}.svg`} alt="Packaging status">
-                </a>
-            </td>
-        ))}
-    </tr>
 ) : (propertyName === "technology") ? (
     <tr>
         <td>Languages</td>
@@ -85,8 +74,10 @@ const values = launchers.map(launcher => {
     <tr>
         <td>{propertyName}</td>
         { launchers.map(launcher => (
-            <td class:list={[launcher.identifier, statusClass(launcher)]}>
-                {valueFromLauncher(launcher).status}
+            <td>
+                <div class:list={["badge", launcher.identifier, statusClass(launcher)]}>
+                    {valueFromLauncher(launcher).status}
+                </div>
             </td>
         ))}
     </tr>
@@ -94,8 +85,10 @@ const values = launchers.map(launcher => {
     <tr>
         <td>{propertyName}</td>
         { launchers.map(launcher => (
-            <td class:list={[launcher.identifier, statusClass(launcher)]}>
-                {valueFromLauncher(launcher).status}
+            <td>
+                <div class:list={["badge", launcher.identifier, statusClass(launcher)]}>
+                    {valueFromLauncher(launcher).status}
+                </div>
             </td>
         ))}
     </tr>
@@ -103,8 +96,10 @@ const values = launchers.map(launcher => {
     <tr>
         <td>{propertyName}</td>
         { launchers.map(launcher => (
-            <td class:list={[launcher.identifier, statusClass(launcher)]}>
-                {valueFromLauncher(launcher).status}
+            <td>
+                <div class:list={["badge", launcher.identifier, statusClass(launcher)]}>
+                    {valueFromLauncher(launcher).status}
+                </div>
             </td>
         ))}
     </tr>
@@ -112,11 +107,13 @@ const values = launchers.map(launcher => {
     <tr>
         <td>{propertyName}</td>
         { launchers.map(launcher => (
-                <td class={launcher.identifier}>
+            <td class={launcher.identifier}>
+                <div class="flex flex-wrap gap-2">
                     {valueFromLauncher(launcher).map((format: string) => (
-                        <div class:list={["card", format.includes("🚧") ? "wip" : ""]}><span>{format}</span></div>
+                        <div class:list={["badge", format.includes("🚧") ? "wip" : "bg-base-200"]}><span>{format}</span></div>
                     ))}
-                </td>
+                </div>
+            </td>
         ))}
     </tr>
 ) : (propertyName === "export") ? (
