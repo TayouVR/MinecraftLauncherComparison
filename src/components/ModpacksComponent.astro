@@ -22,7 +22,7 @@ function modpackFromList(launcherID: string, modpackName: string) {
         </div>
     </td>
     { launchers.map(launcher => (
-        <td>
+        <td class={launcher.identifier}>
             <div class:list={["badge", launcher.identifier, modpackFromList(launcher.identifier, modpack)?.method.toLowerCase() ?? "no" ]} >
                 { modpackFromList(launcher.identifier, modpack)?.method ?? "No" }
             </div>

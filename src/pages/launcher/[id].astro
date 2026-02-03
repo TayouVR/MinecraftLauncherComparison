@@ -29,7 +29,7 @@ const { launcher } = Astro.props;
     <div class="container mx-auto p-4">
         <div class="flex items-center gap-4 mb-8">
             {launcher.icon && <img src={launcher.icon} alt={`${launcher.name} icon`} class="w-16 h-16" />}
-            <h1 class="text-4xl font-bold">{launcher.name}</h1>
+            <h2 class="text-4xl font-bold">{launcher.name}</h2>
             <p><a href={launcher.homepage} class="link link-primary">Homepage</a></p>
             <p><a href={launcher.downloadLink} class="link link-primary">Download</a></p>
             {launcher.sourceRepo && (

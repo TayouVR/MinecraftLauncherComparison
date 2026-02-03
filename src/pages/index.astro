@@ -53,54 +53,25 @@ function launcherProperties<TLauncher extends Record<string, any>>(
 		});
 	});
 
-	// Convert the grouped entries back into an array
+ // Convert the grouped entries back into an array
 	return Object.values(grouped);
 }
-
-
-const columnsClientState: any = {};
-launchers.forEach((launcher) => {
-	columnsClientState[launcher.identifier] = { enabled: true };
-});
 ---
 
 <Layout>
-	<clientData id="clientData" value={JSON.stringify(columnsClientState)}></clientData>
+	<section class="container mx-auto p-4">
+		<h2 class="text-center">
+			This will give you an overview over the various Minecraft (Java Edition) launchers and their features.<br>
+		</h2>
+		<br>
+		<strong>Explanations:</strong>
+		<ul>
+			<li>Modloader support means a way to install the modloader through the launcher directly, without downloading it separately.</li>
+			<li>CurseForge blocked downloads: CurseForge offers creators on the platform the option to opt out of downloads from 3rd party platforms as a means to ensure ad revenue is generated when downloading content. Platforms need to work around that restriction to properly support CurseForge content.</li>
+		</ul>
 
-	This will give you an overview over the various Minecraft (Java Edition) launchers and their features.<br>
-	<br>
-	Explanations:
-	<ul>
-		<li>Modloader support means a way to install the modloader through the launcher directly, without downloading it separately.</li>
-		<li>CurseForge blocked downloads: CurseForge offers creators on the platform the option to opt out of downloads from 3rd party platforms as a means to ensure ad revenue is generated when downloading content. Platforms need to work around that restriction to properly support CurseForge content.</li>
-	</ul>
-
-	Note: This list is maintained mostly by me and random contributions. Data will inevitably get outdated over time and I always welcome any updates and corrections.<br>
-
-	<!-- change popover-1 and --anchor-1 names. Use unique names for each dropdown -->
-	<button class="btn" popovertarget="popover-1" style="anchor-name:--anchor-1">
-		Launcher Selection
-	</button>
-	<ul class="dropdown menu w-52 rounded-box bg-base-100 shadow-sm"
-		popover id="popover-1" style="position-anchor:--anchor-1">
-		{ launchers.map(launcher => (
-			<li class:list={["launcher-toggle", launcher.identifier]}><a onclick={`toggleVisibility('${launcher.identifier}')`} class="flex items-center gap-2">
-				{ launcher.icon ? (
-					<img class="w-8 h-8" src={launcher.icon}  alt=`${launcher.name} Icon` />
-				) : ""}
-				<span>{launcher.name}</span>
-			</a></li>
-		))}
-	</ul>
-	<div class="launcher-toggle-container">
-		{ launchers.map(launcher => (
-			<button class:list={["launcher-toggle", "btn", launcher.identifier, "size-30"]} onclick={`toggleVisibility('${launcher.identifier}')`}>
-				{ launcher.icon ? (
-					<img class="w-full h-full object-contain" src={launcher.icon}  alt=`${launcher.name} Icon` />
-				) : launcher.name}
-			</button>
-		))}
-	</div>
+		Note: This list is maintained mostly by me and random contributions. Data will inevitably get outdated over time and I always welcome any updates and corrections. See the GitHub linked in the header.<br>
+	</section>
 
 	<div class="table-container w-full overflow-auto">
 	<table class="table table-zebra table-hover table-bordered w-full">
@@ -123,7 +94,7 @@ launchers.forEach((launcher) => {
 			<tr>
 				<th>License</th>
 				{ launchers.map(launcher => (
-					<td>
+					<td class={launcher.identifier}>
 						<div class:list={[launcher.identifier, launcher.configuration.license.foss ? "yes" : "no", "badge"]}>
 							{launcher.configuration.license.name}
 						</div>
@@ -131,9 +102,9 @@ launchers.forEach((launcher) => {
 				))}
 			</tr>
 			<tr>
-				<th>Look & Feel</th>
+				<td>Look & Feel</td>
 				{ launchers.map(launcher => (
-					<th class={launcher.identifier}>{launcher.configuration.lookAndFeel}</th>
+					<td class={launcher.identifier}>{launcher.configuration.lookAndFeel}</td>
 				))}
 			</tr>
 			{ launcherProperties(launchers, ["properties"])
@@ -156,29 +127,3 @@ launchers.forEach((launcher) => {
 	</table>
 	</div>
 </Layout>
-
-<script is:inline>
-
-	let columns = {};
-
-	function getColumns() {
-		if (Object.keys(columns).length === 0) {
-			const jsonString = document.getElementById("clientData").attributes.value.value;
-			columns = JSON.parse(jsonString);
-		}
-		return columns;
-	}
-
-	// JavaScript function to toggle visibility
-	function toggleVisibility(className) {
-		getColumns();
-		const elements = document.getElementsByClassName(className);
-		columns[className].enabled = !columns[className].enabled;
-		for (const element of elements) {
-			// Toggle between visible and hidden
-			if (columns[className].enabled === element.classList.contains("column-disabled")) {
-				element.classList.toggle("column-disabled");
-			}
-		}
-	}
-</script>

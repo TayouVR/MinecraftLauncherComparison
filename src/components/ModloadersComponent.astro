@@ -4,18 +4,22 @@ const { launchers, values } = Astro.props as { launchers: LauncherDetails[], val
 
 const availableModloaders = [...new Set(values.flatMap(v => v.value))];
 
+const modloaderHintText = "Modloader support means a way to install the modloader through the launcher directly, without downloading it separately.";
+
 ---
 <tr><th colspan={launchers.length + 1}>Modloaders</th></tr>
 {availableModloaders.map(modloader => (
 <tr>
     <td>
-        <div class="modloader flex flex-row gap-2 text-nowrap h-2em items-center">
-            { getIcon(modloader) != "" ? <img loading="lazy" alt={getName(modloader)} src={getIcon(modloader)} /> : ""}
-            <span>{getName(modloader)}</span>
+        <div class="tooltip tooltip-right" data-tip={modloaderHintText}>
+            <div class="modloader flex flex-row gap-2 text-nowrap h-2em items-center cursor-help">
+                { getIcon(modloader) != "" ? <img loading="lazy" alt={getName(modloader)} src={getIcon(modloader)} /> : ""}
+                <span>{getName(modloader)}</span>
+            </div>
         </div>
     </td>
     { launchers.map(launcher => (
-            <td>
+            <td class={launcher.identifier}>
                 <div class:list={["badge", launcher.identifier, values.find(v => v.identifier === launcher.identifier)?.value.includes(modloader) ? 'yes' : 'no' ]} >
                     { values.find(v => v.identifier === launcher.identifier)?.value.includes(modloader) ? 'Yes' : 'No' }
                 </div>

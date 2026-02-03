@@ -74,7 +74,7 @@ const values = launchers.map(launcher => {
     <tr>
         <td>{propertyName}</td>
         { launchers.map(launcher => (
-            <td>
+            <td class={launcher.identifier}>
                 <div class:list={["badge", launcher.identifier, statusClass(launcher)]}>
                     {valueFromLauncher(launcher).status}
                 </div>
@@ -85,7 +85,7 @@ const values = launchers.map(launcher => {
     <tr>
         <td>{propertyName}</td>
         { launchers.map(launcher => (
-            <td>
+            <td class={launcher.identifier}>
                 <div class:list={["badge", launcher.identifier, statusClass(launcher)]}>
                     {valueFromLauncher(launcher).status}
                 </div>
@@ -96,7 +96,7 @@ const values = launchers.map(launcher => {
     <tr>
         <td>{propertyName}</td>
         { launchers.map(launcher => (
-            <td>
+            <td class={launcher.identifier}>
                 <div class:list={["badge", launcher.identifier, statusClass(launcher)]}>
                     {valueFromLauncher(launcher).status}
                 </div>
