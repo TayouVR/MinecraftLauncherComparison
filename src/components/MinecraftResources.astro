@@ -6,7 +6,7 @@ const { launchers, values } = Astro.props as { launchers: LauncherDetails[], val
     }[]};
 
 const availableResources = [...new Set(values.flat().map(v => Object.keys(v.value)).flat())];
-console.log(availableResources)
+// console.log(availableResources)
 
 function valueFromLauncher(launcher: LauncherDetails, key: string) {
     const resource = values.find(v => v.identifier === launcher.identifier)!.value;

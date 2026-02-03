@@ -34,12 +34,12 @@ function launcherProperties<TLauncher extends Record<string, any>>(
 	// Iterate over each launcher
 	(launchers as any as TLauncher[]).forEach((launcher) => {
 		sections.forEach((section) => {
-			console.log(`\nSection: ${String(section)}`);
+			// console.log(`\nSection: ${String(section)}`);
 			const fields = launcher[section];
 
 			Object.entries(fields).forEach(([fieldName, fieldValue]) => {
-				console.log(`Field Name: ${fieldName}`);
-				console.log("Field Value:", fieldValue);
+				// console.log(`Field Name: ${fieldName}`);
+				// console.log("Field Value:", fieldValue);
 				if (!grouped[fieldName]) {
 					// If the `name` doesn't exist in the grouped map, initialize it
 					grouped[fieldName] = { name: fieldName, values: [] };
@@ -80,7 +80,7 @@ launchers.forEach((launcher) => {
 
 	<div class="launcher-toggle-container">
 		{ launchers.map(launcher => (
-			<button class:list={["launcher-toggle", launcher.identifier]} onclick={`toggleVisibility('${launcher.identifier}')`}>
+			<button class:list={["launcher-toggle", "btn", launcher.identifier]} onclick={`toggleVisibility('${launcher.identifier}')`}>
 				{ launcher.icon ? (
 					<img class="launcher-icon" src={launcher.icon}  alt=`${launcher.name} Icon` /><br/>
 				) : launcher.name}
@@ -88,7 +88,7 @@ launchers.forEach((launcher) => {
 		))}
 	</div>
 
-	<table>
+	<table class="table">
 		<thead>
 			<tr class="header-row">
 				<th>Feature</th>
