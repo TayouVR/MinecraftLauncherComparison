@@ -45,7 +45,7 @@ h1 {
 td.column-disabled, th.column-disabled {
   display: none; }
 
-.card img {
+.card img:not(.big) {
   height: 2em;
   width: 2em; }
 

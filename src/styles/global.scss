@@ -60,7 +60,7 @@ td.column-disabled, th.column-disabled {
 }
 
 .card {
-  img {
+  img:not(.big) {
     height: 2em;
     width: 2em;
   }

@@ -37,7 +37,7 @@ const { launcher } = Astro.props;
             )}
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="grid grid-cols-1 md:grid-cols-[repeat(3,auto)] gap-8">
             <section class="card bg-base-200 p-6 shadow-xl">
                 <h2 class="text-2xl font-semibold mb-4 border-b pb-2">General Info</h2>
                 <div class="space-y-2">
@@ -59,16 +59,11 @@ const { launcher } = Astro.props;
                         ))
                     )}
                 </div>
-                {launcher.properties.packages && (
-                    <div class="mt-4">
-                        <strong>Packaging:</strong><br/>
-                        <a href={`https://repology.org/project/${launcher.properties.packages}/versions`}>
-                        </a>
-                    </div>
-                )}
             </section>
 
-            <img src={`https://repology.org/badge/vertical-allrepos/${launcher.properties.packages}.svg`} alt="Packaging status" class="card bg-base-200 p-0 shadow-xl row-span-5" />
+            <a href={`https://repology.org/project/${launcher.properties.packages}/versions`} class="card bg-base-200 p-0 shadow-xl row-span-5 flex items-center justify-center size-fit overflow-hidden">
+                <img src={`https://repology.org/badge/vertical-allrepos/${launcher.properties.packages}.svg`} alt="Packaging status" class="big max-w-none"/>
+            </a>
 
             <section class="card bg-base-200 p-6 shadow-xl">
                 <h2 class="text-2xl font-semibold mb-4 border-b pb-2">Modpack Support</h2>
