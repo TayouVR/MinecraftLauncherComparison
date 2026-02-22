@@ -1,0 +1,398 @@
+---
+const { launcherName, launcherId, mode = "edit", launcherData = "{}" } = Astro.props;
+const isAdd = mode === "add";
+
+const githubRepo = "TayouVR/MinecraftLauncherComparison";
+const modalId = isAdd ? "propose_new_launcher_modal" : "propose_changes_modal";
+const formId = isAdd ? "propose-new-launcher-form" : "propose-changes-form";
+---
+
+<button class="btn btn-primary" onclick={`${modalId}.showModal()`}>
+  {isAdd ? "Propose New Launcher" : "Propose Changes"}
+</button>
+
+<dialog id={modalId} class="modal modal-bottom sm:modal-middle">
+  <div class="modal-box max-w-2xl">
+    <h3 class="text-lg font-bold">
+      {isAdd ? "Propose New Launcher" : `Propose Changes for ${launcherName}`}
+    </h3>
+    <p class="py-2">
+      {isAdd ? "Fill out the details for the new launcher you'd like to see added." : `What would you like to change or add to the information for ${launcherName}?`}
+    </p>
+    
+    <form id={formId} class="space-y-4">
+      {isAdd && (
+        <div class="form-control">
+          <label class="label" for="prop-name">
+            <span class="label-text">Launcher Name (required)</span>
+          </label>
+          <input type="text" id="prop-name" placeholder="e.g. My Cool Launcher" class="input input-bordered w-full" required />
+        </div>
+      )}
+      <div class="form-control">
+        <label class="label" for="change-summary">
+          <span class="label-text">
+            {isAdd ? "Short description / Why it should be added (required)" : "Summary of changes (required)"}
+          </span>
+        </label>
+        <input type="text" id="change-summary" placeholder={isAdd ? "e.g. A fast, open-source launcher for Linux" : "e.g. Added support for New Modpack format"} class="input input-bordered w-full" required />
+      </div>
+
+      <div class="divider">Detailed Properties</div>
+
+      <div class="collapse collapse-arrow bg-base-200">
+        <input type="checkbox" /> 
+        <div class="collapse-title text-md font-medium">General Information</div>
+        <div class="collapse-content space-y-2">
+          <div class="form-control">
+            <label class="label"><span class="label-text text-xs">Icon URL</span></label>
+            <input type="text" id="prop-icon" class="input input-bordered input-sm w-full" />
+          </div>
+          <div class="form-control">
+            <label class="label"><span class="label-text text-xs">Download Link</span></label>
+            <input type="text" id="prop-downloadLink" class="input input-bordered input-sm w-full" />
+          </div>
+          <div class="form-control">
+            <label class="label"><span class="label-text text-xs">Source Repo</span></label>
+            <input type="text" id="prop-sourceRepo" class="input input-bordered input-sm w-full" />
+          </div>
+          <div class="form-control">
+            <label class="label"><span class="label-text text-xs">Homepage</span></label>
+            <input type="text" id="prop-homepage" class="input input-bordered input-sm w-full" />
+          </div>
+        </div>
+      </div>
+
+      <div class="collapse collapse-arrow bg-base-200">
+        <input type="checkbox" /> 
+        <div class="collapse-title text-md font-medium">Configuration</div>
+        <div class="collapse-content space-y-2">
+          <div class="grid grid-cols-2 gap-2">
+            <div class="form-control">
+              <label class="label"><span class="label-text text-xs">License Name</span></label>
+              <input type="text" id="prop-license-name" class="input input-bordered input-sm w-full" />
+            </div>
+            <div class="form-control">
+              <label class="label"><span class="label-text text-xs">License URL</span></label>
+              <input type="text" id="prop-license-url" class="input input-bordered input-sm w-full" />
+            </div>
+          </div>
+          <div class="flex gap-4">
+            <label class="label cursor-pointer flex gap-2">
+              <input type="checkbox" id="prop-license-foss" class="checkbox checkbox-sm" />
+              <span class="label-text">FOSS</span>
+            </label>
+            <label class="label cursor-pointer flex gap-2">
+              <input type="checkbox" id="prop-serverInstances" class="checkbox checkbox-sm" />
+              <span class="label-text">Server Instances</span>
+            </label>
+          </div>
+          <div class="form-control">
+            <label class="label"><span class="label-text text-xs">Look & Feel</span></label>
+            <input type="text" id="prop-lookAndFeel" class="input input-bordered input-sm w-full" />
+          </div>
+        </div>
+      </div>
+
+      <div class="collapse collapse-arrow bg-base-200">
+        <input type="checkbox" /> 
+        <div class="collapse-title text-md font-medium">Features (Modpacks & Resources)</div>
+        <div class="collapse-content space-y-2">
+          <div class="form-control">
+            <label class="label"><span class="label-text text-xs">Modpacks (JSON array or descriptive)</span></label>
+            <textarea id="prop-modpacks" class="textarea textarea-bordered textarea-sm w-full" placeholder='[{"name": "CurseForge", "method": "Download", "updating": true}, ...]'></textarea>
+          </div>
+          <div class="form-control">
+            <label class="label"><span class="label-text text-xs">Modloaders (comma separated)</span></label>
+            <input type="text" id="prop-modloaders" class="input input-bordered input-sm w-full" placeholder="forge, neoforge, fabric, quilt" />
+          </div>
+          <div class="divider text-xs">Minecraft Resources</div>
+          <div class="grid grid-cols-1 gap-2">
+            <div class="form-control">
+              <label class="label"><span class="label-text text-xs">Resource Details (Mods, Packs, Shaders, etc.)</span></label>
+              <textarea id="prop-resources" class="textarea textarea-bordered textarea-sm w-full" placeholder="Specify which resources can be downloaded/updated and from where..."></textarea>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="collapse collapse-arrow bg-base-200">
+        <input type="checkbox" /> 
+        <div class="collapse-title text-md font-medium">System & Tech</div>
+        <div class="collapse-content space-y-2">
+          <div class="form-control">
+            <label class="label"><span class="label-text text-xs">Import/Export (comma separated)</span></label>
+            <input type="text" id="prop-import-export" class="input input-bordered input-sm w-full" placeholder="Import: CurseForge, Export: Prism..." />
+          </div>
+          <div class="divider text-xs">Java</div>
+          <div class="flex flex-wrap gap-4">
+            <label class="label cursor-pointer flex gap-2">
+              <input type="checkbox" id="prop-java-download" class="checkbox checkbox-sm" />
+              <span class="label-text text-xs">Java Download</span>
+            </label>
+            <label class="label cursor-pointer flex gap-2">
+              <input type="checkbox" id="prop-java-mgmt" class="checkbox checkbox-sm" />
+              <span class="label-text text-xs">Version Management</span>
+            </label>
+            <label class="label cursor-pointer flex gap-2">
+              <input type="checkbox" id="prop-java-system" class="checkbox checkbox-sm" />
+              <span class="label-text text-xs">Use System Install</span>
+            </label>
+          </div>
+          <div class="divider text-xs">Properties</div>
+          <div class="form-control">
+            <label class="label"><span class="label-text text-xs">Platforms (OS: arch, arch; OS2: arch...)</span></label>
+            <input type="text" id="prop-platforms" class="input input-bordered input-sm w-full" />
+          </div>
+          <div class="form-control">
+            <label class="label"><span class="label-text text-xs">Repology Package Name</span></label>
+            <input type="text" id="prop-packages" class="input input-bordered input-sm w-full" />
+          </div>
+          <div class="form-control">
+            <label class="label"><span class="label-text text-xs">Tech (Languages, Frameworks)</span></label>
+            <input type="text" id="prop-tech" class="input input-bordered input-sm w-full" />
+          </div>
+        </div>
+      </div>
+
+      <div class="divider">Additional Information</div>
+
+      <div class="form-control">
+        <label class="label" for="change-details">
+          <span class="label-text">General Comments / Other Changes</span>
+        </label>
+        <textarea id="change-details" class="textarea textarea-bordered h-24 w-full" placeholder="Any other notes or detailed explanations..."></textarea>
+      </div>
+
+      <div class="form-control">
+        <label class="label" for="change-sources">
+          <span class="label-text">Sources / References (optional)</span>
+        </label>
+        <input type="text" id="change-sources" placeholder="Link to website or GitHub" class="input input-bordered w-full" />
+      </div>
+
+      <div class="modal-action">
+        <button type="button" class="btn" onclick={`${modalId}.close()`}>Cancel</button>
+        <button type="submit" class="btn btn-primary">Create Issue</button>
+      </div>
+    </form>
+  </div>
+  <form method="dialog" class="modal-backdrop">
+    <button>close</button>
+  </form>
+</dialog>
+
+<script define:vars={{ launcherName, launcherId, githubRepo, isAdd, modalId, formId, launcherData }}>
+  const form = document.getElementById(formId);
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    
+    const getValue = (id) => document.getElementById(id)?.value || '';
+    const getChecked = (id) => document.getElementById(id)?.checked || false;
+
+    const summary = getValue('change-summary');
+    const details = getValue('change-details');
+    const sources = getValue('change-sources');
+
+    // New launcher specific
+    const newLauncherName = isAdd ? getValue('prop-name') : launcherName;
+    
+    // General Info
+    const icon = getValue('prop-icon');
+    const downloadLink = getValue('prop-downloadLink');
+    const sourceRepo = getValue('prop-sourceRepo');
+    const homepage = getValue('prop-homepage');
+
+    // Config
+    const licenseName = getValue('prop-license-name');
+    const licenseUrl = getValue('prop-license-url');
+    const licenseFoss = getChecked('prop-license-foss');
+    const serverInstances = getChecked('prop-serverInstances');
+    const lookAndFeel = getValue('prop-lookAndFeel');
+
+    // Features
+    const modpacks = getValue('prop-modpacks');
+    const modloaders = getValue('prop-modloaders');
+    const resources = getValue('prop-resources');
+
+    // Tech
+    const importExport = getValue('prop-import-export');
+    const javaDownload = getChecked('prop-java-download');
+    const javaMgmt = getChecked('prop-java-mgmt');
+    const javaSystem = getChecked('prop-java-system');
+    const platformsStr = getValue('prop-platforms');
+    const packages = getValue('prop-packages');
+    const tech = getValue('prop-tech');
+
+    const title = isAdd ? `Propose new launcher: ${newLauncherName}` : `Propose changes for ${launcherName}`;
+    let body = isAdd ? `### New Launcher: ${newLauncherName}\n\n` : `### Launcher: ${launcherName} (${launcherId})\n\n`;
+    body += `#### ${isAdd ? 'Description' : 'Summary'}\n${summary}\n\n`;
+
+    let propChanges = '';
+    if (icon) propChanges += `- **Icon**: ${icon}\n`;
+    if (downloadLink) propChanges += `- **Download Link**: ${downloadLink}\n`;
+    if (sourceRepo) propChanges += `- **Source Repo**: ${sourceRepo}\n`;
+    if (homepage) propChanges += `- **Homepage**: ${homepage}\n`;
+    
+    if (licenseName || licenseUrl || getChecked('prop-license-foss')) {
+        propChanges += `- **License**: ${licenseName} (${licenseUrl}) [FOSS: ${licenseFoss}]\n`;
+    }
+    if (getChecked('prop-serverInstances')) propChanges += `- **Server Instances**: ${serverInstances}\n`;
+    if (lookAndFeel) propChanges += `- **Look & Feel**: ${lookAndFeel}\n`;
+    
+    if (modpacks) propChanges += `- **Modpacks**: ${modpacks}\n`;
+    if (modloaders) propChanges += `- **Modloaders**: ${modloaders}\n`;
+    if (resources) propChanges += `- **Resources**: ${resources}\n`;
+    
+    if (importExport) propChanges += `- **Import/Export**: ${importExport}\n`;
+    if (getChecked('prop-java-download') || getChecked('prop-java-mgmt') || getChecked('prop-java-system')) {
+        propChanges += `- **Java**: Download: ${javaDownload}, Management: ${javaMgmt}, System: ${javaSystem}\n`;
+    }
+    if (platformsStr) propChanges += `- **Platforms**: ${platformsStr}\n`;
+    if (packages) propChanges += `- **Packages**: ${packages}\n`;
+    if (tech) propChanges += `- **Technology**: ${tech}\n`;
+
+    if (propChanges) {
+        body += `#### ${isAdd ? 'Initial Properties' : 'Property Changes'}\n${propChanges}\n`;
+    }
+
+    // --- JSON Logic ---
+    let launcherObj = {};
+    if (!isAdd && launcherData) {
+        try {
+            launcherObj = JSON.parse(launcherData);
+        } catch (e) {
+            console.error("Failed to parse launcherData", e);
+        }
+    }
+
+    // Update or initialize the object structure
+    if (isAdd) {
+        launcherObj.name = newLauncherName;
+        launcherObj.identifier = "com.example." + newLauncherName.toLowerCase().replace(/\s+/g, '-');
+    }
+    if (icon) launcherObj.icon = icon;
+    if (downloadLink) launcherObj.downloadLink = downloadLink;
+    if (sourceRepo) launcherObj.sourceRepo = sourceRepo;
+    if (homepage) launcherObj.homepage = homepage;
+
+    // Configuration
+    if (!launcherObj.configuration) launcherObj.configuration = { license: {} };
+    if (!launcherObj.configuration.license) launcherObj.configuration.license = {};
+    if (licenseName) launcherObj.configuration.license.name = licenseName;
+    if (licenseUrl) launcherObj.configuration.license.url = licenseUrl;
+    if (getChecked('prop-license-foss')) launcherObj.configuration.license.foss = licenseFoss;
+    if (getChecked('prop-serverInstances')) launcherObj.configuration.serverInstances = serverInstances;
+    if (lookAndFeel) launcherObj.configuration.lookAndFeel = lookAndFeel;
+
+    // Features
+    if (!launcherObj.features) launcherObj.features = { 
+        modpacks: [], 
+        modloaders: [], 
+        minecraftResources: {},
+        import: [],
+        export: [],
+        java: {},
+        sandboxing: { status: "No" },
+        overlay: { status: "No" },
+        advertisements: { status: "No" }
+    };
+    
+    if (modpacks) {
+        try {
+            // Attempt to parse as JSON array if it looks like one
+            if (modpacks.trim().startsWith('[')) {
+                launcherObj.features.modpacks = JSON.parse(modpacks);
+            } else {
+                // Fallback to a single entry or comment if it's just text
+                console.warn("Modpacks field is not a JSON array, skipping update in JSON object");
+            }
+        } catch (e) {
+            console.warn("Failed to parse modpacks JSON", e);
+        }
+    }
+    
+    if (modloaders) {
+        launcherObj.features.modloaders = modloaders.split(',').map(s => s.trim()).filter(s => s);
+    }
+
+    if (importExport) {
+        // Simple heuristic for parsing Import/Export field
+        const parts = importExport.split(',');
+        parts.forEach(part => {
+            const [key, val] = part.split(':').map(s => s.trim());
+            if (key && val) {
+                if (key.toLowerCase().includes('import')) {
+                    if (!launcherObj.features.import) launcherObj.features.import = [];
+                    launcherObj.features.import.push(val);
+                } else if (key.toLowerCase().includes('export')) {
+                    if (!launcherObj.features.export) launcherObj.features.export = [];
+                    launcherObj.features.export.push(val);
+                }
+            } else if (key) {
+                // Just a list? Add to both if we don't know
+                if (!launcherObj.features.import) launcherObj.features.import = [];
+                launcherObj.features.import.push(key);
+            }
+        });
+        // Remove duplicates
+        launcherObj.features.import = [...new Set(launcherObj.features.import)];
+        launcherObj.features.export = [...new Set(launcherObj.features.export)];
+    }
+
+    if (getChecked('prop-java-download')) launcherObj.features.java.download = javaDownload;
+    if (getChecked('prop-java-mgmt')) launcherObj.features.java.versionManagement = javaMgmt;
+    if (getChecked('prop-java-system')) launcherObj.features.java.usingSystemInstall = javaSystem;
+
+    // Properties
+    if (!launcherObj.properties) launcherObj.properties = { platforms: {}, technology: { languages: [], frameworks: [] } };
+    
+    if (platformsStr) {
+        // Expecting "linux: x86_64, arm64; windows: x86_64"
+        const platformObj = {};
+        platformsStr.split(';').forEach(section => {
+            const [os, archs] = section.split(':').map(s => s.trim());
+            if (os && archs) {
+                platformObj[os.toLowerCase()] = archs.split(',').map(s => s.trim());
+            }
+        });
+        if (Object.keys(platformObj).length > 0) {
+            launcherObj.properties.platforms = platformObj;
+        }
+    }
+    
+    if (packages) launcherObj.properties.packages = packages;
+    
+    if (tech) {
+        const languages = [];
+        const frameworks = [];
+        // Just split and guess for now, or put all in languages
+        tech.split(',').forEach(t => {
+            const item = t.trim();
+            if (['java', 'c++', 'rust', 'python', 'go', 'javascript', 'typescript', 'c#', 'dart'].includes(item.toLowerCase())) {
+                languages.push(item);
+            } else {
+                frameworks.push(item);
+            }
+        });
+        if (languages.length > 0) launcherObj.properties.technology.languages = languages;
+        if (frameworks.length > 0) launcherObj.properties.technology.frameworks = frameworks;
+    }
+
+    body += `\n#### Proposed JSON\n\`\`\`json\n${JSON.stringify(launcherObj, null, 2)}\n\`\`\`\n\n`;
+    // --- End JSON Logic ---
+
+    if (details) {
+      body += `#### Additional Comments\n${details}\n\n`;
+    }
+    if (sources) {
+      body += `#### Sources\n${sources}\n`;
+    }
+    
+    const url = `https://github.com/${githubRepo}/issues/new?title=${encodeURIComponent(title)}&body=${encodeURIComponent(body)}`;
+    
+    window.open(url, '_blank');
+    document.getElementById(modalId).close();
+    form.reset();
+  });
+</script>

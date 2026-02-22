@@ -2,6 +2,7 @@
 import json5 from 'json5';
 import { readFileSync, readdirSync } from 'fs';
 import path from 'path';
+import ProposeChanges from './ProposeChanges.astro';
 
 const dataDir = './src/launcher-definitions';
 const launchers: LauncherDetails[] = [];
@@ -107,6 +108,7 @@ const themes = [ 'tayou', 'tayou-light',
                 <a href="https://github.com/TayouVR/MinecraftLauncherComparison/issues" class="btn btn-ghost btn-sm" title="Issue Tracker">
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
                 </a>
+                <ProposeChanges mode="add" />
                 <div class="dropdown dropdown-end">
                     <div tabindex="0" role="button" class="btn m-1">
                         Theme
