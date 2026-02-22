@@ -7,10 +7,9 @@
   "homepage": "https://multimc.org/",
   "configuration": {
     "license": {
-      "name": "its complicated",
+      "name": "MS-PL",
       "url": "",
       "foss": false,
-      "extraInfo": "[state 2023] MultiMC is proprietary but a debranded MS-PL licensed version which lacks many keys MultiMC uses is available on GitHub"
     },
     "serverInstances": false,
     "lookAndFeel": "System (configurable)"
@@ -69,9 +68,9 @@
   },
   "properties": {
     "platforms": {
-      "linux": ["x86_64", "x86", "arm64"],
-      "windows": ["x86_64", "x86", "arm64"],
-      "macos": ["x86_64", "x86", "arm64"],
+      "linux": ["x86_64", "x86"],
+      "windows": ["x86"],
+      "macos": ["x86_64"],
     },
     "packages": "multimc",
     "technology": {

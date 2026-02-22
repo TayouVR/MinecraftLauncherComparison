@@ -54,7 +54,7 @@ const { launcher } = Astro.props;
                         Object.entries(platform).map(([os, archs]) => (
                             <div class="flex items-center gap-2 bg-base-100 p-2 rounded" key={os}>
                                 {getIcon(os) && <img src={getIcon(os)} alt={os} class="w-6 h-6" />}
-                                <span class="capitalize font-medium">{os}:</span>
+                                <span class="font-medium">{os}:</span>
                                 <span class="text-sm">{Array.isArray(archs) ? archs.join(', ') : archs}</span>
                             </div>
                         ))

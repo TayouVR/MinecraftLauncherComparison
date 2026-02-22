@@ -73,8 +73,10 @@ enum OS {
 
 enum Architecture {
     ARM64 = "arm64",
+    ARM32 = "arm32",
     X86_64 = "x86_64",
     X86 = "x86",
+    RISCV64 = "riscv64",
 }
 
 type SupportedPlatform = Record<OS, Architecture[]>

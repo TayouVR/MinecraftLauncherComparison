@@ -17,7 +17,7 @@
   ],
   "configuration": {
     "license": {
-      "name": "GPLv3 or newer",
+      "name": "GPL-3.0-only",
       "url": "",
       "foss": true,
       "extraInfo": ""
@@ -139,7 +139,7 @@
   },
   "properties": {
     "platforms": {
-      "linux": ["x86_64", "arm64"],
+      "linux": ["x86_64", "arm64", "arm32", "riscv64"],
       "windows": ["x86_64", "arm64"],
       "macos": ["x86_64", "arm64"],
     },
