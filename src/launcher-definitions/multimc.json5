@@ -9,7 +9,7 @@
     "license": {
       "name": "MS-PL",
       "url": "",
-      "foss": false,
+      "foss": true,
     },
     "serverInstances": false,
     "lookAndFeel": "System (configurable)"
