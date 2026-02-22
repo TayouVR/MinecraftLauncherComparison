@@ -4,6 +4,7 @@ import json5 from 'json5';
 import { readFileSync, readdirSync } from 'fs';
 import path from 'path';
 import { getIcon, getName } from "../../data/utils.ts";
+import { Icon } from 'astro-icon/components';
 
 export async function getStaticPaths() {
     const dataDir = './src/launcher-definitions';
@@ -70,8 +71,11 @@ const { launcher } = Astro.props;
                 <div class="grid grid-cols-2 gap-2">
                     {launcher.features.modpacks.map((mp: any) => (
                         <div class="flex items-center gap-2 p-2 bg-base-100 rounded">
-                             {getIcon(mp.name) && <img src={getIcon(mp.name)} alt={mp.name} class="w-5 h-5" />}
-                             <span>{getName(mp.name)} ({mp.method})</span>
+                            {getIcon(mp.name) && <img src={getIcon(mp.name)} alt={mp.name} class="w-5 h-5" />}
+                            <span>{getName(mp.name)}</span>
+                            { mp.method == "Download" && <Icon name="fa7-solid:download" class="w-4 h-4 tooltip tooltip-right" data-tip="Downloading supported"></Icon> }
+                            { mp.method == "Import" && <Icon name="fa7-solid:file-import" class="w-4 h-4 tooltip tooltip-right" data-tip="Import from external source (e.g. other launcher)" ></Icon> }
+                            { mp.updating && <Icon name="fa7-solid:refresh" class="w-4 h-4 tooltip tooltip-top" data-tip="Updating supported" ></Icon> }
                         </div>
                     ))}
                 </div>

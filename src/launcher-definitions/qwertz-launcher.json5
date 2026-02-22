@@ -1,7 +1,7 @@
 ﻿{
   "identifier": "qwertz-launcher",
   "name": "QWERTZ Launcher",
-  "icon": "",
+  "icon": "/src/assets/launchers/QWERTZ-launcher.png",
   "downloadLink": "https://github.com/QWERTZexe/QWERTZ-Launcher/releases",
   "sourceRepo": "https://github.com/QWERTZexe/QWERTZ-Launcher",
   "homepage": "https://github.com/QWERTZexe/QWERTZ-Launcher",
@@ -62,9 +62,9 @@
   },
   "properties": {
     "platforms": {
-      "linux": ["x86_64", "x64", "arm64"],
-      "windows": ["x86_64", "x64", "arm64"],
-      "macos": ["x86_64", "x64", "arm64"],
+      "linux": ["x86_64", "x86", "arm64"],
+      "windows": ["x86_64", "x86", "arm64"],
+      "macos": ["x86_64", "x86", "arm64"],
     },
     "packages": "link.to.repology/for/this/launcher",
     "technology": {

@@ -50,27 +50,15 @@ td.column-disabled, th.column-disabled {
   width: 2em; }
 
 .yes, .download {
-  background-image: linear-gradient(to bottom, #4FC921 0%, #40BA12 100%); }
-  @media (prefers-color-scheme: dark) {
-    .yes, .download {
-      background-image: linear-gradient(to bottom, #358c15 0%, #2a8306 100%); } }
+  background: var(--color-success); }
 
 .no {
-  background-image: linear-gradient(to bottom, #DC6650 0%, #CB553F 100%); }
-  @media (prefers-color-scheme: dark) {
-    .no {
-      background-image: linear-gradient(to bottom, #b53921 0%, #a82c19 100%); } }
+  background: var(--color-error); }
 
 .import, .unknown {
-  background-image: linear-gradient(to bottom, #ffd363 0%, #cda53d 100%); }
-  @media (prefers-color-scheme: dark) {
-    .import, .unknown {
-      background-image: linear-gradient(to bottom, #c38a0d 0%, #a5750c 100%); } }
+  background: var(--color-warning); }
 
 .wip {
-  background: repeating-linear-gradient(-45deg, #ffaf00 0, #ffae00 10px, #ffffff 10px, #ffffff 20px); }
-  @media (prefers-color-scheme: dark) {
-    .wip {
-      background: repeating-linear-gradient(-45deg, #9f6d00 0, #9f6d00 10px, #000000 10px, #000000 20px); } }
+  background: repeating-linear-gradient(-45deg, var(--color-warning) 0, var(--color-warning) 10px, var(--color-base-100) 10px, var(--color-base-100) 20px); }
 
 /*# sourceMappingURL=global.css.map */

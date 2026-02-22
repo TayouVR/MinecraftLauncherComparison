@@ -116,11 +116,13 @@ function launcherProperties<TLauncher extends Record<string, any>>(
 				<ListComponent propertyName={property.name} launchers={launchers} propCategory="features" />
 			))}
             <tr>
-                <th>CurseForge Blocked Mods handling</th>
+                <td>CurseForge Blocked Mods handling</td>
                 { launchers.map(launcher => (
-                        <th class:list={[launcher.identifier, launcher.specialFeatures.CurseForgeBlockedDownloads.supported ? "yes" : "no"]}>
-                            {launcher.specialFeatures.CurseForgeBlockedDownloads.method != "" ? launcher.specialFeatures.CurseForgeBlockedDownloads.method : "No"}
-                        </th>
+					<td class:list={[launcher.identifier]}>
+						<div class:list={["badge h-fit bg-accent-content/10", launcher.specialFeatures.CurseForgeBlockedDownloads.supported ? "yes" : "no"]}>
+							{launcher.specialFeatures.CurseForgeBlockedDownloads.method != "" ? launcher.specialFeatures.CurseForgeBlockedDownloads.method : "No"}
+						</div>
+					</td>
                 ))}
             </tr>
 		</tbody>

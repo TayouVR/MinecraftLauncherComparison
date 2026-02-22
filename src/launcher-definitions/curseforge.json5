@@ -65,9 +65,9 @@
   },
   "properties": {
     "platforms": {
-      "linux": ["x86_64", "x64", "arm64"],
-      "windows": ["x86_64", "x64", "arm64"],
-      "macos": ["x86_64", "x64", "arm64"],
+      "linux": ["x86_64", "x86", "arm64"],
+      "windows": ["x86_64", "x86", "arm64"],
+      "macos": ["x86_64", "x86", "arm64"],
     },
     "packages": "curseforge",
     "technology": {

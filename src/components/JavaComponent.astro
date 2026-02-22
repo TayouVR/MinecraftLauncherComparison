@@ -1,20 +1,25 @@
 ---
+const { java } = Astro.props as { "java": JavaFeature, };
 
-const { java } = Astro.props as { "java": {
-        download: boolean;
-        versionManagement: boolean;
-        usingSystemInstall: boolean;
-    }, };
-
-const out: string[] = [];
-if (java.download) {
-    out.push("Download");
-}
-if (java.versionManagement) {
-    out.push("Manage Versions");
-}
-if (java.usingSystemInstall) {
-    out.push("use System Java");
-}
+import { Icon } from 'astro-icon/components';
 ---
-{out.join(', ')}
+{ java.download && (
+    <div class="badge bg-accent-content/10 gap-1">
+        <Icon name="fa7-solid:download" class="w-4 h-4" />
+        Download
+    </div>
+)}
+
+{ java.versionManagement && (
+    <div class="badge bg-accent-content/10">
+        <Icon name="material-symbols:folder-managed" class="w-4 h-4" />
+        Manage Versions
+    </div>
+)}
+
+{ java.usingSystemInstall && (
+    <div class="badge bg-accent-content/10">
+        <Icon name="fa7-solid:computer" class="w-4 h-4" />
+        use System Java
+    </div>
+)}

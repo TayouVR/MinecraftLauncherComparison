@@ -15,11 +15,11 @@ function valueFromLauncher<TLauncher extends Record<"properties" | "features", R
 function statusClass(launcher: LauncherDetails) {
     let status = valueFromLauncher(launcher).status;
     if (status.includes("Yes") || status.includes("Optional")) {
-        return "yes";
+        return "bg-success";
     } else if (status.includes("No")) {
-        return "no";
+        return "bg-error";
     } else if (status.includes("WIP")) {
-        return "wip";
+        return "bg-warning";
     } else if (status === "") {
         return "";
     } else {
@@ -96,7 +96,7 @@ if(![
         <td>{propertyName}</td>
         { launchers.map(launcher => (
             <td class={launcher.identifier}>
-                <div class:list={["badge", launcher.identifier, statusClass(launcher)]}>
+                <div class:list={["badge", "h-fit", launcher.identifier, statusClass(launcher)]}>
                     {valueFromLauncher(launcher).status}
                 </div>
             </td>
@@ -111,7 +111,7 @@ if(![
             <td class={launcher.identifier}>
                 <div class="flex flex-wrap gap-2">
                     {valueFromLauncher(launcher).map((format: string) => (
-                        <div class:list={["badge", format.includes("🚧") ? "wip" : "bg-base-200"]}><span>{format}</span></div>
+                        <div class="badge bg-accent-content/10"><span>{format}</span></div>
                     ))}
                 </div>
             </td>
@@ -126,7 +126,7 @@ if(![
             <td class={launcher.identifier}>
                 <div class="flex flex-wrap gap-2">
                     {valueFromLauncher(launcher).map((format: string) => (
-                            <div class:list={["badge", format.includes("🚧") ? "wip" : "bg-base-600"]}><span>{format}</span></div>
+                            <div class="badge bg-accent-content/10"><span>{format}</span></div>
                     ))}
                 </div>
             </td>
