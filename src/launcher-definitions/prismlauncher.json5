@@ -84,6 +84,7 @@
       },
       "shaderpacks": {
         "downloading": true,
+        "updating": true,
         "providers": [
           "Modrinth",
           "CurseForge"
