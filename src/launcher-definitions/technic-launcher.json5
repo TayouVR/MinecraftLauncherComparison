@@ -64,9 +64,9 @@
   },
   "properties": {
     "platforms": {
-      "linux": ["x86_64", "x86", "arm64", "arm32", "riscv64"],
-      "windows": ["x86_64", "x86", "arm64"],
-      "macos": ["x86_64", "x86", "arm64"]
+      "linux": ["x86_64", "x86"],
+      "windows": ["x86_64", "x86"],
+      "macos": ["x86_64", "x86"]
     },
     "packages": "minecraft-technic-launcher",
     "technology": {
