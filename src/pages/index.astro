@@ -59,7 +59,7 @@ function launcherProperties<TLauncher extends Record<string, any>>(
 ---
 
 <Layout>
-	<section class="container mx-auto p-4">
+	<section class="container sticky left-0 mx-auto p-4">
 		<h2 class="text-center">
 			This will give you an overview over the various Minecraft (Java Edition) launchers and their features.<br>
 		</h2>
@@ -73,9 +73,9 @@ function launcherProperties<TLauncher extends Record<string, any>>(
 		Note: This list is maintained mostly by me and random contributions. Data will inevitably get outdated over time and I always welcome any updates and corrections. See the GitHub linked in the header.<br>
 	</section>
 
-	<div class="sticky top-0 table-container w-full overflow-x-auto overflow-y-hidden">
-	<table class="table table-zebra table-hover table-bordered w-full">
-		<thead class="sticky top-0 z-10 bg-base-100 shadow-sm">
+	<div class="sticky top-0 table-container w-screen overflow-y-visible">
+	<table class="sticky top-0 table table-zebra table-hover table-bordered w-full border-separate border-spacing-0">
+		<thead class="sticky top-16 z-10 bg-base-100 shadow-sm">
 			<tr class="header-row">
 				<th class="bg-base-100">Feature</th>
 				{ launchers.map(launcher => (
@@ -92,7 +92,7 @@ function launcherProperties<TLauncher extends Record<string, any>>(
 		</thead>
 		<tbody>
 			<tr>
-				<th>License</th>
+				<td>License</td>
 				{ launchers.map(launcher => (
 					<td class={launcher.identifier}>
 						<div class:list={[launcher.identifier, launcher.configuration.license.foss ? "yes" : "no", "badge"]}>

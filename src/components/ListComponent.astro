@@ -82,7 +82,7 @@ if(![
 
 {propertyName === "java" && (
     <tr>
-        <td>{propertyName}</td>
+        <td class="capitalize">{propertyName}</td>
         { launchers.map(launcher => (
             <td class={launcher.identifier}>
                 <JavaComponent java={valueFromLauncher(launcher)} />
@@ -93,7 +93,7 @@ if(![
 
 {(propertyName === "sandboxing" || propertyName === "overlay" || propertyName === "advertisements") && (
     <tr>
-        <td>{propertyName}</td>
+        <td class="capitalize">{propertyName}</td>
         { launchers.map(launcher => (
             <td class={launcher.identifier}>
                 <div class:list={["badge", "h-fit", launcher.identifier, statusClass(launcher)]}>
@@ -106,7 +106,7 @@ if(![
 
 {propertyName === "import" && (
     <tr>
-        <td>{propertyName}</td>
+        <td class="capitalize">{propertyName}</td>
         { launchers.map(launcher => (
             <td class={launcher.identifier}>
                 <div class="flex flex-wrap gap-2">
@@ -121,7 +121,7 @@ if(![
 
 {propertyName === "export" && (
     <tr>
-        <td>{propertyName}</td>
+        <td class="capitalize">{propertyName}</td>
         { launchers.map(launcher => (
             <td class={launcher.identifier}>
                 <div class="flex flex-wrap gap-2">
@@ -139,7 +139,7 @@ if(![
     "java", "sandboxing", "overlay", "advertisements", "import", "export"
 ].includes(propertyName) && (
     <tr>
-        <td>{propertyName}</td>
+        <td class="capitalize">{propertyName}</td>
         { launchers.map(launcher => (
             <td class={launcher.identifier}>
                 {(typeof valueFromLauncher(launcher) === "string") ? (

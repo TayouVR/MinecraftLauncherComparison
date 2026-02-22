@@ -7,7 +7,7 @@ const availableModloaders = [...new Set(values.flatMap(v => v.value))];
 const modloaderHintText = "Modloader support means a way to install the modloader through the launcher directly, without downloading it separately.";
 
 ---
-<tr><th colspan={launchers.length + 1}>Modloaders</th></tr>
+    <th colspan={launchers.length + 1} class="bg-base-300 z-5 text-left border-y border-base-content/10"><span>Modloaders</span></th>
 {availableModloaders.map(modloader => (
 <tr>
     <td>
