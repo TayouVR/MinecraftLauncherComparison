@@ -1,0 +1,157 @@
+---
+import PlatformComponent from "./PlatformComponent.astro";
+import ModloadersComponent from "./ModloadersComponent.astro";
+import MinecraftResources from "./MinecraftResources.astro";
+import JavaComponent from "./JavaComponent.astro";
+import ModpacksComponent from "./ModpacksComponent.astro";
+
+
+const { propertyName, launchers, propCategory } = Astro.props as { propertyName: string, launchers: LauncherDetails[], propCategory: "properties" | "features" };
+
+function valueFromLauncher<TLauncher extends Record<"properties" | "features", Record<string, any>>>(launcher: LauncherDetails) {
+    return (launcher as any as TLauncher)[propCategory][propertyName];
+}
+
+function statusClass(launcher: LauncherDetails) {
+    let status = valueFromLauncher(launcher).status;
+    if (status.includes("Yes") || status.includes("Optional")) {
+        return "bg-success";
+    } else if (status.includes("No")) {
+        return "bg-error";
+    } else if (status.includes("WIP")) {
+        return "bg-warning";
+    } else if (status === "") {
+        return "";
+    } else {
+        return "unknown";
+    }
+}
+
+const values = launchers.map(launcher => {
+    return {
+        identifier: launcher.identifier,
+        value: valueFromLauncher(launcher)
+    }
+});
+
+if(![
+    "platforms", "technology", "modpacks", "modloaders", "minecraftResources",
+    "java", "sandboxing", "overlay", "advertisements", "import", "export"
+].includes(propertyName)) {
+    console.warn("property doesn't have dedicated row rendering", propertyName);
+}
+
+---
+
+{propertyName === "platforms" && (
+    <PlatformComponent launchers={launchers} values={values} />
+)}
+
+{propertyName === "technology" && (
+    <>
+        <tr>
+            <td>Languages</td>
+            { launchers.map(launcher => (
+                <td class={launcher.identifier}>
+                    {valueFromLauncher(launcher).languages.join(', ')}
+                </td>
+            ))}
+        </tr>
+        <tr>
+            <td>Core Toolkits and Libraries</td>
+            { launchers.map(launcher => (
+                <td class={launcher.identifier}>
+                    {valueFromLauncher(launcher).frameworks.join(', ')}
+                </td>
+            ))}
+        </tr>
+    </>
+)}
+
+{propertyName === "modpacks" && (
+    <ModpacksComponent launchers={launchers} values={values} />
+)}
+
+{propertyName === "modloaders" && (
+    <ModloadersComponent launchers={launchers} values={values} />
+)}
+
+{propertyName === "minecraftResources" && (
+    <MinecraftResources launchers={launchers} values={values} />
+)}
+
+{propertyName === "java" && (
+    <tr>
+        <td class="capitalize">{propertyName}</td>
+        { launchers.map(launcher => (
+            <td class={launcher.identifier}>
+                <JavaComponent java={valueFromLauncher(launcher)} />
+            </td>
+        ))}
+    </tr>
+)}
+
+{(propertyName === "sandboxing" || propertyName === "overlay" || propertyName === "advertisements") && (
+    <tr>
+        <td class="capitalize">{propertyName}</td>
+        { launchers.map(launcher => (
+            <td class={launcher.identifier}>
+                <div class:list={["badge", "h-fit", launcher.identifier, statusClass(launcher)]}>
+                    {valueFromLauncher(launcher).status}
+                </div>
+            </td>
+        ))}
+    </tr>
+)}
+
+{propertyName === "import" && (
+    <tr>
+        <td class="capitalize">{propertyName}</td>
+        { launchers.map(launcher => (
+            <td class={launcher.identifier}>
+                <div class="flex flex-wrap gap-2">
+                    {valueFromLauncher(launcher).map((format: string) => (
+                        <div class="badge bg-accent-content/10"><span>{format}</span></div>
+                    ))}
+                </div>
+            </td>
+        ))}
+    </tr>
+)}
+
+{propertyName === "export" && (
+    <tr>
+        <td class="capitalize">{propertyName}</td>
+        { launchers.map(launcher => (
+            <td class={launcher.identifier}>
+                <div class="flex flex-wrap gap-2">
+                    {valueFromLauncher(launcher).map((format: string) => (
+                            <div class="badge bg-accent-content/10"><span>{format}</span></div>
+                    ))}
+                </div>
+            </td>
+        ))}
+    </tr>
+)}
+
+{![
+    "platforms", "technology", "modpacks", "modloaders", "minecraftResources",
+    "java", "sandboxing", "overlay", "advertisements", "import", "export"
+].includes(propertyName) && (
+    <tr>
+        <td class="capitalize">{propertyName}</td>
+        { launchers.map(launcher => (
+            <td class={launcher.identifier}>
+                {(typeof valueFromLauncher(launcher) === "string") ? (
+                    valueFromLauncher(launcher).toUpperCase()
+                ) : (typeof valueFromLauncher(launcher) === "number") ? (
+                    valueFromLauncher(launcher).toFixed(2)
+                ) : (Array.isArray(valueFromLauncher(launcher))) ? (
+                    valueFromLauncher(launcher).join(', ')
+                ) : (
+                    "Unsupported Type"
+                )}
+            </td>
+        ))}
+    </tr>
+)}

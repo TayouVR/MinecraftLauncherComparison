@@ -1,0 +1,85 @@
+﻿{
+  "identifier": "com.gdevs.gdlauncher-carbon",
+  "name": "GDLauncher Carbon",
+  "icon": "https://gdlauncher.com/_astro/logo.7ZVlJ_ii_1kHq2S.svg",
+  "downloadLink": "https://gdlauncher.com/en/download/",
+  "sourceRepo": "https://github.com/gorilla-devs/GDLauncher-Carbon",
+  "homepage": "https://gdlauncher.com/",
+  "configuration": {
+    "license": {
+      "name": "source available",
+      "url": "",
+      "foss": false,
+      "extraInfo": ""
+    },
+    "serverInstances": false,
+    "lookAndFeel": "Custom"
+  },
+  "features": {
+    "modpacks": [
+      { "name": "CurseForge", "method": "Download", "updating": true },
+      { "name": "Modrinth", "method": "Download", "updating": true },
+    ],
+    "modloaders": ["forge", "neoforge", "fabric", "quilt", "liteloader"],
+    "minecraftResources": {
+      "mods": {
+        "downloading": true,
+        "updating": true,
+        "providers": ["Modrinth", "CurseForge"]
+      },
+      "resourcepacks": {
+        "downloading": false,
+        "updating": false,
+        "providers": []
+      },
+      "shaderpacks": {
+        "downloading": false,
+        "updating": false,
+        "providers": []
+      },
+      "worlds": {
+        "downloading": false,
+        "updating": false,
+        "providers": []
+      },
+      "datapacks": {
+        "downloading": false,
+        "updating": false,
+        "providers": []
+      },
+      "plugins": {
+        "downloading": false,
+        "updating": false,
+        "providers": []
+      }
+    },
+    "import": ["OneSix", "\uD83D\uDEA7 Modrinth", "CurseForge", "\uD83D\uDEA7 Technic", "\uD83D\uDEA7 FtbApp", "\uD83D\uDEA7 ATLauncher"],
+    "export": ["Modrinth", "CurseForge"],
+    "java": {
+      "download": true,
+      "versionManagement": true,
+      "usingSystemInstall": true,
+    },
+    "sandboxing": { "status": "No" },
+    "overlay": { "status": "No" },
+    "advertisements": { "status": "Yes" }
+  },
+  "properties": {
+    "platforms": {
+      "linux": ["x86_64"],
+      "windows": ["x86_64"],
+      "macos": ["x86_64", "arm64"],
+    },
+    "packages": "gdlauncher-carbon",
+    "technology": {
+      "languages": ["HTML", "JS", "CSS", "Rust", "TypeScript"],
+      "frameworks": ["Astro"]
+    }
+  },
+  "specialFeatures": {
+    "CurseForgeBlockedDownloads": {
+      "supported": true,
+      "method": "Yes (granted bypass by CurseForge)"
+    }
+  },
+}

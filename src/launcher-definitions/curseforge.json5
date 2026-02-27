@@ -1,0 +1,84 @@
+﻿{
+  "identifier": "com.CurseForge.CurseForge",
+  "name": "CurseForge App",
+  "icon": "/src/assets/modplatforms/curseforge.svg",
+  "downloadLink": "https://download.curseforge.com/",
+  "sourceRepo": "",
+  "homepage": "https://www.curseforge.com/minecraft",
+  "configuration": {
+    "license": {
+      "name": "proprietary",
+      "url": "",
+      "foss": false,
+      "extraInfo": ""
+    },
+    "serverInstances": false,
+    "lookAndFeel": "Custom"
+  },
+  "features": {
+    "modpacks": [
+      { "name": "CurseForge", "method": "Download", "updating": true },
+    ],
+    "modloaders": ["forge", "neoforge", "fabric", "quilt"],
+    "minecraftResources": {
+      "mods": {
+        "downloading": true,
+        "updating": true,
+        "providers": ["CurseForge"]
+      },
+      "resourcepacks": {
+        "downloading": true,
+        "updating": true,
+        "providers": ["CurseForge"]
+      },
+      "shaderpacks": {
+        "downloading": false,
+        "updating": false,
+        "providers": []
+      },
+      "worlds": {
+        "downloading": true,
+        "updating": true,
+        "providers": ["CurseForge"]
+      },
+      "datapacks": {
+        "downloading": false,
+        "updating": false,
+        "providers": []
+      },
+      "plugins": {
+        "downloading": false,
+        "updating": false,
+        "providers": []
+      }
+    },
+    "import": ["CurseForge"],
+    "export": ["CurseForge"],
+    "java": {
+      "download": true,
+      "versionManagement": true,
+      "usingSystemInstall": true,
+    },
+    "sandboxing": { "status": "No" },
+    "overlay": { "status": "Optional (via Overwolf app)" },
+    "advertisements": { "status": "Yes" }
+  },
+  "properties": {
+    "platforms": {
+      "linux": ["x86_64"],
+      "windows": ["x86_64"],
+      "macos": ["x86_64", "arm64"]
+    },
+    "packages": "curseforge",
+    "technology": {
+      "languages": ["HTML", "JS", "CSS"],
+      "frameworks": ["React", "Next.js", "Overwolf (Windows) or Electron (Windows, macOS, Linux)"]
+    }
+  },
+  "specialFeatures": {
+    "CurseForgeBlockedDownloads": {
+      "supported": true,
+      "method": "Yes"
+    }
+  },
+}

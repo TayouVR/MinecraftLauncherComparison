@@ -1,0 +1,24 @@
+---
+import {getIcon, getName} from "../data/utils.ts";
+const { launchers, values } = Astro.props as { launchers: LauncherDetails[], values: { identifier: string, value: SupportedPlatform }[] };
+
+function getPlatformSupportForLauncher(launcherID: string) {
+    return Object.keys(values.find((values) => values.identifier == launcherID)!.value ?? {});
+}
+
+---
+<tr>
+    <td>Platforms</td>
+    { launchers.map(launcher => (
+        <td class={"platform " + launcher.identifier}>
+            <div class="flex flex-wrap gap-2">
+            { getPlatformSupportForLauncher(launcher.identifier).map(platform => (
+                <div class="card bg-accent-content/10 p-3 items-center shadow-m">
+                    {getIcon(platform) != null ? <img loading="lazy" src={getIcon(platform)} alt={getName(platform)}/> : ""}
+                    {getName(platform)}
+                </div>
+            ))}
+            </div>
+        </td>
+    ))}
+</tr>

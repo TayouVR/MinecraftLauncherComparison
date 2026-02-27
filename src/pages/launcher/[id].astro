@@ -1,0 +1,115 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import json5 from 'json5';
+import { readFileSync, readdirSync } from 'fs';
+import path from 'path';
+import { getIcon, getName } from "../../data/utils.ts";
+import { Icon } from 'astro-icon/components';
+
+export async function getStaticPaths() {
+    const dataDir = './src/launcher-definitions';
+    const files = readdirSync(dataDir);
+    
+    return files
+        .filter(file => file.endsWith('.json5'))
+        .map(file => {
+            const filePath = path.join(dataDir, file);
+            const content = readFileSync(filePath, 'utf-8');
+            const launcher = json5.parse(content);
+            return {
+                params: { id: launcher.identifier },
+                props: { launcher },
+            };
+        });
+}
+
+const { launcher } = Astro.props;
+---
+
+<Layout>
+    <div class="container mx-auto p-4">
+        <div class="flex items-center gap-4 mb-8">
+            {launcher.icon && <img src={launcher.icon} alt={`${launcher.name} icon`} class="w-16 h-16" />}
+            <h2 class="text-4xl font-bold">{launcher.name}</h2>
+            <p><a href={launcher.homepage} class="link link-primary">Homepage</a></p>
+            <p><a href={launcher.downloadLink} class="link link-primary">Download</a></p>
+            {launcher.sourceRepo && (
+                    <p><a href={launcher.sourceRepo} class="link link-primary">Source Repository</a></p>
+            )}
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-[repeat(3,auto)] gap-8">
+            <section class="card bg-base-200 p-6 shadow-xl">
+                <h2 class="text-2xl font-semibold mb-4 border-b pb-2">General Info</h2>
+                <div class="space-y-2">
+                    <p><strong>License:</strong> {launcher.configuration.license.name} {launcher.configuration.license.foss ? "(FOSS)" : ""}</p>
+                    <p><strong>Look & Feel:</strong> {launcher.configuration.lookAndFeel}</p>
+                </div>
+            </section>
+
+            <section class="card bg-base-200 p-6 shadow-xl">
+                <h2 class="text-2xl font-semibold mb-4 border-b pb-2">Supported Platforms</h2>
+                <div class="flex flex-wrap gap-4">
+                    {launcher.properties.platforms && (Array.isArray(launcher.properties.platforms) ? launcher.properties.platforms : [launcher.properties.platforms]).map((platform: any) => 
+                        Object.entries(platform).map(([os, archs]) => (
+                            <div class="flex items-center gap-2 bg-base-100 p-2 rounded" key={os}>
+                                {getIcon(os) && <img src={getIcon(os)} alt={os} class="w-6 h-6" />}
+                                <span class="font-medium">{os}:</span>
+                                <span class="text-sm">{Array.isArray(archs) ? archs.join(', ') : archs}</span>
+                            </div>
+                        ))
+                    )}
+                </div>
+            </section>
+
+            <a href={`https://repology.org/project/${launcher.properties.packages}/versions`} class="card bg-base-200 p-0 shadow-xl row-span-5 flex items-center justify-center size-fit overflow-hidden">
+                <img src={`https://repology.org/badge/vertical-allrepos/${launcher.properties.packages}.svg`} alt="Packaging status" class="big max-w-none"/>
+            </a>
+
+            <section class="card bg-base-200 p-6 shadow-xl">
+                <h2 class="text-2xl font-semibold mb-4 border-b pb-2">Modpack Support</h2>
+                <div class="grid grid-cols-2 gap-2">
+                    {launcher.features.modpacks.map((mp: any) => (
+                        <div class="flex items-center gap-2 p-2 bg-base-100 rounded">
+                            {getIcon(mp.name) && <img src={getIcon(mp.name)} alt={mp.name} class="w-5 h-5" />}
+                            <span>{getName(mp.name)}</span>
+                            { mp.method == "Download" && <Icon name="fa7-solid:download" class="w-4 h-4 tooltip tooltip-right" data-tip="Downloading supported"></Icon> }
+                            { mp.method == "Import" && <Icon name="fa7-solid:file-import" class="w-4 h-4 tooltip tooltip-right" data-tip="Import from external source (e.g. other launcher)" ></Icon> }
+                            { mp.updating && <Icon name="fa7-solid:refresh" class="w-4 h-4 tooltip tooltip-top" data-tip="Updating supported" ></Icon> }
+                        </div>
+                    ))}
+                </div>
+            </section>
+
+            <section class="card bg-base-200 p-6 shadow-xl">
+                <h2 class="text-2xl font-semibold mb-4 border-b pb-2">Modloaders</h2>
+                <div class="flex flex-wrap gap-2">
+                    {launcher.features.modloaders.map((loader: string) => (
+                        <div class="flex items-center gap-2 badge badge-lg p-4">
+                            {getIcon(loader) && <img src={getIcon(loader)} alt={loader} class="w-4 h-4" />}
+                            {getName(loader)}
+                        </div>
+                    ))}
+                </div>
+            </section>
+
+            <section class="card bg-base-200 p-6 shadow-xl col-span-1 md:col-span-2">
+                <h2 class="text-2xl font-semibold mb-4 border-b pb-2">Resource Downloads</h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+                    {Object.entries(launcher.features.minecraftResources).map(([type, data]: [string, any]) => (
+                        <div class="bg-base-100 p-3 rounded">
+                            <h3 class="font-bold capitalize border-b mb-2">{type}</h3>
+                            <p>Download: {data.downloading ? "✅" : "❌"}</p>
+                            {data.updating !== undefined && <p>Update: {data.updating ? "✅" : "❌"}</p>}
+                            <div class="mt-2 flex flex-wrap gap-1">
+                                {data.providers.map((p: string) => (
+                                    <span class="badge badge-sm">{getName(p)}</span>
+                                ))}
+                            </div>
+                        </div>
+                    ))}
+                </div>
+            </section>
+        </div>
+    </div>
+</Layout>

@@ -1,0 +1,131 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+import json5 from 'json5';
+import { readFileSync, readdirSync } from 'fs';
+import path from 'path';
+import ListComponent from "../components/ListComponent.astro";
+
+function getLauncherDetails(path: string) {
+	return json5.parse<LauncherDetails>(
+		readFileSync(path, 'utf-8')
+	);
+}
+
+
+const dataDir = './src/launcher-definitions'; // Define the directory that holds JSON5 files
+const launchers: LauncherDetails[] = [];
+
+// Dynamically loop through all files in the directory
+readdirSync(dataDir).forEach((file) => {
+	if (file.endsWith('.json5')) {
+		const filePath = path.join(dataDir, file); // Construct full file path
+		launchers.push(getLauncherDetails(filePath)); // Parse and push to `launchers`
+	}
+});
+
+function launcherProperties<TLauncher extends Record<string, any>>(
+	launchers: LauncherDetails[],
+	sections: (keyof TLauncher)[]
+): Array<{ name: string; values: Array<{ identifier: string; value: unknown }>; }> {
+	// Create a map to group properties by name
+	const grouped: Record<string, { name: string; values: Array<{ identifier: string; value: unknown }>; }> = {};
+
+	// Iterate over each launcher
+	(launchers as any as TLauncher[]).forEach((launcher) => {
+		sections.forEach((section) => {
+			// console.log(`\nSection: ${String(section)}`);
+			const fields = launcher[section];
+
+			Object.entries(fields).forEach(([fieldName, fieldValue]) => {
+				// console.log(`Field Name: ${fieldName}`);
+				// console.log("Field Value:", fieldValue);
+				if (!grouped[fieldName]) {
+					// If the `name` doesn't exist in the grouped map, initialize it
+					grouped[fieldName] = { name: fieldName, values: [] };
+				}
+				// Add the launcher identifier and its property value
+				grouped[fieldName].values.push({
+					identifier: launcher.identifier,
+					value: fieldValue,
+				});
+			});
+		});
+	});
+
+ // Convert the grouped entries back into an array
+	return Object.values(grouped);
+}
+---
+
+<Layout>
+	<section class="container sticky left-0 mx-auto p-4">
+		<h2 class="text-center">
+			This will give you an overview over the various Minecraft (Java Edition) launchers and their features.<br>
+		</h2>
+		<br>
+		<strong>Explanations:</strong>
+		<ul>
+			<li>Modloader support means a way to install the modloader through the launcher directly, without downloading it separately.</li>
+			<li>CurseForge blocked downloads: CurseForge offers creators on the platform the option to opt out of downloads from 3rd party platforms as a means to ensure ad revenue is generated when downloading content. Platforms need to work around that restriction to properly support CurseForge content.</li>
+		</ul>
+
+		Note: This list is maintained mostly by me and random contributions. Data will inevitably get outdated over time and I always welcome any updates and corrections. See the GitHub linked in the header.<br>
+	</section>
+
+	<div class="sticky top-0 table-container w-screen overflow-y-visible">
+	<table class="sticky top-0 table table-zebra table-hover table-bordered w-full border-separate border-spacing-0">
+		<thead class="sticky top-16 z-10 bg-base-100 shadow-sm">
+			<tr class="header-row">
+				<th class="bg-base-100">Feature</th>
+				{ launchers.map(launcher => (
+					<th class:list={[launcher.identifier, "bg-base-100"]}>
+						<a href={`/launcher/${launcher.identifier}`} class="flex flex-col items-center gap-2 hover:bg-base-200 p-2 rounded-lg transition-colors h-full w-full justify-center">
+							{ launcher.icon ? (
+								<img class="launcher-icon w-16 h-16 object-contain" src={launcher.icon}  alt=`${launcher.name} Icon` />
+							) : <div class="w-16 h-16 flex items-center justify-center font-bold">?</div>}
+							<span class="text-center">{launcher.name}</span>
+						</a>
+					</th>
+				))}
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>License</td>
+				{ launchers.map(launcher => (
+					<td class={launcher.identifier}>
+						<div class:list={[launcher.identifier, launcher.configuration.license.foss ? "yes" : "no", "badge"]}>
+							{launcher.configuration.license.name}
+						</div>
+					</td>
+				))}
+			</tr>
+			<tr>
+				<td>Look & Feel</td>
+				{ launchers.map(launcher => (
+					<td class={launcher.identifier}>{launcher.configuration.lookAndFeel}</td>
+				))}
+			</tr>
+			{ launcherProperties(launchers, ["properties"])
+				.filter((prop) => prop.name != "packages")
+				.map((property) => (
+				<ListComponent propertyName={property.name} launchers={launchers} propCategory="properties" />
+			))}
+			{ launcherProperties(launchers, ["features"]).map((property) => (
+				<ListComponent propertyName={property.name} launchers={launchers} propCategory="features" />
+			))}
+            <tr>
+                <td>CurseForge Blocked Mods handling</td>
+                { launchers.map(launcher => (
+					<td class:list={[launcher.identifier]}>
+						<div class:list={["badge h-fit bg-accent-content/10", launcher.specialFeatures.CurseForgeBlockedDownloads.supported ? "yes" : "no"]}>
+							{launcher.specialFeatures.CurseForgeBlockedDownloads.method != "" ? launcher.specialFeatures.CurseForgeBlockedDownloads.method : "No"}
+						</div>
+					</td>
+                ))}
+            </tr>
+		</tbody>
+	</table>
+	</div>
+</Layout>

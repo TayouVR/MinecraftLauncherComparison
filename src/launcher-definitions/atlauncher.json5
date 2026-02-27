@@ -1,0 +1,87 @@
+﻿{
+  "identifier": "org.atlauncher.atlauncher",
+  "name": "ATLauncher",
+  "icon": "https://atlauncher.com/assets/images/logo.svg",
+  "downloadLink": "https://atlauncher.com/downloads",
+  "sourceRepo": "https://github.com/ATLauncher/ATLauncher",
+  "homepage": "https://atlauncher.com/",
+  "configuration": {
+    "license": {
+      "name": "GPLv3",
+      "url": "",
+      "foss": true,
+      "extraInfo": ""
+    },
+    "serverInstances": false,
+    "lookAndFeel": "Custom (configurable)"
+  },
+  "features": {
+    "modpacks": [
+      { "name": "CurseForge", "method": "Download", "updating": true },
+      { "name": "Modrinth", "method": "Download", "updating": true },
+      { "name": "ftb", "method": "Download", "updating": false },
+      { "name": "atlauncher", "method": "Download", "updating": false },
+      { "name": "technic", "method": "Download", "updating": false }
+    ],
+    "modloaders": ["forge", "neoforge", "fabric", "quilt", "legacy-fabric"],
+    "minecraftResources": {
+      "mods": {
+        "downloading": true,
+        "updating": true,
+        "providers": ["Modrinth", "CurseForge"]
+      },
+      "resourcepacks": {
+        "downloading": true,
+        "updating": true,
+        "providers": ["Modrinth", "CurseForge"]
+      },
+      "shaderpacks": {
+        "downloading": true,
+        "providers": ["Modrinth", "CurseForge"]
+      },
+      "worlds": {
+        "downloading": true,
+        "updating": true,
+        "providers": ["CurseForge"]
+      },
+      "datapacks": {
+        "downloading": false,
+        "updating": false,
+        "providers": []
+      },
+      "plugins": {
+        "downloading": false,
+        "updating": false,
+        "providers": []
+      }
+    },
+    "import": ["OneSix", "Modrinth", "CurseForge"],
+    "export": ["OneSix", "Modrinth", "CurseForge"],
+    "java": {
+      "download": true,
+      "versionManagement": true,
+      "usingSystemInstall": true,
+    },
+    "sandboxing": { "status": "No" },
+    "overlay": { "status": "No" },
+    "advertisements": { "status": "No" }
+  },
+  "properties": {
+    "platforms": {
+      "linux": ["x86_64", "x86", "arm64", "arm32", "riscv64"],
+      "windows": ["x86_64", "x86", "arm64"],
+      "macos": ["x86_64", "x86", "arm64"],
+    },
+    "packages": "atlauncher",
+    "technology": {
+      "languages": ["Java"],
+      "frameworks": ["Swing"]
+    }
+  },
+  "specialFeatures": {
+    "CurseForgeBlockedDownloads": {
+      "supported": true,
+      "method": "via web browser, automatically copies mod"
+    }
+  },
+}

@@ -1,0 +1,38 @@
+---
+import {getIcon, getName} from "../data/utils.ts";
+const { launchers, values } = Astro.props as { launchers: LauncherDetails[], values: { identifier: string, value: string[] }[] };
+
+const availableModloaders = [...new Set(values.flatMap(v => v.value))];
+
+const modloaderHintText = "Modloader support means a way to install the modloader through the launcher directly, without downloading it separately.";
+
+---
+    <th colspan={launchers.length + 1} class="bg-base-300 z-5 text-left border-y border-base-content/10"><span>Modloaders</span></th>
+{availableModloaders.map(modloader => (
+<tr>
+    <td>
+        <div class="tooltip tooltip-right" data-tip={modloaderHintText}>
+            <div class="modloader flex flex-row gap-2 text-nowrap h-2em items-center cursor-help">
+                { getIcon(modloader) != "" ? <img loading="lazy" alt={getName(modloader)} src={getIcon(modloader)} /> : ""}
+                <span>{getName(modloader)}</span>
+            </div>
+        </div>
+    </td>
+    { launchers.map(launcher => (
+            <td class={launcher.identifier}>
+                <div class:list={["badge", launcher.identifier, values.find(v => v.identifier === launcher.identifier)?.value.includes(modloader) ? 'yes' : 'no' ]} >
+                    { values.find(v => v.identifier === launcher.identifier)?.value.includes(modloader) ? 'Yes' : 'No' }
+                </div>
+            </td>
+    ))}
+</tr>
+))}
+
+<style>
+    .modloader {
+        img {
+            height: 2em;
+            border-radius: 2px;
+        }
+    }
+</style>

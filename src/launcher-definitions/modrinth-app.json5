@@ -1,0 +1,83 @@
+﻿{
+  "identifier": "org.Modrinth.theseus",
+  "name": "Modrinth App",
+  "icon": "/src/assets/modplatforms/modrinth.svg",
+  "downloadLink": "https://modrinth.com/app",
+  "sourceRepo": "https://github.com/modrinth/theseus",
+  "homepage": "https://modrinth.com/",
+  "configuration": {
+    "license": {
+      "name": "GPLv3 or newer",
+      "url": "",
+      "foss": true,
+      "extraInfo": ""
+    },
+    "serverInstances": false,
+    "lookAndFeel": "Custom"
+  },
+  "features": {
+    "modpacks": [
+      { "name": "Modrinth", "method": "Download", "updating": true },
+    ],
+    "modloaders": ["forge", "neoforge", "fabric", "quilt"],
+    "minecraftResources": {
+      "mods": {
+        "downloading": true,
+        "updating": true,
+        "providers": ["Modrinth"]
+      },
+      "resourcepacks": {
+        "downloading": true,
+        "updating": true,
+        "providers": ["Modrinth"]
+      },
+      "shaderpacks": {
+        "downloading": true,
+        "providers": ["Modrinth"]
+      },
+      "worlds": {
+        "downloading": false,
+        "updating": false,
+        "providers": []
+      },
+      "datapacks": {
+        "downloading": true,
+        "updating": true,
+        "providers": ["Modrinth"]
+      },
+      "plugins": {
+        "downloading": false,
+        "updating": false,
+        "providers": []
+      }
+    },
+    "import": ["OneSix", "Modrinth", "CurseForge", "ATLauncher"],
+    "export": ["Modrinth"],
+    "java": {
+      "download": true,
+      "versionManagement": true,
+      "usingSystemInstall": true,
+    },
+    "sandboxing": { "status": "No" },
+    "overlay": { "status": "No" },
+    "advertisements": { "status": "Yes" },
+  },
+  "properties": {
+    "platforms": {
+      "linux": ["x86_64"],
+      "windows": ["x86_64"],
+      "macos": ["x86_64", "arm64"]
+    },
+    "packages": "modrinth-app",
+    "technology": {
+      "languages": ["HTML", "JS", "CSS", "Rust"],
+      "frameworks": ["Vue.js", "Tauri"]
+    }
+  },
+  "specialFeatures": {
+    "CurseForgeBlockedDownloads": {
+      "supported": false,
+      "method": ""
+    }
+  },
+}

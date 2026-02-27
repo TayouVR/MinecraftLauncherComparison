@@ -1,0 +1,81 @@
+﻿{
+  "identifier": "com.mojang.minecraft.launcher",
+  "name": "Vanilla Launcher (old)",
+  "icon": "https://cdn.freebiesupply.com/logos/large/2x/minecraft-1-logo-png-transparent.png",
+  "downloadLink": "https://launcher.mojang.com/download/",
+  "sourceRepo": "",
+  "homepage": "https://launcher.mojang.com/",
+  "configuration": {
+    "license": {
+      "name": "proprietary",
+      "url": "",
+      "foss": false,
+      "extraInfo": ""
+    },
+    "serverInstances": false,
+    "lookAndFeel": "Java Swing"
+  },
+  "features": {
+    "modpacks": [],
+    "modloaders": [],
+    "minecraftResources": {
+      "mods": {
+        "downloading": false,
+        "updating": false,
+        "providers": []
+      },
+      "resourcepacks": {
+        "downloading": false,
+        "updating": false,
+        "providers": []
+      },
+      "shaderpacks": {
+        "downloading": false,
+        "providers": []
+      },
+      "worlds": {
+        "downloading": false,
+        "updating": false,
+        "providers": []
+      },
+      "datapacks": {
+        "downloading": false,
+        "updating": false,
+        "providers": []
+      },
+      "plugins": {
+        "downloading": false,
+        "updating": false,
+        "providers": []
+      }
+    },
+    "import": [],
+    "export": [],
+    "java": {
+      "download": true,
+      "versionManagement": true,
+      "usingSystemInstall": true,
+    },
+    "sandboxing": { "status": "No" },
+    "overlay": { "status": "No" },
+    "advertisements": { "status": "No" }
+  },
+  "properties": {
+    "platforms": {
+      "linux": ["x86_64", "x86"],
+      "windows": ["x86_64", "x86"],
+      "macos": ["x86_64", "x86"]
+    },
+    "packages": "minecraft-launcher",
+    "technology": {
+      "languages": ["Java"],
+      "frameworks": ["Swing", "AWT"]
+    }
+  },
+  "specialFeatures": {
+    "CurseForgeBlockedDownloads": {
+      "supported": false,
+      "method": ""
+    }
+  },
+}

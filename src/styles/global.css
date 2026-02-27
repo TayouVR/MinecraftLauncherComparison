@@ -1,0 +1,82 @@
+:root {
+  --text-color: black;
+  --bg-color: white;
+  --alt-table-row-color: #cccccc;
+  --header-table-row-color: #74ebff;
+  font-family: sans-serif; }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --text-color: white;
+      --bg-color: #181818;
+      --alt-table-row-color: #0e0e0e;
+      --header-table-row-color: #203f44; } }
+
+th {
+  min-width: 200px;
+  vertical-align: top;
+  border-bottom: 1px solid var(--fallback-bc, oklch(var(--bc)/0.1));
+  border-right: 1px solid var(--fallback-bc, oklch(var(--bc)/0.1)); }
+
+th:first-child, td:first-child {
+  position: sticky;
+  left: 0;
+  z-index: 2;
+  border-right: 1px solid var(--color-base-300); }
+
+tr:nth-child(2n) > th:first-child, tr:nth-child(2n) > td:first-child {
+  background: var(--color-base-200); }
+
+tr:nth-child(2n+1) > th:first-child, tr:nth-child(2n+1) > td:first-child {
+  background: var(--color-base-100); }
+
+th:first-child > span {
+  position: sticky;
+  left: calc(0.25rem * 4); }
+
+h1 {
+  text-align: center; }
+
+:not(button):link {
+  color: #3787ff; }
+  :not(button):link :visited {
+    color: #9b67ff; }
+
+.launcher-icon {
+  max-height: 6em; }
+
+.launcher-toggle-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 10px; }
+
+.launcher-toggle.column-disabled {
+  background-color: #a3a3a3; }
+  @media (prefers-color-scheme: dark) {
+    .launcher-toggle.column-disabled {
+      background-color: #515151; } }
+  .launcher-toggle.column-disabled img {
+    filter: saturate(0); }
+
+td.column-disabled, th.column-disabled {
+  display: none; }
+
+.card img:not(.big) {
+  height: 2em;
+  width: 2em; }
+
+.yes, .download {
+  background: var(--color-success); }
+
+.no {
+  background: var(--color-error); }
+
+.import, .unknown {
+  background: var(--color-warning); }
+
+.wip {
+  background: repeating-linear-gradient(-45deg, var(--color-warning) 0, var(--color-warning) 10px, var(--color-base-100) 10px, var(--color-base-100) 20px); }
+
+/*# sourceMappingURL=global.css.map */

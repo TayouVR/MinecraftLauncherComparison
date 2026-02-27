@@ -1,0 +1,42 @@
+---
+import {getIcon, getName} from "../data/utils.ts";
+const { launchers, values } = Astro.props as { launchers: LauncherDetails[], values: { identifier: string, value: FeatureModpack[] }[] };
+
+const availableModPackPlatforms = [...new Set(values.flatMap(v => v.value).flatMap(v => v.name))];
+
+function modpackForLauncher(launcherID: string) {
+    return values.find((values) => values.identifier == launcherID)!.value;
+}
+function modpackFromList(launcherID: string, modpackName: string) {
+    return modpackForLauncher(launcherID)!.find((modpack) => modpack.name == modpackName);
+}
+
+---
+    <th colspan={launchers.length + 1} class="bg-base-300 z-5 text-left border-y border-base-content/10"><span>Modpacks</span></th>
+{availableModPackPlatforms.map(modpack => (
+<tr>
+    <td>
+        <div class="modpack flex flex-row gap-2 text-nowrap h-2em items-center">
+            { getIcon(modpack) != "" ? <img loading="lazy" alt={getName(modpack)} src={getIcon(modpack)} /> : ""}
+            <span>{getName(modpack)}</span>
+        </div>
+    </td>
+    { launchers.map(launcher => (
+        <td class={launcher.identifier}>
+            <div class:list={["badge", launcher.identifier, modpackFromList(launcher.identifier, modpack)?.method.toLowerCase() ?? "no" ]} >
+                { modpackFromList(launcher.identifier, modpack)?.method ?? "No" }
+            </div>
+        </td>
+    ))}
+</tr>
+))}
+
+<style>
+    .modpack {
+        img {
+            height: 2em;
+            width: 2em;
+            border-radius: 2px;
+        }
+    }
+</style>

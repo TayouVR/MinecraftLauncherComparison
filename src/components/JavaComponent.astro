@@ -1,0 +1,25 @@
+---
+const { java } = Astro.props as { "java": JavaFeature, };
+
+import { Icon } from 'astro-icon/components';
+---
+{ java.download && (
+    <div class="badge bg-accent-content/10 gap-1">
+        <Icon name="fa7-solid:download" class="w-4 h-4" />
+        Download
+    </div>
+)}
+
+{ java.versionManagement && (
+    <div class="badge bg-accent-content/10">
+        <Icon name="material-symbols:folder-managed" class="w-4 h-4" />
+        Manage Versions
+    </div>
+)}
+
+{ java.usingSystemInstall && (
+    <div class="badge bg-accent-content/10">
+        <Icon name="fa7-solid:computer" class="w-4 h-4" />
+        use System Java
+    </div>
+)}

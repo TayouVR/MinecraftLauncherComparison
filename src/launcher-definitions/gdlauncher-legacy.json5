@@ -1,0 +1,84 @@
+﻿{
+  "identifier": "com.gdevs.gdlauncher",
+  "name": "GDLauncher (Legacy)",
+  "icon": "https://github.com/gorilla-devs/GDLauncher/blob/master/public/linux-icons/1024x1024.png?raw=true",
+  "downloadLink": "https://github.com/gorilla-devs/GDLauncher/releases",
+  "sourceRepo": "https://github.com/gorilla-devs/GDLauncher",
+  "homepage": "https://github.com/gorilla-devs/GDLauncher",
+  "configuration": {
+    "license": {
+      "name": "GPLv3 or newer",
+      "url": "",
+      "foss": true,
+      "extraInfo": "has a <a href=\"https://cla-assistant.io/gorilla-devs/GDLauncher\">CLA</a>"
+    },
+    "serverInstances": false,
+    "lookAndFeel": "Custom"
+  },
+  "features": {
+    "modpacks": [
+      { "name": "CurseForge", "method": "Download", "updating": true },
+    ],
+    "modloaders": ["forge", "fabric"],
+    "minecraftResources": {
+      "mods": {
+        "downloading": true,
+        "updating": true,
+        "providers": ["Modrinth", "CurseForge"]
+      },
+      "resourcepacks": {
+        "downloading": false,
+        "updating": false,
+        "providers": []
+      },
+      "shaderpacks": {
+        "downloading": false,
+        "updating": false,
+        "providers": []
+      },
+      "worlds": {
+        "downloading": false,
+        "updating": false,
+        "providers": []
+      },
+      "datapacks": {
+        "downloading": false,
+        "updating": false,
+        "providers": []
+      },
+      "plugins": {
+        "downloading": false,
+        "updating": false,
+        "providers": []
+      }
+    },
+    "import": ["CurseForge"],
+    "export": ["CurseForge"],
+    "java": {
+      "download": true,
+      "versionManagement": true,
+      "usingSystemInstall": true,
+    },
+    "sandboxing": { "status": "No" },
+    "overlay": { "status": "No" },
+    "advertisements": { "status": "Yes" }
+  },
+  "properties": {
+    "platforms": {
+      "linux": ["x86_64"],
+      "windows": ["x86_64"],
+      "macos": ["x86_64", "arm64"]
+    },
+    "packages": "gdlauncher",
+    "technology": {
+      "languages": ["HTML", "JS", "CSS", "Rust"],
+      "frameworks": ["Preact", "Electron", "Solid.js"]
+    }
+  },
+  "specialFeatures": {
+    "CurseForgeBlockedDownloads": {
+      "supported": true,
+      "method": "Yes (by using standard browser user agent)"
+    }
+  },
+}

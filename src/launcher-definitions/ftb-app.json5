@@ -1,0 +1,86 @@
+﻿{
+  "identifier": "org.ftb.ftb",
+  "name": "FTB App",
+  "icon": "/src/assets/launchers/ftb.svg",
+  "downloadLink": "https://www.feed-the-beast.com/app",
+  "sourceRepo": "https://github.com/FTBTeam/FTB-App",
+  "homepage": "https://www.feed-the-beast.com/",
+  "configuration": {
+    "license": {
+      "name": "LGPL-2.1",
+      "url": "",
+      "foss": true,
+      "extraInfo": ""
+    },
+    "serverInstances": false,
+    "lookAndFeel": "Custom"
+  },
+  "features": {
+    "modpacks": [
+      { "name": "CurseForge", "method": "Download", "updating": true },
+      { "name": "ftb", "method": "Download", "updating": true },
+      { "name": "legacy-ftb", "method": "Download", "updating": true },
+    ],
+    "modloaders": ["forge", "neoforge", "fabric", "quilt"],
+    "minecraftResources": {
+      "mods": {
+        "downloading": true,
+        "updating": true,
+        "providers": ["CurseForge"]
+      },
+      "resourcepacks": {
+        "downloading": false,
+        "updating": false,
+        "providers": []
+      },
+      "shaderpacks": {
+        "downloading": false,
+        "updating": false,
+        "providers": []
+      },
+      "worlds": {
+        "downloading": false,
+        "updating": false,
+        "providers": []
+      },
+      "datapacks": {
+        "downloading": false,
+        "updating": false,
+        "providers": []
+      },
+      "plugins": {
+        "downloading": false,
+        "updating": false,
+        "providers": []
+      }
+    },
+    "import": ["FTB App Share Code", "CurseForge"],
+    "export": ["FTB App Share Code"],
+    "java": {
+      "download": true,
+      "versionManagement": true,
+      "usingSystemInstall": true,
+    },
+    "sandboxing": { "status": "No" },
+    "overlay": { "status": "Optional (via Overwolf app)" },
+    "advertisements": { "status": "Yes" }
+  },
+  "properties": {
+    "platforms": {
+      "linux": ["x86_64"],
+      "windows": ["x86_64"],
+      "macos": ["x86_64", "arm64"]
+    },
+    "packages": "ftb-app",
+    "technology": {
+      "languages": ["HTML", "JS", "CSS", "Java"],
+      "frameworks": ["Vue.js", "Tailwind", "Overwolf (Windows) Electron (macOS and Linux)"]
+    }
+  },
+  "specialFeatures": {
+    "CurseForgeBlockedDownloads": {
+      "supported": true,
+      "method": "Yes"
+    }
+  },
+}

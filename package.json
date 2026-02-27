@@ -1,0 +1,25 @@
+{
+  "name": "minecraft-launcher-comparison",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@iconify-json/fa7-solid": "^1.2.3",
+    "@iconify-json/material-symbols": "^1.2.53",
+    "@iconify-json/mdi": "^1.2.3",
+    "@tailwindcss/vite": "^4.1.18",
+    "astro": "^5.4.2",
+    "astro-icon": "^1.1.5",
+    "json5": "^2.2.3",
+    "tailwindcss": "^4.1.18"
+  },
+  "devDependencies": {
+    "@types/node": "^22.13.10",
+    "daisyui": "^5.5.17"
+  }
+}

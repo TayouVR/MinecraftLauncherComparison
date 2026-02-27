@@ -1,0 +1,5 @@
+---
+import Package from "./Package.astro";
+const { packages } = Astro.props as { packages: { name: string, official: boolean }[]};
+---
+{packages.map(packageData => <Package packageData={packageData} />)}

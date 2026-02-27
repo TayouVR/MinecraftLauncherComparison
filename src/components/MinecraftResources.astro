@@ -1,0 +1,41 @@
+---
+import {getIcon, getName} from "../data/utils.ts";
+const { launchers, values } = Astro.props as { launchers: LauncherDetails[], values: {
+        identifier: string,
+        value: MinecraftResources
+    }[]};
+
+const availableResources = [...new Set(values.flat().map(v => Object.keys(v.value)).flat())];
+// console.log(availableResources)
+
+function valueFromLauncher(launcher: LauncherDetails, key: string) {
+    const resource = values.find(v => v.identifier === launcher.identifier)!.value;
+    return resource[key];
+}
+---
+    <th colspan={launchers.length + 1} class="bg-base-300 z-5 text-left border-y border-base-content/10"><span>Resource Download (Mods, Resourcepacks, Shaders, etc.)</span></th>
+{availableResources.map((key) => (
+<tr>
+    <td class="capitalize">{key}</td>
+    { launchers.map(launcher => (
+        <td class:list={[launcher.identifier]}>
+            <div class="flex flex-col gap-2">
+                { valueFromLauncher(launcher, key)?.providers?.map(provider =>
+                    <div class="badge h-fit flex flex-row bg-accent-content/10">
+                        {getIcon(provider) != "" ? <img loading="lazy" alt={getName(provider)} src={getIcon(provider)} /> : ""}
+                        <span>{getName(provider)}</span>
+                    </div>
+                )}
+            </div>
+        </td>
+    ))}
+</tr>
+
+))}
+
+<style>
+    img {
+        height: 2em;
+        width: 2em;
+    }
+</style>

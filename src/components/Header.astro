@@ -1,0 +1,357 @@
+---
+import json5 from 'json5';
+import { readFileSync, readdirSync } from 'fs';
+import path from 'path';
+
+const dataDir = './src/launcher-definitions';
+const launchers: LauncherDetails[] = [];
+
+readdirSync(dataDir).forEach((file) => {
+	if (file.endsWith('.json5')) {
+		const filePath = path.join(dataDir, file);
+		launchers.push(json5.parse(readFileSync(filePath, 'utf-8')));
+	}
+});
+
+// Sort launchers by name
+launchers.sort((a, b) => a.name.localeCompare(b.name));
+
+const themes = [ 'tayou', 'tayou-light',
+    'light', 'dark', 'cupcake', 'bumblebee', 'emerald', 'corporate', 'synthwave', 'retro',
+    'cyberpunk', 'valentine', 'halloween', 'garden', 'forest', 'aqua', 'lofi', 'pastel',
+    'fantasy', 'wireframe', 'black', 'luxury', 'dracula', 'cmyk', 'autumn', 'business',
+    'acid', 'lemonade', 'night', 'coffee', 'winter', 'dim', 'nord', 'sunset', 'caramellatte',
+    'abyss', 'silk'
+];
+---
+<div class="drawer">
+    <input id="main-drawer" type="checkbox" class="drawer-toggle" />
+    <div class="drawer-content flex flex-col">
+        <!-- Fake Navbar for positioning -->
+        <div class="navbar w-full z-1">
+        </div>
+        <!-- Navbar -->
+        <div class="navbar bg-base-300 w-full fixed z-20">
+            <div class="flex-none lg:hidden">
+                <label for="main-drawer" aria-label="open sidebar" class="btn btn-square btn-ghost">
+                    <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            class="inline-block h-6 w-6 stroke-current"
+                    >
+                        <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h16"
+                        ></path>
+                    </svg>
+                </label>
+            </div>
+            <div class="flex-1">
+                <a href="/" class="btn btn-ghost text-xl">MCL Compare</a>
+            </div>
+            <div class="flex-none hidden lg:flex items-center gap-2">
+                <div class="dropdown dropdown-bottom">
+                    <button tabindex="0" role="button" class="btn btn-m">
+                        Filter Launchers
+                    </button>
+                    <div tabindex="0" class="dropdown-content z-[1] card card-compact bg-base-200 shadow-xl p-4 w-128">
+                        <form id="filter-form" class="grid grid-cols-3 gap-2">
+                            { launchers.map(launcher => (
+                                <label class="btn btn-s flex-1 p-1 cursor-pointer flex flex-col h-20">
+                                    <input
+                                        type="checkbox"
+                                        class="hidden"
+                                        name="launcher-filter"
+                                        aria-label={launcher.name}
+                                        value={launcher.identifier}
+                                        onchange="updateFilters(this)"
+                                    />
+                                    { launcher.icon ? (
+                                        <img class="w-full h-full object-contain pointer-events-none" src={launcher.icon} alt={`${launcher.name} Icon`} />
+                                    ) : ""}
+                                    {launcher.name}
+                                </label>
+                            ))}
+                            <button type="reset" class="btn btn-m bg-red-400 h-20" onclick="setTimeout(() => updateFilters(this), 0)">× reset</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <div tabindex="0" role="button" class="btn m-1">
+                        Launchers
+                        <svg
+                                width="12px"
+                                height="12px"
+                                class="inline-block h-2 w-2 fill-current opacity-60"
+                                xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 2048 2048">
+                            <path d="M1799 349l242 241-1017 1017L7 590l242-241 775 775 775-775z"></path>
+                        </svg>
+                    </div>
+                    <ul
+                        tabindex="0"
+                        class="dropdown-content menu bg-base-100 rounded-box z-[1] w-52 p-2 shadow">
+                        {launchers.map(launcher => (
+                            <li>
+                                <a href={`/launcher/${launcher.identifier}`}>
+                                    {launcher.icon && <img src={launcher.icon} class="w-4 h-4" alt="" />}
+                                    {launcher.name}
+                                </a>
+                            </li>
+                        ))}
+                    </ul>
+                </div>
+                <a href="https://github.com/TayouVR/MinecraftLauncherComparison" class="btn btn-ghost btn-sm" title="GitHub Repository">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                </a>
+                <a href="https://github.com/TayouVR/MinecraftLauncherComparison/issues" class="btn btn-ghost btn-sm" title="Issue Tracker">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
+                </a>
+                <div class="dropdown dropdown-end">
+                    <div tabindex="0" role="button" class="btn m-1">
+                        Theme
+                        <svg
+                                width="12px"
+                                height="12px"
+                                class="inline-block h-2 w-2 fill-current opacity-60"
+                                xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 2048 2048">
+                            <path d="M1799 349l242 241-1017 1017L7 590l242-241 775 775 775-775z"></path>
+                        </svg>
+                    </div>
+                    <ul tabindex="-1" class="dropdown-content bg-base-300 rounded-box z-1 w-52 p-2 shadow-2xl max-h-96 overflow-y-auto">
+                        {themes.map(theme => (
+                            <li>
+                                <label class="w-full btn btn-sm btn-block btn-ghost justify-start capitalize gap-3 px-2 flex-row flex">
+                                    <input
+                                            type="radio"
+                                            name="theme-dropdown"
+                                            class="theme-controller hidden peer"
+                                            aria-label={theme}
+                                            value={theme} />
+                                    <div data-theme={theme} class="h-5 bg-base-100 grid shrink-0 grid-cols-2 gap-0.5 rounded-md p-1 shadow-sm">
+                                        <div class="bg-base-content size-1 rounded-full"></div>
+                                        <div class="bg-primary size-1 rounded-full"></div>
+                                        <div class="bg-secondary size-1 rounded-full"></div>
+                                        <div class="bg-accent size-1 rounded-full"></div></div>
+                                    <div class="w-32 truncate text-left">{theme}</div>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" class="invisible peer-checked:visible h-3 w-3 shrink-0">
+                                        <path d="M20.285 2l-11.285 11.567-5.286-5.011-3.714 3.716 9 8.728 15-15.285z"></path>
+                                    </svg>
+                                </label>
+                            </li>
+                        ))}
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <slot />
+    </div>
+    <div class="drawer-side z-30">
+        <label for="main-drawer" aria-label="close sidebar" class="drawer-overlay"></label>
+        <ul class="menu bg-base-200 min-h-full w-80 p-4">
+            <li><h2 class="menu-title">Launchers</h2></li>
+            {launchers.map(launcher => (
+                <li>
+                    <a href={`/launcher/${launcher.identifier}`}>
+                        {launcher.icon && <img src={launcher.icon} class="w-4 h-4" alt="" />}
+                        {launcher.name}
+                    </a>
+                </li>
+            ))}
+            <li>
+                <div class="collapse collapse-arrow bg-base-100 mb-2">
+                    <input type="checkbox" />
+                    <div class="collapse-title text-sm font-medium">
+                        Filter Launchers
+                    </div>
+                    <div class="collapse-content">
+                        <form id="filter-form-mobile" class="grid grid-cols-2 gap-2">
+                            { launchers.map(launcher => (
+                                    <label class="btn btn-s flex-1 p-1 cursor-pointer flex flex-col h-20">
+                                        <input
+                                                type="checkbox"
+                                                class="hidden"
+                                                name="launcher-filter"
+                                                aria-label={launcher.name}
+                                                value={launcher.identifier}
+                                                onchange="updateFilters(this)"
+                                        />
+                                        { launcher.icon ? (
+                                                <img class="w-full h-full object-contain pointer-events-none" src={launcher.icon} alt={`${launcher.name} Icon`} />
+                                        ) : ""}
+                                        {launcher.name}
+                                    </label>
+                            ))}
+                            <button type="reset" class="btn btn-m bg-red-400 h-20" onclick="setTimeout(() => updateFilters(this), 0)">× reset</button>
+                        </form>
+                    </div>
+                </div>
+            </li>
+            <div class="divider"></div>
+            <li>
+                <a href="https://github.com/TayouVR/MinecraftLauncherComparison">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                    GitHub Repository
+                </a>
+            </li>
+            <li>
+                <a href="https://github.com/TayouVR/MinecraftLauncherComparison/issues">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
+                    Issue Tracker
+                </a>
+            </li>
+            <div class="divider"></div>
+            <li><h2 class="menu-title">Theme</h2></li>
+            <div class="grid grid-cols-1 gap-2">
+                {themes.map(theme => (
+                    <li>
+                        <label class="btn btn-sm btn-ghost justify-start capitalize gap-3 px-2 flex-row flex w-full">
+                            <input
+                                    type="radio"
+                                    name="theme-drawer"
+                                    class="theme-controller hidden peer"
+                                    aria-label={theme}
+                                    value={theme} />
+                            <div data-theme={theme} class="bg-base-100 grid shrink-0 grid-cols-2 gap-0.5 rounded-md p-1 shadow-sm">
+                                <div class="bg-base-content size-1 rounded-full"></div>
+                                <div class="bg-primary size-1 rounded-full"></div>
+                                <div class="bg-secondary size-1 rounded-full"></div>
+                                <div class="bg-accent size-1 rounded-full"></div></div>
+                            <div class="w-32 truncate text-left">{theme}</div>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" class="invisible peer-checked:visible h-3 w-3 shrink-0">
+                                <path d="M20.285 2l-11.285 11.567-5.286-5.011-3.714 3.716 9 8.728 15-15.285z"></path>
+                            </svg>
+                        </label>
+                    </li>
+                ))}
+            </div>
+        </ul>
+    </div>
+</div>
+
+<clientData id="clientData" value={JSON.stringify(launchers.reduce((acc, l) => ({...acc, [l.identifier]: {enabled: true}}), {}))}></clientData>
+
+<script is:inline>
+	function updateFilters(source) {
+		const desktopForm = document.getElementById('filter-form');
+		const mobileForm = document.getElementById('filter-form-mobile');
+
+		const checkedIdentifiers = new Set();
+
+		if (source && (source.id === 'filter-form' || source.closest?.('#filter-form'))) {
+			const desktopChecked = desktopForm.querySelectorAll('input[name="launcher-filter"]:checked');
+			desktopChecked.forEach(input => checkedIdentifiers.add(input.value));
+		} else if (source && (source.id === 'filter-form-mobile' || source.closest?.('#filter-form-mobile'))) {
+			const mobileChecked = mobileForm.querySelectorAll('input[name="launcher-filter"]:checked');
+			mobileChecked.forEach(input => checkedIdentifiers.add(input.value));
+		} else {
+			// Fallback: merge both (initial load)
+			if (desktopForm) {
+				const desktopChecked = desktopForm.querySelectorAll('input[name="launcher-filter"]:checked');
+				desktopChecked.forEach(input => checkedIdentifiers.add(input.value));
+			}
+			if (mobileForm) {
+				const mobileChecked = mobileForm.querySelectorAll('input[name="launcher-filter"]:checked');
+				mobileChecked.forEach(input => checkedIdentifiers.add(input.value));
+			}
+		}
+
+		// Sync both forms
+		const allFilterInputs = document.querySelectorAll('input[name="launcher-filter"]');
+		allFilterInputs.forEach(input => {
+			input.checked = checkedIdentifiers.has(input.value);
+            // Update the parent label's visual state for daisyUI button styling
+            const label = input.closest('label');
+            if (label) {
+                if (input.checked) {
+                    label.classList.add('btn-active');
+                    label.classList.remove('saturate-0', 'opacity-50');
+                } else {
+                    label.classList.remove('btn-active');
+                    if (checkedIdentifiers.size > 0) {
+                        label.classList.add('saturate-0', 'opacity-50');
+                    } else {
+                        label.classList.remove('saturate-0', 'opacity-50');
+                    }
+                }
+            }
+		});
+
+		const clientDataEl = document.getElementById("clientData");
+		if (!clientDataEl) return;
+
+		const launchersData = JSON.parse(clientDataEl.attributes.value.value);
+		const identifiers = Object.keys(launchersData);
+
+		// Update toggle buttons in index page
+		const toggleButtons = document.querySelectorAll('.launcher-toggle-container .launcher-toggle');
+		toggleButtons.forEach(btn => {
+			const btnId = identifiers.find(id => btn.classList.contains(id));
+			if (btnId) {
+				if (checkedIdentifiers.has(btnId)) {
+					btn.classList.remove("column-disabled");
+				} else if (checkedIdentifiers.size > 0) {
+					btn.classList.add("column-disabled");
+				} else {
+					btn.classList.remove("column-disabled");
+				}
+			}
+		});
+
+		identifiers.forEach(id => {
+			const elements = document.getElementsByClassName(id);
+			const shouldShow = checkedIdentifiers.size === 0 || checkedIdentifiers.has(id);
+
+			for (const element of elements) {
+				if (shouldShow) {
+					element.classList.remove("column-disabled");
+				} else {
+					element.classList.add("column-disabled");
+				}
+			}
+		});
+	}
+
+	// Initialize on page load (in case browser remembers checkbox state)
+	window.addEventListener('DOMContentLoaded', () => {
+        updateFilters();
+
+        // Theme handling
+        const currentTheme = document.documentElement.getAttribute('data-theme');
+        const themeControllers = document.querySelectorAll('.theme-controller');
+        
+        // Initialize radio buttons
+        themeControllers.forEach(el => {
+            if (el.value === currentTheme) {
+                el.checked = true;
+                const label = el.closest('label');
+                if (label) label.classList.add('bg-primary');
+            }
+        });
+
+        // Listen for changes
+        themeControllers.forEach(el => {
+            el.addEventListener('change', (e) => {
+                const newTheme = e.target.value;
+                document.documentElement.setAttribute('data-theme', newTheme);
+                document.cookie = `theme=${newTheme}; path=/; max-age=31536000; SameSite=Lax`;
+                
+                // Sync other radio buttons with the same value and update visual state
+                themeControllers.forEach(radio => {
+                    const label = radio.closest('label');
+                    if (radio.value === newTheme) {
+                        radio.checked = true;
+                        if (label) label.classList.add('bg-primary');
+                    } else {
+                        radio.checked = false;
+                        if (label) label.classList.remove('bg-primary');
+                    }
+                });
+            });
+        });
+    });
+</script>

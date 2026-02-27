@@ -1,0 +1,87 @@
+﻿{
+  "identifier": "org.multimc.multimc",
+  "name": "MultiMC",
+  "icon": "/src/assets/launchers/multimc.png",
+  "downloadLink": "https://multimc.org/#Download",
+  "sourceRepo": "https://github.com/MultiMC/Launcher/",
+  "homepage": "https://multimc.org/",
+  "configuration": {
+    "license": {
+      "name": "MS-PL",
+      "url": "",
+      "foss": true,
+    },
+    "serverInstances": false,
+    "lookAndFeel": "System (configurable)"
+  },
+  "features": {
+    "modpacks": [
+      { "name": "Modrinth", "method": "Download", "updating": true },
+      { "name": "ftb", "method": "Import", "updating": false },
+      { "name": "atlauncher", "method": "Download", "updating": false },
+      { "name": "legacy-ftb", "method": "Download", "updating": false },
+      { "name": "technic", "method": "Download", "updating": false }
+    ],
+    "modloaders": ["forge", "neoforge", "fabric", "quilt", "liteloader"],
+    "minecraftResources": {
+      "mods": {
+        "downloading": false,
+        "updating": false,
+        "providers": []
+      },
+      "resourcepacks": {
+        "downloading": false,
+        "updating": false,
+        "providers": []
+      },
+      "shaderpacks": {
+        "downloading": false,
+        "updating": false,
+        "providers": []
+      },
+      "worlds": {
+        "downloading": false,
+        "updating": false,
+        "providers": []
+      },
+      "datapacks": {
+        "downloading": false,
+        "updating": false,
+        "providers": []
+      },
+      "plugins": {
+        "downloading": false,
+        "updating": false,
+        "providers": []
+      }
+    },
+    "import": ["OneSix", "Modrinth", "Technic", "FtbApp"],
+    "export": ["OneSix", "Modrinth"],
+    "java": {
+      "download": false,
+      "versionManagement": false,
+      "usingSystemInstall": true,
+    },
+    "sandboxing": { "status": "No" },
+    "overlay": { "status": "No" },
+    "advertisements": { "status": "No" }
+  },
+  "properties": {
+    "platforms": {
+      "linux": ["x86_64", "x86"],
+      "windows": ["x86"],
+      "macos": ["x86_64"],
+    },
+    "packages": "multimc",
+    "technology": {
+      "languages": ["C++"],
+      "frameworks": ["Qt (Widgets)"]
+    }
+  },
+  "specialFeatures": {
+    "CurseForgeBlockedDownloads": {
+      "supported": false,
+      "method": ""
+    }
+  },
+}

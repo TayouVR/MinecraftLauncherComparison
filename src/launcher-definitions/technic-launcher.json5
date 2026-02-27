@@ -1,0 +1,83 @@
+﻿{
+  "identifier": "org.technic.technic-launcher",
+  "name": "Technic Launcher",
+  "icon": "/src/assets/launchers/technic-launcher.svg",
+  "downloadLink": "https://www.technicpack.net/download",
+  "sourceRepo": "https://github.com/TechnicPack/LauncherV3",
+  "homepage": "https://www.technicpack.net",
+  "configuration": {
+    "license": {
+      "name": "GPLv3",
+      "url": "",
+      "foss": true,
+      "extraInfo": ""
+    },
+    "serverInstances": false,
+    "lookAndFeel": "Custom"
+  },
+  "features": {
+    "modpacks":  [
+      { "name": "technic", "method": "Download", "updating": false }
+    ],
+    "modloaders": ["forge"],
+    "minecraftResources": {
+      "mods": {
+        "downloading": false,
+        "updating": false,
+        "providers": []
+      },
+      "resourcepacks": {
+        "downloading": false,
+        "updating": false,
+        "providers": []
+      },
+      "shaderpacks": {
+        "downloading": false,
+        "providers": []
+      },
+      "worlds": {
+        "downloading": false,
+        "updating": false,
+        "providers": []
+      },
+      "datapacks": {
+        "downloading": false,
+        "updating": false,
+        "providers": []
+      },
+      "plugins": {
+        "downloading": false,
+        "updating": false,
+        "providers": []
+      }
+    },
+    "import": ["Technic"],
+    "export": [],
+    "java": {
+      "download": true,
+      "versionManagement": true,
+      "usingSystemInstall": true,
+    },
+    "sandboxing": { "status": "No" },
+    "overlay": { "status": "No" },
+    "advertisements": { "status": "No" }
+  },
+  "properties": {
+    "platforms": {
+      "linux": ["x86_64", "x86"],
+      "windows": ["x86_64", "x86"],
+      "macos": ["x86_64", "x86"]
+    },
+    "packages": "minecraft-technic-launcher",
+    "technology": {
+      "languages": ["Java"],
+      "frameworks": []
+    }
+  },
+  "specialFeatures": {
+    "CurseForgeBlockedDownloads": {
+      "supported": false,
+      "method": ""
+    }
+  },
+}

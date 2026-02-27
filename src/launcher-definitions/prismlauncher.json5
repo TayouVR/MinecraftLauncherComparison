@@ -1,0 +1,162 @@
+﻿{
+  "identifier": "org.prismlauncher.prismlauncher",
+  "name": "Prism Launcher",
+  "icon": "/src/assets/launchers/prismlauncher.svg",
+  "downloadLink": "https://prismlauncher.org/download/",
+  "sourceRepo": "https://github.com/PrismLauncher/PrismLauncher",
+  "homepage": "https://prismlauncher.org/",
+  "screenshots": [
+    {
+      "name": "main window",
+      "url": ""
+    },
+    {
+      "name": "theming example (Fusion)",
+      "url": ""
+    }
+  ],
+  "configuration": {
+    "license": {
+      "name": "GPL-3.0-only",
+      "url": "",
+      "foss": true,
+      "extraInfo": ""
+    },
+    "serverInstances": false,
+    "lookAndFeel": "System (configurable)"
+  },
+  "features": {
+    "modpacks": [
+      {
+        "name": "CurseForge",
+        "method": "Download",
+        "updating": true
+      },
+      {
+        "name": "Modrinth",
+        "method": "Download",
+        "updating": true
+      },
+      {
+        "name": "ftb",
+        "method": "Download",
+        "updating": false
+      },
+      {
+        "name": "atlauncher",
+        "method": "Download",
+        "updating": false
+      },
+      {
+        "name": "legacy-ftb",
+        "method": "Download",
+        "updating": false
+      },
+      {
+        "name": "technic",
+        "method": "Download",
+        "updating": false
+      }
+    ],
+    "modloaders": [
+      "forge",
+      "neoforge",
+      "fabric",
+      "quilt",
+      "liteloader"
+    ],
+    "minecraftResources": {
+      "mods": {
+        "downloading": true,
+        "updating": true,
+        "providers": [
+          "Modrinth",
+          "CurseForge"
+        ]
+      },
+      "resourcepacks": {
+        "downloading": true,
+        "updating": true,
+        "providers": [
+          "Modrinth",
+          "CurseForge"
+        ]
+      },
+      "shaderpacks": {
+        "downloading": true,
+        "updating": true,
+        "providers": [
+          "Modrinth",
+          "CurseForge"
+        ]
+      },
+      "worlds": {
+        "downloading": false,
+        "updating": false,
+        "providers": []
+      },
+      "datapacks": {
+        "downloading": true,
+        "updating": false,
+        "providers": [
+          "Modrinth",
+          "CurseForge"
+        ]
+      },
+      "plugins": {
+        "downloading": false,
+        "updating": false,
+        "providers": []
+      }
+    },
+    "import": [
+      "OneSix",
+      "Modrinth",
+      "CurseForge",
+      "Technic",
+      "FtbApp"
+    ],
+    "export": [
+      "OneSix",
+      "Modrinth",
+      "CurseForge",
+      "Text",
+      "Markdown",
+      "JSON",
+      "HTML"
+    ],
+    "java": {
+      "download": true,
+      "versionManagement": true,
+      "usingSystemInstall": true,
+    },
+    "sandboxing": { "status": "WIP" },
+    "overlay": { "status": "No" },
+    "advertisements": {
+      "status": "No",
+      "note": "Displaying optional ads for download providers via networks like Adrinth have been in consideration"
+    }
+  },
+  "properties": {
+    "platforms": {
+      "linux": ["x86_64", "arm64", "arm32", "riscv64"],
+      "windows": ["x86_64", "arm64"],
+      "macos": ["x86_64", "arm64"],
+    },
+    "packages": "prismlauncher",
+    "technology": {
+      "languages": [
+        "C++"
+      ],
+      "frameworks": [
+        "Qt (Widgets)"
+      ]
+    }
+  },
+  "specialFeatures": {
+    "CurseForgeBlockedDownloads": {
+      "supported": true,
+      "method": "via web browser, automatically copies mod"
+    }
+  },
+}

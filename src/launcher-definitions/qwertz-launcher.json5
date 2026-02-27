@@ -1,0 +1,79 @@
+﻿{
+  "identifier": "qwertz-launcher",
+  "name": "QWERTZ Launcher",
+  "icon": "/src/assets/launchers/QWERTZ-launcher.png",
+  "downloadLink": "https://github.com/QWERTZexe/QWERTZ-Launcher/releases",
+  "sourceRepo": "https://github.com/QWERTZexe/QWERTZ-Launcher",
+  "homepage": "https://github.com/QWERTZexe/QWERTZ-Launcher",
+  "configuration": {
+    "license": {
+      "name": "AGPL3",
+      "url": "",
+      "foss": true,
+      "extraInfo": ""
+    },
+    "serverInstances": false,
+    "lookAndFeel": "System (mostly)"
+  },
+  "features": {
+    "modpacks": [],
+    "modloaders": ["forge", "fabric"],
+    "minecraftResources": {
+      "mods": {
+        "downloading": false,
+        "updating": false,
+        "providers": []
+      },
+      "resourcepacks": {
+        "downloading": false,
+        "updating": false,
+        "providers": []
+      },
+      "shaderpacks": {
+        "downloading": false,
+        "providers": []
+      },
+      "worlds": {
+        "downloading": false,
+        "updating": false,
+        "providers": []
+      },
+      "datapacks": {
+        "downloading": false,
+        "updating": false,
+        "providers": []
+      },
+      "plugins": {
+        "downloading": false,
+        "updating": false,
+        "providers": []
+      }
+    },
+    "import": [],
+    "export": [],
+    "java": {
+      "download": true,
+      "versionManagement": true,
+      "usingSystemInstall": true,
+    },
+    "sandboxing": { "status": "No" },
+    "overlay": { "status": "No" },
+    "advertisements": { "status": "No" }
+  },
+  "properties": {
+    "platforms": {
+      "windows": ["x86_64"],
+    },
+    "packages": "link.to.repology/for/this/launcher",
+    "technology": {
+      "languages": ["Python"],
+      "frameworks": ["Qt"]
+    }
+  },
+  "specialFeatures": {
+    "CurseForgeBlockedDownloads": {
+      "supported": false,
+      "method": ""
+    }
+  },
+}
