@@ -1,7 +1,7 @@
 ﻿{
   "identifier": "qwertz-launcher",
   "name": "QWERTZ Launcher",
-  "icon": "/src/assets/launchers/QWERTZ-launcher.png",
+  "icon": "/assets/launchers/QWERTZ-launcher.png",
   "downloadLink": "https://github.com/QWERTZexe/QWERTZ-Launcher/releases",
   "sourceRepo": "https://github.com/QWERTZexe/QWERTZ-Launcher",
   "homepage": "https://github.com/QWERTZexe/QWERTZ-Launcher",

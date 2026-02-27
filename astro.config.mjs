@@ -8,7 +8,6 @@ export default defineConfig({
     site: "https://mc-launcher.tayou.org/",
     output: "static",
     integrations: [icon({
-        iconDir: "/src/assets/icons",
         include: {
             "fa7-solid": ["*"],
             "material-symbols": ["*"]

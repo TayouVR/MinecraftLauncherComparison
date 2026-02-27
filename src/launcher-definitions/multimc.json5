@@ -1,7 +1,7 @@
 ﻿{
   "identifier": "org.multimc.multimc",
   "name": "MultiMC",
-  "icon": "/src/assets/launchers/multimc.png",
+  "icon": "/assets/launchers/multimc.png",
   "downloadLink": "https://multimc.org/#Download",
   "sourceRepo": "https://github.com/MultiMC/Launcher/",
   "homepage": "https://multimc.org/",

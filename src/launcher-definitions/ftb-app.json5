@@ -1,7 +1,7 @@
 ﻿{
   "identifier": "org.ftb.ftb",
   "name": "FTB App",
-  "icon": "/src/assets/launchers/ftb.svg",
+  "icon": "/assets/launchers/ftb.svg",
   "downloadLink": "https://www.feed-the-beast.com/app",
   "sourceRepo": "https://github.com/FTBTeam/FTB-App",
   "homepage": "https://www.feed-the-beast.com/",

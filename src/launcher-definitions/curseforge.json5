@@ -1,7 +1,7 @@
 ﻿{
   "identifier": "com.CurseForge.CurseForge",
   "name": "CurseForge App",
-  "icon": "/src/assets/modplatforms/curseforge.svg",
+  "icon": "/assets/modplatforms/curseforge.svg",
   "downloadLink": "https://download.curseforge.com/",
   "sourceRepo": "",
   "homepage": "https://www.curseforge.com/minecraft",

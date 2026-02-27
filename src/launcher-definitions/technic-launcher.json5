@@ -1,7 +1,7 @@
 ﻿{
   "identifier": "org.technic.technic-launcher",
   "name": "Technic Launcher",
-  "icon": "/src/assets/launchers/technic-launcher.svg",
+  "icon": "/assets/launchers/technic-launcher.svg",
   "downloadLink": "https://www.technicpack.net/download",
   "sourceRepo": "https://github.com/TechnicPack/LauncherV3",
   "homepage": "https://www.technicpack.net",
