@@ -1,0 +1,77 @@
+{
+  "identifier": "com.arcticlauncher.launcher",
+  "name": "Arctic Launcher",
+  "icon": "/assets/launchers/arctic-launcher.png",
+  "downloadLink": "https://arcticlauncher.com/download",
+  "sourceRepo": "https://github.com/brksfrb/arctic-launcher",
+  "homepage": "https://arcticlauncher.com/",
+  "configuration": {
+    "license": {
+      "name": "GPL-3.0-or-later",
+      "url": "https://github.com/brksfrb/arctic-launcher/blob/main/LICENSE",
+      "foss": true,
+      "extraInfo": ""
+    },
+    "serverInstances": false,
+    "lookAndFeel": "Custom"
+  },
+  "features": {
+    "modpacks": [
+      { "name": "Modrinth", "method": "Download" }
+    ],
+    "modloaders": ["forge", "neoforge", "fabric", "quilt"],
+    "minecraftResources": {
+      "mods": {
+        "downloading": true,
+        "providers": ["Modrinth"]
+      },
+      "resourcepacks": {
+        "downloading": true,
+        "providers": ["Modrinth"]
+      },
+      "shaderpacks": {
+        "downloading": true,
+        "providers": ["Modrinth"]
+      },
+      "worlds": {
+        "downloading": false,
+        "providers": []
+      },
+      "datapacks": {
+        "downloading": false,
+        "providers": []
+      },
+      "plugins": {
+        "downloading": false,
+        "providers": []
+      }
+    },
+    "import": ["Vanilla Launcher", "OneSix", "Modrinth", "CurseForge", "ATLauncher", "GDLauncher", "TLauncher", "Lunar Client", "Badlion Client", "Feather Client", "LabyMod"],
+    "export": ["Arctic share code"],
+    "java": {
+      "download": true,
+      "versionManagement": true,
+      "usingSystemInstall": true
+    },
+    "sandboxing": { "status": "" },
+    "overlay": { "status": "" },
+    "advertisements": { "status": "No" }
+  },
+  "properties": {
+    "platforms": {
+      "linux": ["x86_64"],
+      "windows": ["x86_64"],
+      "macos": ["x86_64", "arm64"]
+    },
+    "technology": {
+      "languages": ["Rust", "Java"],
+      "frameworks": ["egui"]
+    }
+  },
+  "specialFeatures": {
+    "CurseForgeBlockedDownloads": {
+      "supported": false,
+      "method": ""
+    }
+  }
+}
