@@ -78,9 +78,9 @@ const { launcher } = Astro.props;
                         <div class="flex items-center gap-2 p-2 bg-base-100 rounded">
                             {getIcon(mp.name) && <img src={getIcon(mp.name)} alt={mp.name} class="w-5 h-5" />}
                             <span>{getName(mp.name)}</span>
-                            { mp.method == "Download" && <Icon name="fa7-solid:download" class="w-4 h-4 tooltip tooltip-right" data-tip="Downloading supported"></Icon> }
-                            { mp.method == "Import" && <Icon name="fa7-solid:file-import" class="w-4 h-4 tooltip tooltip-right" data-tip="Import from external source (e.g. other launcher)" ></Icon> }
-                            { mp.updating && <Icon name="fa7-solid:refresh" class="w-4 h-4 tooltip tooltip-top" data-tip="Updating supported" ></Icon> }
+                            { mp.method == "Download" && <span class="tooltip tooltip-top" data-tip="Downloading supported"><Icon name="fa7-solid:download" class="w-4 h-4" /></span> }
+                            { mp.method == "Import" && <span class="tooltip tooltip-top" data-tip="Import from external source (e.g. other launcher)"><Icon name="fa7-solid:file-import" class="w-4 h-4" /></span> }
+                            { mp.updating && <span class="tooltip tooltip-top" data-tip="Updating supported"><Icon name="fa7-solid:refresh" class="w-4 h-4" /></span> }
                         </div>
                     ))}
                 </div>
