@@ -64,25 +64,41 @@ const piracyCount = launchers.filter(l => l.features.offlinePlayWithoutLicense).
 ---
 
 <Layout>
-	<section class="container sticky left-0 mx-auto p-4">
-		<h2 class="text-center">
-			This will give you an overview over the various Minecraft (Java Edition) launchers and their features.<br>
+	<section class="container sticky left-0 mx-auto max-w-3xl p-4">
+		<h2 class="text-center text-xl font-semibold">
+			This will give you an overview over the various Minecraft (Java Edition) launchers and their features.
 		</h2>
-		<br>
-		<strong>Explanations:</strong>
-		<ul>
-			<li>Modloader support means a way to install the modloader through the launcher directly, without downloading it separately.</li>
-			<li>CurseForge blocked downloads: CurseForge offers creators on the platform the option to opt out of downloads from 3rd party platforms as a means to ensure ad revenue is generated when downloading content. Platforms need to work around that restriction to properly support CurseForge content.</li>
-		</ul>
 
-		Note: This list is maintained mostly by me and random contributions. Data will inevitably get outdated over time and I always welcome any updates and corrections. See the GitHub linked in the header.<br>
-		{piracyCount > 0 && (
-			<p class="mt-2">
-				<span class="inline-block h-3 w-3 rounded-sm align-[-1px] piracy-swatch"></span>
-				<strong>Brown</strong> marks launchers that allow full-game play without owning a Minecraft license
-				(offline accounts, no demo mode). This facilitates piracy. {piracyCount === 1 ? "It is" : "They are"} hidden by default; enable {piracyCount === 1 ? "it" : "them"} via the <em>Filter Launchers</em> menu.
-			</p>
-		)}
+		<div class="mt-6 space-y-4">
+			<div>
+				<strong class="block mb-1">Explanations</strong>
+				<ul class="list-disc space-y-2 pl-6">
+					<li><strong>Modloader support</strong> means a way to install the modloader through the launcher directly, without downloading it separately.</li>
+					<li><strong>CurseForge blocked downloads:</strong> CurseForge offers creators on the platform the option to opt out of downloads from 3rd party platforms as a means to ensure ad revenue is generated when downloading content. Platforms need to work around that restriction to properly support CurseForge content.</li>
+				</ul>
+			</div>
+
+			{piracyCount > 0 && (
+				<div>
+					<strong class="block mb-1">Color coding</strong>
+					<p>
+						<span class="inline-block h-3 w-3 rounded-sm align-[-1px] piracy-swatch"></span>
+						<strong>Brown</strong> marks launchers that allow full-game play without owning a Minecraft license
+						(offline accounts, no demo mode). This facilitates piracy. {piracyCount === 1 ? "It is" : "They are"} hidden by default; enable {piracyCount === 1 ? "it" : "them"} via the <em>Filter Launchers</em> menu.
+					</p>
+				</div>
+			)}
+
+			<div>
+				<strong class="block mb-1">Note</strong>
+				<p>
+					This list is maintained mostly by me and random contributions. Data will inevitably get outdated over time and I always welcome any updates and corrections. See the GitHub linked in the header.
+				</p>
+				<p class="mt-2">
+					Listed launchers are generally probed for obvious malware, but this is no guarantee. Please evaluate each launcher yourself based on its popularity and general community trust before using it.
+				</p>
+			</div>
+		</div>
 	</section>
 
 	<div class="sticky top-0 table-container w-screen overflow-y-visible">
