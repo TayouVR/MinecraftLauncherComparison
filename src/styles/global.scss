@@ -138,6 +138,17 @@ html.piracy-page body {
   background-color: color-mix(in oklab, #8b5e34 24%, var(--color-base-100));
 }
 
+/* Selected launchers in the "Filter Launchers" menu get an active background. */
+label.filter-active {
+  background-color: var(--color-info);
+  color: var(--color-info-content);
+}
+/* the piracy tint wins over the generic active tint so it stays visible */
+label.filter-active.piracy {
+  background-color: color-mix(in oklab, #8b5e34 55%, var(--color-info));
+  color: var(--color-info-content);
+}
+
 .wip {
   background: repeating-linear-gradient(-45deg, var(--color-warning) 0, var(--color-warning) 10px,
           var(--color-base-100) 10px, var(--color-base-100) 20px);

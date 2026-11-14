@@ -295,20 +295,11 @@ const themes = [ 'tayou', 'tayou-light',
 		const allFilterInputs = document.querySelectorAll('input[name="launcher-filter"]');
 		allFilterInputs.forEach(input => {
 			input.checked = checkedIdentifiers.has(input.value);
-            // Update the parent label's visual state for daisyUI button styling
+            // Update the parent label's visual state: selected labels get an
+            // active background, unselected stay neutral (no ugly desaturation).
             const label = input.closest('label');
             if (label) {
-                if (input.checked) {
-                    label.classList.add('btn-active');
-                    label.classList.remove('saturate-0', 'opacity-50');
-                } else {
-                    label.classList.remove('btn-active');
-                    if (checkedIdentifiers.size > 0) {
-                        label.classList.add('saturate-0', 'opacity-50');
-                    } else {
-                        label.classList.remove('saturate-0', 'opacity-50');
-                    }
-                }
+                label.classList.toggle('filter-active', input.checked);
             }
 		});
 
