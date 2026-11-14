@@ -30,3 +30,21 @@ export function getName(thing: string) {
     const loaderData = niceNames[thing as keyof typeof niceNames];
     return loaderData?.displayName ?? thing;
 }
+
+/**
+ * Class list for a launcher's comparison-table cell/column. Always includes the
+ * identifier; adds `piracy` (brown tint) for launchers that enable full-game
+ * play without a license.
+ *
+ * Visibility (hidden-by-default) is intentionally NOT handled here: it is a
+ * presentational concern driven by the "Filter Launchers" checkboxes (see the
+ * `.drawer:has(...)` rule in global.css), not something the data encodes into
+ * the column classes.
+ */
+export function columnClass(launcher: LauncherDetails, ...extra: (string | false | null | undefined)[]) {
+    return [
+        launcher.identifier,
+        launcher.features.offlinePlayWithoutLicense ? "piracy" : null,
+        ...extra,
+    ];
+}

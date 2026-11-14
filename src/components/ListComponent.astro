@@ -4,6 +4,7 @@ import ModloadersComponent from "./ModloadersComponent.astro";
 import MinecraftResources from "./MinecraftResources.astro";
 import JavaComponent from "./JavaComponent.astro";
 import ModpacksComponent from "./ModpacksComponent.astro";
+import { columnClass } from "../data/utils.ts";
 
 
 const { propertyName, launchers, propCategory } = Astro.props as { propertyName: string, launchers: LauncherDetails[], propCategory: "properties" | "features" };
@@ -26,6 +27,8 @@ function statusClass(launcher: LauncherDetails) {
         return "unknown";
     }
 }
+
+const cellClass = columnClass;
 
 const values = launchers.map(launcher => {
     return {
@@ -52,7 +55,7 @@ if(![
         <tr>
             <td>Languages</td>
             { launchers.map(launcher => (
-                <td class={launcher.identifier}>
+                <td class:list={cellClass(launcher)}>
                     {valueFromLauncher(launcher).languages.join(', ')}
                 </td>
             ))}
@@ -60,7 +63,7 @@ if(![
         <tr>
             <td>Core Toolkits and Libraries</td>
             { launchers.map(launcher => (
-                <td class={launcher.identifier}>
+                <td class:list={cellClass(launcher)}>
                     {valueFromLauncher(launcher).frameworks.join(', ')}
                 </td>
             ))}
@@ -84,7 +87,7 @@ if(![
     <tr>
         <td class="capitalize">{propertyName}</td>
         { launchers.map(launcher => (
-            <td class={launcher.identifier}>
+            <td class:list={cellClass(launcher)}>
                 <JavaComponent java={valueFromLauncher(launcher)} />
             </td>
         ))}
@@ -95,7 +98,7 @@ if(![
     <tr>
         <td class="capitalize">{propertyName}</td>
         { launchers.map(launcher => (
-            <td class={launcher.identifier}>
+            <td class:list={cellClass(launcher)}>
                 <div class:list={["badge", "h-fit", launcher.identifier, statusClass(launcher)]}>
                     {valueFromLauncher(launcher).status}
                 </div>
@@ -108,7 +111,7 @@ if(![
     <tr>
         <td class="capitalize">{propertyName}</td>
         { launchers.map(launcher => (
-            <td class={launcher.identifier}>
+            <td class:list={cellClass(launcher)}>
                 <div class="flex flex-wrap gap-2">
                     {valueFromLauncher(launcher).map((format: string) => (
                         <div class="badge bg-accent-content/10"><span>{format}</span></div>
@@ -123,7 +126,7 @@ if(![
     <tr>
         <td class="capitalize">{propertyName}</td>
         { launchers.map(launcher => (
-            <td class={launcher.identifier}>
+            <td class:list={cellClass(launcher)}>
                 <div class="flex flex-wrap gap-2">
                     {valueFromLauncher(launcher).map((format: string) => (
                             <div class="badge bg-accent-content/10"><span>{format}</span></div>
@@ -141,7 +144,7 @@ if(![
     <tr>
         <td class="capitalize">{propertyName}</td>
         { launchers.map(launcher => (
-            <td class={launcher.identifier}>
+            <td class:list={cellClass(launcher)}>
                 {(typeof valueFromLauncher(launcher) === "string") ? (
                     valueFromLauncher(launcher).toUpperCase()
                 ) : (typeof valueFromLauncher(launcher) === "number") ? (

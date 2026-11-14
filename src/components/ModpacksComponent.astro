@@ -1,5 +1,5 @@
 ---
-import {getIcon, getName} from "../data/utils.ts";
+import {getIcon, getName, columnClass} from "../data/utils.ts";
 const { launchers, values } = Astro.props as { launchers: LauncherDetails[], values: { identifier: string, value: FeatureModpack[] }[] };
 
 const availableModPackPlatforms = [...new Set(values.flatMap(v => v.value).flatMap(v => v.name))];
@@ -22,7 +22,7 @@ function modpackFromList(launcherID: string, modpackName: string) {
         </div>
     </td>
     { launchers.map(launcher => (
-        <td class={launcher.identifier}>
+        <td class:list={columnClass(launcher)}>
             <div class:list={["badge", launcher.identifier, modpackFromList(launcher.identifier, modpack)?.method.toLowerCase() ?? "no" ]} >
                 { modpackFromList(launcher.identifier, modpack)?.method ?? "No" }
             </div>

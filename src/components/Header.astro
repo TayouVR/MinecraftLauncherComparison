@@ -16,6 +16,20 @@ readdirSync(dataDir).forEach((file) => {
 // Sort launchers by name
 launchers.sort((a, b) => a.name.localeCompare(b.name));
 
+// Launchers hidden by default (unchecked in the filter menu). Their columns are
+// hidden at render time by a presentational `.drawer:has(checkbox:not(:checked))`
+// rule below — the data/column markup carries no visibility class. Dynamic
+// toggling is still handled by updateFilters() adding/removing column-disabled.
+const hiddenByDefault = launchers.filter(l => !((l.shownByDefault ?? false) && !l.features.offlinePlayWithoutLicense));
+
+// Pre-built CSS (identifiers escaped for class selectors). Injected unescaped below.
+// The "pre-filter" class gates these rules to initial render only; updateFilters()
+// removes it on first run, after which JS fully owns visibility (incl. the
+// "none checked = show all" reset state, which this static rule can't express).
+const initialVisibilityCss = hiddenByDefault.map(l =>
+    `.pre-filter .drawer:has(input[name="launcher-filter"][value="${l.identifier}"]:not(:checked)) :is(td, th).${l.identifier.replace(/\./g, "\\.")} { display: none; }`
+).join("\n");
+
 const themes = [ 'tayou', 'tayou-light',
     'light', 'dark', 'cupcake', 'bumblebee', 'emerald', 'corporate', 'synthwave', 'retro',
     'cyberpunk', 'valentine', 'halloween', 'garden', 'forest', 'aqua', 'lofi', 'pastel',
@@ -24,6 +38,12 @@ const themes = [ 'tayou', 'tayou-light',
     'abyss', 'silk'
 ];
 ---
+<!-- Presentational initial visibility: hide columns whose filter checkbox is
+     unchecked, without any JS-timing flash and without encoding visibility into
+     the column markup. .drawer is the common ancestor of both the filter
+     checkboxes and the comparison table. Once the user interacts, updateFilters()
+     takes over by adding/removing .column-disabled at runtime. -->
+<style is:inline set:html={initialVisibilityCss}></style>
 <div class="drawer">
     <input id="main-drawer" type="checkbox" class="drawer-toggle" />
     <div class="drawer-content flex flex-col">
@@ -60,7 +80,7 @@ const themes = [ 'tayou', 'tayou-light',
                     <div tabindex="0" class="dropdown-content z-[1] card card-compact bg-base-200 shadow-xl p-4 w-128">
                         <form id="filter-form" class="grid grid-cols-3 gap-2">
                             { launchers.map(launcher => (
-                                <label class="btn btn-s flex-1 p-1 cursor-pointer flex flex-col h-20">
+                                <label class:list={["btn btn-s flex-1 p-1 cursor-pointer flex flex-col h-20", launcher.features.offlinePlayWithoutLicense && "piracy"]}>
                                     <input
                                         type="checkbox"
                                         class="hidden"
@@ -100,6 +120,9 @@ const themes = [ 'tayou', 'tayou-light',
                                 <a href={`/launcher/${launcher.identifier}`}>
                                     {launcher.icon && <img src={launcher.icon} class="w-4 h-4" alt="" />}
                                     {launcher.name}
+                                    {launcher.features.offlinePlayWithoutLicense && (
+                                        <span title="Allows playing the full game without owning Minecraft (facilitates piracy)">🏴‍☠️</span>
+                                    )}
                                 </a>
                             </li>
                         ))}
@@ -160,6 +183,9 @@ const themes = [ 'tayou', 'tayou-light',
                     <a href={`/launcher/${launcher.identifier}`}>
                         {launcher.icon && <img src={launcher.icon} class="w-4 h-4" alt="" />}
                         {launcher.name}
+                        {launcher.features.offlinePlayWithoutLicense && (
+                            <span title="Allows playing the full game without owning Minecraft (facilitates piracy)">🏴‍☠️</span>
+                        )}
                     </a>
                 </li>
             ))}
@@ -172,7 +198,7 @@ const themes = [ 'tayou', 'tayou-light',
                     <div class="collapse-content">
                         <form id="filter-form-mobile" class="grid grid-cols-2 gap-2">
                             { launchers.map(launcher => (
-                                    <label class="btn btn-s flex-1 p-1 cursor-pointer flex flex-col h-20">
+                                    <label class:list={["btn btn-s flex-1 p-1 cursor-pointer flex flex-col h-20", launcher.features.offlinePlayWithoutLicense && "piracy"]}>
                                         <input
                                                 type="checkbox"
                                                 class="hidden"
@@ -239,6 +265,9 @@ const themes = [ 'tayou', 'tayou-light',
 
 <script is:inline>
 	function updateFilters(source) {
+		// JS now owns visibility; drop the initial-render CSS gating.
+		document.documentElement.classList.remove('pre-filter');
+
 		const desktopForm = document.getElementById('filter-form');
 		const mobileForm = document.getElementById('filter-form-mobile');
 

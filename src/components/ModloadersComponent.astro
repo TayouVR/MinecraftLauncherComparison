@@ -1,5 +1,5 @@
 ---
-import {getIcon, getName} from "../data/utils.ts";
+import {getIcon, getName, columnClass} from "../data/utils.ts";
 const { launchers, values } = Astro.props as { launchers: LauncherDetails[], values: { identifier: string, value: string[] }[] };
 
 const availableModloaders = [...new Set(values.flatMap(v => v.value))];
@@ -19,7 +19,7 @@ const modloaderHintText = "Modloader support means a way to install the modloade
         </div>
     </td>
     { launchers.map(launcher => (
-            <td class={launcher.identifier}>
+            <td class:list={columnClass(launcher)}>
                 <div class:list={["badge", launcher.identifier, values.find(v => v.identifier === launcher.identifier)?.value.includes(modloader) ? 'yes' : 'no' ]} >
                     { values.find(v => v.identifier === launcher.identifier)?.value.includes(modloader) ? 'Yes' : 'No' }
                 </div>

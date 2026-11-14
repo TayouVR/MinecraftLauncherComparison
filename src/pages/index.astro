@@ -5,6 +5,7 @@ import json5 from 'json5';
 import { readFileSync, readdirSync } from 'fs';
 import path from 'path';
 import ListComponent from "../components/ListComponent.astro";
+import { columnClass } from "../data/utils.ts";
 
 function getLauncherDetails(path: string) {
 	return json5.parse<LauncherDetails>(
@@ -57,10 +58,9 @@ function launcherProperties<TLauncher extends Record<string, any>>(
 	return Object.values(grouped);
 }
 
-// Launchers hidden by default (via the Filter Launchers dropdown) unless they
-// explicitly opt in. Piracy-facilitating launchers are never shown by default.
-const isShownByDefault = (l: LauncherDetails) =>
-	(l.shownByDefault ?? false) && !l.features.offlinePlayWithoutLicense;
+const hasBundledMod = launchers.some(l => l.features.bundledMod);
+// Columns of piracy-facilitating launchers are tinted brown, so note it up top.
+const piracyCount = launchers.filter(l => l.features.offlinePlayWithoutLicense).length;
 ---
 
 <Layout>
@@ -76,15 +76,22 @@ const isShownByDefault = (l: LauncherDetails) =>
 		</ul>
 
 		Note: This list is maintained mostly by me and random contributions. Data will inevitably get outdated over time and I always welcome any updates and corrections. See the GitHub linked in the header.<br>
+		{piracyCount > 0 && (
+			<p class="mt-2">
+				<span class="inline-block h-3 w-3 rounded-sm align-[-1px] piracy-swatch"></span>
+				<strong>Brown</strong> marks launchers that allow full-game play without owning a Minecraft license
+				(offline accounts, no demo mode). This facilitates piracy. {piracyCount === 1 ? "It is" : "They are"} hidden by default; enable {piracyCount === 1 ? "it" : "them"} via the <em>Filter Launchers</em> menu.
+			</p>
+		)}
 	</section>
 
 	<div class="sticky top-0 table-container w-screen overflow-y-visible">
-	<table class="sticky top-0 table table-zebra table-hover table-bordered w-full border-separate border-spacing-0">
+	<table class="sticky top-0 table table-zebra table-hover table-bordered w-full border-separate border-spacing-0 comparison">
 		<thead class="sticky top-16 z-10 bg-base-100 shadow-sm">
 			<tr class="header-row">
 				<th class="bg-base-100">Feature</th>
 				{ launchers.map(launcher => (
-					<th class:list={[launcher.identifier, "bg-base-100"]}>
+					<th class:list={columnClass(launcher, "bg-base-100")}>
 						<a href={`/launcher/${launcher.identifier}`} class="flex flex-col items-center gap-2 hover:bg-base-200 p-2 rounded-lg transition-colors h-full w-full justify-center">
 							{ launcher.icon ? (
 								<img class="launcher-icon w-16 h-16 object-contain" src={launcher.icon}  alt=`${launcher.name} Icon` />
@@ -99,7 +106,7 @@ const isShownByDefault = (l: LauncherDetails) =>
 			<tr>
 				<td>License</td>
 				{ launchers.map(launcher => (
-					<td class={launcher.identifier}>
+					<td class:list={columnClass(launcher)}>
 						<div class:list={[launcher.identifier, launcher.configuration.license.foss ? "yes" : "no", "badge"]}>
 							{launcher.configuration.license.name}
 						</div>
@@ -109,7 +116,7 @@ const isShownByDefault = (l: LauncherDetails) =>
 			<tr>
 				<td>Look & Feel</td>
 				{ launchers.map(launcher => (
-					<td class={launcher.identifier}>{launcher.configuration.lookAndFeel}</td>
+					<td class:list={columnClass(launcher)}>{launcher.configuration.lookAndFeel}</td>
 				))}
 			</tr>
 			{ launcherProperties(launchers, ["properties"])
@@ -122,14 +129,35 @@ const isShownByDefault = (l: LauncherDetails) =>
 			))}
             <tr>
                 <td>CurseForge Blocked Mods handling</td>
-                { launchers.map(launcher => (
-					<td class:list={[launcher.identifier]}>
-						<div class:list={["badge h-fit bg-accent-content/10", launcher.specialFeatures.CurseForgeBlockedDownloads.supported ? "yes" : "no"]}>
-							{launcher.specialFeatures.CurseForgeBlockedDownloads.method != "" ? launcher.specialFeatures.CurseForgeBlockedDownloads.method : "No"}
+                { launchers.map(launcher => {
+					const cf = launcher.specialFeatures.CurseForgeBlockedDownloads;
+					const tone = cf.supported ? (cf.legallyGray ? "shady" : "yes") : "no";
+					return (
+					<td class:list={columnClass(launcher)}>
+						<div class:list={["badge h-fit bg-accent-content/10", tone, cf.legallyGray && "tooltip tooltip-bottom"]} data-tip={cf.note}>
+							{cf.method != "" ? cf.method : "No"}
+							{cf.legallyGray && <span class="ml-1" title={cf.note}>⚠️</span>}
 						</div>
+					</td>
+					);
+                })}
+            </tr>
+            {hasBundledMod && (
+            <tr>
+                <td>Bundled Client Mod</td>
+                { launchers.map(launcher => (
+					<td class:list={columnClass(launcher)}>
+						{launcher.features.bundledMod ? (
+							<div class="badge h-fit bundled-mod-badge tooltip tooltip-bottom whitespace-normal text-left" data-tip={launcher.features.bundledMod.long ?? launcher.features.bundledMod.short}>
+								{launcher.features.bundledMod.short}
+							</div>
+						) : (
+							<div class="badge h-fit no">No</div>
+						)}
 					</td>
                 ))}
             </tr>
+            )}
 		</tbody>
 	</table>
 	</div>

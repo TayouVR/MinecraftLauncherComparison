@@ -2,8 +2,14 @@
 import "../styles/global.css";
 import "../styles/tailwind.css";
 import Header from "../components/Header.astro";
+
+interface Props {
+	/** When true, the whole page background is tinted brown (piracy-facilitating launcher). */
+	piracy?: boolean;
+}
+const { piracy = false } = Astro.props;
 ---
-<html lang="en" data-theme="tayou">
+<html lang="en" data-theme="tayou" class={`pre-filter${piracy ? " piracy-page" : ""}`}>
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />

@@ -101,6 +101,43 @@ td.column-disabled, th.column-disabled {
   background: var(--color-warning);
 }
 
+/* CurseForge "blocked downloads" handled in a legally/ToS-gray way */
+.shady {
+  background: var(--color-warning);
+}
+
+/* Bundled client-mod badge (neutral) */
+.bundled-mod-badge {
+  background: var(--color-info);
+}
+
+/* Launchers that allow full-game play without a Minecraft license are tinted
+   brown to flag that they facilitate piracy. */
+
+/* The whole comparison-table column. The class is on the identifier, so we tint
+   every cell of that column regardless of which component rendered it; !important
+   beats daisyUI's table-zebra / row-hover / sticky first-column backgrounds. */
+table.comparison td.piracy,
+table.comparison th.piracy {
+  background-color: color-mix(in oklab, #8b5e34 26%, var(--color-base-100)) !important;
+}
+
+/* Filter-dropdown buttons for piracy launchers */
+label.piracy {
+  background-color: color-mix(in oklab, #8b5e34 30%, var(--btn-bg, transparent));
+}
+
+/* small brown swatch used in the "brown = piracy" legend note */
+.piracy-swatch {
+  background-color: color-mix(in oklab, #8b5e34 45%, var(--color-base-100));
+}
+
+/* Whole-page brown background for a piracy launcher's detail page */
+html.piracy-page,
+html.piracy-page body {
+  background-color: color-mix(in oklab, #8b5e34 24%, var(--color-base-100));
+}
+
 .wip {
   background: repeating-linear-gradient(-45deg, var(--color-warning) 0, var(--color-warning) 10px,
           var(--color-base-100) 10px, var(--color-base-100) 20px);
