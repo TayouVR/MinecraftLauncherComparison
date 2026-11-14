@@ -1,0 +1,87 @@
+{
+  "identifier": "md.thomas.shard",
+  "name": "Shard Launcher",
+  "icon": "/assets/launchers/shard.png",
+  "downloadLink": "https://shard.thomas.md",
+  "sourceRepo": "https://github.com/Th0rgal/shard",
+  "homepage": "https://shard.thomas.md/",
+  "configuration": {
+    "license": {
+      "name": "MIT",
+      "url": "https://github.com/Th0rgal/shard/blob/master/LICENSE",
+      "foss": true,
+      "extraInfo": ""
+    },
+    "serverInstances": false,
+    "lookAndFeel": "Custom"
+  },
+  "features": {
+    "modpacks": [
+      // Modrinth .mrpack import is currently CLI-only; not wired into the GUI.
+      { "name": "Modrinth", "method": "Import", "updating": false }
+    ],
+    "modloaders": ["forge", "neoforge", "fabric", "quilt"],
+    "minecraftResources": {
+      "mods": {
+        "downloading": true,
+        "updating": true,
+        "providers": ["Modrinth", "CurseForge"]
+      },
+      "resourcepacks": {
+        "downloading": true,
+        "updating": true,
+        "providers": ["Modrinth", "CurseForge"]
+      },
+      "shaderpacks": {
+        "downloading": true,
+        "updating": true,
+        "providers": ["Modrinth", "CurseForge"]
+      },
+      "worlds": {
+        "downloading": false,
+        "updating": false,
+        "providers": []
+      },
+      "datapacks": {
+        "downloading": false,
+        "updating": false,
+        "providers": []
+      },
+      "plugins": {
+        "downloading": false,
+        "updating": false,
+        "providers": []
+      }
+    },
+    "import": [], // .mrpack import is CLI-only for now, not exposed in the GUI
+    "export": [],
+    "java": {
+      // Shard auto-downloads Temurin JDKs from Adoptium into a managed runtimes dir.
+      "download": true,
+      "versionManagement": true,
+      "usingSystemInstall": true
+    },
+    "sandboxing": { "status": "No" },
+    "overlay": { "status": "No" },
+    "advertisements": { "status": "No", "note": "No ads and no telemetry" }
+  },
+  "properties": {
+    "platforms": {
+      "linux": ["x86_64"],
+      "windows": ["x86_64"],
+      "macos": ["x86_64", "arm64"]
+    },
+    "technology": {
+      "languages": ["TypeScript", "Rust"],
+      "frameworks": ["Tauri", "React"]
+    }
+  },
+  "specialFeatures": {
+    "CurseForgeBlockedDownloads": {
+      "supported": true,
+      "method": "Yes, by embedding the private CurseForge App API key",
+      "note": "Release builds embed a CurseForge API key extracted from Overwolf's official CurseForge app; likely a CurseForge ToS violation that may be revoked at any time. Self-builds without a key are Modrinth-only. Honors the blocked-downloads flag (it does not bypass it).",
+      "legallyGray": true
+    }
+  }
+}
