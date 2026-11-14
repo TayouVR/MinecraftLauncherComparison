@@ -1,6 +1,7 @@
 ﻿{
   "identifier": "org.atlauncher.atlauncher",
   "name": "ATLauncher",
+  "shownByDefault": true,
   "icon": "/assets/launchers/at-launcher.svg",
   "downloadLink": "https://atlauncher.com/downloads",
   "sourceRepo": "https://github.com/ATLauncher/ATLauncher",

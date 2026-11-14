@@ -67,6 +67,7 @@ const themes = [ 'tayou', 'tayou-light',
                                         name="launcher-filter"
                                         aria-label={launcher.name}
                                         value={launcher.identifier}
+                                        checked={(launcher.shownByDefault ?? false) && !launcher.features.offlinePlayWithoutLicense}
                                         onchange="updateFilters(this)"
                                     />
                                     { launcher.icon ? (
@@ -178,6 +179,7 @@ const themes = [ 'tayou', 'tayou-light',
                                                 name="launcher-filter"
                                                 aria-label={launcher.name}
                                                 value={launcher.identifier}
+                                                checked={(launcher.shownByDefault ?? false) && !launcher.features.offlinePlayWithoutLicense}
                                                 onchange="updateFilters(this)"
                                         />
                                         { launcher.icon ? (
@@ -233,7 +235,7 @@ const themes = [ 'tayou', 'tayou-light',
     </div>
 </div>
 
-<clientData id="clientData" value={JSON.stringify(launchers.reduce((acc, l) => ({...acc, [l.identifier]: {enabled: true}}), {}))}></clientData>
+<clientData id="clientData" value={JSON.stringify(launchers.reduce((acc, l) => ({...acc, [l.identifier]: {enabled: true, shownByDefault: (l.shownByDefault ?? false) && !l.features.offlinePlayWithoutLicense}}), {}))}></clientData>
 
 <script is:inline>
 	function updateFilters(source) {

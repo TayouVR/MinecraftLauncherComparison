@@ -56,6 +56,11 @@ function launcherProperties<TLauncher extends Record<string, any>>(
  // Convert the grouped entries back into an array
 	return Object.values(grouped);
 }
+
+// Launchers hidden by default (via the Filter Launchers dropdown) unless they
+// explicitly opt in. Piracy-facilitating launchers are never shown by default.
+const isShownByDefault = (l: LauncherDetails) =>
+	(l.shownByDefault ?? false) && !l.features.offlinePlayWithoutLicense;
 ---
 
 <Layout>

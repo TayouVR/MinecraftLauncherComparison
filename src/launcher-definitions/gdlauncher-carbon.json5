@@ -1,6 +1,7 @@
 ﻿{
   "identifier": "com.gdevs.gdlauncher-carbon",
   "name": "GDLauncher Carbon",
+  "shownByDefault": true,
   "icon": "https://gdlauncher.com/_astro/logo.7ZVlJ_ii_1kHq2S.svg",
   "downloadLink": "https://gdlauncher.com/en/download/",
   "sourceRepo": "https://github.com/gorilla-devs/GDLauncher-Carbon",

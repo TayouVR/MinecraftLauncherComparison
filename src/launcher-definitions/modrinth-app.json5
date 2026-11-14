@@ -1,6 +1,7 @@
 ﻿{
   "identifier": "org.Modrinth.theseus",
   "name": "Modrinth App",
+  "shownByDefault": true,
   "icon": "/assets/modplatforms/modrinth.svg",
   "downloadLink": "https://modrinth.com/app",
   "sourceRepo": "https://github.com/modrinth/theseus",

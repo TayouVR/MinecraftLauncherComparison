@@ -1,6 +1,7 @@
 ﻿{
   "identifier": "org.prismlauncher.prismlauncher",
   "name": "Prism Launcher",
+  "shownByDefault": true,
   "icon": "/assets/launchers/prismlauncher.svg",
   "downloadLink": "https://prismlauncher.org/download/",
   "sourceRepo": "https://github.com/PrismLauncher/PrismLauncher",

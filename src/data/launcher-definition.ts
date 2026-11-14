@@ -46,6 +46,13 @@ interface Overlay {
     status: string;
 }
 
+interface BundledMod {
+    /** One-line explanation of the bundled client mod (shown in the table). */
+    short: string;
+    /** Longer description shown on the launcher's detail page. */
+    long?: string;
+}
+
 interface Advertisement {
     status: string;
     note: string;
@@ -61,6 +68,10 @@ interface Features {
     sandboxing: Sandboxing;
     overlay: Overlay;
     advertisements: Advertisement;
+    /** cracked, no Microsoft account required */
+    offlinePlayWithoutLicense?: boolean;
+    /** A client mod bundled into the launcher (e.g. an in-game "client"). */
+    bundledMod?: BundledMod;
 }
 
 enum OS {
@@ -94,7 +105,15 @@ interface Properties {
 
 interface SpecialFeature {
     supported: boolean;
+    /** Short description shown as the badge; a longer note can go in `note`. */
     method: string;
+    /** Optional caveat shown as a tooltip. */
+    note?: string;
+    /**
+     * Marks the method as legally/ToS questionable. The badge is rendered in a
+     * warning (orange) tone instead of the positive (green) one.
+     */
+    legallyGray?: boolean;
 }
 
 interface SpecialFeatures {
@@ -118,4 +137,12 @@ interface LauncherDetails {
     features: Features;
     properties: Properties;
     specialFeatures: SpecialFeatures;
+    /**
+     * Whether the launcher's column is visible by default. Launchers without
+     * this (or set to false) start hidden and can be enabled via the
+     * "Filter Launchers" dropdown. Piracy-facilitating launchers
+     * (`features.offlinePlayWithoutLicense`) are always hidden by default
+     * regardless of this value.
+     */
+    shownByDefault?: boolean;
 }
