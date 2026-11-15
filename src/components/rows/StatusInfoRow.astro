@@ -24,6 +24,6 @@ function toneFor(field: StatusInfo | undefined): string {
 	{ launchers.map(launcher => {
 		const field = values.find(v => v.identifier === launcher.identifier)?.value;
 		const text = field == null ? "Unknown" : field.badgeText;
-		return <StatusCell launcher={launcher} text={text} tone={toneFor(field)} note={field?.note} />;
+		return <StatusCell launcher={launcher} text={text} tone={toneFor(field)} note={field?.tooltip} />;
 	})}
 </tr>

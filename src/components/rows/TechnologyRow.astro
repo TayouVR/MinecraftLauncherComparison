@@ -14,7 +14,7 @@ const valueFor = (l: LauncherDetails) => values.find(v => v.identifier === l.ide
 	<td>Languages</td>
 	{ launchers.map(launcher => (
 		<td class:list={columnClass(launcher)}>
-			{valueFor(launcher).languages.join(', ')}
+			{valueFor(launcher)?.languages.join(', ')}
 		</td>
 	))}
 </tr>
@@ -22,7 +22,7 @@ const valueFor = (l: LauncherDetails) => values.find(v => v.identifier === l.ide
 	<td>Core Toolkits and Libraries</td>
 	{ launchers.map(launcher => (
 		<td class:list={columnClass(launcher)}>
-			{valueFor(launcher).frameworks.join(', ')}
+			{valueFor(launcher)?.frameworks.join(', ')}
 		</td>
 	))}
 </tr>
