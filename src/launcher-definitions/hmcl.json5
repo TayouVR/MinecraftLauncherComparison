@@ -1,0 +1,153 @@
+{
+  "identifier": "org.glavo.hmcl",
+  "name": "HMCL",
+  "shownByDefault": false,
+  "icon": "/assets/launchers/hmcl.png",
+  "downloadLink": "https://hmcl.huangyuhui.net/download/",
+  "sourceRepo": "https://github.com/HMCL-dev/HMCL",
+  "homepage": "https://hmcl.huangyuhui.net/",
+  "configuration": {
+    "license": {
+      "name": "GPL-3.0-or-later",
+      "url": "https://github.com/HMCL-dev/HMCL/blob/javafx/LICENSE",
+      "foss": true,
+      "extraInfo": "with AdditionRef-HMCL additional-permission reference"
+    },
+    "serverInstances": true,
+    "lookAndFeel": "Custom"
+  },
+  "features": {
+    "offlinePlayWithoutLicense": true,
+    "bundledMod": {
+      "short": "Terracotta: optional LAN / multiplayer component (downloaded at runtime)",
+      "long": "HMCL can download 'Terracotta', an optional Easytier-based LAN/multiplayer overlay component, at runtime with user consent. It is a separate downloaded bundle rather than a silently injected Minecraft mod."
+    },
+    "modpacks": [
+      {
+        "name": "CurseForge",
+        "method": "Download",
+        "updating": true
+      },
+      {
+        "name": "Modrinth",
+        "method": "Download",
+        "updating": true
+      }
+    ],
+    "modloaders": [
+      "forge",
+      "neoforge",
+      "fabric",
+      "quilt",
+      "liteloader",
+      "legacy-fabric"
+    ],
+    "minecraftResources": {
+      "mods": {
+        "downloading": true,
+        "updating": true,
+        "providers": [
+          "Modrinth",
+          "CurseForge"
+        ]
+      },
+      "resourcepacks": {
+        "downloading": true,
+        "updating": true,
+        "providers": [
+          "Modrinth",
+          "CurseForge"
+        ]
+      },
+      "shaderpacks": {
+        "downloading": true,
+        "updating": false,
+        "providers": [
+          "Modrinth",
+          "CurseForge"
+        ]
+      },
+      "worlds": {
+        "downloading": true,
+        "updating": false,
+        "providers": [
+          "Modrinth",
+          "CurseForge"
+        ]
+      },
+      "datapacks": {
+        "downloading": true,
+        "updating": false,
+        "providers": [
+          "Modrinth",
+          "CurseForge"
+        ]
+      },
+      "plugins": {
+        "downloading": false,
+        "updating": false,
+        "providers": []
+      }
+    },
+    "import": [
+      "OneSix"
+    ],
+    "export": [
+      "CurseForge",
+      "Modrinth",
+      "MCBBS",
+      "HMCL Server"
+    ],
+    "java": {
+      "download": true,
+      "versionManagement": true,
+      "usingSystemInstall": true
+    },
+    "sandboxing": {
+      "status": "No"
+    },
+    "overlay": {
+      "status": "No"
+    },
+    "advertisements": {
+      "status": "No",
+      "note": "No ads or telemetry in the launcher itself (the website shows Google AdSense, but the app does not)."
+    },
+    "telemetry": {
+      "status": "No",
+      "note": "No ads or telemetry in the launcher itself (the website shows Google AdSense, but the app does not)."
+    }
+  },
+  "properties": {
+    "platforms": {
+      "linux": [
+        "x86_64",
+        "arm64"
+      ],
+      "windows": [
+        "x86_64",
+        "arm64"
+      ],
+      "macos": [
+        "x86_64",
+        "arm64"
+      ]
+    },
+    "packages": "hmcl",
+    "technology": {
+      "languages": [
+        "Java"
+      ],
+      "frameworks": [
+        "JavaFX"
+      ]
+    }
+  },
+  "specialFeatures": {
+    "CurseForgeBlockedDownloads": {
+      "supported": true,
+      "method": "Yes, via its own CurseForge API key",
+      "note": "Uses its own CurseForge API key (CI-injected), the standard approach. Files are fetched via edge.forgecdn.net."
+    }
+  }
+}
