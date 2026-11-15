@@ -2,6 +2,7 @@
 import Layout from '../layouts/Layout.astro';
 
 import ListComponent from "../components/ListComponent.astro";
+import StatusCell from "../components/StatusCell.astro";
 import { columnClass, getLaunchers } from "../data/utils.ts";
 
 const launchers = getLaunchers();
@@ -103,11 +104,7 @@ const piracyCount = launchers.filter(l => l.features.offlinePlayWithoutLicense).
 			<tr>
 				<td>License</td>
 				{ launchers.map(launcher => (
-					<td class:list={columnClass(launcher)}>
-						<div class:list={[launcher.identifier, launcher.configuration.license.foss ? "yes" : "no", "badge"]}>
-							{launcher.configuration.license.name}
-						</div>
-					</td>
+					<StatusCell launcher={launcher} text={launcher.configuration.license.name} tone={launcher.configuration.license.foss ? "yes" : "no"} />
 				))}
 			</tr>
 			<tr>
@@ -131,17 +128,9 @@ const piracyCount = launchers.filter(l => l.features.offlinePlayWithoutLicense).
                 <td>Allows Piracy</td>
                 { launchers.map(launcher => {
 					const flag = launcher.features.offlinePlayWithoutLicense;
-					return (
-					<td class:list={columnClass(launcher)}>
-						{flag === true ? (
-							<div class="badge h-fit no">Yes</div>
-						) : flag === false ? (
-							<div class="badge h-fit yes">No</div>
-						) : (
-							<div class="badge h-fit bg-accent-content/10"></div>
-						)}
-					</td>
-					);
+					const text = flag === true ? "Yes" : flag === false ? "No" : null;
+					const tone = flag === true ? "no" : flag === false ? "yes" : undefined;
+					return <StatusCell launcher={launcher} text={text} tone={tone} />;
                 })}
             </tr>
             <tr>
@@ -149,14 +138,8 @@ const piracyCount = launchers.filter(l => l.features.offlinePlayWithoutLicense).
                 { launchers.map(launcher => {
 					const cf = launcher.specialFeatures.CurseForgeBlockedDownloads;
 					const tone = cf.supported ? (cf.legallyGray ? "shady" : "yes") : "no";
-					return (
-					<td class:list={columnClass(launcher)}>
-						<div class:list={["badge h-fit bg-accent-content/10", tone, cf.legallyGray && "tooltip tooltip-bottom"]} data-tip={cf.note}>
-							{cf.method != "" ? cf.method : "No"}
-							{cf.legallyGray && <span class="ml-1" title={cf.note}>⚠️</span>}
-						</div>
-					</td>
-					);
+					const text = cf.method != "" ? cf.method : "No";
+					return <StatusCell launcher={launcher} text={text} tone={tone} note={cf.note} warn={cf.legallyGray} />;
                 })}
             </tr>
             {hasBundledMod && (

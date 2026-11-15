@@ -1,0 +1,46 @@
+---
+import { columnClass } from "../data/utils.ts";
+
+/**
+ * A single comparison-table cell holding a colored status badge.
+ *
+ * - `launcher`   the launcher this cell belongs to (drives identifier/piracy/column classes)
+ * - `text`       badge label; when null/undefined an empty neutral badge is rendered
+ * - `tone`       badge color class. If omitted it is derived from `text`:
+ *                Yes/Optional → green, No → red, WIP → warning, "" → none, else → unknown.
+ *                Pass e.g. "piracy" (brown) or "shady" (orange) to override.
+ * - `note`       optional tooltip text
+ * - `warn`       append a ⚠️ marker (used for legally-gray entries)
+ */
+interface Props {
+	launcher: LauncherDetails;
+	text?: string | null;
+	tone?: string;
+	note?: string;
+	warn?: boolean;
+}
+
+const { launcher, text, tone, note, warn = false } = Astro.props;
+
+function defaultTone(t: string): string {
+	if (t.includes("Yes") || t.includes("Optional")) return "yes";
+	if (t.includes("No")) return "no";
+	if (t.includes("WIP")) return "wip";
+	if (t === "") return "";
+	return "unknown";
+}
+
+const badgeTone = tone ?? (text != null ? defaultTone(text) : "bg-accent-content/10");
+const hasTooltip = !!note;
+---
+
+<td class:list={columnClass(launcher)}>
+	{text == null ? (
+		<div class:list={["badge h-fit", launcher.identifier, "bg-accent-content/10"]}></div>
+	) : (
+		<div class:list={["badge h-fit", launcher.identifier, badgeTone, hasTooltip && "tooltip tooltip-bottom"]} data-tip={note}>
+			{text}
+			{warn && <span class="ml-1" title={note}>⚠️</span>}
+		</div>
+	)}
+</td>

@@ -4,6 +4,7 @@ import ModloadersComponent from "./ModloadersComponent.astro";
 import MinecraftResources from "./MinecraftResources.astro";
 import JavaComponent from "./JavaComponent.astro";
 import ModpacksComponent from "./ModpacksComponent.astro";
+import StatusCell from "./StatusCell.astro";
 import { columnClass } from "../data/utils.ts";
 
 
@@ -108,18 +109,9 @@ if(![
         <td class="capitalize">{propertyName}</td>
         { launchers.map(launcher => {
             const field = valueFromLauncher(launcher);
-            const note = field?.note;
-            return (
-            <td class:list={cellClass(launcher)}>
-                {field == null ? (
-                    <div class:list={["badge", "h-fit", launcher.identifier, "unknown"]}>Unknown</div>
-                ) : (
-                    <div class:list={["badge", "h-fit", launcher.identifier, statusClass(launcher), note && "tooltip tooltip-bottom"]} data-tip={note}>
-                        {field.status}
-                    </div>
-                )}
-            </td>
-            );
+            const text = field == null ? "Unknown" : field.status;
+            const tone = field == null ? "unknown" : statusClass(launcher);
+            return <StatusCell launcher={launcher} text={text} tone={tone} note={field?.note} />;
         })}
     </tr>
 )}
