@@ -30,6 +30,15 @@ function statusClass(launcher: LauncherDetails) {
 
 const cellClass = columnClass;
 
+// Fallback renderer for feature/property values without a dedicated row.
+// Converts the raw value to display text; plain if/else instead of nested ternaries.
+function fallbackText(value: unknown): string {
+    if (typeof value === "string") return value.toUpperCase();
+    if (typeof value === "number") return value.toFixed(2);
+    if (Array.isArray(value)) return value.join(', ');
+    return "Unsupported Type";
+}
+
 const values = launchers.map(launcher => {
     return {
         identifier: launcher.identifier,
@@ -153,15 +162,7 @@ if(![
         <td class="capitalize">{propertyName}</td>
         { launchers.map(launcher => (
             <td class:list={cellClass(launcher)}>
-                {(typeof valueFromLauncher(launcher) === "string") ? (
-                    valueFromLauncher(launcher).toUpperCase()
-                ) : (typeof valueFromLauncher(launcher) === "number") ? (
-                    valueFromLauncher(launcher).toFixed(2)
-                ) : (Array.isArray(valueFromLauncher(launcher))) ? (
-                    valueFromLauncher(launcher).join(', ')
-                ) : (
-                    "Unsupported Type"
-                )}
+                {fallbackText(valueFromLauncher(launcher))}
             </td>
         ))}
     </tr>
