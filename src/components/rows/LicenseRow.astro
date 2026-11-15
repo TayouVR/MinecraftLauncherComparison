@@ -1,0 +1,11 @@
+---
+import StatusCell from "../StatusCell.astro";
+
+const { launchers } = Astro.props as { launchers: LauncherDetails[] };
+---
+<tr>
+	<td>License</td>
+	{ launchers.map(launcher => (
+		<StatusCell launcher={launcher} text={launcher.configuration.license.name} tone={launcher.configuration.license.foss ? "yes" : "no"} />
+	))}
+</tr>

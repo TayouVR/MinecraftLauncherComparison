@@ -1,0 +1,16 @@
+---
+import StatusCell from "../StatusCell.astro";
+import { piracy, piracyInfo } from "../../data/utils.ts";
+
+const { launchers } = Astro.props as { launchers: LauncherDetails[] };
+---
+<tr>
+	<td>Allows Piracy</td>
+	{ launchers.map(launcher => {
+		const info = piracyInfo(launcher);
+		const isPiracy = piracy(launcher);
+		const text = info?.badgeText ?? null;
+		const tone = isPiracy ? "no" : info != null && info.badgeText === "No" ? "yes" : undefined;
+		return <StatusCell launcher={launcher} text={text} tone={tone} tooltip={info?.tooltip} />;
+	})}
+</tr>

@@ -1,0 +1,18 @@
+---
+import { columnClass } from "../../data/utils.ts";
+
+const { launchers } = Astro.props as { launchers: LauncherDetails[] };
+---
+<tr class="header-row">
+	<th class="bg-base-100">Feature</th>
+	{ launchers.map(launcher => (
+		<th class:list={columnClass(launcher, "bg-base-100")}>
+			<a href={`/launcher/${launcher.identifier}`} class="flex flex-col items-center gap-2 hover:bg-base-200 p-2 rounded-lg transition-colors h-full w-full justify-center">
+				{ launcher.icon ? (
+					<img class="launcher-icon w-16 h-16 object-contain" src={launcher.icon}  alt=`${launcher.name} Icon` />
+				) : <div class="w-16 h-16 flex items-center justify-center font-bold">?</div>}
+				<span class="text-center">{launcher.name}</span>
+			</a>
+		</th>
+	))}
+</tr>

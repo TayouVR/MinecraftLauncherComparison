@@ -1,0 +1,15 @@
+---
+import StatusCell from "../StatusCell.astro";
+
+const { launchers } = Astro.props as { launchers: LauncherDetails[] };
+---
+<tr>
+	<td>Bundled Client Mod</td>
+	{ launchers.map(launcher => (
+		launcher.features.bundledMod ? (
+			<StatusCell launcher={launcher} text={launcher.features.bundledMod.badgeText} tone="bundled-mod-badge" tooltip={launcher.features.bundledMod.tooltip ?? launcher.features.bundledMod.longDescription} />
+		) : (
+			<StatusCell launcher={launcher} text="No" tone="no" />
+		)
+	))}
+</tr>

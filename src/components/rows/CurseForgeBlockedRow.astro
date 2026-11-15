@@ -1,0 +1,15 @@
+---
+import StatusCell from "../StatusCell.astro";
+
+// CurseForge's opt-out-of-3rd-party-downloads flag. legallyGray → orange + ⚠️.
+const { launchers } = Astro.props as { launchers: LauncherDetails[] };
+---
+<tr>
+	<td>CurseForge Blocked Mods handling</td>
+	{ launchers.map(launcher => {
+		const cf = launcher.specialFeatures.CurseForgeBlockedDownloads;
+		const tone = cf.supported ? (cf.legallyGray ? "shady" : "yes") : "no";
+		const text = cf.method != "" ? cf.method : "No";
+		return <StatusCell launcher={launcher} text={text} tone={tone} tooltip={cf.note} warn={cf.legallyGray} />;
+	})}
+</tr>

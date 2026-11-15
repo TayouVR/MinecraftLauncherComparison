@@ -1,0 +1,11 @@
+---
+import { columnClass } from "../../data/utils.ts";
+
+const { launchers } = Astro.props as { launchers: LauncherDetails[] };
+---
+<tr>
+	<td>Look & Feel</td>
+	{ launchers.map(launcher => (
+		<td class:list={columnClass(launcher)}>{launcher.configuration.lookAndFeel}</td>
+	))}
+</tr>

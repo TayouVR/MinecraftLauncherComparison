@@ -2,8 +2,13 @@
 import Layout from '../layouts/Layout.astro';
 
 import ListComponent from "../components/ListComponent.astro";
-import StatusCell from "../components/StatusCell.astro";
-import { columnClass, getLaunchers, piracy, piracyInfo } from "../data/utils.ts";
+import HeaderRow from "../components/rows/HeaderRow.astro";
+import LicenseRow from "../components/rows/LicenseRow.astro";
+import LookAndFeelRow from "../components/rows/LookAndFeelRow.astro";
+import AllowsPiracyRow from "../components/rows/AllowsPiracyRow.astro";
+import CurseForgeBlockedRow from "../components/rows/CurseForgeBlockedRow.astro";
+import BundledModRow from "../components/rows/BundledModRow.astro";
+import { getLaunchers, piracy } from "../data/utils.ts";
 
 const launchers = getLaunchers();
 
@@ -86,33 +91,11 @@ const piracyCount = launchers.filter(l => piracy(l)).length;
 	<div class="sticky top-0 table-container w-screen overflow-y-visible">
 	<table class="sticky top-0 table table-zebra table-hover table-bordered w-full border-separate border-spacing-0 comparison">
 		<thead class="sticky top-16 z-10 bg-base-100 shadow-sm">
-			<tr class="header-row">
-				<th class="bg-base-100">Feature</th>
-				{ launchers.map(launcher => (
-					<th class:list={columnClass(launcher, "bg-base-100")}>
-						<a href={`/launcher/${launcher.identifier}`} class="flex flex-col items-center gap-2 hover:bg-base-200 p-2 rounded-lg transition-colors h-full w-full justify-center">
-							{ launcher.icon ? (
-								<img class="launcher-icon w-16 h-16 object-contain" src={launcher.icon}  alt=`${launcher.name} Icon` />
-							) : <div class="w-16 h-16 flex items-center justify-center font-bold">?</div>}
-							<span class="text-center">{launcher.name}</span>
-						</a>
-					</th>
-				))}
-			</tr>
+			<HeaderRow launchers={launchers} />
 		</thead>
 		<tbody>
-			<tr>
-				<td>License</td>
-				{ launchers.map(launcher => (
-					<StatusCell launcher={launcher} text={launcher.configuration.license.name} tone={launcher.configuration.license.foss ? "yes" : "no"} />
-				))}
-			</tr>
-			<tr>
-				<td>Look & Feel</td>
-				{ launchers.map(launcher => (
-					<td class:list={columnClass(launcher)}>{launcher.configuration.lookAndFeel}</td>
-				))}
-			</tr>
+			<LicenseRow launchers={launchers} />
+			<LookAndFeelRow launchers={launchers} />
 			{ launcherProperties(launchers, ["properties"])
 				.filter((prop) => prop.name != "packages")
 				.map((property) => (
@@ -124,36 +107,10 @@ const piracyCount = launchers.filter(l => piracy(l)).length;
 				.map((property) => (
 				<ListComponent propertyName={property.name} launchers={launchers} propCategory="features" />
 			))}
-            <tr>
-                <td>Allows Piracy</td>
-                { launchers.map(launcher => {
-					const info = piracyInfo(launcher);
-					const isPiracy = piracy(launcher);
-					const text = info?.badgeText ?? null;
-					const tone = isPiracy ? "no" : info != null && info.badgeText === "No" ? "yes" : undefined;
-					return <StatusCell launcher={launcher} text={text} tone={tone} note={info?.tooltip} />;
-                })}
-            </tr>
-            <tr>
-                <td>CurseForge Blocked Mods handling</td>
-                { launchers.map(launcher => {
-					const cf = launcher.specialFeatures.CurseForgeBlockedDownloads;
-					const tone = cf.supported ? (cf.legallyGray ? "shady" : "yes") : "no";
-					const text = cf.method != "" ? cf.method : "No";
-					return <StatusCell launcher={launcher} text={text} tone={tone} note={cf.note} warn={cf.legallyGray} />;
-                })}
-            </tr>
+            <AllowsPiracyRow launchers={launchers} />
+            <CurseForgeBlockedRow launchers={launchers} />
             {hasBundledMod && (
-            <tr>
-                <td>Bundled Client Mod</td>
-                { launchers.map(launcher => (
-					launcher.features.bundledMod ? (
-						<StatusCell launcher={launcher} text={launcher.features.bundledMod.badgeText} tone="bundled-mod-badge" note={launcher.features.bundledMod.longDescription ?? launcher.features.bundledMod.tooltip} />
-					) : (
-						<StatusCell launcher={launcher} text="No" tone="no" />
-					)
-                ))}
-            </tr>
+            <BundledModRow launchers={launchers} />
             )}
 		</tbody>
 	</table>
