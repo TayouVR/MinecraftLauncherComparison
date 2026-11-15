@@ -1,0 +1,160 @@
+{
+  "identifier": "app.xmcl.voxelum",
+  "name": "XMCL",
+  "shownByDefault": false,
+  "icon": "/assets/launchers/xmcl.png",
+  "downloadLink": "https://xmcl.app/en/#download",
+  "sourceRepo": "https://github.com/Voxelum/x-minecraft-launcher",
+  "homepage": "https://xmcl.app/en/",
+  "configuration": {
+    "license": {
+      "name": "MIT",
+      "url": "https://github.com/Voxelum/x-minecraft-launcher/blob/master/LICENSE",
+      "foss": true,
+      "extraInfo": ""
+    },
+    "serverInstances": true,
+    "lookAndFeel": "Custom"
+  },
+  "features": {
+    "offlinePlayWithoutLicense": true,
+    "modpacks": [
+      {
+        "name": "CurseForge",
+        "method": "Download",
+        "updating": true
+      },
+      {
+        "name": "Modrinth",
+        "method": "Download",
+        "updating": true
+      },
+      {
+        "name": "ftb",
+        "method": "Download",
+        "updating": true
+      },
+      {
+        "name": "technic",
+        "method": "Download",
+        "updating": false
+      }
+    ],
+    "modloaders": [
+      "forge",
+      "neoforge",
+      "fabric",
+      "quilt"
+    ],
+    "minecraftResources": {
+      "mods": {
+        "downloading": true,
+        "updating": true,
+        "providers": [
+          "Modrinth",
+          "CurseForge"
+        ]
+      },
+      "resourcepacks": {
+        "downloading": true,
+        "updating": true,
+        "providers": [
+          "Modrinth",
+          "CurseForge"
+        ]
+      },
+      "shaderpacks": {
+        "downloading": true,
+        "updating": true,
+        "providers": [
+          "Modrinth",
+          "CurseForge"
+        ]
+      },
+      "worlds": {
+        "downloading": true,
+        "updating": false,
+        "providers": [
+          "Modrinth",
+          "CurseForge"
+        ]
+      },
+      "datapacks": {
+        "downloading": false,
+        "updating": false,
+        "providers": []
+      },
+      "plugins": {
+        "downloading": false,
+        "updating": false,
+        "providers": []
+      }
+    },
+    "import": [
+      "Vanilla Launcher",
+      "OneSix",
+      "Modrinth",
+      "CurseForge"
+    ],
+    "export": [
+      "CurseForge",
+      "Modrinth",
+      "packwiz",
+      "Server (SSH)"
+    ],
+    "java": {
+      "download": true,
+      "versionManagement": true,
+      "usingSystemInstall": true
+    },
+    "sandboxing": {
+      "status": "No"
+    },
+    "overlay": {
+      "status": "No"
+    },
+    "advertisements": {
+      "status": "No",
+      "note": "No ads, but Azure AppInsights telemetry is ON by default (opt-out in Settings). Optional paid multiplayer-relay subscription."
+    },
+    "telemetry": {
+      "status": "Opt-out",
+      "note": "Azure AppInsights telemetry is ON by default; can be disabled in Settings. Optional paid multiplayer-relay."
+    }
+  },
+  "properties": {
+    "platforms": {
+      "linux": [
+        "x86_64",
+        "arm64"
+      ],
+      "windows": [
+        "x86_64",
+        "x86"
+      ],
+      "macos": [
+        "x86_64",
+        "arm64"
+      ]
+    },
+    "packages": "xmcl",
+    "technology": {
+      "languages": [
+        "TypeScript"
+      ],
+      "frameworks": [
+        "Electron",
+        "Vue 3",
+        "Vuetify"
+      ]
+    }
+  },
+  "specialFeatures": {
+    "CurseForgeBlockedDownloads": {
+      "supported": true,
+      "method": "Yes, via its own API key + forgecdn URL fallback",
+      "note": "Uses its own compiled-in CurseForge API key (standard), but additionally guesses forgecdn.net URLs for distribution-blocked files, bypassing the block. Likely a CurseForge ToS violation.",
+      "legallyGray": true
+    }
+  }
+}
