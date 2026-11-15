@@ -63,7 +63,8 @@
     },
     "sandboxing": { "status": "No" },
     "overlay": { "status": "Optional (via Overwolf app)" },
-    "advertisements": { "status": "Yes" }
+    "advertisements": { "status": "Yes" },
+    "telemetry": { "status": "Yes", "note": "Overwolf/Electron app: ads + analytics (assumed; closed-source, not code-audited)." },
   },
   "properties": {
     "platforms": {

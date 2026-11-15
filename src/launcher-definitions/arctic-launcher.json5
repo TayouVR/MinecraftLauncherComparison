@@ -59,10 +59,9 @@
       "usingSystemInstall": true
     },
     "sandboxing": { "status": "" },
-    // Overlay provided by the bundled Arctic Client mod (HUD), not the launcher itself.
     "overlay": { "status": "" },
-    // No ad networks/analytics, but has a dismissible first-party sponsor card (Flash Hosting).
-    "advertisements": { "status": "No", "note": "No ads/analytics; has a dismissible first-party sponsor card (Flash Hosting)" }
+    "advertisements": { "status": "No", "note": "No ads; has a dismissible first-party sponsor card (Flash Hosting)" },
+    "telemetry": { "status": "No", "note": "No analytics or telemetry. Has a dismissible first-party sponsor card (Flash Hosting). User-initiated crash reports only." },
   },
   "properties": {
     "platforms": {

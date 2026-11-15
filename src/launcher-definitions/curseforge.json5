@@ -62,7 +62,8 @@
     },
     "sandboxing": { "status": "No" },
     "overlay": { "status": "Optional (via Overwolf app)" },
-    "advertisements": { "status": "Yes" }
+    "advertisements": { "status": "Yes" },
+    "telemetry": { "status": "Yes", "note": "Overwolf ad platform: serves ads and collects app usage patterns (assumed; closed-source, not code-audited)." },
   },
   "properties": {
     "platforms": {

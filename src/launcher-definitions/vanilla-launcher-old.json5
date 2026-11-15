@@ -58,7 +58,8 @@
     },
     "sandboxing": { "status": "No" },
     "overlay": { "status": "No" },
-    "advertisements": { "status": "No" }
+    "advertisements": { "status": "No" },
+    "telemetry": { "status": "Unknown", "note": "Unknown — old Java launcher jar not inspected." }
   },
   "properties": {
     "platforms": {

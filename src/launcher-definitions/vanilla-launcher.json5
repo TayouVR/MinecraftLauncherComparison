@@ -58,7 +58,8 @@
     },
     "sandboxing": { "status": "No" },
     "overlay": { "status": "No" },
-    "advertisements": { "status": "No" }
+    "advertisements": { "status": "No" },
+    "telemetry": { "status": "Yes", "note": "Mojang/Microsoft collects game stats, system properties and usage/diagnostic data per its privacy policy (assumed; not code-audited here)." }
   },
   "properties": {
     "platforms": {

@@ -61,7 +61,8 @@
     },
     "sandboxing": { "status": "No" },
     "overlay": { "status": "No" },
-    "advertisements": { "status": "Yes" }
+    "advertisements": { "status": "Yes" },
+    "telemetry": { "status": "Yes", "note": "Google Analytics + self-hosted Plausible: page/route views, instance launches, ad views — always-on in production, no in-app opt-out. Source-audited." },
   },
   "properties": {
     "platforms": {

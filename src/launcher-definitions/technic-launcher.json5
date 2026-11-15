@@ -60,7 +60,8 @@
     },
     "sandboxing": { "status": "No" },
     "overlay": { "status": "No" },
-    "advertisements": { "status": "No" }
+    "advertisements": { "status": "No" },
+    "telemetry": { "status": "Yes", "note": "Sentry crash reporting (self-hosted sentry.technicpack.net: exceptions + OS/arch tags + client UUID, always-on) and per-pack run/install stat pings (api.technicpack.net, IP+pack+build). Google Analytics removed. Source-audited." }
   },
   "properties": {
     "platforms": {

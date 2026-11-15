@@ -1,6 +1,7 @@
 {
   "identifier": "md.thomas.shard",
   "name": "Shard Launcher",
+  "shownByDefault": false,
   "icon": "/assets/launchers/shard.png",
   "downloadLink": "https://shard.thomas.md",
   "sourceRepo": "https://github.com/Th0rgal/shard",
@@ -16,6 +17,9 @@
     "lookAndFeel": "Custom"
   },
   "features": {
+    // Offline launch exists only as a CLI dev-mode flag (--offline, for online-mode=false test
+    // servers); it is NOT a user-facing offline-account feature in the GUI, so no piracy flag.
+    "offlinePlayWithoutLicense": false,
     "modpacks": [
       // Modrinth .mrpack import is currently CLI-only; not wired into the GUI.
       { "name": "Modrinth", "method": "Import", "updating": false }
@@ -56,14 +60,14 @@
     "import": [], // .mrpack import is CLI-only for now, not exposed in the GUI
     "export": [],
     "java": {
-      // Shard auto-downloads Temurin JDKs from Adoptium into a managed runtimes dir.
       "download": true,
       "versionManagement": true,
       "usingSystemInstall": true
     },
     "sandboxing": { "status": "No" },
     "overlay": { "status": "No" },
-    "advertisements": { "status": "No", "note": "No ads and no telemetry" }
+    "advertisements": { "status": "No" },
+    "telemetry": { "status": "No" }
   },
   "properties": {
     "platforms": {

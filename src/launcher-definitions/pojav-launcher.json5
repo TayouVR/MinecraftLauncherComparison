@@ -61,7 +61,8 @@
     },
     "sandboxing": { "status": "No" },
     "overlay": { "status": "Yes, for controls → touch screen" },
-    "advertisements": { "status": "No" }
+    "advertisements": { "status": "No" },
+    "telemetry": { "status": "No" },
   },
   "properties": {
     "platforms": {

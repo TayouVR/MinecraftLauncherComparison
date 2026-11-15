@@ -64,7 +64,8 @@
     },
     "sandboxing": { "status": "No" },
     "overlay": { "status": "No" },
-    "advertisements": { "status": "No" }
+    "advertisements": { "status": "No" },
+    "telemetry": { "status": "No" },
   },
   "properties": {
     "platforms": {

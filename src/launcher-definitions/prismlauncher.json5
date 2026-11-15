@@ -133,10 +133,8 @@
     },
     "sandboxing": { "status": "WIP" },
     "overlay": { "status": "No" },
-    "advertisements": {
-      "status": "No",
-      "note": "Displaying optional ads for download providers via networks like Adrinth have been in consideration"
-    }
+    "advertisements": { "status": "No" },
+    "telemetry": { "status": "No" },
   },
   "properties": {
     "platforms": {

@@ -39,7 +39,7 @@ const values = launchers.map(launcher => {
 
 if(![
     "platforms", "technology", "modpacks", "modloaders", "minecraftResources",
-    "java", "sandboxing", "overlay", "advertisements", "import", "export"
+    "java", "sandboxing", "overlay", "advertisements", "telemetry", "import", "export"
 ].includes(propertyName)) {
     console.warn("property doesn't have dedicated row rendering", propertyName);
 }
@@ -94,16 +94,24 @@ if(![
     </tr>
 )}
 
-{(propertyName === "sandboxing" || propertyName === "overlay" || propertyName === "advertisements") && (
+{(propertyName === "sandboxing" || propertyName === "overlay" || propertyName === "advertisements" || propertyName === "telemetry") && (
     <tr>
         <td class="capitalize">{propertyName}</td>
-        { launchers.map(launcher => (
+        { launchers.map(launcher => {
+            const field = valueFromLauncher(launcher);
+            const note = field?.note;
+            return (
             <td class:list={cellClass(launcher)}>
-                <div class:list={["badge", "h-fit", launcher.identifier, statusClass(launcher)]}>
-                    {valueFromLauncher(launcher).status}
-                </div>
+                {field == null ? (
+                    <div class:list={["badge", "h-fit", launcher.identifier, "unknown"]}>Unknown</div>
+                ) : (
+                    <div class:list={["badge", "h-fit", launcher.identifier, statusClass(launcher), note && "tooltip tooltip-bottom"]} data-tip={note}>
+                        {field.status}
+                    </div>
+                )}
             </td>
-        ))}
+            );
+        })}
     </tr>
 )}
 
@@ -139,7 +147,7 @@ if(![
 
 {![
     "platforms", "technology", "modpacks", "modloaders", "minecraftResources",
-    "java", "sandboxing", "overlay", "advertisements", "import", "export"
+    "java", "sandboxing", "overlay", "advertisements", "telemetry", "import", "export"
 ].includes(propertyName) && (
     <tr>
         <td class="capitalize">{propertyName}</td>

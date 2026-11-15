@@ -65,7 +65,8 @@
     },
     "sandboxing": { "status": "No" },
     "overlay": { "status": "No" },
-    "advertisements": { "status": "No" }
+    "advertisements": { "status": "No" },
+    "telemetry": { "status": "Opt-out", "note": "Self-hosted analytics (analytics.atlauncher.com): session/system info, screen views, play duration, installs — on by default, opt-out in Settings. Plus Sentry crash reporting (exceptions + OS/Java tags). Source-audited." },
   },
   "properties": {
     "platforms": {

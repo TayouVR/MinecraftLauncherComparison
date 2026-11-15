@@ -63,7 +63,8 @@
     },
     "sandboxing": { "status": "No" },
     "overlay": { "status": "No" },
-    "advertisements": { "status": "Yes" }
+    "advertisements": { "status": "Yes" },
+    "telemetry": { "status": "Opt-in", "note": "First-party metrics (gdl.gg API): page views, instance install/launch stats, hardware/OS props — gated by terms/privacy acceptance (opt-in). Plus Sentry crash reporting (opt-out via flag). Source-audited." },
   },
   "properties": {
     "platforms": {

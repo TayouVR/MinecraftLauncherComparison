@@ -62,6 +62,7 @@
     "sandboxing": { "status": "No" },
     "overlay": { "status": "No" },
     "advertisements": { "status": "Yes" },
+    "telemetry": { "status": "Opt-out", "note": "Usage-analytics plumbing exists but is currently a no-op (sends nothing); a privacy toggle is present. Sentry crash reporting IS active in production builds. Source-audited." },
   },
   "properties": {
     "platforms": {

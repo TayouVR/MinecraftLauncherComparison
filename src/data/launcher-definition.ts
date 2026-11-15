@@ -58,6 +58,13 @@ interface Advertisement {
     note: string;
 }
 
+interface Telemetry {
+    /** e.g. "No", "Yes", "Opt-out", "Opt-in" */
+    status: string;
+    /** Optional detail shown as a tooltip. */
+    note?: string;
+}
+
 interface Features {
     modpacks: FeatureModpack[];
     modloaders: string[];
@@ -68,6 +75,8 @@ interface Features {
     sandboxing: Sandboxing;
     overlay: Overlay;
     advertisements: Advertisement;
+    /** Usage/analytics telemetry collected by the launcher (distinct from ads). */
+    telemetry?: Telemetry;
     /** cracked, no Microsoft account required */
     offlinePlayWithoutLicense?: boolean;
     /** A client mod bundled into the launcher (e.g. an in-game "client"). */
