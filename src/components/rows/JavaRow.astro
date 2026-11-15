@@ -1,0 +1,19 @@
+---
+import JavaComponent from "../JavaComponent.astro";
+import { columnClass } from "../../data/utils.ts";
+
+// Row for the "java" feature. Each value is a JavaFeature.
+const { launchers, values, propertyName } = Astro.props as {
+	launchers: LauncherDetails[];
+	values: { identifier: string; value: JavaFeature }[];
+	propertyName: string;
+};
+---
+<tr>
+	<td class="capitalize">{propertyName}</td>
+	{ launchers.map(launcher => (
+		<td class:list={columnClass(launcher)}>
+			<JavaComponent java={values.find(v => v.identifier === launcher.identifier)?.value} />
+		</td>
+	))}
+</tr>

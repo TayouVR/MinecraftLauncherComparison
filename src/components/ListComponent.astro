@@ -2,11 +2,12 @@
 import PlatformComponent from "./PlatformComponent.astro";
 import ModloadersComponent from "./ModloadersComponent.astro";
 import MinecraftResources from "./MinecraftResources.astro";
-import JavaComponent from "./JavaComponent.astro";
 import ModpacksComponent from "./ModpacksComponent.astro";
-import StatusCell from "./StatusCell.astro";
+import TechnologyRow from "./rows/TechnologyRow.astro";
+import JavaRow from "./rows/JavaRow.astro";
+import StatusInfoRow from "./rows/StatusInfoRow.astro";
+import ImportExportRow from "./rows/ImportExportRow.astro";
 import { columnClass } from "../data/utils.ts";
-
 
 const { propertyName, launchers, propCategory } = Astro.props as { propertyName: string, launchers: LauncherDetails[], propCategory: "properties" | "features" };
 
@@ -14,25 +15,8 @@ function valueFromLauncher<TLauncher extends Record<"properties" | "features", R
     return (launcher as any as TLauncher)[propCategory][propertyName];
 }
 
-function statusClass(launcher: LauncherDetails) {
-    let badgeText = valueFromLauncher(launcher).badgeText;
-    if (badgeText.includes("Yes") || badgeText.includes("Optional")) {
-        return "bg-success";
-    } else if (badgeText.includes("No")) {
-        return "bg-error";
-    } else if (badgeText.includes("WIP")) {
-        return "bg-warning";
-    } else if (badgeText === "") {
-        return "";
-    } else {
-        return "unknown";
-    }
-}
-
-const cellClass = columnClass;
-
 // Fallback renderer for feature/property values without a dedicated row.
-// Converts the raw value to display text; plain if/else instead of nested ternaries.
+// Converts the raw value to display text.
 function fallbackText(value: unknown): string {
     if (typeof value === "string") return value.toUpperCase();
     if (typeof value === "number") return value.toFixed(2);
@@ -47,113 +31,35 @@ const values = launchers.map(launcher => {
     }
 });
 
-if(![
-    "platforms", "technology", "modpacks", "modloaders", "minecraftResources",
-    "java", "sandboxing", "overlay", "advertisements", "telemetry", "import", "export"
-].includes(propertyName)) {
+const ROW_COMPONENTS: Record<string, any> = {
+    "platforms": PlatformComponent,
+    "technology": TechnologyRow,
+    "modpacks": ModpacksComponent,
+    "modloaders": ModloadersComponent,
+    "minecraftResources": MinecraftResources,
+    "java": JavaRow,
+    "sandboxing": StatusInfoRow,
+    "overlay": StatusInfoRow,
+    "advertisements": StatusInfoRow,
+    "telemetry": StatusInfoRow,
+    "import": ImportExportRow,
+    "export": ImportExportRow,
+};
+const Row = ROW_COMPONENTS[propertyName];
+
+if (!Row) {
     console.warn("property doesn't have dedicated row rendering", propertyName);
 }
 
 ---
 
-{propertyName === "platforms" && (
-    <PlatformComponent launchers={launchers} values={values} />
-)}
-
-{propertyName === "technology" && (
-    <>
-        <tr>
-            <td>Languages</td>
-            { launchers.map(launcher => (
-                <td class:list={cellClass(launcher)}>
-                    {valueFromLauncher(launcher).languages.join(', ')}
-                </td>
-            ))}
-        </tr>
-        <tr>
-            <td>Core Toolkits and Libraries</td>
-            { launchers.map(launcher => (
-                <td class:list={cellClass(launcher)}>
-                    {valueFromLauncher(launcher).frameworks.join(', ')}
-                </td>
-            ))}
-        </tr>
-    </>
-)}
-
-{propertyName === "modpacks" && (
-    <ModpacksComponent launchers={launchers} values={values} />
-)}
-
-{propertyName === "modloaders" && (
-    <ModloadersComponent launchers={launchers} values={values} />
-)}
-
-{propertyName === "minecraftResources" && (
-    <MinecraftResources launchers={launchers} values={values} />
-)}
-
-{propertyName === "java" && (
+{Row ? (
+    <Row launchers={launchers} values={values} propertyName={propertyName} />
+) : (
     <tr>
         <td class="capitalize">{propertyName}</td>
         { launchers.map(launcher => (
-            <td class:list={cellClass(launcher)}>
-                <JavaComponent java={valueFromLauncher(launcher)} />
-            </td>
-        ))}
-    </tr>
-)}
-
-{(propertyName === "sandboxing" || propertyName === "overlay" || propertyName === "advertisements" || propertyName === "telemetry") && (
-    <tr>
-        <td class="capitalize">{propertyName}</td>
-        { launchers.map(launcher => {
-            const field = valueFromLauncher(launcher);
-            const text = field == null ? "Unknown" : field.badgeText;
-            const tone = field == null ? "unknown" : statusClass(launcher);
-            return <StatusCell launcher={launcher} text={text} tone={tone} note={field?.note} />;
-        })}
-    </tr>
-)}
-
-{propertyName === "import" && (
-    <tr>
-        <td class="capitalize">{propertyName}</td>
-        { launchers.map(launcher => (
-            <td class:list={cellClass(launcher)}>
-                <div class="flex flex-wrap gap-2">
-                    {valueFromLauncher(launcher).map((format: string) => (
-                        <div class="badge bg-accent-content/10"><span>{format}</span></div>
-                    ))}
-                </div>
-            </td>
-        ))}
-    </tr>
-)}
-
-{propertyName === "export" && (
-    <tr>
-        <td class="capitalize">{propertyName}</td>
-        { launchers.map(launcher => (
-            <td class:list={cellClass(launcher)}>
-                <div class="flex flex-wrap gap-2">
-                    {valueFromLauncher(launcher).map((format: string) => (
-                            <div class="badge bg-accent-content/10"><span>{format}</span></div>
-                    ))}
-                </div>
-            </td>
-        ))}
-    </tr>
-)}
-
-{![
-    "platforms", "technology", "modpacks", "modloaders", "minecraftResources",
-    "java", "sandboxing", "overlay", "advertisements", "telemetry", "import", "export"
-].includes(propertyName) && (
-    <tr>
-        <td class="capitalize">{propertyName}</td>
-        { launchers.map(launcher => (
-            <td class:list={cellClass(launcher)}>
+            <td class:list={columnClass(launcher)}>
                 {fallbackText(valueFromLauncher(launcher))}
             </td>
         ))}

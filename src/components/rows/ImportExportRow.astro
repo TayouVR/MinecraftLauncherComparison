@@ -1,0 +1,23 @@
+---
+import { columnClass } from "../../data/utils.ts";
+
+// Shared row for list-of-formats features ("import" and "export").
+// `values` is [{ identifier, value }] where value is a string[].
+const { launchers, values, propertyName } = Astro.props as {
+	launchers: LauncherDetails[];
+	values: { identifier: string; value: string[] }[];
+	propertyName: string;
+};
+---
+<tr>
+	<td class="capitalize">{propertyName}</td>
+	{ launchers.map(launcher => (
+		<td class:list={columnClass(launcher)}>
+			<div class="flex flex-wrap gap-2">
+				{(values.find(v => v.identifier === launcher.identifier)?.value ?? []).map((format: string) => (
+					<div class="badge bg-accent-content/10"><span>{format}</span></div>
+				))}
+			</div>
+		</td>
+	))}
+</tr>

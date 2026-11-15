@@ -1,0 +1,29 @@
+---
+import StatusCell from "../StatusCell.astro";
+
+// Shared row for StatusInfo features (sandboxing, overlay, advertisements, telemetry).
+// Each value is a StatusInfo { badgeText, note?, long? } or undefined.
+const { launchers, values, propertyName } = Astro.props as {
+	launchers: LauncherDetails[];
+	values: { identifier: string; value: StatusInfo | undefined }[];
+	propertyName: string;
+};
+
+function toneFor(field: StatusInfo | undefined): string {
+	if (field == null) return "unknown";
+	const t = field.badgeText;
+	if (t.includes("Yes") || t.includes("Optional")) return "bg-success";
+	if (t.includes("No")) return "bg-error";
+	if (t.includes("WIP")) return "bg-warning";
+	if (t === "") return "";
+	return "unknown";
+}
+---
+<tr>
+	<td class="capitalize">{propertyName}</td>
+	{ launchers.map(launcher => {
+		const field = values.find(v => v.identifier === launcher.identifier)?.value;
+		const text = field == null ? "Unknown" : field.badgeText;
+		return <StatusCell launcher={launcher} text={text} tone={toneFor(field)} note={field?.note} />;
+	})}
+</tr>
