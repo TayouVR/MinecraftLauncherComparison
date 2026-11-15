@@ -18,7 +18,7 @@
   },
   "features": {
     // after adding Microsoft account offline accounts can exist. Deleting Microsoft account does not invalidate offline accounts. Does not force demo mode. (looks like bug/oversight in launcher)
-    "offlinePlayWithoutLicense": false,
+    "offlinePlayWithoutLicense": { "badgeText": "No" },
     "modpacks": [
       {
         "name": "CurseForge",
@@ -95,18 +95,16 @@
       "usingSystemInstall": true
     },
     "sandboxing": {
-      "status": "Optional"
+      "badgeText": "Optional"
     },
     "overlay": {
-      "status": "No"
+      "badgeText": "No"
     },
     "advertisements": {
-      "status": "No",
-      "note": "No ads and no telemetry."
+      "badgeText": "No",
     },
     "telemetry": {
-      "status": "No",
-      "note": "No ads and no telemetry."
+      "badgeText": "No",
     }
   },
   "properties": {

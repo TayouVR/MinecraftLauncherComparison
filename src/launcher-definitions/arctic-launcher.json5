@@ -16,10 +16,10 @@
     "lookAndFeel": "Custom"
   },
   "features": {
-    "offlinePlayWithoutLicense": true,
+    "offlinePlayWithoutLicense": { "badgeText": "Yes" },
     "bundledMod": {
-      "short": "Arctic Client: in-game cosmetics, friends & join system, voice, replay, HUD",
-      "long": "Bundles the 'Arctic Client' mod (open source, GPL-3.0, Java sources in the same repo under mod/). It adds cosmetics & emotes, a friends / join-together system, proximity voice chat, a replay recorder, PvP 'tiers' display and a custom HUD. It talks to Arctic's closed-source first-party backend (cosmetics.arcticlauncher.com) for the social features."
+      "badgeText": "Arctic Client: in-game cosmetics, friends & join system, voice, replay, HUD",
+      "longDescription": "Bundles the 'Arctic Client' mod (open source, GPL-3.0, Java sources in the same repo under mod/). It adds cosmetics & emotes, a friends / join-together system, proximity voice chat, a replay recorder, PvP 'tiers' display and a custom HUD. It talks to Arctic's closed-source first-party backend (cosmetics.arcticlauncher.com) for the social features."
     },
     "modpacks": [
       { "name": "Modrinth", "method": "Download", "updating": false }
@@ -58,10 +58,10 @@
       "versionManagement": true,
       "usingSystemInstall": true
     },
-    "sandboxing": { "status": "" },
-    "overlay": { "status": "" },
-    "advertisements": { "status": "No", "note": "No ads; has a dismissible first-party sponsor card (Flash Hosting)" },
-    "telemetry": { "status": "No", "note": "No analytics or telemetry. Has a dismissible first-party sponsor card (Flash Hosting). User-initiated crash reports only." },
+    "sandboxing": { "badgeText": "" },
+    "overlay": { "badgeText": "" },
+    "advertisements": { "badgeText": "No", "tooltip": "No ads; has a dismissible first-party sponsor card (Flash Hosting)" },
+    "telemetry": { "badgeText": "No", "tooltip": "No analytics or telemetry. Has a dismissible first-party sponsor card (Flash Hosting). User-initiated crash reports only." },
   },
   "properties": {
     "platforms": {

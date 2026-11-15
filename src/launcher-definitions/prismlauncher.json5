@@ -27,7 +27,7 @@
     "lookAndFeel": "System (configurable)"
   },
   "features": {
-    "offlinePlayWithoutLicense": false,
+    "offlinePlayWithoutLicense": { "badgeText": "No" },
     "modpacks": [
       {
         "name": "CurseForge",
@@ -132,10 +132,10 @@
       "versionManagement": true,
       "usingSystemInstall": true,
     },
-    "sandboxing": { "status": "WIP" },
-    "overlay": { "status": "No" },
-    "advertisements": { "status": "No" },
-    "telemetry": { "status": "No" },
+    "sandboxing": { "badgeText": "WIP" },
+    "overlay": { "badgeText": "No" },
+    "advertisements": { "badgeText": "No" },
+    "telemetry": { "badgeText": "No" },
   },
   "properties": {
     "platforms": {

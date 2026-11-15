@@ -17,10 +17,20 @@ export function getLaunchers(): LauncherDetails[] {
         }
     });
     return launchers.sort((a, b) => {
-        const aPiracy = a.features.offlinePlayWithoutLicense === true ? 1 : 0;
-        const bPiracy = b.features.offlinePlayWithoutLicense === true ? 1 : 0;
+        const aPiracy = piracy(a) ? 1 : 0;
+        const bPiracy = piracy(b) ? 1 : 0;
         return aPiracy - bPiracy || a.name.localeCompare(b.name);
     });
+}
+
+/** The launcher's offlinePlayWithoutLicense StatusInfo, or undefined if unknown. */
+export function piracyInfo(launcher: LauncherDetails): StatusInfo | undefined {
+    return launcher.features.offlinePlayWithoutLicense;
+}
+
+/** True if the launcher facilitates piracy (offlinePlayWithoutLicense.badgeText === "Yes"). */
+export function piracy(launcher: LauncherDetails): boolean {
+    return piracyInfo(launcher)?.badgeText === "Yes";
 }
 
 const niceNames = {
@@ -68,7 +78,7 @@ export function getName(thing: string) {
 export function columnClass(launcher: LauncherDetails, ...extra: (string | false | null | undefined)[]) {
     return [
         launcher.identifier,
-        launcher.features.offlinePlayWithoutLicense ? "piracy" : null,
+        piracy(launcher) ? "piracy" : null,
         ...extra,
     ];
 }

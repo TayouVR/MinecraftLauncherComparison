@@ -81,18 +81,18 @@
       "usingSystemInstall": false
     },
     "sandboxing": {
-      "status": "No"
+      "badgeText": "No"
     },
     "overlay": {
-      "status": "No"
+      "badgeText": "No"
     },
     "advertisements": {
-      "status": "No",
-      "note": "Freemium (optional Premium adds AI credits). First-party telemetry endpoint present; opt-in/out unverifiable. No ad networks."
+      "badgeText": "No",
+      "tooltip": "Freemium (optional Premium adds AI credits). First-party telemetry endpoint present; opt-in/out unverifiable. No ad networks."
     },
     "telemetry": {
-      "status": "Yes",
-      "note": "First-party telemetry endpoint present; opt-in/out unverifiable (closed source). Optional hosted AI sends data off-machine."
+      "badgeText": "Yes",
+      "tooltip": "First-party telemetry endpoint present; opt-in/out unverifiable (closed source). Optional hosted AI sends data off-machine."
     }
   },
   "properties": {

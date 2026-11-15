@@ -17,7 +17,7 @@
     "lookAndFeel": "Custom"
   },
   "features": {
-    "offlinePlayWithoutLicense": false,
+    "offlinePlayWithoutLicense": { "badgeText": "No" },
     "modpacks": [
       { "name": "CurseForge", "method": "Download", "updating": true },
       { "name": "Modrinth", "method": "Download", "updating": true },
@@ -62,10 +62,10 @@
       "versionManagement": true,
       "usingSystemInstall": true,
     },
-    "sandboxing": { "status": "No" },
-    "overlay": { "status": "No" },
-    "advertisements": { "status": "Yes" },
-    "telemetry": { "status": "Opt-in", "note": "First-party metrics (gdl.gg API): page views, instance install/launch stats, hardware/OS props — gated by terms/privacy acceptance (opt-in). Plus Sentry crash reporting (opt-out via flag). Source-audited." },
+    "sandboxing": { "badgeText": "No" },
+    "overlay": { "badgeText": "No" },
+    "advertisements": { "badgeText": "Yes" },
+    "telemetry": { "badgeText": "Opt-in", "tooltip": "First-party metrics (gdl.gg API): page views, instance install/launch stats, hardware/OS props — gated by terms/privacy acceptance (opt-in). Plus Sentry crash reporting (opt-out via flag). Source-audited." },
   },
   "properties": {
     "platforms": {

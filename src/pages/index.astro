@@ -3,7 +3,7 @@ import Layout from '../layouts/Layout.astro';
 
 import ListComponent from "../components/ListComponent.astro";
 import StatusCell from "../components/StatusCell.astro";
-import { columnClass, getLaunchers } from "../data/utils.ts";
+import { columnClass, getLaunchers, piracy, piracyInfo } from "../data/utils.ts";
 
 const launchers = getLaunchers();
 
@@ -42,7 +42,7 @@ function launcherProperties<TLauncher extends Record<string, any>>(
 
 const hasBundledMod = launchers.some(l => l.features.bundledMod);
 // Columns of piracy-facilitating launchers are tinted brown, so note it up top.
-const piracyCount = launchers.filter(l => l.features.offlinePlayWithoutLicense).length;
+const piracyCount = launchers.filter(l => piracy(l)).length;
 ---
 
 <Layout>
@@ -127,10 +127,11 @@ const piracyCount = launchers.filter(l => l.features.offlinePlayWithoutLicense).
             <tr>
                 <td>Allows Piracy</td>
                 { launchers.map(launcher => {
-					const flag = launcher.features.offlinePlayWithoutLicense;
-					const text = flag === true ? "Yes" : flag === false ? "No" : null;
-					const tone = flag === true ? "no" : flag === false ? "yes" : undefined;
-					return <StatusCell launcher={launcher} text={text} tone={tone} />;
+					const info = piracyInfo(launcher);
+					const isPiracy = piracy(launcher);
+					const text = info?.badgeText ?? null;
+					const tone = isPiracy ? "no" : info != null && info.badgeText === "No" ? "yes" : undefined;
+					return <StatusCell launcher={launcher} text={text} tone={tone} note={info?.tooltip} />;
                 })}
             </tr>
             <tr>
@@ -146,15 +147,11 @@ const piracyCount = launchers.filter(l => l.features.offlinePlayWithoutLicense).
             <tr>
                 <td>Bundled Client Mod</td>
                 { launchers.map(launcher => (
-					<td class:list={columnClass(launcher)}>
-						{launcher.features.bundledMod ? (
-							<div class="badge h-fit bundled-mod-badge tooltip tooltip-bottom whitespace-normal text-left" data-tip={launcher.features.bundledMod.long ?? launcher.features.bundledMod.short}>
-								{launcher.features.bundledMod.short}
-							</div>
-						) : (
-							<div class="badge h-fit no">No</div>
-						)}
-					</td>
+					launcher.features.bundledMod ? (
+						<StatusCell launcher={launcher} text={launcher.features.bundledMod.badgeText} tone="bundled-mod-badge" note={launcher.features.bundledMod.longDescription ?? launcher.features.bundledMod.tooltip} />
+					) : (
+						<StatusCell launcher={launcher} text="No" tone="no" />
+					)
                 ))}
             </tr>
             )}

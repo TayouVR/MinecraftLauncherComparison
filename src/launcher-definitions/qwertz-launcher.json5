@@ -16,7 +16,7 @@
     "lookAndFeel": "System (mostly)"
   },
   "features": {
-    "offlinePlayWithoutLicense": false,
+    "offlinePlayWithoutLicense": { "badgeText": "No" },
     "modpacks": [],
     "modloaders": ["forge", "fabric"],
     "minecraftResources": {
@@ -57,10 +57,10 @@
       "versionManagement": true,
       "usingSystemInstall": true,
     },
-    "sandboxing": { "status": "No" },
-    "overlay": { "status": "No" },
-    "advertisements": { "status": "No" },
-    "telemetry": { "status": "No" },
+    "sandboxing": { "badgeText": "No" },
+    "overlay": { "badgeText": "No" },
+    "advertisements": { "badgeText": "No" },
+    "telemetry": { "badgeText": "No" },
   },
   "properties": {
     "platforms": {

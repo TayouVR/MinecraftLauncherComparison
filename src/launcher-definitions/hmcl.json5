@@ -17,10 +17,13 @@
     "lookAndFeel": "Custom"
   },
   "features": {
-    "offlinePlayWithoutLicense": true,
+    "offlinePlayWithoutLicense": {
+      "badgeText": "Yes",
+      "tooltip": "Offline accounts require a licensed Microsoft account (game-ownership is checked on Microsoft login), BUT this is trivially bypassed: HMCL supports custom authlib-injector / yggdrasil auth servers that don't verify ownership, and a Microsoft account can be removed after adding an offline account (which then keeps working, no demo fallback)."
+    },
     "bundledMod": {
-      "short": "Terracotta: optional LAN / multiplayer component (downloaded at runtime)",
-      "long": "HMCL can download 'Terracotta', an optional Easytier-based LAN/multiplayer overlay component, at runtime with user consent. It is a separate downloaded bundle rather than a silently injected Minecraft mod."
+      "badgeText": "Terracotta: optional LAN / multiplayer component (downloaded at runtime)",
+      "longDescription": "HMCL can download 'Terracotta', an optional Easytier-based LAN/multiplayer overlay component, at runtime with user consent. It is a separate downloaded bundle rather than a silently injected Minecraft mod."
     },
     "modpacks": [
       {
@@ -104,18 +107,18 @@
       "usingSystemInstall": true
     },
     "sandboxing": {
-      "status": "No"
+      "badgeText": "No"
     },
     "overlay": {
-      "status": "No"
+      "badgeText": "No"
     },
     "advertisements": {
-      "status": "No",
-      "note": "No ads or telemetry in the launcher itself (the website shows Google AdSense, but the app does not)."
+      "badgeText": "No",
+      "tooltip": "No ads or telemetry in the launcher itself (the website shows Google AdSense, but the app does not)."
     },
     "telemetry": {
-      "status": "No",
-      "note": "No ads or telemetry in the launcher itself (the website shows Google AdSense, but the app does not)."
+      "badgeText": "No",
+      "tooltip": "No ads or telemetry in the launcher itself (the website shows Google AdSense, but the app does not)."
     }
   },
   "properties": {
@@ -147,7 +150,7 @@
     "CurseForgeBlockedDownloads": {
       "supported": true,
       "method": "Yes, via its own CurseForge API key",
-      "note": "Uses its own CurseForge API key (CI-injected), the standard approach. Files are fetched via edge.forgecdn.net."
+      "tooltip": "Uses its own CurseForge API key (CI-injected), the standard approach. Files are fetched via edge.forgecdn.net."
     }
   }
 }

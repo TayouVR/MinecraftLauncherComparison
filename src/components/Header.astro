@@ -1,5 +1,5 @@
 ---
-import { getLaunchers } from "../data/utils.ts";
+import { getLaunchers, piracy } from "../data/utils.ts";
 
 const launchers = getLaunchers();
 
@@ -7,7 +7,7 @@ const launchers = getLaunchers();
 // hidden at render time by a presentational `.drawer:has(checkbox:not(:checked))`
 // rule below — the data/column markup carries no visibility class. Dynamic
 // toggling is still handled by updateFilters() adding/removing column-disabled.
-const hiddenByDefault = launchers.filter(l => !((l.shownByDefault ?? false) && !l.features.offlinePlayWithoutLicense));
+const hiddenByDefault = launchers.filter(l => !((l.shownByDefault ?? false) && !piracy(l)));
 
 // Pre-built CSS (identifiers escaped for class selectors). Injected unescaped below.
 // The "pre-filter" class gates these rules to initial render only; updateFilters()
@@ -67,14 +67,14 @@ const themes = [ 'tayou', 'tayou-light',
                     <div tabindex="0" class="dropdown-content z-[1] card card-compact bg-base-200 shadow-xl p-4 w-128">
                         <form id="filter-form" class="grid grid-cols-3 gap-2">
                             { launchers.map(launcher => (
-                                <label class:list={["btn btn-s flex-1 p-1 cursor-pointer flex flex-col h-20", launcher.features.offlinePlayWithoutLicense && "piracy"]}>
+                                <label class:list={["btn btn-s flex-1 p-1 cursor-pointer flex flex-col h-20", piracy(launcher) && "piracy"]}>
                                     <input
                                         type="checkbox"
                                         class="hidden"
                                         name="launcher-filter"
                                         aria-label={launcher.name}
                                         value={launcher.identifier}
-                                        checked={(launcher.shownByDefault ?? false) && !launcher.features.offlinePlayWithoutLicense}
+                                        checked={(launcher.shownByDefault ?? false) && !piracy(launcher)}
                                         onchange="updateFilters(this)"
                                     />
                                     { launcher.icon ? (
@@ -107,7 +107,7 @@ const themes = [ 'tayou', 'tayou-light',
                                 <a href={`/launcher/${launcher.identifier}`}>
                                     {launcher.icon && <img src={launcher.icon} class="w-4 h-4" alt="" />}
                                     {launcher.name}
-                                    {launcher.features.offlinePlayWithoutLicense && (
+                                    {piracy(launcher) && (
                                         <span title="Allows playing the full game without owning Minecraft (facilitates piracy)">🏴‍☠️</span>
                                     )}
                                 </a>
@@ -170,7 +170,7 @@ const themes = [ 'tayou', 'tayou-light',
                     <a href={`/launcher/${launcher.identifier}`}>
                         {launcher.icon && <img src={launcher.icon} class="w-4 h-4" alt="" />}
                         {launcher.name}
-                        {launcher.features.offlinePlayWithoutLicense && (
+                        {piracy(launcher) && (
                             <span title="Allows playing the full game without owning Minecraft (facilitates piracy)">🏴‍☠️</span>
                         )}
                     </a>
@@ -185,14 +185,14 @@ const themes = [ 'tayou', 'tayou-light',
                     <div class="collapse-content">
                         <form id="filter-form-mobile" class="grid grid-cols-2 gap-2">
                             { launchers.map(launcher => (
-                                    <label class:list={["btn btn-s flex-1 p-1 cursor-pointer flex flex-col h-20", launcher.features.offlinePlayWithoutLicense && "piracy"]}>
+                                    <label class:list={["btn btn-s flex-1 p-1 cursor-pointer flex flex-col h-20", piracy(launcher) && "piracy"]}>
                                         <input
                                                 type="checkbox"
                                                 class="hidden"
                                                 name="launcher-filter"
                                                 aria-label={launcher.name}
                                                 value={launcher.identifier}
-                                                checked={(launcher.shownByDefault ?? false) && !launcher.features.offlinePlayWithoutLicense}
+                                                checked={(launcher.shownByDefault ?? false) && !piracy(launcher)}
                                                 onchange="updateFilters(this)"
                                         />
                                         { launcher.icon ? (
@@ -248,7 +248,7 @@ const themes = [ 'tayou', 'tayou-light',
     </div>
 </div>
 
-<clientData id="clientData" value={JSON.stringify(launchers.reduce((acc, l) => ({...acc, [l.identifier]: {enabled: true, shownByDefault: (l.shownByDefault ?? false) && !l.features.offlinePlayWithoutLicense}}), {}))}></clientData>
+<clientData id="clientData" value={JSON.stringify(launchers.reduce((acc, l) => ({...acc, [l.identifier]: {enabled: true, shownByDefault: (l.shownByDefault ?? false) && !piracy(l)}}), {}))}></clientData>
 
 <script is:inline>
 	function updateFilters(source) {

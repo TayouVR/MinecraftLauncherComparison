@@ -15,7 +15,7 @@
     "lookAndFeel": "System (configurable)"
   },
   "features": {
-    "offlinePlayWithoutLicense": false,
+    "offlinePlayWithoutLicense": { "badgeText": "No" },
     "modpacks": [
       { "name": "Modrinth", "method": "Download", "updating": true },
       { "name": "ftb", "method": "Import", "updating": false },
@@ -63,10 +63,10 @@
       "versionManagement": false,
       "usingSystemInstall": true,
     },
-    "sandboxing": { "status": "No" },
-    "overlay": { "status": "No" },
-    "advertisements": { "status": "No" },
-    "telemetry": { "status": "No" },
+    "sandboxing": { "badgeText": "No" },
+    "overlay": { "badgeText": "No" },
+    "advertisements": { "badgeText": "No" },
+    "telemetry": { "badgeText": "No" },
   },
   "properties": {
     "platforms": {

@@ -16,7 +16,7 @@
     "lookAndFeel": "Minecraft Inspired"
   },
   "features": {
-    "offlinePlayWithoutLicense": false,
+    "offlinePlayWithoutLicense": { "badgeText": "No" },
     "modpacks": [
       { "name": "CurseForge", "method": "Download", "updating": true },
       { "name": "Modrinth", "method": "Download", "updating": true },
@@ -60,10 +60,10 @@
       "versionManagement": true,
       "usingSystemInstall": true,
     },
-    "sandboxing": { "status": "No" },
-    "overlay": { "status": "Yes, for controls → touch screen" },
-    "advertisements": { "status": "No" },
-    "telemetry": { "status": "No" },
+    "sandboxing": { "badgeText": "No" },
+    "overlay": { "badgeText": "Yes, for controls → touch screen" },
+    "advertisements": { "badgeText": "No" },
+    "telemetry": { "badgeText": "No" },
   },
   "properties": {
     "platforms": {

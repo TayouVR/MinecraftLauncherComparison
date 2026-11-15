@@ -19,7 +19,7 @@
   "features": {
     // Offline launch exists only as a CLI dev-mode flag (--offline, for online-mode=false test
     // servers); it is NOT a user-facing offline-account feature in the GUI, so no piracy flag.
-    "offlinePlayWithoutLicense": false,
+    "offlinePlayWithoutLicense": { "badgeText": "No" },
     "modpacks": [
       // Modrinth .mrpack import is currently CLI-only; not wired into the GUI.
       { "name": "Modrinth", "method": "Import", "updating": false }
@@ -64,10 +64,10 @@
       "versionManagement": true,
       "usingSystemInstall": true
     },
-    "sandboxing": { "status": "No" },
-    "overlay": { "status": "No" },
-    "advertisements": { "status": "No" },
-    "telemetry": { "status": "No" }
+    "sandboxing": { "badgeText": "No" },
+    "overlay": { "badgeText": "No" },
+    "advertisements": { "badgeText": "No" },
+    "telemetry": { "badgeText": "No" }
   },
   "properties": {
     "platforms": {

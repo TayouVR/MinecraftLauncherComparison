@@ -16,7 +16,7 @@
     "lookAndFeel": "Custom"
   },
   "features": {
-    "offlinePlayWithoutLicense": false,
+    "offlinePlayWithoutLicense": { "badgeText": "No" },
     "modpacks": [
       { "name": "CurseForge", "method": "Download", "updating": true },
       { "name": "ftb", "method": "Download", "updating": true },
@@ -62,10 +62,10 @@
       "versionManagement": true,
       "usingSystemInstall": true,
     },
-    "sandboxing": { "status": "No" },
-    "overlay": { "status": "Optional (via Overwolf app)" },
-    "advertisements": { "status": "Yes" },
-    "telemetry": { "status": "Yes", "note": "Overwolf/Electron app: ads + analytics (assumed; closed-source, not code-audited)." },
+    "sandboxing": { "badgeText": "No" },
+    "overlay": { "badgeText": "Optional (via Overwolf app)" },
+    "advertisements": { "badgeText": "Yes" },
+    "telemetry": { "badgeText": "Yes", "tooltip": "Overwolf/Electron app: ads + analytics (assumed; closed-source, not code-audited)." },
   },
   "properties": {
     "platforms": {

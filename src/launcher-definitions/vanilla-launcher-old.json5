@@ -16,7 +16,7 @@
     "lookAndFeel": "Java Swing"
   },
   "features": {
-    "offlinePlayWithoutLicense": false,
+    "offlinePlayWithoutLicense": { "badgeText": "No" },
     "modpacks": [],
     "modloaders": [],
     "minecraftResources": {
@@ -57,10 +57,10 @@
       "versionManagement": true,
       "usingSystemInstall": true,
     },
-    "sandboxing": { "status": "No" },
-    "overlay": { "status": "No" },
-    "advertisements": { "status": "No" },
-    "telemetry": { "status": "Unknown", "note": "Unknown — old Java launcher jar not inspected." }
+    "sandboxing": { "badgeText": "No" },
+    "overlay": { "badgeText": "No" },
+    "advertisements": { "badgeText": "No" },
+    "telemetry": { "badgeText": "Unknown", "tooltip": "Unknown — old Java launcher jar not inspected." }
   },
   "properties": {
     "platforms": {

@@ -17,7 +17,7 @@
     "lookAndFeel": "Custom (configurable)"
   },
   "features": {
-    "offlinePlayWithoutLicense": false,
+    "offlinePlayWithoutLicense": { "badgeText": "No" },
     "modpacks": [
       { "name": "CurseForge", "method": "Download", "updating": true },
       { "name": "Modrinth", "method": "Download", "updating": true },
@@ -64,10 +64,10 @@
       "versionManagement": true,
       "usingSystemInstall": true,
     },
-    "sandboxing": { "status": "No" },
-    "overlay": { "status": "No" },
-    "advertisements": { "status": "No" },
-    "telemetry": { "status": "Opt-out", "note": "Self-hosted analytics (analytics.atlauncher.com): session/system info, screen views, play duration, installs — on by default, opt-out in Settings. Plus Sentry crash reporting (exceptions + OS/Java tags). Source-audited." },
+    "sandboxing": { "badgeText": "No" },
+    "overlay": { "badgeText": "No" },
+    "advertisements": { "badgeText": "No" },
+    "telemetry": { "badgeText": "Opt-out", "tooltip": "Self-hosted analytics (analytics.atlauncher.com): session/system info, screen views, play duration, installs — on by default, opt-out in Settings. Plus Sentry crash reporting (exceptions + OS/Java tags). Source-audited." },
   },
   "properties": {
     "platforms": {

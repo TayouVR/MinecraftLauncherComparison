@@ -17,7 +17,7 @@
     "lookAndFeel": "Custom"
   },
   "features": {
-    "offlinePlayWithoutLicense": true,
+    "offlinePlayWithoutLicense": { "badgeText": "Yes" },
     "modpacks": [
       {
         "name": "CurseForge",
@@ -108,18 +108,18 @@
       "usingSystemInstall": true
     },
     "sandboxing": {
-      "status": "No"
+      "badgeText": "No"
     },
     "overlay": {
-      "status": "No"
+      "badgeText": "No"
     },
     "advertisements": {
-      "status": "No",
-      "note": "No ads, but Azure AppInsights telemetry is ON by default (opt-out in Settings). Optional paid multiplayer-relay subscription."
+      "badgeText": "No",
+      "tooltip": "No ads, but Azure AppInsights telemetry is ON by default (opt-out in Settings). Optional paid multiplayer-relay subscription."
     },
     "telemetry": {
-      "status": "Opt-out",
-      "note": "Azure AppInsights telemetry is ON by default; can be disabled in Settings. Optional paid multiplayer-relay."
+      "badgeText": "Opt-out",
+      "tooltip": "Azure AppInsights telemetry is ON by default; can be disabled in Settings. Optional paid multiplayer-relay."
     }
   },
   "properties": {

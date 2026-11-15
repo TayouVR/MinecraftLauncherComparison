@@ -38,31 +38,13 @@ interface JavaFeature {
     usingSystemInstall: boolean;
 }
 
-interface Sandboxing {
-    status: string;
-}
-
-interface Overlay {
-    status: string;
-}
-
-interface BundledMod {
-    /** One-line explanation of the bundled client mod (shown in the table). */
-    short: string;
-    /** Longer description shown on the launcher's detail page. */
-    long?: string;
-}
-
-interface Advertisement {
-    status: string;
-    note: string;
-}
-
-interface Telemetry {
-    /** e.g. "No", "Yes", "Opt-out", "Opt-in" */
-    status: string;
-    /** Optional detail shown as a tooltip. */
-    note?: string;
+interface StatusInfo {
+    /** Short badgeText, e.g. "Yes", "No", "Optional", "Opt-out", "WIP", "" */
+    badgeText: string;
+    /** Optional short note shown as a tooltip. */
+    tooltip?: string;
+    /** Optional long note shown on the detail page. */
+    longDescription?: string;
 }
 
 interface Features {
@@ -72,15 +54,15 @@ interface Features {
     import: string[];
     export: string[];
     java: JavaFeature;
-    sandboxing: Sandboxing;
-    overlay: Overlay;
-    advertisements: Advertisement;
+    sandboxing: StatusInfo;
+    overlay: StatusInfo;
+    advertisements: StatusInfo;
     /** Usage/analytics telemetry collected by the launcher (distinct from ads). */
-    telemetry?: Telemetry;
-    /** cracked, no Microsoft account required */
-    offlinePlayWithoutLicense?: boolean;
+    telemetry?: StatusInfo;
+    /** cracked, no Microsoft account required. Use `piracy()` / `piracyInfo()` helpers. */
+    offlinePlayWithoutLicense?: StatusInfo;
     /** A client mod bundled into the launcher (e.g. an in-game "client"). */
-    bundledMod?: BundledMod;
+    bundledMod?: StatusInfo;
 }
 
 enum OS {

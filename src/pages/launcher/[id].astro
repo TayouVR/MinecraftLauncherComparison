@@ -1,6 +1,6 @@
 ---
 import Layout from '../../layouts/Layout.astro';
-import { getIcon, getName, getLaunchers } from "../../data/utils.ts";
+import { getIcon, getName, getLaunchers, piracy } from "../../data/utils.ts";
 import { Icon } from 'astro-icon/components';
 
 export async function getStaticPaths() {
@@ -13,13 +13,13 @@ export async function getStaticPaths() {
 const { launcher } = Astro.props;
 ---
 
-<Layout piracy={launcher.features.offlinePlayWithoutLicense === true}>
+<Layout piracy={piracy(launcher)}>
     <div class="container mx-auto p-4">
         <div class="flex items-center gap-4 mb-8">
             {launcher.icon && <img src={launcher.icon} alt={`${launcher.name} icon`} class="w-16 h-16" />}
             <h2 class="text-4xl font-bold">
                 {launcher.name}
-                {launcher.features.offlinePlayWithoutLicense && (
+                {piracy(launcher) && (
                     <span class="ml-2 align-middle text-3xl" title="Allows playing the full game without owning Minecraft (facilitates piracy)" role="img" aria-label="piracy">🏴‍☠️</span>
                 )}
             </h2>
@@ -88,7 +88,7 @@ const { launcher } = Astro.props;
             {launcher.features.bundledMod && (
             <section class="card bg-base-200 p-6 shadow-xl col-span-1 md:col-span-2">
                 <h2 class="text-2xl font-semibold mb-4 border-b pb-2">Bundled Client Mod</h2>
-                <p class="font-medium">{launcher.features.bundledMod.short}</p>
+                <p class="font-medium">{launcher.features.bundledMod.badgeText}</p>
                 {launcher.features.bundledMod.long && (
                     <p class="mt-2 text-sm opacity-80">{launcher.features.bundledMod.long}</p>
                 )}

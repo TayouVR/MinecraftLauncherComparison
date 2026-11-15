@@ -15,14 +15,14 @@ function valueFromLauncher<TLauncher extends Record<"properties" | "features", R
 }
 
 function statusClass(launcher: LauncherDetails) {
-    let status = valueFromLauncher(launcher).status;
-    if (status.includes("Yes") || status.includes("Optional")) {
+    let badgeText = valueFromLauncher(launcher).badgeText;
+    if (badgeText.includes("Yes") || badgeText.includes("Optional")) {
         return "bg-success";
-    } else if (status.includes("No")) {
+    } else if (badgeText.includes("No")) {
         return "bg-error";
-    } else if (status.includes("WIP")) {
+    } else if (badgeText.includes("WIP")) {
         return "bg-warning";
-    } else if (status === "") {
+    } else if (badgeText === "") {
         return "";
     } else {
         return "unknown";
@@ -109,7 +109,7 @@ if(![
         <td class="capitalize">{propertyName}</td>
         { launchers.map(launcher => {
             const field = valueFromLauncher(launcher);
-            const text = field == null ? "Unknown" : field.status;
+            const text = field == null ? "Unknown" : field.badgeText;
             const tone = field == null ? "unknown" : statusClass(launcher);
             return <StatusCell launcher={launcher} text={text} tone={tone} note={field?.note} />;
         })}
