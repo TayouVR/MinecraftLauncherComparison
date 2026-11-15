@@ -1,15 +1,23 @@
 ---
 import StatusCell from "../StatusCell.astro";
 
-const { launchers, values, propertyName } = Astro.props as {
+const { launchers, values, propertyName, inverted } = Astro.props as {
 	launchers: LauncherDetails[];
 	values: { identifier: string; value: StatusInfo | undefined }[];
 	propertyName: string;
+	inverted?: boolean;
 };
 
 function toneFor(field: StatusInfo | undefined): string {
 	if (field == null) return "unknown";
 	const t = field.badgeText;
+	if (inverted) {
+		if (t.includes("No")) return "bg-success";
+		if (t.includes("Yes")) return "bg-error";
+		if (t.includes("WIP")) return "bg-warning";
+		if (t === "") return "";
+		return "unknown";
+	}
 	if (t.includes("Yes") || t.includes("Optional")) return "bg-success";
 	if (t.includes("No")) return "bg-error";
 	if (t.includes("WIP")) return "bg-warning";
