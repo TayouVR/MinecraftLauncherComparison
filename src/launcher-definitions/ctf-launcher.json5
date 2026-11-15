@@ -1,0 +1,124 @@
+{
+  "identifier": "mom.ctf.launcher",
+  "name": "CTF Launcher",
+  "shownByDefault": false,
+  "icon": "/assets/launchers/ctf.png",
+  "downloadLink": "https://launcher.ctf.mom/",
+  "sourceRepo": "",
+  "homepage": "https://home.ctf.mom/?lang=en",
+  "configuration": {
+    "license": {
+      "name": "proprietary",
+      "url": "",
+      "foss": false,
+      "extraInfo": "Closed source. Windows binaries are unsigned. No public privacy policy/terms. Has an offline-account mode; whether it allows full-game play without a license is UNVERIFIED (could not be determined from static analysis)."
+    },
+    "serverInstances": false,
+    "lookAndFeel": "Custom"
+  },
+  "features": {
+    // NOTE: closed source. An offline-account mode EXISTS in the binary, but we CANNOT determine
+    // from static analysis whether it launches the full game or is gated to demo mode — so
+    // offlinePlayWithoutLicense is intentionally UNSET (unknown; treated as legitimate for now).
+    "modpacks": [
+      {
+        "name": "Modrinth",
+        "method": "Download",
+        "updating": false
+      }
+    ],
+    "modloaders": [
+      "forge",
+      "neoforge",
+      "fabric",
+      "quilt"
+    ],
+    "minecraftResources": {
+      "mods": {
+        "downloading": true,
+        "providers": [
+          "Modrinth"
+        ]
+      },
+      "resourcepacks": {
+        "downloading": true,
+        "providers": [
+          "Modrinth"
+        ]
+      },
+      "shaderpacks": {
+        "downloading": true,
+        "providers": [
+          "Modrinth"
+        ]
+      },
+      "worlds": {
+        "downloading": false,
+        "providers": []
+      },
+      "datapacks": {
+        "downloading": true,
+        "providers": [
+          "Modrinth"
+        ]
+      },
+      "plugins": {
+        "downloading": false,
+        "providers": []
+      }
+    },
+    "import": [
+      "OneSix",
+      "ATLauncher",
+      "Modrinth"
+    ],
+    "export": [
+      "DNA share link"
+    ],
+    "java": {
+      "download": true,
+      "versionManagement": true,
+      "usingSystemInstall": false
+    },
+    "sandboxing": {
+      "status": "No"
+    },
+    "overlay": {
+      "status": "No"
+    },
+    "advertisements": {
+      "status": "No",
+      "note": "Freemium (optional Premium adds AI credits). First-party telemetry endpoint present; opt-in/out unverifiable. No ad networks."
+    },
+    "telemetry": {
+      "status": "Yes",
+      "note": "First-party telemetry endpoint present; opt-in/out unverifiable (closed source). Optional hosted AI sends data off-machine."
+    }
+  },
+  "properties": {
+    "platforms": {
+      "linux": [
+        "x86_64"
+      ],
+      "windows": [
+        "x86_64"
+      ]
+    },
+    "packages": "",
+    "technology": {
+      "languages": [
+        "Rust",
+        "QML"
+      ],
+      "frameworks": [
+        "Qt 6"
+      ]
+    }
+  },
+  "specialFeatures": {
+    "CurseForgeBlockedDownloads": {
+      "supported": false,
+      "method": ""
+    }
+  }
+}
