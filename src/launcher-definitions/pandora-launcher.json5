@@ -1,0 +1,141 @@
+{
+  "identifier": "com.moulberry.pandora",
+  "name": "Pandora Launcher",
+  "shownByDefault": false,
+  "icon": "/assets/launchers/pandora.png",
+  "downloadLink": "https://pandora.moulberry.com/#downloads",
+  "sourceRepo": "https://github.com/Moulberry/PandoraLauncher",
+  "homepage": "https://pandora.moulberry.com/",
+  "configuration": {
+    "license": {
+      "name": "MIT",
+      "url": "https://github.com/Moulberry/PandoraLauncher/blob/master/LICENSE",
+      "foss": true,
+      "extraInfo": ""
+    },
+    "serverInstances": false,
+    "lookAndFeel": "Custom"
+  },
+  "features": {
+    "offlinePlayWithoutLicense": true,
+    "modpacks": [
+      {
+        "name": "CurseForge",
+        "method": "Download",
+        "updating": false
+      },
+      {
+        "name": "Modrinth",
+        "method": "Download",
+        "updating": false
+      }
+    ],
+    "modloaders": [
+      "forge",
+      "neoforge",
+      "fabric"
+    ],
+    "minecraftResources": {
+      "mods": {
+        "downloading": true,
+        "updating": true,
+        "providers": [
+          "Modrinth",
+          "CurseForge"
+        ]
+      },
+      "resourcepacks": {
+        "downloading": true,
+        "updating": true,
+        "providers": [
+          "Modrinth",
+          "CurseForge"
+        ]
+      },
+      "shaderpacks": {
+        "downloading": true,
+        "updating": true,
+        "providers": [
+          "Modrinth",
+          "CurseForge"
+        ]
+      },
+      "worlds": {
+        "downloading": false,
+        "updating": false,
+        "providers": []
+      },
+      "datapacks": {
+        "downloading": false,
+        "updating": false,
+        "providers": []
+      },
+      "plugins": {
+        "downloading": false,
+        "updating": false,
+        "providers": []
+      }
+    },
+    "import": [
+      "OneSix",
+      "CurseForge",
+      "Modrinth",
+      "ATLauncher",
+      "Fjord Launcher"
+    ],
+    "export": [
+      "Zip",
+      "Modrinth",
+      "CurseForge"
+    ],
+    "java": {
+      "download": true,
+      "versionManagement": true,
+      "usingSystemInstall": true
+    },
+    "sandboxing": {
+      "status": "Optional"
+    },
+    "overlay": {
+      "status": "No"
+    },
+    "advertisements": {
+      "status": "No",
+      "note": "No ads and no telemetry."
+    },
+    "telemetry": {
+      "status": "No",
+      "note": "No ads and no telemetry."
+    }
+  },
+  "properties": {
+    "platforms": {
+      "linux": [
+        "x86_64"
+      ],
+      "windows": [
+        "x86_64"
+      ],
+      "macos": [
+        "x86_64",
+        "arm64"
+      ]
+    },
+    "packages": "pandora-launcher",
+    "technology": {
+      "languages": [
+        "Rust"
+      ],
+      "frameworks": [
+        "gpui"
+      ]
+    }
+  },
+  "specialFeatures": {
+    "CurseForgeBlockedDownloads": {
+      "supported": true,
+      "method": "No bypass — user downloads blocked files via browser; launcher imports them (sha1/length match)",
+      "note": "Uses its own official CFCore API key. For distribution-blocked files it does not bypass: it opens the file's CurseForge page for a manual browser download and imports the result by matching length + SHA-1."
+    }
+  }
+}
