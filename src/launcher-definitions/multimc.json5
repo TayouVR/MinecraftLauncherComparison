@@ -15,6 +15,7 @@
     "lookAndFeel": "System (configurable)"
   },
   "features": {
+    "offlinePlayWithoutLicense": false,
     "modpacks": [
       { "name": "Modrinth", "method": "Download", "updating": true },
       { "name": "ftb", "method": "Import", "updating": false },

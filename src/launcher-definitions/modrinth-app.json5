@@ -17,6 +17,7 @@
     "lookAndFeel": "Custom"
   },
   "features": {
+    "offlinePlayWithoutLicense": false,
     "modpacks": [
       { "name": "Modrinth", "method": "Download", "updating": true },
     ],

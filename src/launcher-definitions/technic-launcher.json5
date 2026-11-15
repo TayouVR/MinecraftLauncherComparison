@@ -16,6 +16,7 @@
     "lookAndFeel": "Custom"
   },
   "features": {
+    "offlinePlayWithoutLicense": false,
     "modpacks":  [
       { "name": "technic", "method": "Download", "updating": false }
     ],

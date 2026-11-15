@@ -16,6 +16,7 @@
     "lookAndFeel": "Java Swing"
   },
   "features": {
+    "offlinePlayWithoutLicense": false,
     "modpacks": [],
     "modloaders": [],
     "minecraftResources": {

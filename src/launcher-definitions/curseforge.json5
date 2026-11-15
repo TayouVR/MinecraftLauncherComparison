@@ -17,6 +17,7 @@
     "lookAndFeel": "Custom"
   },
   "features": {
+    "offlinePlayWithoutLicense": false,
     "modpacks": [
       { "name": "CurseForge", "method": "Download", "updating": true },
     ],

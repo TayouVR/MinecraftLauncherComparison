@@ -140,9 +140,29 @@ const piracyCount = launchers.filter(l => l.features.offlinePlayWithoutLicense).
 				.map((property) => (
 				<ListComponent propertyName={property.name} launchers={launchers} propCategory="properties" />
 			))}
-			{ launcherProperties(launchers, ["features"]).map((property) => (
+			{ launcherProperties(launchers, ["features"])
+				// bundledMod has its own row below; offlinePlayWithoutLicense is shown as "Allows Piracy".
+				.filter((prop) => prop.name !== "bundledMod" && prop.name !== "offlinePlayWithoutLicense")
+				.map((property) => (
 				<ListComponent propertyName={property.name} launchers={launchers} propCategory="features" />
 			))}
+            <tr>
+                <td>Allows Piracy</td>
+                { launchers.map(launcher => {
+					const flag = launcher.features.offlinePlayWithoutLicense;
+					return (
+					<td class:list={columnClass(launcher)}>
+						{flag === true ? (
+							<div class="badge h-fit no">Yes</div>
+						) : flag === false ? (
+							<div class="badge h-fit yes">No</div>
+						) : (
+							<div class="badge h-fit bg-accent-content/10"></div>
+						)}
+					</td>
+					);
+                })}
+            </tr>
             <tr>
                 <td>CurseForge Blocked Mods handling</td>
                 { launchers.map(launcher => {

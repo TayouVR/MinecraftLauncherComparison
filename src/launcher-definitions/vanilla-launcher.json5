@@ -16,6 +16,7 @@
     "lookAndFeel": "Minecraft Official"
   },
   "features": {
+    "offlinePlayWithoutLicense": false,
     "modpacks": [],
     "modloaders": [],
     "minecraftResources": {

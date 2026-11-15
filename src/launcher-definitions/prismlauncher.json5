@@ -27,6 +27,7 @@
     "lookAndFeel": "System (configurable)"
   },
   "features": {
+    "offlinePlayWithoutLicense": false,
     "modpacks": [
       {
         "name": "CurseForge",

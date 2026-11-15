@@ -16,6 +16,7 @@
     "lookAndFeel": "System (mostly)"
   },
   "features": {
+    "offlinePlayWithoutLicense": false,
     "modpacks": [],
     "modloaders": ["forge", "fabric"],
     "minecraftResources": {

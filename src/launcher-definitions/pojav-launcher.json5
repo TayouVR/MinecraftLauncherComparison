@@ -16,6 +16,7 @@
     "lookAndFeel": "Minecraft Inspired"
   },
   "features": {
+    "offlinePlayWithoutLicense": false,
     "modpacks": [
       { "name": "CurseForge", "method": "Download", "updating": true },
       { "name": "Modrinth", "method": "Download", "updating": true },
