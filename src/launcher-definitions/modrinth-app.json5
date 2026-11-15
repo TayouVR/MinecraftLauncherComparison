@@ -60,7 +60,7 @@
       "versionManagement": true,
       "usingSystemInstall": true,
     },
-    "sandboxing": { "badgeText": "No" },
+    "sandboxing": { "badgeText": "WIP" },
     "overlay": { "badgeText": "No" },
     "advertisements": { "badgeText": "Yes" },
     "telemetry": { "badgeText": "Opt-out", "tooltip": "Usage-analytics plumbing exists but is currently a no-op (sends nothing); a privacy toggle is present. Sentry crash reporting IS active in production builds. Source-audited." },
