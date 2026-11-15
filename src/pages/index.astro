@@ -1,29 +1,10 @@
 ---
 import Layout from '../layouts/Layout.astro';
 
-import json5 from 'json5';
-import { readFileSync, readdirSync } from 'fs';
-import path from 'path';
 import ListComponent from "../components/ListComponent.astro";
-import { columnClass } from "../data/utils.ts";
+import { columnClass, getLaunchers } from "../data/utils.ts";
 
-function getLauncherDetails(path: string) {
-	return json5.parse<LauncherDetails>(
-		readFileSync(path, 'utf-8')
-	);
-}
-
-
-const dataDir = './src/launcher-definitions'; // Define the directory that holds JSON5 files
-const launchers: LauncherDetails[] = [];
-
-// Dynamically loop through all files in the directory
-readdirSync(dataDir).forEach((file) => {
-	if (file.endsWith('.json5')) {
-		const filePath = path.join(dataDir, file); // Construct full file path
-		launchers.push(getLauncherDetails(filePath)); // Parse and push to `launchers`
-	}
-});
+const launchers = getLaunchers();
 
 function launcherProperties<TLauncher extends Record<string, any>>(
 	launchers: LauncherDetails[],

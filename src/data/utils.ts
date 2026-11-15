@@ -1,3 +1,27 @@
+import json5 from 'json5';
+import { readFileSync, readdirSync } from 'fs';
+import path from 'path';
+
+const DATA_DIR = './src/launcher-definitions';
+
+/**
+ * Read all launcher definitions from `src/launcher-definitions/*.json5`, sorted
+ * by name with piracy-facilitating launchers pushed to the back.
+ * Shared by index.astro, Header.astro and launcher/[id].astro.
+ */
+export function getLaunchers(): LauncherDetails[] {
+    const launchers: LauncherDetails[] = [];
+    readdirSync(DATA_DIR).forEach((file) => {
+        if (file.endsWith('.json5')) {
+            launchers.push(json5.parse(readFileSync(path.join(DATA_DIR, file), 'utf-8')));
+        }
+    });
+    return launchers.sort((a, b) => {
+        const aPiracy = a.features.offlinePlayWithoutLicense === true ? 1 : 0;
+        const bPiracy = b.features.offlinePlayWithoutLicense === true ? 1 : 0;
+        return aPiracy - bPiracy || a.name.localeCompare(b.name);
+    });
+}
 
 const niceNames = {
     "CurseForge":       { displayName: "CurseForge",            iconUrl: "/assets/modplatforms/curseforge.svg"},

@@ -1,26 +1,13 @@
 ---
 import Layout from '../../layouts/Layout.astro';
-import json5 from 'json5';
-import { readFileSync, readdirSync } from 'fs';
-import path from 'path';
-import { getIcon, getName } from "../../data/utils.ts";
+import { getIcon, getName, getLaunchers } from "../../data/utils.ts";
 import { Icon } from 'astro-icon/components';
 
 export async function getStaticPaths() {
-    const dataDir = './src/launcher-definitions';
-    const files = readdirSync(dataDir);
-    
-    return files
-        .filter(file => file.endsWith('.json5'))
-        .map(file => {
-            const filePath = path.join(dataDir, file);
-            const content = readFileSync(filePath, 'utf-8');
-            const launcher = json5.parse(content);
-            return {
-                params: { id: launcher.identifier },
-                props: { launcher },
-            };
-        });
+    return getLaunchers().map((launcher) => ({
+        params: { id: launcher.identifier },
+        props: { launcher },
+    }));
 }
 
 const { launcher } = Astro.props;

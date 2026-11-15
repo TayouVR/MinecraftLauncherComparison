@@ -1,20 +1,7 @@
 ---
-import json5 from 'json5';
-import { readFileSync, readdirSync } from 'fs';
-import path from 'path';
+import { getLaunchers } from "../data/utils.ts";
 
-const dataDir = './src/launcher-definitions';
-const launchers: LauncherDetails[] = [];
-
-readdirSync(dataDir).forEach((file) => {
-	if (file.endsWith('.json5')) {
-		const filePath = path.join(dataDir, file);
-		launchers.push(json5.parse(readFileSync(filePath, 'utf-8')));
-	}
-});
-
-// Sort launchers by name
-launchers.sort((a, b) => a.name.localeCompare(b.name));
+const launchers = getLaunchers();
 
 // Launchers hidden by default (unchecked in the filter menu). Their columns are
 // hidden at render time by a presentational `.drawer:has(checkbox:not(:checked))`
