@@ -24,7 +24,12 @@
       {
         "name": "Modrinth",
         "method": "Download",
-        "updating": false
+        "updating": true // probably - can't confirm currently
+      },
+      {
+        "name": "CurseForge",
+        "method": "Download",
+        "updating": true // probably - can't confirm currently
       }
     ],
     "modloaders": [
@@ -37,19 +42,22 @@
       "mods": {
         "downloading": true,
         "providers": [
-          "Modrinth"
+          "Modrinth",
+          "CurseForge"
         ]
       },
       "resourcepacks": {
         "downloading": true,
         "providers": [
-          "Modrinth"
+          "Modrinth",
+          "CurseForge"
         ]
       },
       "shaderpacks": {
         "downloading": true,
         "providers": [
-          "Modrinth"
+          "Modrinth",
+          "CurseForge"
         ]
       },
       "worlds": {
@@ -70,7 +78,8 @@
     "import": [
       "OneSix",
       "ATLauncher",
-      "Modrinth"
+      "Modrinth",
+      "CurseForge"
     ],
     "export": [
       "DNA share link"
@@ -88,7 +97,7 @@
     },
     "advertisements": {
       "badgeText": "No",
-      "tooltip": "Freemium (optional Premium adds AI credits). First-party telemetry endpoint present; opt-in/out unverifiable. No ad networks."
+      "tooltip": "Freemium (optional Premium adds AI credits). No ad networks."
     },
     "telemetry": {
       "badgeText": "Yes",
@@ -118,7 +127,8 @@
   "specialFeatures": {
     "CurseForgeBlockedDownloads": {
       "supported": false,
-      "method": ""
+      "method": "",
+      "note": "Respects author distribution restrictions: a required file the API cannot distribute is reported as restricted. Does NOT bypass blocked downloads. (Uses the CurseForge manifest's project/file IDs to resolve exact versions.)"
     }
   }
 }
